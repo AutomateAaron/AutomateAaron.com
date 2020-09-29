@@ -1,8 +1,10 @@
 ---
 enable: true
-title: Hello, I am Aaron N. Brock
-subtitle: I'm here to empower developers
-description: But why?
+topTitle: Hello, I am Aaron N. Brock
+content: >
+  # I'm here to empower developers
+
+  But why?
 buttonName: Contact me
 buttonURL: contact
 image: images/hero/hero.jpg
