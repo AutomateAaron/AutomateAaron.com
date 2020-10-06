@@ -68,7 +68,7 @@ headerButtonText = "Get In Touch"
 
 [params.address]
 address = "Princeton, NJ."
-email = "hello@AaronNBrock.com"
+email = "Hello@AaronNBrock.com"
 openingHours = "Open from 9am to 5pm"
 phone = "+(609) 555 1212"
 
