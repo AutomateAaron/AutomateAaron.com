@@ -59,9 +59,9 @@ googleAnalytics = "YOUR GOOGLE ANALYTICS CODE"
 logo = "images/site-navigation/logo.png"
 
 footerButtonTarget = "/contact"
-footerButtonText = "Get in Touch"
+footerButtonText = "Get In Touch"
 footerCallToAction = "Let's Start a Project"
-footerTopTitle = "Contact me"
+footerTopTitle = "Contact Me"
 
 headerButtonTarget = "/contact"
 headerButtonText = "Get In Touch"
