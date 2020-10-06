@@ -2,54 +2,52 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 paginate = 6
 theme = "portio"
-title = "Portio"
+title = "Aaron N. Brock"
+
 # Main Menu
 [[menu.main]]
+identifier = "home"
 name = "Home"
-url = "#home"
+url = "/#home"
 weight = 1
 [[menu.main]]
 name = "About"
-url = "#about"
+url = "/#about"
 weight = 2
 [[menu.main]]
-name = "Service"
-url = "#service"
+name = "Services"
+url = "/#service"
 weight = 3
-[[menu.main]]
-name = "Work"
-url = "#portfolio"
-weight = 4
+# [[menu.main]]
+# name = "Work"
+# url = "#portfolio"
+# weight = 4
 [[menu.main]]
 name = "Resume"
-url = "#resume"
+url = "/#resume"
 weight = 5
 [[menu.main]]
-name = "Blog"
-url = "#blog"
+name = "Reviews"
+url = "/#testimonial"
 weight = 6
 [[menu.main]]
-name = "Contact"
-url = "#contact"
+name = "Blog"
+url = "/#blog"
 weight = 7
 
 # Sitemap Menu
 [[menu.sitemap]]
-name = "About me"
-url = "about"
+name = "Home"
+url = "/#home"
 weight = 1
 [[menu.sitemap]]
-name = "Frequently Ask Question"
-url = "#"
+name = "About me"
+url = "/#about"
 weight = 2
 [[menu.sitemap]]
-name = "Privacy & Policy"
-url = "#"
+name = "Blog"
+url = "/blog"
 weight = 3
-[[menu.sitemap]]
-name = "Latest Article"
-url = "#"
-weight = 4
 
 [params]
 blogPageURL = "blog"
@@ -60,13 +58,43 @@ formspreeURL = "YOUR FORMSPREE URL"
 googleAnalytics = "YOUR GOOGLE ANALYTICS CODE"
 logo = "images/site-navigation/logo.png"
 
+footerButtonTarget = "/contact"
+footerButtonText = "Get in Touch"
+footerCallToAction = "Let's Start a Project"
+footerTopTitle = "Contact me"
+
+headerButtonTarget = "/contact"
+headerButtonText = "Get In Touch"
+
 [params.address]
 address = "Princeton, NJ."
 email = "hello@AaronNBrock.com"
-openingHours = "Open from 10am to 6pm (close at 5pm Sundays)"
+openingHours = "Open from 9am to 5pm"
 phone = "+(609) 555 1212"
+
 [params.map]
 APIkey = "YOUR GOOGLE MAP API"
 latitude = "23.7783741"
 longitude = "90.3746808"
 pinImage = "images/pin.png"
+
+# Socail icons
+[[params.social]]
+icon = "fa-github"
+url = "https://www.github.com/AaronNBrock"
+
+[[params.social]]
+icon = "fa-linkedin"
+url = "https://www.linkedin.com/in/AaronNBrock/"
+
+[[params.social]]
+icon = "fa-facebook"
+url = "https://www.facebook.com/AaronNBrock/"
+
+[[params.social]]
+icon = "fa-twitter"
+url = "https://twitter.com/AaronNBrock"
+
+[[params.social]]
+icon = "fa-medium"
+url = "https://medium.com/@AaronNBrock"

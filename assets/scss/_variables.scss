@@ -1,0 +1,45 @@
+//
+// Colors
+//
+
+// General
+$primary: #400080;
+$secondary: #282f49;
+// Text
+$body-color: rgba(0, 0, 0, 0.8);
+
+//
+// Typography
+//
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+$font-family-base: "Merriweather", serif;
+$headings-font-family: "Merriweather Sans", sans-serif;
+$input-btn-font-family: "Merriweather Sans", sans-serif;
+
+// Size
+$font-size-base: 1.125rem; // 18px
+
+$heading-base-size: 1.25rem;
+$h1-font-size: $heading-base-size * 2.5 !default;
+$h2-font-size: $heading-base-size * 2 !default;
+$h3-font-size: $heading-base-size * 1.75 !default;
+$h4-font-size: $heading-base-size * 1.5 !default;
+$h5-font-size: $heading-base-size * 1.25 !default;
+$h6-font-size: $heading-base-size !default;
+$headings-font-weight: 600 !default;
+
+// $h1-font-size: 60px;
+// $h2-font-size: 50px;
+// $h3-font-size: 30px;
+// $h4-font-size: 25px;
+// $h5-font-size: 22px;
+// $h6-font-size: 16px;
+
+// Spacing
+$headings-margin-bottom: 1.5rem;
+$line-height-base: 1.75;
+
+// Misc
+$link-hover-decoration: none;

@@ -1,7 +1,11 @@
 ---
 enable: true
-title: About me
-subtitle: Enable's interative Improvement, one step at a time.
+topTitle: About
+title: >
+  ## About me
+
+  Enable's interative Improvement, one step at a time.
+
 content: >
   ### I deliverer solutions.
 

@@ -1,63 +1,65 @@
 ---
 enable: true
 topTitle: My Resume
-# Using "&nbsp;" is a way to force extra line breaks.
-# See: https://discourse.gohugo.io/t/does-hardlinebreak-works-with-multiple-line-breaks/12522
-content: >
-  # My Expertises
+title: >
+  ## My Experience
 
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore  
+  A person is crafted by their life experiences, it's what makes them who they are.
 
 
-  &nbsp;
 
-
-  Magna aliquyam erat, sed diam voluptua. At vero eos accusam justo.
-tab1Name: Education
-tab2Name: Experiences
+  These experiences are what make me who I am.
+tab1Name: Experiences
+tab2Name: Achievements
 tab1Target: education
 tab2Target: experience
 
 education:
-  - content: >
-      #### Master in Arts
+  - time: SEP 2019 - PRESENT
+    content: >
+      #### DevOps Consultant, Contino
 
-      Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    time: 2008-2010
-  - content: >
-      #### Master in Arts
+      Lead transformations which helped large, heavily-regulated enterprises become fast, agile and competitive.
 
-      Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    time: 2008-2010
-  - content: >
-      #### Master in Arts
+  - time: JUN 2019 - AUG 2019
+    content: >
+      #### Automation Intern, Soterea
 
-      Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    time: 2008-2010
-  - content: >
-      #### Master in Arts
+      Automated the data labeling workflow, enabling the creation of consitent well-maintained datasets to power the future of safe self-driving cars.
 
-      Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    time: 2008-2010
+  - time: DEC 2017 - MAY 2019
+    content: >
+      #### DevOps Engineer, iconectiv
+
+      Facilitated the adoption of DevOps best Practices, though training & pairing with development teams.
+
+  - time: OCT 2016 - JAN 2017
+    content: >
+      #### Co-Founder, Soda Hop Media
+
+      Pioneered accessible cloud gaming technology, aiming to revolutionize the way humans interact with computers.
+
+  - time: OCT 2016 - JAN 2017
+    content: >
+      #### Contract Consultant, Various Minecraft Servers
+
+      Honed my development skills across many different teams during the boom of Minecraft.
 
 experience:
-  - content: >
-      #### Umbrella co. 
+  - time: JUN 2020
+    content: >
+      #### GCP Professional Cloud Architect
 
-      Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    time: 2016-Present
-  - content: >
-      #### Aperture Science 
+      "A Professional Cloud Architect enables organizations to leverage Google Cloud technologies. With a thorough understanding of cloud architecture and Google Cloud Platform, this individual can design, develop, and manage robust, secure, scalable, highly available, and dynamic solutions to drive business objectives." ~ Google Cloud
 
-      Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    time: 2010-2016
-  - content: >
-      #### ACME Inc. 
+  - time: DEC 2019
+    content: >
+      #### GCP Associate Cloud Engineer
 
-      Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    time: 2005-2010
-  - content: >
-      #### LexCorp 
+      "An Associate Cloud Engineer deploys applications, monitors operations, and manages enterprise solutions. This individual is able to use Google Cloud Console and the command-line interface to perform common platform-based tasks to maintain one or more deployed solutions that leverage Google-managed or self-managed services on Google Cloud." ~ Google Cloud
 
-      Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    time: 2001-2005
+  - time: NOV 2018
+    content: >
+      #### Eagle Scout
+
+      "Since 1912, the Eagle Scout rank has represented a milestone of accomplishment—perhaps without equal—that is recognized across the country and even the world." ~ Scouting.org

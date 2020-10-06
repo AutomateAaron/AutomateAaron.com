@@ -1,7 +1,8 @@
 ---
 enable: true
-topTitle: Testimonial
-title: What People are Say About Me?
+topTitle: Testimonials
+title: >
+  ## What People are Say About Me?
 
 testimonial:
   - name: Grepory Patmore
@@ -11,4 +12,8 @@ testimonial:
   - name: Paul Kordes
     comment: Aaron immediately jumped in suggesting Postgres for storing TF state which we ended up using at the customer! Now in my first engagement with him he has jumped right back in assisting with k8s installs of Jenkins and Artifactory. He has patiently helped me out with some things about Rancher I did not know and paired throughout.  He is super fun and easy to work with. He very quickly figured out every bump in the road with the helm installs.
     time: Sep 23, 2020
+    star: 5
+  - name: Jason Lutz
+    comment: Working with Aaron was a great experience, he had a lot of patience with me and I saw my coding skills improved greatly. Also, Aaron's presentation skills are excellent which makes demos fun. Keep being an enthusiastic influence!
+    time: Sep 22, 2020
     star: 5

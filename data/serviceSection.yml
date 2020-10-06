@@ -1,45 +1,23 @@
 ---
 enable: true
 topTitle: Working Area
-content: >
+title: >
   # DevOps Engineering
 
-  Enjoy team diversity and increase their networks among others people in
-  various fields by provided.
+  Using technology to empower development teams to deliver better software faster.
 service:
   - content: >
-      #### UI/UX Design 
+      #### Cloud Architecture
 
-      Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod
-      tempor invidunt ut labore et dolore magna aliquyam erat.
-    image: images/service/ui-ux.svg
-  - content: >
-      #### Web Development 
-
-      Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod
-      tempor invidunt ut labore et dolore magna aliquyam erat.
-    image: images/service/web.svg
-  - content: >
-      #### Creative Design 
-
-      Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod
-      tempor invidunt ut labore et dolore magna aliquyam erat.
+      Architecting your applications to be deployed to the cloud, creating customer-focused sequence diagrams, developming network layouts, and designing micro-services layouts.
     image: images/service/creative.svg
   - content: >
-      #### Branding
+      #### Deployment Flow
 
-      Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod
-      tempor invidunt ut labore et dolore magna aliquyam erat.
+      Designing the application deployment process with your team, from creating git workflows to match your deployment strategise to implementing CI/CD pipelines to automate each step.
     image: images/service/branding.svg
   - content: >
-      #### UI/UX Design
+      #### Agile Coaching
 
-      Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod
-      tempor invidunt ut labore et dolore magna aliquyam erat.
-    image: images/service/ui-ux.svg
-  - content: >
-      #### Web Development
-
-      Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod
-      tempor invidunt ut labore et dolore magna aliquyam erat.
+      Working with your team at every part of the software development lifecycle to empower rapid development, leveraging agile software development.
     image: images/service/web.svg
