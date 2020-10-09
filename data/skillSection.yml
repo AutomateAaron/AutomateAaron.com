@@ -5,6 +5,14 @@ content: >
   # What's my Skill Set?
 
   I have extensive experience in Docker, K8s, Jenkins, Ansible, Terraform and more.  I has worked in a wide breadth of companies across a variety of industries ranging from small gaming companies to large financial institutions, and have experience at every level of the software development lifecycle.  I can help empower your team to succeed.
+
+  ## test
+
+  | Syntax | Description |
+  | --- | ----------- |
+  | Header | Title |
+  | Paragraph | Text |
+
 image: images/skill/skill_image.jpg
 # skill:
 #   - title: HTML
