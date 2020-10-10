@@ -4,6 +4,13 @@ paginate = 6
 theme = "portio"
 title = "Aaron N. Brock"
 
+# markup
+[markup]
+defaultMarkdownHandler = "goldmark"
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
 # Main Menu
 [[menu.main]]
 identifier = "home"
@@ -18,10 +25,6 @@ weight = 2
 name = "Services"
 url = "/#service"
 weight = 3
-# [[menu.main]]
-# name = "Work"
-# url = "#portfolio"
-# weight = 4
 [[menu.main]]
 name = "Resume"
 url = "/#resume"
@@ -58,20 +61,24 @@ formspreeURL = "https://formspree.io/f/mrgoepkk"
 googleAnalytics = "YOUR GOOGLE ANALYTICS CODE"
 logo = "images/site-navigation/logo.png"
 
+# Header
+headerButtonTarget = "/contact"
+headerButtonText = "Get In Touch"
+
+# Footer
 footerButtonTarget = "/contact"
 footerButtonText = "Get In Touch"
 footerCallToAction = "Let's Start a Project"
 footerTopTitle = "Contact Me"
 
-headerButtonTarget = "/contact"
-headerButtonText = "Get In Touch"
-
+# Contact
 [params.address]
 address = "Princeton, NJ."
 email = "Hello@AaronNBrock.com"
 openingHours = "Open from 9am to 5pm"
 phone = "+(609) 555 1212"
 
+# Map
 [params.map]
 APIkey = "YOUR GOOGLE MAP API"
 latitude = "23.7783741"

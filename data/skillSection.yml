@@ -1,17 +1,46 @@
 ---
 enable: true
 topTitle: My Skills
-content: >
+content: |
   # What's my Skill Set?
 
   I have extensive experience in Docker, K8s, Jenkins, Ansible, Terraform and more.  I has worked in a wide breadth of companies across a variety of industries ranging from small gaming companies to large financial institutions, and have experience at every level of the software development lifecycle.  I can help empower your team to succeed.
 
-  ## test
-
-  | Syntax | Description |
-  | --- | ----------- |
-  | Header | Title |
-  | Paragraph | Text |
+  <table>
+  <tr>
+    <td><i class="fa fa-check text-primary"></i> AWS</td>
+    <td><i class="fa fa-check text-primary"></i> GCP</td>
+    <td><i class="fa fa-check text-primary"></i> Kubernetes</td>
+  </tr>
+  <tr>
+    <td><i class="fa fa-check text-primary"></i> Terraform</td>
+    <td><i class="fa fa-check text-primary"></i> Ansible</td>
+    <td><i class="fa fa-check text-primary"></i> Docker</td>
+  </tr>
+  <tr>
+    <td><i class="fa fa-check text-primary"></i> Jenkins</td>
+    <td><i class="fa fa-check text-primary"></i> GitHub</td>
+    <td><i class="fa fa-check text-primary"></i> Rancher</td>
+  </tr>
+  <tr>
+    <td><i class="fa fa-check text-primary"></i> Python</td>
+    <td><i class="fa fa-check text-primary"></i> Golang</td>
+    <td><i class="fa fa-check text-primary"></i> Java</td>
+  </tr>
+  <tr>
+    <td><i class="fa fa-check text-primary"></i> Javascript</td>
+    <td><i class="fa fa-check text-primary"></i> VueJS</td>
+    <td></td>
+  </tr>
+  </table>
+# Table defined above in HTML to avoid creating a header row.
+# |                                                     |                                                 |                                                     |
+# | :-------------------------------------------------- | :---------------------------------------------- | :-------------------------------------------------- |
+# | <i class="fa fa-check text-primary"></i> Python     | <i class="fa fa-check text-primary"></i> Pandas | <i class="fa fa-check text-primary"></i> Git        |
+# | <i class="fa fa-check text-primary"></i> GoLang     | <i class="fa fa-check text-primary"></i> Docker | <i class="fa fa-check text-primary"></i> Kubernetes |
+# | <i class="fa fa-check text-primary"></i> Javascript | <i class="fa fa-check text-primary"></i> Vue    | <i class="fa fa-check text-primary"></i> Jenkins    |
+# | <i class="fa fa-check text-primary"></i> Java       | <i class="fa fa-check text-primary"></i> AWS    | <i class="fa fa-check text-primary"></i> Ansible    |
+# | <i class="fa fa-check text-primary"></i> Terraform  | <i class="fa fa-check text-primary"></i> GCP    | <i class="fa fa-check text-primary"></i> Terraform  |
 
 image: images/skill/skill_image.jpg
 # skill:
