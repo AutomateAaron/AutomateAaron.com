@@ -2,37 +2,29 @@
 enable: true
 topTitle: My Skills
 content: |
-  # What's my Skill Set?
+  # What's my Skillset?
 
-  I have extensive experience in Docker, K8s, Jenkins, Ansible, Terraform and more.  I has worked in a wide breadth of companies across a variety of industries ranging from small gaming companies to large financial institutions, and have experience at every level of the software development lifecycle.  I can help empower your team to succeed.
-
-  <table>
-  <tr>
-    <td><i class="fa fa-check text-primary"></i> AWS</td>
-    <td><i class="fa fa-check text-primary"></i> GCP</td>
-    <td><i class="fa fa-check text-primary"></i> Kubernetes</td>
-  </tr>
-  <tr>
-    <td><i class="fa fa-check text-primary"></i> Terraform</td>
-    <td><i class="fa fa-check text-primary"></i> Ansible</td>
-    <td><i class="fa fa-check text-primary"></i> Docker</td>
-  </tr>
-  <tr>
-    <td><i class="fa fa-check text-primary"></i> Jenkins</td>
-    <td><i class="fa fa-check text-primary"></i> GitHub</td>
-    <td><i class="fa fa-check text-primary"></i> Rancher</td>
-  </tr>
-  <tr>
-    <td><i class="fa fa-check text-primary"></i> Python</td>
-    <td><i class="fa fa-check text-primary"></i> Golang</td>
-    <td><i class="fa fa-check text-primary"></i> Java</td>
-  </tr>
-  <tr>
-    <td><i class="fa fa-check text-primary"></i> Javascript</td>
-    <td><i class="fa fa-check text-primary"></i> VueJS</td>
-    <td></td>
+  I have extensive experience in Docker, K8s, Jenkins, Ansible, Terraform and more.  I have worked in a wide breadth of companies across a variety of industries ranging from small gaming companies to large financial institutions, and have experience at every level of the software development lifecycle.  I can help empower your team to succeed.
+  <div class="w-100 overflow-hidden">
+  <table class="text-nowrap">
+  <tr><td class="px-0 px-sm-1"><i class="fa fa-check text-primary pr-1"></i>AWS</td>
+      <td class="px-0 px-sm-1"><i class="fa fa-check text-primary pr-1"></i>GCP</td>
+      <td class="px-0 px-sm-1"><i class="fa fa-check text-primary pr-1"></i>Kubernetes</td></tr>
+  <tr><td class="px-0 px-sm-1"><i class="fa fa-check text-primary pr-1"></i>Terraform</td>
+      <td class="px-0 px-sm-1"><i class="fa fa-check text-primary pr-1"></i>Ansible</td>
+      <td class="px-0 px-sm-1"><i class="fa fa-check text-primary pr-1"></i>Docker</td></tr>
+  <tr><td class="px-0 px-sm-1"><i class="fa fa-check text-primary pr-1"></i>Jenkins</td>
+      <td class="px-0 px-sm-1"><i class="fa fa-check text-primary pr-1"></i>GitHub</td>
+      <td class="px-0 px-sm-1"><i class="fa fa-check text-primary pr-1"></i>Rancher</td></tr>
+  <tr><td class="px-0 px-sm-1"><i class="fa fa-check text-primary pr-1"></i>Python</td>
+      <td class="px-0 px-sm-1"><i class="fa fa-check text-primary pr-1"></i>Golang</td>
+      <td class="px-0 px-sm-1"><i class="fa fa-check text-primary pr-1"></i>Java</td></tr>
+  <tr><td class="px-0 px-sm-1"><i class="fa fa-check text-primary pr-1"></i>Javascript</td>
+      <td class="px-0 px-sm-1"><i class="fa fa-check text-primary pr-1"></i>VueJS</td>
+      <td class="px-0 px-sm-1"></td>
   </tr>
   </table>
+  </div>
 # Table defined above in HTML to avoid creating a header row.
 # |                                                     |                                                 |                                                     |
 # | :-------------------------------------------------- | :---------------------------------------------- | :-------------------------------------------------- |
