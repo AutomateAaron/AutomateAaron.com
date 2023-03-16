@@ -3,78 +3,78 @@
 @tailwind utilities;
 
 @layer base {
-	* {
-		@apply scroll-smooth;
-	}
+  * {
+    @apply scroll-smooth;
+  }
 
-	/* #region  /**=========== Typography =========== */
+  /* #region  /**=========== Typography =========== */
 
-	/* Headers general */
-	h0,
-	h1,
-	h2,
-	h3,
-	h4,
-	.h0,
-	.h1,
-	.h2,
-	.h3,
-	.h4 {
-		@apply font-sans font-semibold mb-6;
-	}
+  /* Headers general */
+  h0,
+  h1,
+  h2,
+  h3,
+  h4,
+  .h0,
+  .h1,
+  .h2,
+  .h3,
+  .h4 {
+    @apply mb-6 font-sans font-semibold;
+  }
 
-	h1,
-	.h1 {
-		@apply text-4xl md:text-5xl lg:text-6xl;
-	}
+  h1,
+  .h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
 
-	h2,
-	.h2 {
-		@apply text-3xl md:text-4xl lg:text-6xl;
-	}
+  h2,
+  .h2 {
+    @apply text-3xl md:text-4xl lg:text-6xl;
+  }
 
-	h3,
-	.h3 {
-		@apply text-2xl md:text-3xl lg:text-5xl;
-	}
+  h3,
+  .h3 {
+    @apply text-2xl md:text-3xl lg:text-5xl;
+  }
 
-	h4,
-	.h4 {
-		@apply text-xl md:text-2xl lg:text-4xl;
-	}
+  h4,
+  .h4 {
+    @apply text-xl md:text-2xl lg:text-4xl;
+  }
 
-	h5,
-	.h5 {
-		@apply text-lg md:text-xl lg:text-3xl;
-	}
+  h5,
+  .h5 {
+    @apply text-lg md:text-xl lg:text-3xl;
+  }
 
-	body,
-	.body {
-		@apply font-sans duration-300 ease-in-out text-base md:text-xl text-gray-800 leading-normal bg-gray-100 selection:text-gray-100 selection:bg-primary-900;
-	}
+  body,
+  .body {
+    @apply font-sans text-base leading-normal duration-300 ease-in-out text-gray-800 bg-gray-100 selection:text-gray-100 selection:bg-primary-900 md:text-xl;
+  }
 
-	p,
-	.p {
-		@apply font-serif;
-	}
+  p,
+  .p {
+    @apply font-serif;
+  }
 
-	/* #endregion  /**======== Typography =========== */
+  /* #endregion  /**======== Typography =========== */
 }
 
 @layer components {
-	.container {
-		@apply sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto px-4;
-	}
+  .container {
+    @apply mx-auto px-4 sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl;
+  }
 
-	.btn {
-		@apply py-4 px-8 text-base rounded-lg text-center transform transition-all duration-300 ease-in-out;
-	}
+  .btn {
+    @apply transform rounded-lg py-4 px-8 text-center text-base transition-all duration-300 ease-in-out;
+  }
 
-	.primary-btn {
-		@apply text-gray-100 bg-primary-700 border border-primary-700 hover:border-primary-700 hover:bg-primary-700 active:border-primary-700 active:bg-primary-700;
-	}
+  .primary-btn {
+    @apply border text-gray-100 bg-primary-700 border-primary-700 hover:bg-primary-700 hover:border-primary-700 active:bg-primary-700 active:border-primary-700;
+  }
 
-	.pre-line-top-title {
-		@apply relative ml-8 before:absolute before:top-1/2 before:-left-8 before:w-5 before:h-0.5 before:bg-gray-900 transform -translate-x-1/2;
-	}
+  .pre-line-top-title {
+    @apply relative ml-8 -translate-x-1/2 transform before:absolute before:top-1/2 before:-left-8 before:h-0.5 before:w-5 before:bg-gray-900;
+  }
 }
