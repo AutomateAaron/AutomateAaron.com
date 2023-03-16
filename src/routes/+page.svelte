@@ -1,23 +1,29 @@
-<script>
+<script type="ts">
+	import About from '$lib/components/landing-sections/About.svelte';
+	import Blog from '$lib/components/landing-sections/Blog.svelte';
+	import Hero from '$lib/components/landing-sections/Hero.svelte';
+	import Portfolio from '$lib/components/landing-sections/Portfolio.svelte';
+	import Resume from '$lib/components/landing-sections/Resume.svelte';
+	import Services from '$lib/components/landing-sections/Services.svelte';
+	import Skillset from '$lib/components/landing-sections/Skillset.svelte';
+	import Testimonial from '$lib/components/landing-sections/Testimonial.svelte';
+	import { siteTitle } from '$lib/config';
+
+	// export let data;
 </script>
 
-<h1>h1 Bootstrap heading</h1>
-<h2>h2 Bootstrap heading</h2>
-<h3>h3 Bootstrap heading</h3>
-<h4>h4 Bootstrap heading</h4>
-<h5>h5 Bootstrap heading</h5>
-<h6>h6 Bootstrap heading</h6>
+<svelte:head>
+	<title>{siteTitle}</title>
+</svelte:head>
 
-<p>
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-	labore et dolore magna aliqua. Tellus in metus vulputate eu scelerisque felis. Eget aliquet nibh
-	praesent tristique magna. Sit amet justo donec enim diam vulputate ut pharetra sit. Tortor
-	dignissim convallis aenean et tortor at risus viverra adipiscing. Sollicitudin tempor id eu nisl
-	nunc mi ipsum faucibus vitae. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus.
-	Semper eget duis at tellus at urna. Semper feugiat nibh sed pulvinar proin. Sit amet commodo nulla
-	facilisi. Accumsan lacus vel facilisis volutpat. Egestas dui id ornare arcu odio ut sem nulla.
-	Quis auctor elit sed vulputate mi. Auctor urna nunc id cursus metus aliquam eleifend mi in. Morbi
-	blandit cursus risus at ultrices mi tempus. Aliquam id diam maecenas ultricies mi eget. Nisi quis
-	eleifend quam adipiscing vitae proin sagittis. A diam maecenas sed enim ut sem viverra. Donec
-	adipiscing tristique risus nec feugiat in fermentum. Enim tortor at auctor urna nunc id cursus.
-</p>
+<Hero />
+<About />
+<Services />
+<Portfolio />
+<Resume />
+<Skillset />
+<Testimonial />
+<Blog />
+
+<!-- This is the README.md file in the root of the repo. It serves double duty as the homepage's content. If you'd rather use your own HTML and/or Svelte, you can delete/modify everything in this file. -->
+<!-- <svelte:component this={data.ReadMe} /> -->

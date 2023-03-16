@@ -1,0 +1,134 @@
+<script lang="ts">
+	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
+	import '@splidejs/svelte-splide/css';
+
+	import type { IService } from '$lib/types/generalTypes';
+	import Branding from '../svg/landing-sections/service/Branding.svelte';
+	import Creative from '../svg/landing-sections/service/Creative.svelte';
+	import Web from '../svg/landing-sections/service/Web.svelte';
+	import ServiceBg from '../svg/landing-sections/service/ServiceBg.svelte';
+	import ServiceCard from './ServiceCard.svelte';
+	import FigureSmall from '../svg/FigureSmall.svelte';
+	import BreathingBlob from '../svg/BreathingBlob.svelte';
+
+	const services: IService[] = [
+		{
+			title: 'Teaching',
+			description:
+				'Learn to use Google Cloud like a pro. From the basics to advanced strategies, I’ll give you the knowledge and skills you need to fully leverage the power of Google Cloud.',
+			icon: Creative
+		},
+		{
+			title: 'Tuning',
+			description:
+				'Take control of your Google Cloud costs. From identifying and eliminating unnecessary expenses to implementing cost-saving strategies, I’ll help you get the most out of your investment.',
+			icon: Web
+		},
+		{
+			title: 'Templates',
+			description:
+				'Streamline your Google Cloud operations with templates. From deployments to scaling, templates provide you with a proven foundation to build upon, and allow you to focus on growing your business.',
+			icon: Branding
+		}
+	];
+
+	const options = {
+		type: 'loop',
+		perPage: 2,
+		perMove: 1,
+		gap: 30,
+		autoplay: false,
+		interval: 3000,
+		padding: '2rem',
+		arrows: false,
+		pagination: true,
+		height: '550px',
+		breakpoints: {
+			640: {
+				perPage: 1,
+				gap: 10
+			},
+			768: {
+				perPage: 2,
+				gap: 30
+			}
+		},
+		classes: {
+			// Add classes for arrows.
+			arrows: 'splide__arrows service-slide-arrows',
+			arrow: 'splide__arrow service-slide-arrow',
+			prev: 'splide__arrow--prev service-slide-prev',
+			next: 'splide__arrow--next service-slide-next',
+
+			// Add classes for pagination.
+			pagination: 'splide__pagination service-slide-pagination', // container
+			page: 'splide__pagination__page service-slide-page' // each button
+		}
+	};
+</script>
+
+<section id="services" class="py-12 lg:pt-24 lg:pb-72 relative overflow-hidden">
+	<div>
+		<div class="container">
+			<div class="lg:w-1/2">
+				<span class="text-xl leading-normal text-gray-800 mb-4 pre-line-top-title"
+					>Area of Work</span
+				>
+				<h2 class="h2 mt-4">Google Cloud</h2>
+				<p class="mb-4 text-xl leading-normal">
+					Using technology to empower development teams to deliver software better faster stronger.
+				</p>
+			</div>
+		</div>
+
+		<div class="mt-12 mb-12 lg:hidden">
+			<Splide hasTrack={false} {options}>
+				<SplideTrack>
+					{#each services as service}
+						<SplideSlide>
+							<ServiceCard {service} />
+						</SplideSlide>
+					{/each}
+				</SplideTrack>
+			</Splide>
+		</div>
+
+		<div class="hidden mt-12 container lg:flex justify-between items-start space-x-10">
+			{#each services as service}
+				<ServiceCard {service} />
+			{/each}
+		</div>
+	</div>
+
+	<div class="hidden lg:block absolute bottom-[4%] left-[6%] transform -z-10 animate-move-top">
+		<FigureSmall class="h-[120px] w-[120px]" />
+	</div>
+
+	<div class="hidden lg:block absolute -bottom-[4%] -left-[6%] transform -z-20">
+		<!-- <ServiceBlob class="h-[465px] w-[410px] text-gray-10" /> -->
+		<BreathingBlob gradientId="ccc" class="h-[465px] w-[410px] rotate-45 text-gray-200" />
+	</div>
+
+	<ServiceBg class="w-3/5 absolute top-0 right-0 z-[-2] text-gray-200" />
+</section>
+
+<style lang="postcss">
+	:global(.service-slide-pagination) {
+		@apply -bottom-[2rem];
+	}
+
+	@media (min-width: 640px) {
+		:global(.service-slide-pagination) {
+			bottom: -2rem;
+		}
+	}
+
+	:global(.service-slide-page) {
+		background-color: #c2c8cc !important;
+	}
+
+	:global(.service-slide-pagination .is-active) {
+		background-color: #400080 !important;
+		transform: none;
+	}
+</style>
