@@ -104,18 +104,12 @@
     </div>
   </div>
 
-  <div
-    class="absolute bottom-[4%] left-[6%] -z-10 hidden transform animate-move-top lg:block"
-  >
-    <FigureSmall class="h-[120px] w-[120px]" />
+  <div class="absolute bottom-[4%] left-[6%] -z-10 hidden transform  lg:block">
+    <FigureSmall class="h-24 w-24 animate-move-top" />
   </div>
 
-  <div class="absolute -bottom-[4%] -left-[6%] -z-20 hidden transform lg:block">
-    <!-- <ServiceBlob class="h-[465px] w-[410px] text-gray-10" /> -->
-    <BreathingBlob
-      gradientId="ccc"
-      class="h-[465px] w-[410px] rotate-45 text-gray-200"
-    />
+  <div class="absolute -bottom-[4%] left-[-2%] -z-20 hidden transform lg:block">
+    <BreathingBlob gradientId="ccc" class="h-96 w-96 rotate-45 text-gray-200" />
   </div>
 
   <ServiceBg class="absolute top-0 right-0 z-[-2] w-3/5 text-gray-200" />

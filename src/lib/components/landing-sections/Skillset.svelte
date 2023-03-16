@@ -39,10 +39,8 @@
         style="-webkit-mask:url({SkillMask});-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;-webkit-mask-position:center center"
       />
 
-      <div
-        class="absolute -top-[11%] -left-[17%] -z-10 transform animate-move-top"
-      >
-        <Figure class="h-36 w-36" />
+      <div class="absolute -top-[2%] -left-[13%] -z-10 transform ">
+        <Figure class="h-36 w-36 animate-move-top" />
       </div>
     </div>
 
@@ -69,10 +67,8 @@
     </div>
   </div>
 
-  <div
-    class="absolute bottom-[5%] right-[10%] -z-10 hidden transform animate-move-top lg:block"
-  >
-    <FigureSmall class="h-24 w-24" />
+  <div class="absolute bottom-[5%] right-[10%] -z-10 hidden transform lg:block">
+    <FigureSmall class="h-24 w-24 animate-move-top" />
   </div>
 
   <div class="absolute -bottom-[0%] right-[2%] -z-20 hidden transform lg:block">

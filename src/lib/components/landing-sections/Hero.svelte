@@ -7,6 +7,7 @@
 
   import Close from "../svg/Close.svelte";
   import BreathingBlob from "../svg/BreathingBlob.svelte";
+  import FigureSmall from "../svg/FigureSmall.svelte";
 
   let showModal = false;
 </script>
@@ -89,9 +90,9 @@
       </div>
 
       <div
-        class="absolute top-0 left-1/2 -z-10 -mt-14 -translate-x-1/2 transform animate-move-left"
+        class="absolute top-0 left-1/2 -z-10 -mt-14 -translate-x-1/2 transform"
       >
-        <Figure class="h-36 w-36" />
+        <Figure class="h-36 w-36 animate-move-left" />
       </div>
     </div>
   </div>

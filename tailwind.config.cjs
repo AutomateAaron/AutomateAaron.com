@@ -37,12 +37,12 @@ module.exports = {
       },
       keyframes: {
         "move-top": {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(15px)" },
+          "0%, 100%": { transform: "translateY(-10px)" },
+          "50%": { transform: "translateY(10px)" },
         },
         "move-left": {
-          "0%": { transform: "translateX(-50%)" },
-          "50%": { transform: "translateX(-57%)" },
+          "0%, 100%": { transform: "translateX(-10px)" },
+          "50%": { transform: "translateX(10px)" },
         },
       },
     },
