@@ -39,7 +39,7 @@
 	];
 </script>
 
-<footer class="bg-gray-800 dark:bg-gray-700 text-gray-100 dark:text-gray-100 mt-40 relative">
+<footer class="bg-gray-800 dark:bg-gray-700 mt-40 relative">
 	<div class="relative z-00 text-gray-100">
 		<svg viewBox="0 0 1920 79"
 			><path d="M0 0h1920v79L0 0z" data-name="Path 1450" fill="currentColor" /></svg
@@ -50,7 +50,7 @@
 		<!-- contact -->
 		{#if $page.url.pathname != '/contact'}
 			<div
-				class="relative bg-primary-700 py-16 px-10 md:px-20 lg:py-20 xl:py-24 rounded-3xl -mt-48 overflow-hidden"
+				class="relative bg-primary-700 text-gray-100 py-16 px-10 md:px-20 lg:py-20 xl:py-24 rounded-3xl -mt-48 overflow-hidden"
 			>
 				<div class="md:flex justify-between gap-4 relative z-10">
 					<div class="">
@@ -85,7 +85,7 @@
 
 		<!-- footer -->
 		<div
-			class="space-y-12 py-12 flex flex-col items-center lg:py-20 lg:flex-row lg:justify-between lg:items-center"
+			class="space-y-12 py-12 flex flex-col text-gray-100 dark:text-gray-100 items-center lg:py-20 lg:flex-row lg:justify-between lg:items-center"
 		>
 			<div>
 				<img src={Logo} alt="" />

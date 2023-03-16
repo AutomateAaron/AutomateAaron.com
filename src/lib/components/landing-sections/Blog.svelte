@@ -48,7 +48,7 @@
 			<div class="hidden lg:block">
 				<a
 					href="blog"
-					class="py-4 px-8 border-lg border-2 border-gray-800 text-base text-gray-800 rounded-lg text-center duration-300 ease-in-out hover:scale-110 inline-block hover:shadow-lg"
+					class="py-4 px-8 border-lg border-2 border-gray-700 text-base text-gray-700 rounded-lg text-center duration-300 ease-in-out hover:scale-110 inline-block hover:shadow-lg"
 					>See All Posts</a
 				>
 			</div>
@@ -85,7 +85,7 @@
 		<div class="lg:hidden flex justify-center mt-8">
 			<a
 				href="blog"
-				class="py-4 px-8 border-lg border-2 border-gray-800 text-base text-gray-800 rounded-lg text-center duration-300 ease-in-out hover:scale-110 inline-block hover:shadow-lg"
+				class="py-4 px-8 border-lg border-2 border-gray-700 text-base text-gray-700 rounded-lg text-center duration-300 ease-in-out hover:scale-110 inline-block hover:shadow-lg"
 			>
 				See All Posts
 			</a>

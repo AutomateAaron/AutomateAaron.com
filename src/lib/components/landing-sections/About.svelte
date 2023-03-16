@@ -34,7 +34,7 @@
 				class="bg-gray-800 dark:bg-gray-700 text-gray-100 dark:text-gray-100 mt-8 rounded-3xl p-6 lg:w-3/5 lg:p-12 lg:-translate-x-12 relative "
 			>
 				<h3 class="h3">Mission Statement</h3>
-				<p class="mb-6">
+				<p class="mb-6 text-gray-200 dark:text-gray-100">
 					As a the leader in <a target="_blank" href="/">Google Cloud memes</a>, I know a thing or
 					two about both communicating Google Cloud concepts and building applications on the
 					platform. As a self proclaimed fan boy also, I keep up-to-date with Google’s newest
@@ -50,7 +50,7 @@
 					>
 					<a
 						href="/"
-						class="py-4 px-8 border-lg border-2 border-gray-100 text-base text-gray-100 rounded-lg text-center duration-300 ease-in-out hover:scale-110 inline-block hover:shadow-lg nightwind-prevent"
+						class="py-4 px-8 border-lg border-2 border-gray-100 dark:border-gray-100 text-base text-gray-100 dark:text-gray-100 rounded-lg text-center duration-300 ease-in-out hover:scale-110 inline-block hover:shadow-lg"
 						>Let's Chat</a
 					>
 				</div>

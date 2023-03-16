@@ -98,7 +98,7 @@
 			</p>
 
 			<div
-				class="flex justify-between items-center mt-12 text-gray-100 hover:scale-110 hover:shadow-lg duration-300 ease-in-out"
+				class="flex justify-between items-center mt-12 text-gray-100 hover:scale-105 hover:shadow-lg duration-300 ease-in-out"
 			>
 				<button
 					class="rounded-l-2xl border-r-0 w-full py-4 border-2
