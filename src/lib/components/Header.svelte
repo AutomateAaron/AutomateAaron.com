@@ -108,7 +108,7 @@
 
 	<!-- mobile nav -->
 	{#if showMobileMenu}
-		<div transition:slide={{ duration: 400 }} class="lg:hidden bg-white rounded-xl shadow-lg">
+		<div transition:slide={{ duration: 400 }} class="lg:hidden bg-gray-100 rounded-xl shadow-lg">
 			<nav class="px-5 py-4 ">
 				<ul class="space-y-2">
 					{#each navItems as item}
