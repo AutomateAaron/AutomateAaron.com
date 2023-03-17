@@ -7,7 +7,6 @@
 
   import Close from "../svg/Close.svelte";
   import BreathingBlob from "../svg/BreathingBlob.svelte";
-  import FigureSmall from "../svg/FigureSmall.svelte";
 
   let showModal = false;
 </script>

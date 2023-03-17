@@ -75,7 +75,7 @@
   <div class="absolute animate-move-left">
     <Figure class="h-36 w-36" />
   </div>
-  <div class="container px-40">
+  <div class="container px-4 md:px-20 lg:px-40">
     <svelte:component this={PostContent} />
   </div>
 </article>
