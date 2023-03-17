@@ -41,7 +41,10 @@
       </div>
 
       <div class="absolute -top-[45%] -left-[35%] -z-10 hidden lg:block">
-        <BreathingBlob gradientId="hero" class="h-96 w-96 text-gray-100" />
+        <BreathingBlob
+          gradientId="hero"
+          class=" h-32 w-32 text-gray-100 lg:h-96 lg:w-96"
+        />
       </div>
     </div>
 
