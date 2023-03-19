@@ -37,7 +37,7 @@
 </script>
 
 <section id="blog" class="relative py-20 md:py-12 xl:py-24">
-  <div class="container relative z-10">
+  <div class="container relative z-10 overflow-hidden">
     <div class="items-end justify-between lg:flex">
       <div>
         <span class="pre-line-top-title mb-4 text-xl leading-normal">

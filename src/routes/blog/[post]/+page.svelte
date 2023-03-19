@@ -71,12 +71,32 @@
   {/if}
 </article> -->
 
-<article class="my-40">
-  <div class="absolute animate-move-left">
+<article class="relative pt-36 pb-8 lg:py-40 xl:py-44">
+  <div class="absolute -left-14 hidden animate-move-top lg:block ">
     <Figure class="h-36 w-36" />
   </div>
-  <div class="container px-4 md:px-20 lg:px-40">
-    <svelte:component this={PostContent} />
+
+  <div class="container">
+    <div class="lg:mx-24 xl:mx-36">
+      <img class="cover-image rounded-3xl" src={coverImage} alt="" />
+    </div>
+    <main class="my-16 lg:mx-40 xl:mx-48">
+      <svelte:component this={PostContent} />
+    </main>
+    {#if categories}
+      <aside class="mt-16 text-base text-gray-600 lg:mx-40 xl:mx-48">
+        <span class="h-48">Categories:</span>
+        <ul class="inline-block">
+          {#each categories as category}
+            <li class="float-left mx-4 rounded-xl px-2 py-1 bg-primary-100">
+              <a href="/blog/category/{category}/">
+                #{category}
+              </a>
+            </li>
+          {/each}
+        </ul>
+      </aside>
+    {/if}
   </div>
 </article>
 

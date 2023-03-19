@@ -141,6 +141,10 @@
 </header>
 
 <style lang="postcss">
+  .navbar-toggle-icon {
+    @apply mb-[5px] block h-0.5 w-6 transition-all duration-300 ease-linear bg-primary-700;
+  }
+
   .icon-1 {
     transform: rotate(45deg);
     transform-origin: 10% 10%;
