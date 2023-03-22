@@ -5,6 +5,5 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.tabSize": 2,
-  "workbench.editor.labelFormat": "short",
-  "workbench.iconTheme": "vs-seti"
+  "workbench.editor.labelFormat": "short"
 }

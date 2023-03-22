@@ -77,9 +77,9 @@
         </div>
 
         <div
-          class="animate-anim-spin absolute -top-[43%] left-[2%] z-0 -rotate-[20deg] transform opacity-10 text-gray-800"
+          class="absolute -top-[43%] left-[2%] z-0 transform opacity-10 text-gray-800"
         >
-          <Shape1 class="h-80 w-[357px] " />
+          <Shape1 class="h-80 w-[357px] animate-spin-slow" />
         </div>
 
         <div

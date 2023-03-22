@@ -5,7 +5,7 @@ const nightwind = require("nightwind");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
-  content: ["./src/**/*.{html,js,svelte,ts}"],
+  content: ["./src/**/*.{html,js,svelte,ts,md}"],
   theme: {
     nightwind: {
       colors: {
@@ -31,7 +31,7 @@ module.exports = {
         gray: colors.slate,
       },
       animation: {
-        "spin-slow": "spin 16s linear infinite",
+        "spin-slow": "spin 40s linear infinite",
         "move-top": "move-top 4s linear infinite",
         "move-left": "move-left 4s linear infinite",
       },

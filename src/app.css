@@ -62,6 +62,178 @@
 }
 
 @layer components {
+  /* #region /**============ Syntax Highlighting ============ */
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    /* color: #393a34;
+    font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier,
+      monospace; */
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    font-size: 0.9em;
+    line-height: 1.2em;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre > code[class*="language-"] {
+    font-size: 1em;
+  }
+
+  /* pre[class*="language-"]::-moz-selection,
+  pre[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection,
+  code[class*="language-"] ::-moz-selection {
+    background: #c1def1;
+  }
+
+  pre[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
+  code[class*="language-"]::selection,
+  code[class*="language-"] ::selection {
+    background: #c1def1;
+  } */
+
+  /* Code blocks */
+  pre[class*="language-"] {
+    @apply my-4 overflow-auto rounded-3xl p-4 shadow bg-gray-50 border-gray-200;
+  }
+
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    @apply overflow-auto rounded-3xl px-2 py-1 bg-gray-50;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    font-style: italic; /* not using tailwind class to avoid circular dependency*/
+    @apply text-green-600;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.string {
+    @apply text-red-600;
+  }
+
+  .token.punctuation,
+  .token.operator {
+    color: #393a34; /* no highlight */
+    @apply text-gray-800;
+  }
+
+  .token.url,
+  .token.symbol,
+  .token.number,
+  .token.boolean,
+  .token.variable,
+  .token.constant,
+  .token.inserted {
+    @apply text-cyan-600;
+  }
+
+  .token.atrule,
+  .token.keyword,
+  .token.attr-value,
+  .language-autohotkey .token.selector,
+  .language-json .token.boolean,
+  .language-json .token.number,
+  code[class*="language-css"] {
+    @apply text-blue-600;
+  }
+
+  .token.function {
+    @apply text-yellow-600;
+  }
+
+  .token.deleted,
+  .language-autohotkey .token.tag {
+    @apply text-rose-600;
+  }
+
+  .token.selector,
+  .language-autohotkey .token.keyword {
+    @apply text-blue-600;
+  }
+
+  .token.important {
+    @apply text-amber-600;
+  }
+
+  .token.important,
+  .token.bold .token.function {
+    font-weight: bold;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.class-name,
+  .language-json .token.property {
+    @apply text-cyan-600;
+  }
+
+  .token.tag,
+  .token.selector {
+    @apply text-red-900;
+  }
+
+  .token.attr-name,
+  .token.property,
+  .token.regex,
+  .token.entity {
+    @apply text-red-600;
+  }
+
+  .token.directive.tag .tag {
+    @apply text-gray-800 bg-yellow-600;
+  }
+
+  /* overrides color-values for the Line Numbers plugin
+   * http://prismjs.com/plugins/line-numbers/
+   */
+  .line-numbers.line-numbers .line-numbers-rows {
+    border-right-color: #a5a5a5;
+  }
+
+  .line-numbers .line-numbers-rows > span:before {
+    color: #2b91af;
+  }
+
+  /* overrides color-values for the Line Highlight plugin
+   * http://prismjs.com/plugins/line-highlight/
+   */
+  .line-highlight.line-highlight {
+    background: rgba(193, 222, 241, 0.2);
+    background: -webkit-linear-gradient(
+      left,
+      rgba(193, 222, 241, 0.2) 70%,
+      rgba(221, 222, 241, 0)
+    );
+    background: linear-gradient(
+      to right,
+      rgba(193, 222, 241, 0.2) 70%,
+      rgba(221, 222, 241, 0)
+    );
+  }
+  /* #endregion  /**======== Syntax Highlighting ============ */
+
   .container {
     @apply mx-auto px-4 sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl;
   }
