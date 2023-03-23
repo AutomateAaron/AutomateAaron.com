@@ -7,6 +7,21 @@ module.exports = {
   darkMode: "class",
   content: ["./src/**/*.{html,js,svelte,ts,md}"],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+      },
+      // default breakpoints but with 40px removed
+      screens: {
+        sm: defaultTheme.screens['xs'],
+        md: defaultTheme.screens['sm'],
+        lg: defaultTheme.screens['md'],
+        xl: defaultTheme.screens['lg'],
+        '2xl': defaultTheme.screens['xl'],
+      },
+    },
     nightwind: {
       colors: {
         primary: {

@@ -231,10 +231,6 @@
   }
   /* #endregion  /**======== Syntax Highlighting ============ */
 
-  .container {
-    @apply mx-auto px-4 sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl;
-  }
-
   .btn {
     @apply transform rounded-lg py-4 px-8 text-center text-base transition-all duration-300 ease-in-out;
   }
