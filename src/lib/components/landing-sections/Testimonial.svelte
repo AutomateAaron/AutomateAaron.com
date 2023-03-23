@@ -84,7 +84,7 @@
         {#each testimonials as item, i}
           <SplideSlide>
             <div
-              class="h-full rounded-3xl py-12 px-8 bg-gray-100 md:py-16 md:px-12"
+              class="h-full rounded-xl py-12 px-8 bg-gray-100 md:py-16 md:px-12"
             >
               <div>
                 {#each Array(item.star) as star, i}

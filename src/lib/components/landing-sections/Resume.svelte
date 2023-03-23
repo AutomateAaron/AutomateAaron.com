@@ -124,7 +124,7 @@
       {#each resume as section}
         {#if section.title === currentTab}
           {#each section.items as item}
-            <div class="rounded-3xl p-8 bg-gray-100">
+            <div class="rounded-xl p-8 bg-gray-100">
               <span
                 class="pre-line-top-title text-xl leading-normal text-primary-700 before:bg-primary-700"
                 >{item.date}</span

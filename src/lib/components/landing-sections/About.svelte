@@ -33,7 +33,7 @@
 
       <!-- text -->
       <div
-        class="relative mt-8 rounded-3xl p-6 text-gray-100 bg-gray-800 dark:text-gray-100 dark:bg-gray-700 lg:w-3/5 lg:-translate-x-12 lg:p-12 "
+        class="relative mt-8 rounded-xl p-6 text-gray-100 bg-gray-800 dark:text-gray-100 dark:bg-gray-700 lg:w-3/5 lg:-translate-x-12 lg:p-12 "
       >
         <h3 class="h3">Mission Statement</h3>
         <p class="mb-6 text-gray-200 dark:text-gray-100">

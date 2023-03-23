@@ -45,7 +45,17 @@ module.exports = {
           "50%": { transform: "translateX(10px)" },
         },
       },
+      borderRadius: {
+        sm: defaultTheme.borderRadius["md"],
+        DEFAULT: defaultTheme.borderRadius["lg"],
+        md: defaultTheme.borderRadius["xl"],
+        lg: defaultTheme.borderRadius["2xl"],
+        xl: defaultTheme.borderRadius["3xl"],
+        "2xl": "2rem",
+        "3xl": "2.5rem",
+      },
     },
+
     fontFamily: {
       sans: ['"Source Sans Pro"', ...defaultTheme.fontFamily.sans],
       serif: ['"Source Serif Pro"', ...defaultTheme.fontFamily.serif],

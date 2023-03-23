@@ -10,7 +10,7 @@
       <a href="/blog/{post.slug}">
         <div>
           <div
-            class="mx-auto w-4/5 overflow-hidden rounded-3xl lg:ml-0 lg:w-[90%]"
+            class="mx-auto w-4/5 overflow-hidden rounded-xl lg:ml-0 lg:w-[90%]"
           >
             <img
               src={post.coverImage}
@@ -21,7 +21,7 @@
         </div>
 
         <div
-          class="absolute -bottom-24 left-0 rounded-3xl p-8 bg-gray-100 md:left-10 lg:right-0 "
+          class="absolute -bottom-24 left-0 rounded-xl p-8 bg-gray-100 md:left-10 lg:right-0 "
           style="box-shadow: 0 20px 40px rgb(50 65 141 / 12%);"
         >
           <span class="pre-line-top-title text-base text-primary-700"

@@ -11,7 +11,7 @@
       <img
         src={item?.image?.src}
         alt={item?.image?.alt}
-        class="w-full rounded-3xl transition-all duration-300 group-hover:shadow-xl"
+        class="w-full rounded-xl transition-all duration-300 group-hover:shadow-xl"
       />
 
       <div class="overflow-hidden">

@@ -77,7 +77,7 @@
   <div class="container">
     <div class="lg:mx-24 xl:mx-36">
       <div class="relative">
-        <img class="rounded-3xl" src={coverImage} alt="" />
+        <img class="rounded-xl" src={coverImage} alt="" />
         <FigureSmall
           class="absolute top-0 left-0 -z-10 -mt-8 -ml-8 h-20 w-20 animate-move-top lg:-mt-12 lg:-ml-12 lg:h-32 lg:w-32"
         />

@@ -54,7 +54,7 @@
     <!-- contact -->
     {#if $page.url.pathname != "/contact"}
       <div
-        class="relative -mt-48 overflow-hidden rounded-3xl py-16 px-10 text-gray-100 bg-primary-700 md:px-20 lg:py-20 xl:py-24"
+        class="relative -mt-48 overflow-hidden rounded-xl py-16 px-10 text-gray-100 bg-primary-700 md:px-20 lg:py-20 xl:py-24"
       >
         <div class="relative z-10 justify-between gap-4 md:flex">
           <div class="">

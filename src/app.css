@@ -66,9 +66,6 @@
 
   code[class*="language-"],
   pre[class*="language-"] {
-    /* color: #393a34;
-    font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier,
-      monospace; */
     direction: ltr;
     text-align: left;
     white-space: pre;
@@ -107,12 +104,12 @@
 
   /* Code blocks */
   pre[class*="language-"] {
-    @apply my-4 overflow-auto rounded-3xl p-4 shadow bg-gray-50 border-gray-200;
+    @apply my-4 overflow-auto rounded-xl p-4 shadow bg-gray-50 border-gray-200;
   }
 
   /* Inline code */
   :not(pre) > code[class*="language-"] {
-    @apply overflow-auto rounded-3xl px-2 py-1 bg-gray-50;
+    @apply overflow-auto rounded-xl px-2 py-1 bg-gray-50;
   }
 
   .token.comment,

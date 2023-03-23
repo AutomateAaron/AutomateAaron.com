@@ -6,7 +6,7 @@
 </script>
 
 <div
-  class="mb-12 h-[500px] w-full rounded-3xl p-8 shadow-xl bg-gray-100 md:h-[520px] lg:h-[620px] xl:h-[520px]"
+  class="mb-12 h-[500px] w-full rounded-xl p-8 shadow-xl bg-gray-100 md:h-[520px] lg:h-[620px] xl:h-[520px]"
 >
   <!-- render icon -->
   {#if service?.icon}

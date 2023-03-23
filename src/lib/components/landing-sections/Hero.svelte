@@ -60,7 +60,7 @@
 
         <!-- video -->
         <button
-          class="absolute top-full left-1/2 z-10 -mt-28 h-40 w-64 -translate-x-1/2 transform overflow-hidden rounded-3xl border-2 border-gray-100 lg:left-0 lg:-mt-60"
+          class="absolute top-full left-1/2 z-10 -mt-28 h-40 w-64 -translate-x-1/2 transform overflow-hidden rounded-xl border-2 border-gray-100 lg:left-0 lg:-mt-60"
           on:click={() => (showModal = true)}
         >
           <img
