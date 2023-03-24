@@ -4,7 +4,7 @@
 
 @layer base {
   * {
-    @apply scroll-smooth;
+    @apply scroll-smooth duration-300 ease-in-out;
   }
 
   /* #region  /**=========== Typography =========== */
@@ -50,7 +50,7 @@
 
   body,
   .body {
-    @apply font-sans text-base leading-normal duration-300 ease-in-out text-gray-800 bg-gray-100 selection:text-gray-100 selection:bg-primary-900 md:text-xl;
+    @apply font-sans text-base leading-normal text-gray-800 bg-gray-100 selection:text-gray-100 selection:bg-primary-900 md:text-xl;
   }
 
   p,
@@ -232,7 +232,7 @@
   /* #endregion  /**======== Syntax Highlighting ============ */
 
   .btn {
-    @apply transform rounded-lg py-4 px-8 text-center text-base transition-all duration-300 ease-in-out;
+    @apply transform rounded-lg py-4 px-8 text-center text-base transition-all;
   }
 
   .primary-btn {

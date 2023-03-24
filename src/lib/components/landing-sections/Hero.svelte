@@ -28,7 +28,9 @@
           <br /> simple
         </h1>
 
-        <p class="mb-8 text-lg leading-normal md:text-2xl">
+        <p
+          class="m-auto mb-8 max-w-sm text-lg leading-normal md:max-w-lg md:text-2xl"
+        >
           Effortlessly navigate your way to success on Google Cloud with expert
           guidance.
         </p>
@@ -40,10 +42,12 @@
         >
       </div>
 
-      <div class="absolute -top-[45%] -left-[35%] -z-10 hidden lg:block">
+      <div
+        class="absolute -top-32 left-1/2 -z-10 -ml-56 text-center lg:-top-[45%] lg:-left-[35%] lg:ml-auto"
+      >
         <BreathingBlob
           gradientId="hero"
-          class=" h-32 w-32 text-gray-100 lg:h-96 lg:w-96"
+          class="h-56 w-56 text-gray-100 lg:h-96 lg:w-96"
         />
       </div>
     </div>

@@ -70,7 +70,7 @@
           >
             <a
               href="contact"
-              class="rounded-lg py-4 px-8 font-semibold duration-300 ease-in-out bg-gray-100 text-primary-700 hover:scale-110"
+              class="rounded-lg py-4 px-8 font-semibold bg-gray-100 text-primary-700 hover:scale-110"
               >Get In Touch</a
             >
           </div>
@@ -162,7 +162,7 @@
           <a href={item?.url} class="group">
             <svelte:component
               this={item?.icon}
-              classNames="h-5 fill-gray-100 group-hover:fill-primary-700 transition-colors duration-300 ease-in-out"
+              classNames="h-5 fill-gray-100 group-hover:fill-primary-700 transition-colors"
             />
           </a>
         {/each}

@@ -33,7 +33,7 @@
 
       <!-- text -->
       <div
-        class="relative mt-8 rounded-xl p-6 text-gray-100 bg-gray-800 dark:text-gray-100 dark:bg-gray-700 lg:w-3/5 lg:-translate-x-12 lg:p-12 "
+        class="relative mx-4 -mt-48 rounded-xl p-6 text-gray-100 bg-gray-800 dark:text-gray-100 dark:bg-gray-700 lg:mt-8 lg:w-3/5 lg:-translate-x-12 lg:p-12 "
       >
         <h3 class="h3">Mission Statement</h3>
         <p class="mb-6 text-gray-200 dark:text-gray-100">
@@ -45,15 +45,15 @@
           fosus on what matters: growing your business.
         </p>
 
-        <div class="space-x-7 pb-4">
+        <div class="-m-2">
           <a
             href="/contact"
-            class="border-lg inline-block rounded-lg border-2 py-4 px-8 text-center text-base duration-300 ease-in-out text-gray-100 bg-primary-700 border-primary-700 hover:scale-110 hover:shadow-lg"
+            class="border-lg m-2 inline-block rounded-lg border-2 py-4 px-8 text-center text-base duration-300 ease-in-out text-gray-100 bg-primary-700 border-primary-700 hover:scale-110 hover:shadow-lg"
             >Contact me</a
           >
           <a
             href="/"
-            class="border-lg inline-block rounded-lg border-2 py-4 px-8 text-center text-base duration-300 ease-in-out text-gray-100 border-gray-100 hover:scale-110 hover:shadow-lg dark:text-gray-100 dark:border-gray-100"
+            class="border-lg m-2 inline-block rounded-lg border-2 py-4 px-8 text-center text-base duration-300 ease-in-out text-gray-100 border-gray-100 hover:scale-110 hover:shadow-lg dark:text-gray-100 dark:border-gray-100"
             >Let's Chat</a
           >
         </div>

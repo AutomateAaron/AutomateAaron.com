@@ -10,16 +10,16 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
+        DEFAULT: "1rem",
+        sm: "2rem",
       },
       // default breakpoints but with 40px removed
       screens: {
-        sm: defaultTheme.screens['xs'],
-        md: defaultTheme.screens['sm'],
-        lg: defaultTheme.screens['md'],
-        xl: defaultTheme.screens['lg'],
-        '2xl': defaultTheme.screens['xl'],
+        sm: defaultTheme.screens["xs"],
+        md: defaultTheme.screens["sm"],
+        lg: defaultTheme.screens["md"],
+        xl: defaultTheme.screens["lg"],
+        "2xl": defaultTheme.screens["xl"],
       },
     },
     nightwind: {
@@ -43,7 +43,7 @@ module.exports = {
     extend: {
       colors: {
         primary: colors.violet,
-        gray: colors.slate,
+        gray: colors.gray,
       },
       animation: {
         "spin-slow": "spin 40s linear infinite",

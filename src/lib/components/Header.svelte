@@ -54,13 +54,13 @@
 <svelte:window on:scroll={handleOnScroll} />
 
 <header
-  class="fixed left-5 right-5 top-4 z-50 rounded-lg transition-all duration-300 ease-linear lg:top-0 lg:left-0 lg:right-0 lg:rounded-none {scrollY >
+  class="duration-3 fixed left-5 right-5 top-4 z-50 rounded-lg transition-all ease-in-out lg:top-0 lg:left-0 lg:right-0 lg:rounded-none {scrollY >
   100
     ? 'bg-opacity-100 shadow-lg bg-gray-100'
     : 'bg-transparent lg:bg-opacity-0'}"
 >
   <div
-    class="container flex items-center justify-between transition-all duration-300 ease-in-out {scrollY >
+    class="ease-oet container flex items-center justify-between transition-all duration-300 {scrollY >
     100
       ? 'py-4 lg:py-5'
       : 'py-4 lg:py-10'}"
@@ -141,6 +141,58 @@
 </header>
 
 <style lang="postcss">
+  :root {
+    --header-outer-height: 110px;
+    --header-inner-height: 70px;
+    --header-height-difference: calc(
+      var(--header-outer-height) - var(--header-inner-height)
+    );
+    --header-bg: #fff;
+  }
+
+  body {
+    font-family: "DM Sans", sans-serif;
+    background-color: #f2f5f7;
+    line-height: 1.5;
+    min-height: 300vh;
+    position: relative;
+  }
+
+  .responsive-wrapper {
+    width: 90%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Sticky header */
+  .header-outer {
+    /* Make it stick */
+    height: var(--header-outer-height);
+    position: sticky;
+    top: calc(
+      var(--header-height-difference) * -1
+    ); /* Multiply by -1 to get a negative value */
+    display: flex;
+    align-items: center;
+
+    /* Other */
+    /* 	background-color: var(--header-bg); */
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .header-inner {
+    /* Make it stick */
+    height: var(--header-inner-height);
+    position: sticky;
+    top: 0;
+
+    /* Other */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .navbar-toggle-icon {
     @apply mb-[5px] block h-0.5 w-6 transition-all duration-300 ease-linear bg-primary-700;
   }
