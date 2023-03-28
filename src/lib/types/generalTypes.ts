@@ -1,18 +1,25 @@
 import type { ComponentType } from "svelte";
 
-export interface IImage {
-  src: string;
-  alt: string;
-}
+// export interface IImage {
+//   src: string;
+//   alt: string;
+// }
 
 export interface INavItem {
   name: string;
   href: string;
 }
 
+export interface IMeme {
+  slug: string;
+  image: string;
+  title: string;
+}
+
 export interface IBlog {
   slug: string;
-  image: IImage;
+  image: string;
+  imageAlt: string;
   title: string;
   date: string;
 }
@@ -21,7 +28,8 @@ export interface IPortfolio {
   slug: string;
   category: string;
   title: string;
-  image: IImage;
+  image: string;
+  imageAlt: string;
 }
 
 export interface IResumeSectionItem {

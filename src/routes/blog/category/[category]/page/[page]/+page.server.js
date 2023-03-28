@@ -1,6 +1,6 @@
 import { redirect } from "@sveltejs/kit";
-import { postsPerPage } from "$lib/config";
-import fetchPosts from "$lib/assets/js/fetchPosts";
+import { blogsPerPage } from "$lib/config";
+import fetchPosts from "$lib/assets/js/fetchBlogs";
 
 export const load = async ({ url, params, fetch }) => {
   const page = parseInt(params.page) || 1;
@@ -11,14 +11,14 @@ export const load = async ({ url, params, fetch }) => {
     throw redirect(301, `/blog/category/${category}`);
   }
 
-  let offset = page * postsPerPage - postsPerPage;
+  let offset = page * blogsPerPage - blogsPerPage;
 
-  const totalPostsRes = await fetch(`${url.origin}/api/posts/count`);
+  const totalPostsRes = await fetch(`${url.origin}/api/blogs/count`);
   const total = await totalPostsRes.json();
-  const { posts } = await fetchPosts({ offset, page });
+  const { blogs } = await fetchPosts({ offset, page });
 
   return {
-    posts,
+    blogs,
     page,
     category,
     totalPosts: total,

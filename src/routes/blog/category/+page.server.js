@@ -1,11 +1,11 @@
 export const load = async ({ url, fetch }) => {
-  const res = await fetch(`${url.origin}/api/posts.json`);
-  let posts = await res.json();
+  const res = await fetch(`${url.origin}/api/blogs.json`);
+  let blogs = await res.json();
 
   let uniqueCategories = {};
 
-  posts.forEach((post) => {
-    post.categories.forEach((category) => {
+  blogs.forEach((blog) => {
+    blog.categories.forEach((category) => {
       // eslint-disable-next-line no-prototype-builtins
       if (uniqueCategories.hasOwnProperty(category)) {
         uniqueCategories[category].count += 1;

@@ -1,9 +1,11 @@
-<script>
-  import PostsList from "$lib/components/PostsList.svelte";
-  import Pagination from "$lib/components/Pagination.svelte";
+<script lang="ts">
+  import type { IBlog } from "$lib/types/generalTypes";
+  import PostsList from "$lib/components/blog/BlogsList.svelte";
   import { siteDescription } from "$lib/config";
 
   export let data;
+
+  let blogs: IBlog[] = data.blogs;
 </script>
 
 <svelte:head>
@@ -11,8 +13,10 @@
   <meta data-key="description" name="description" content={siteDescription} />
 </svelte:head>
 
-<h1>Blog</h1>
+<section class="container mt-48">
+  <h1>Blog</h1>
 
-<PostsList posts={data.posts} />
+  <PostsList {blogs} />
+</section>
 
 <!-- <Pagination currentPage={1} totalPosts={data.total} /> -->

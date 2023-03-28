@@ -1,14 +1,14 @@
-<!-- Renders posts listed by category -->
+<!-- Renders blogs listed by category -->
 <script>
-  import PostsList from "$lib/components/PostsList.svelte";
-  import Pagination from "$lib/components/Pagination.svelte";
-  import { siteDescription, postsPerPage } from "$lib/config";
+  import PostsList from "$lib/components/blog/BlogsList.svelte";
+  import Pagination from "$lib/components/blog/Pagination.svelte";
+  import { siteDescription, blogsPerPage } from "$lib/config";
 
   export let data;
-  const { page, category, totalPosts, posts } = data;
+  const { page, category, totalPosts, blogs } = data;
 
-  $: lowerBound = page * postsPerPage - (postsPerPage - 1) || 1;
-  $: upperBound = Math.min(page * postsPerPage, totalPosts);
+  $: lowerBound = page * blogsPerPage - (blogsPerPage - 1) || 1;
+  $: upperBound = Math.min(page * blogsPerPage, totalPosts);
 </script>
 
 <svelte:head>
@@ -17,7 +17,7 @@
 </svelte:head>
 
 <!-- TODO: this is duplicated across multiple `+page.svelte` files -->
-{#if posts && posts.length}
+{#if blogs && blogs.length}
   <h1>
     Category: {category}
     <br />
@@ -29,7 +29,7 @@
     path="/blog/category/{category}/page"
   />
 
-  <PostsList {posts} />
+  <PostsList {blogs} />
 
   <Pagination
     currentPage={page}
@@ -39,7 +39,7 @@
 {:else}
   <h1>Oops!</h1>
 
-  <p>Sorry, no posts to show here.</p>
+  <p>Sorry, no blogs to show here.</p>
 
   <a href="/blog">Back to blog</a>
 {/if}

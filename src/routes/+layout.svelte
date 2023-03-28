@@ -11,8 +11,8 @@
   import "@fontsource/source-code-pro/400.css";
   import "@fontsource/source-code-pro/600.css"; // semibold
 
-  import Header from "$lib/components/Header.svelte";
-  import Footer from "$lib/components/Footer.svelte";
+  import Header from "$lib/components/layout/Header.svelte";
+  import Footer from "$lib/components/layout/Footer.svelte";
   import { currentPage, isMenuOpen } from "$lib/assets/js/store";
   import { navItems } from "$lib/config";
   import { preloadCode } from "$app/navigation";
