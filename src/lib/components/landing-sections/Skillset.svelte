@@ -28,7 +28,7 @@
 
 <section id="skill" class="relative">
   <div
-    class="container grid-cols-2 items-center gap-x-16 space-y-8 py-12 lg:grid lg:space-y-0 lg:pt-20 lg:pb-24 xl:pt-24 xl:pb-36"
+    class="container grid-cols-2 items-center gap-x-16 space-y-8 py-12 lg:grid lg:space-y-0 lg:pb-24 lg:pt-20 xl:pb-36 xl:pt-24"
   >
     <div class="relative">
       <!-- <img src={SkillImage} alt="" /> -->
@@ -39,7 +39,7 @@
         style="-webkit-mask:url({SkillMask});-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;-webkit-mask-position:center center"
       />
 
-      <div class="absolute -top-[2%] -left-[13%] -z-10 transform ">
+      <div class="absolute -left-[13%] -top-[2%] -z-10 transform ">
         <Figure class="h-36 w-36 animate-move-top" />
       </div>
     </div>

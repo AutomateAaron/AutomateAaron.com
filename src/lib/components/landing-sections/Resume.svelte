@@ -82,7 +82,7 @@
 
 <section id="resume" class="relative mb-10 py-12 md:py-24 lg:mb-24 lg:py-36">
   <div
-    class="z-00 absolute top-0 left-0 right-0 bottom-0 -skew-y-2 transform bg-gray-800 dark:bg-gray-700"
+    class="z-00 absolute bottom-0 left-0 right-0 top-0 -skew-y-2 transform bg-gray-800 dark:bg-gray-700"
   />
 
   <div class="container relative items-start justify-between gap-x-6 lg:flex">
@@ -130,7 +130,7 @@
                 >{item.date}</span
               >
               <h4
-                class="mt-5 mb-6 text-2xl font-semibold leading-tight md:text-3xl"
+                class="mb-6 mt-5 text-2xl font-semibold leading-tight md:text-3xl"
               >
                 {item.title}
               </h4>

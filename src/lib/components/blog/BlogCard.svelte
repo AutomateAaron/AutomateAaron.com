@@ -22,7 +22,7 @@
       <span class="pre-line-top-title text-base text-primary-700"
         >{blog.date}</span
       >
-      <h4 class="h5 mt-5 mb-0 group-hover:text-primary-700">{blog.title}</h4>
+      <h4 class="h5 mb-0 mt-5 group-hover:text-primary-700">{blog.title}</h4>
     </div>
   </a>
 </div>

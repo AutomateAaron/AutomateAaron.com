@@ -46,7 +46,7 @@
   ];
 </script>
 
-<section id="portfolio" class="services py-12 lg:py-16 xl:pt-24 xl:pb-32">
+<section id="portfolio" class="services py-12 lg:py-16 xl:pb-32 xl:pt-24">
   <div class="container">
     <div>
       <span

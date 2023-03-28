@@ -11,7 +11,7 @@
   let showModal = false;
 </script>
 
-<section id="home" class="relative pt-36 pb-8 lg:py-40 xl:py-44">
+<section id="home" class="relative pb-8 pt-36 lg:py-40 xl:py-44">
   <div
     class="container relative items-center justify-between space-y-16 lg:flex lg:space-x-20 lg:space-y-0"
   >
@@ -43,7 +43,7 @@
       </div>
 
       <div
-        class="absolute -top-32 left-1/2 -z-10 -ml-56 text-center lg:-top-[45%] lg:-left-[35%] lg:ml-auto"
+        class="absolute -top-32 left-1/2 -z-10 -ml-56 text-center lg:-left-[35%] lg:-top-[45%] lg:ml-auto"
       >
         <BreathingBlob
           gradientId="hero"
@@ -64,7 +64,7 @@
 
         <!-- video -->
         <button
-          class="absolute top-full left-1/2 z-10 -mt-28 h-40 w-64 -translate-x-1/2 transform overflow-hidden rounded-xl border-2 border-gray-100 lg:left-0 lg:-mt-60"
+          class="absolute left-1/2 top-full z-10 -mt-28 h-40 w-64 -translate-x-1/2 transform overflow-hidden rounded-xl border-2 border-gray-100 lg:left-0 lg:-mt-60"
           on:click={() => (showModal = true)}
         >
           <img
@@ -74,7 +74,7 @@
           />
 
           <div
-            class="group absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-opacity-50 bg-gray-800 dark:bg-opacity-50 dark:bg-gray-800"
+            class="group absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-opacity-50 bg-gray-800 dark:bg-opacity-50 dark:bg-gray-800"
           >
             <div
               class="flex h-16 w-16 transform items-center justify-center rounded-full transition-all duration-300 ease-in-out bg-gray-100 text-primary-700 group-hover:scale-110 group-hover:text-gray-100 group-hover:bg-primary-700"
@@ -96,7 +96,7 @@
       </div>
 
       <div
-        class="absolute top-0 left-1/2 -z-10 -mt-14 -translate-x-1/2 transform"
+        class="absolute left-1/2 top-0 -z-10 -mt-14 -translate-x-1/2 transform"
       >
         <Figure class="h-36 w-36 animate-move-left" />
       </div>
@@ -104,11 +104,11 @@
   </div>
 
   <!-- gray bg -->
-  <HeroBg class="absolute top-0 left-0 -z-50 w-[65%] text-gray-200" />
+  <HeroBg class="absolute left-0 top-0 -z-50 w-[65%] text-gray-200" />
 
   <!-- figure -->
   <div
-    class="absolute bottom-5 -left-32 -z-10 hidden transform animate-move-top lg:block"
+    class="absolute -left-32 bottom-5 -z-10 hidden transform animate-move-top lg:block"
   >
     <Figure class="h-52 w-52" />
   </div>
@@ -116,7 +116,7 @@
 
 {#if showModal}
   <div
-    class="fixed top-0 left-0 z-50 flex h-screen w-screen items-center justify-center bg-opacity-70 p-2 bg-black"
+    class="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-opacity-70 p-2 bg-black"
   >
     <div class="relative aspect-video w-full max-w-4xl">
       <iframe

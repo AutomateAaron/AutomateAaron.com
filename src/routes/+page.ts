@@ -1,6 +1,4 @@
-import fetchPosts from '$lib/assets/js/fetchBlogs';
-import type { IBlog } from '$lib/types/generalTypes';
-
+import { fetchBlogs, fetchMemes } from "$lib/assets/js/utils";
 
 export const load = async ({ url, fetch }) => {
   // const blogRes = await fetch(`${url.origin}/api/blogs.json`);
@@ -10,8 +8,14 @@ export const load = async ({ url, fetch }) => {
   // const total = await totalRes.json();
 
   // return { blogs, total };
-
-  return await fetchPosts({
+  const blogs = await fetchBlogs({
     limit: 3,
   });
+
+  const memes = await fetchMemes();
+
+  return {
+    blogs: blogs,
+    memes: memes,
+  };
 };

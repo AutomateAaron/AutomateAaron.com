@@ -11,7 +11,7 @@
   <!-- render icon -->
   {#if service?.icon}
     <div class="relative mb-4 flex h-32 w-24 items-end justify-start">
-      <div class="absolute top-0 left-0">
+      <div class="absolute left-0 top-0">
         <ServiceCardBlob class="z-20 text-gray-200" />
       </div>
       <svelte:component

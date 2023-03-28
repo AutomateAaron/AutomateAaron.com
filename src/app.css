@@ -232,7 +232,7 @@
   /* #endregion  /**======== Syntax Highlighting ============ */
 
   .btn {
-    @apply transform rounded-lg py-4 px-8 text-center text-base transition-all;
+    @apply transform rounded-lg px-8 py-4 text-center text-base transition-all;
   }
 
   .primary-btn {
@@ -240,6 +240,6 @@
   }
 
   .pre-line-top-title {
-    @apply relative ml-8 -translate-x-1/2 transform before:absolute before:top-1/2 before:-left-8 before:h-0.5 before:w-5 before:bg-gray-900;
+    @apply relative ml-8 -translate-x-1/2 transform before:absolute before:-left-8 before:top-1/2 before:h-0.5 before:w-5 before:bg-gray-900;
   }
 }

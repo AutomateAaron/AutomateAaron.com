@@ -26,7 +26,7 @@
           style="-webkit-mask:url({AboutMaskImage});-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;-webkit-mask-position:center center"
         />
 
-        <div class="absolute -top-[7%] -left-[16%] transform animate-move-top">
+        <div class="absolute -left-[16%] -top-[7%] transform animate-move-top">
           <Figure classNames="h-36 w-36" />
         </div>
       </div>
@@ -48,18 +48,18 @@
         <div class="-m-2">
           <a
             href="/contact"
-            class="border-lg m-2 inline-block rounded-lg border-2 py-4 px-8 text-center text-base duration-300 ease-in-out text-gray-100 bg-primary-700 border-primary-700 hover:scale-110 hover:shadow-lg"
+            class="border-lg m-2 inline-block rounded-lg border-2 px-8 py-4 text-center text-base duration-300 ease-in-out text-gray-100 bg-primary-700 border-primary-700 hover:scale-110 hover:shadow-lg"
             >Contact me</a
           >
           <a
             href="/"
-            class="border-lg m-2 inline-block rounded-lg border-2 py-4 px-8 text-center text-base duration-300 ease-in-out text-gray-100 border-gray-100 hover:scale-110 hover:shadow-lg dark:text-gray-100 dark:border-gray-100"
+            class="border-lg m-2 inline-block rounded-lg border-2 px-8 py-4 text-center text-base duration-300 ease-in-out text-gray-100 border-gray-100 hover:scale-110 hover:shadow-lg dark:text-gray-100 dark:border-gray-100"
             >Let's Chat</a
           >
         </div>
       </div>
 
-      <div class="absolute -top-[20%] -right-[12%] -z-50 hidden lg:block">
+      <div class="absolute -right-[12%] -top-[20%] -z-50 hidden lg:block">
         <BreathingBlob
           gradientId="aaa"
           class="h-80 w-80 rotate-45 text-gray-200"

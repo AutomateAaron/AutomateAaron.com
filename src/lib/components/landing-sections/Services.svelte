@@ -67,7 +67,7 @@
   };
 </script>
 
-<section id="services" class="relative overflow-hidden py-12 lg:pt-24 lg:pb-72">
+<section id="services" class="relative overflow-hidden py-12 lg:pb-72 lg:pt-24">
   <div>
     <div class="container">
       <div class="lg:w-1/2">
@@ -83,7 +83,7 @@
       </div>
     </div>
 
-    <div class="mt-12 mb-12 lg:hidden">
+    <div class="mb-12 mt-12 lg:hidden">
       <Splide hasTrack={false} {options}>
         <SplideTrack>
           {#each services as service}
@@ -112,7 +112,7 @@
     <BreathingBlob gradientId="ccc" class="h-96 w-96 rotate-45 text-gray-200" />
   </div>
 
-  <ServiceBg class="absolute top-0 right-0 z-[-2] w-3/5 text-gray-200" />
+  <ServiceBg class="absolute right-0 top-0 z-[-2] w-3/5 text-gray-200" />
 </section>
 
 <style lang="postcss">

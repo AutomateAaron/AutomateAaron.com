@@ -15,7 +15,7 @@
       />
 
       <div class="overflow-hidden">
-        <span class="text-gray mt-7 mb-5 inline-block text-lg leading-none"
+        <span class="text-gray mb-5 mt-7 inline-block text-lg leading-none"
           >{item?.category}</span
         >
         <h3 class="h3">{item?.title}</h3>

@@ -42,6 +42,10 @@
       name: "Blog",
       href: "/#blog",
     },
+    {
+      name: "Memes",
+      href: "/#memes",
+    },
   ];
 
   function toggleDarkMode() {

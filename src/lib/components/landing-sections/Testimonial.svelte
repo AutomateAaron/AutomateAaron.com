@@ -58,58 +58,53 @@
   };
 </script>
 
-<section id="reviews" class="relative ">
-  <div
-    class="absolute  top-0 left-0 right-0 bottom-0 -z-40 skew-y-2 transform bg-gray-200"
-  />
+<section id="reviews" class="my-36">
+  <div class="relative">
+    <div
+      class="absolute bottom-0 left-0 right-0 top-0 -z-40 skew-y-2 transform bg-gray-200"
+    />
 
-  <!-- <div class="absolute top-0 left-0 right-0 text-gray-100">
-		<svg viewBox="0 0 1920 79"
-			><path d="M0 0h1920v79L0 0z" data-name="Path 1450" fill="currentColor" /></svg
-		>
-	</div> -->
+    <div class="container overflow-hidden py-24">
+      <div>
+        <span
+          class="mb-4 inline-block w-full text-center text-xl leading-normal"
+          >Testimonials</span
+        >
+        <h2 class="h2 text-center">What People Are Saying About Me?</h2>
+      </div>
 
-  <div
-    class="container overflow-hidden py-24 md:py-12 lg:pt-36 lg:pb-32 xl:pt-44 xl:pb-36"
-  >
-    <div>
-      <span class="mb-4 inline-block w-full text-center text-xl leading-normal"
-        >Testimonials</span
-      >
-      <h2 class="h2 text-center">What People Are Saying About Me?</h2>
-    </div>
+      <div class="mt-12">
+        <Splide {options}>
+          {#each testimonials as item, i}
+            <SplideSlide>
+              <div
+                class="h-full rounded-xl px-8 py-12 bg-gray-100 md:px-12 md:py-16"
+              >
+                <div>
+                  {#each Array(item.star) as star, i}
+                    <Star
+                      class="inline-block h-5 w-5 fill-yellow-400 text-yellow-400"
+                    />
+                  {/each}
+                </div>
 
-    <div class="mt-12">
-      <Splide {options}>
-        {#each testimonials as item, i}
-          <SplideSlide>
-            <div
-              class="h-full rounded-xl py-12 px-8 bg-gray-100 md:py-16 md:px-12"
-            >
-              <div>
-                {#each Array(item.star) as star, i}
-                  <Star
-                    class="inline-block h-5 w-5 fill-yellow-400 text-yellow-400"
-                  />
-                {/each}
+                <p class="mb-10 mt-6">{item.comment}</p>
+
+                <div>
+                  <span
+                    class="pre-line-top-title text-base font-bold leading-none text-gray-600"
+                  >
+                    {item.name}
+                  </span>
+                  <span class="text-base leading-none text-gray-400">
+                    | {item.time}</span
+                  >
+                </div>
               </div>
-
-              <p class="mt-6 mb-10">{item.comment}</p>
-
-              <div>
-                <span
-                  class="pre-line-top-title text-base font-bold leading-none text-gray-600"
-                >
-                  {item.name}
-                </span>
-                <span class="text-base leading-none text-gray-400">
-                  | {item.time}</span
-                >
-              </div>
-            </div>
-          </SplideSlide>
-        {/each}
-      </Splide>
+            </SplideSlide>
+          {/each}
+        </Splide>
+      </div>
     </div>
   </div>
 </section>

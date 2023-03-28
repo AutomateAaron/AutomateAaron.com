@@ -54,7 +54,7 @@
     <!-- contact -->
     {#if $page.url.pathname != "/contact"}
       <div
-        class="relative -mt-48 overflow-hidden rounded-xl py-16 px-10 text-gray-100 bg-primary-700 md:px-20 lg:py-20 xl:py-24"
+        class="relative -mt-48 overflow-hidden rounded-xl px-10 py-16 text-gray-100 bg-primary-700 md:px-20 lg:py-20 xl:py-24"
       >
         <div class="relative z-10 justify-between gap-4 md:flex">
           <div class="">
@@ -70,7 +70,7 @@
           >
             <a
               href="contact"
-              class="rounded-lg py-4 px-8 font-semibold bg-gray-100 text-primary-700 hover:scale-110"
+              class="rounded-lg px-8 py-4 font-semibold bg-gray-100 text-primary-700 hover:scale-110"
               >Get In Touch</a
             >
           </div>
@@ -83,7 +83,7 @@
         </div>
 
         <div
-          class="absolute top-[12%] -right-[9%] z-0 rotate-[80deg] transform animate-move-top opacity-10 text-gray-800"
+          class="absolute -right-[9%] top-[12%] z-0 rotate-[80deg] transform animate-move-top opacity-10 text-gray-800"
         >
           <Shape2 class="h-52 w-60 " />
         </div>
