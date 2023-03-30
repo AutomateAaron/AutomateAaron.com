@@ -24,12 +24,7 @@
     </div>
 
     <div class="mt-8 flex justify-center">
-      <a
-        href="memes"
-        class="border-lg inline-block rounded-lg border-2 px-8 py-4 text-center text-base duration-300 ease-in-out text-gray-700 border-gray-700 hover:scale-110 hover:shadow-lg"
-      >
-        See All Memes
-      </a>
+      <a href="memes" class="btn btn-outline"> See All Memes </a>
     </div>
   </div>
 </section>

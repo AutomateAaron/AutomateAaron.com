@@ -11,12 +11,12 @@
   let showModal = false;
 </script>
 
-<section id="home" class="relative pb-8 pt-36 lg:py-40 xl:py-44">
+<section id="home" class="relative pb-8 pt-36 md:py-40 xl:py-44">
   <div
-    class="container relative items-center justify-between space-y-16 lg:flex lg:space-x-20 lg:space-y-0"
+    class="container relative items-center justify-between space-y-16 md:flex md:space-x-28 md:space-y-0"
   >
     <!-- text -->
-    <div class="relative w-full text-center lg:pr-20 lg:text-left">
+    <div class="relative w-full text-center md:text-left">
       <div class="relative">
         <span
           class="pre-line-top-title mb-4 text-xl leading-normal text-gray-800"
@@ -29,25 +29,21 @@
         </h1>
 
         <p
-          class="m-auto mb-8 max-w-sm text-lg leading-normal md:max-w-lg md:text-2xl"
+          class="mx-auto mb-8 max-w-sm text-lg leading-normal md:mx-0 md:max-w-lg lg:text-2xl"
         >
           Effortlessly navigate your way to success on Google Cloud with expert
           guidance.
         </p>
 
-        <a
-          href="/contact"
-          class="btn primary-btn hover:shadow-[0 8px 20px rgb(56 87 241 / 30%)] inline-block hover:scale-105"
-          >Contact me</a
-        >
+        <a href="/contact" class="btn btn-primary inline-block">Contact me</a>
       </div>
 
       <div
-        class="absolute -top-32 left-1/2 -z-10 -ml-56 text-center lg:-left-[35%] lg:-top-[45%] lg:ml-auto"
+        class="absolute -top-32 left-1/2 -z-10 -ml-56 text-center md:-left-[35%] md:-top-[45%] md:ml-auto"
       >
         <BreathingBlob
           gradientId="hero"
-          class="h-56 w-56 text-gray-100 lg:h-96 lg:w-96"
+          class="h-56 w-56 text-gray-100 md:h-96 md:w-96"
         />
       </div>
     </div>
@@ -64,7 +60,7 @@
 
         <!-- video -->
         <button
-          class="absolute left-1/2 top-full z-10 -mt-28 h-40 w-64 -translate-x-1/2 transform overflow-hidden rounded-xl border-2 border-gray-100 lg:left-0 lg:-mt-60"
+          class="absolute -bottom-[5%] left-0 right-0 mx-auto aspect-3/2 w-2/5 min-w-[8rem] overflow-hidden rounded-lg border-2 border-gray-100 md:-left-1/2 md:right-1/2 md:top-2/3"
           on:click={() => (showModal = true)}
         >
           <img
@@ -77,12 +73,12 @@
             class="group absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-opacity-50 bg-gray-800 dark:bg-opacity-50 dark:bg-gray-800"
           >
             <div
-              class="flex h-16 w-16 transform items-center justify-center rounded-full transition-all duration-300 ease-in-out bg-gray-100 text-primary-700 group-hover:scale-110 group-hover:text-gray-100 group-hover:bg-primary-700"
+              class="flex aspect-square h-2/5 transform items-center justify-center rounded-full transition-all duration-300 ease-in-out bg-gray-100 text-primary-700 group-hover:scale-110 group-hover:text-gray-100 group-hover:bg-primary-700"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 21 24"
-                class="ml-1 h-6 w-6"
+                class="ml-1 w-1/2 max-w-[1rem]"
                 fill="currentColor"
               >
                 <path
@@ -108,7 +104,7 @@
 
   <!-- figure -->
   <div
-    class="absolute -left-32 bottom-5 -z-10 hidden transform animate-move-top lg:block"
+    class="absolute -left-32 bottom-5 -z-10 hidden transform animate-move-top md:block"
   >
     <Figure class="h-52 w-52" />
   </div>

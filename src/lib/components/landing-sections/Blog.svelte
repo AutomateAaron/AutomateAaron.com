@@ -18,22 +18,13 @@
       </div>
 
       <div class="hidden lg:block">
-        <a
-          href="blog"
-          class="border-lg inline-block rounded-lg border-2 px-8 py-4 text-center text-base duration-300 ease-in-out text-gray-700 border-gray-700 hover:scale-110 hover:shadow-lg"
-          >See All Blogs</a
-        >
+        <a href="blog" class="btn btn-outline inline-block">See All Blogs</a>
       </div>
     </div>
     <BlogsList {blogs} />
 
     <div class="mt-8 flex justify-center lg:hidden">
-      <a
-        href="blog"
-        class="border-lg inline-block rounded-lg border-2 px-8 py-4 text-center text-base duration-300 ease-in-out text-gray-700 border-gray-700 hover:scale-110 hover:shadow-lg"
-      >
-        See All Blogs
-      </a>
+      <a href="blog" class="btn btn-outline inline-block"> See All Blogs </a>
     </div>
     <div class="absolute -right-[10%] -top-[5%] -z-20">
       <BlogBlob class="h-96 w-96 animate-spin-slow text-gray-200" />

@@ -72,19 +72,19 @@
 
 <header bind:this={outerElement} class="sticky -top-8 z-40 -mb-28 h-28">
   <div
-    class="mx-4 w-auto rounded-b-xl pt-8 lg:mx-0 {scrollY > heightDifference
+    class="mx-4 w-auto rounded-b-xl pt-8 md:mx-0 {scrollY > heightDifference
       ? 'shadow-lg bg-gray-100'
       : 'bg-transparent'}"
   >
     <div
       bind:this={innerElement}
-      class="container flex h-16 items-center justify-between lg:h-20"
+      class="container flex h-16 items-center justify-between md:h-20"
     >
       <a href="/">
         <img src={Logo} alt="" class="h-10 w-10" />
       </a>
 
-      <nav class="hidden lg:block">
+      <nav class="hidden md:block">
         <ul class="flex items-center justify-center">
           {#each navItems as item}
             <li>
@@ -107,14 +107,12 @@
           {/if}
         </button>
 
-        <a
-          href="/contact"
-          class="btn primary-btn hover:shadow-[0 8px 20px rgb(56 87 241 / 30%)] hidden hover:scale-105 lg:block"
+        <a href="/contact" class="btn btn-primary hidden md:block"
           >Get in Touch</a
         >
 
         <button
-          class="lg:hidden"
+          class="md:hidden"
           on:click={() => (showMobileMenu = !showMobileMenu)}
         >
           <span class="navbar-toggle-icon {showMobileMenu && 'icon-1'}" />
@@ -127,7 +125,7 @@
     {#if showMobileMenu}
       <div
         transition:slide={{ duration: 400 }}
-        class="rounded-xl shadow-lg bg-gray-100 lg:hidden"
+        class="rounded-xl shadow-lg bg-gray-100 md:hidden"
       >
         <nav class="px-5 py-4 ">
           <ul class="space-y-2">
@@ -143,9 +141,7 @@
             {/each}
 
             <li>
-              <a
-                href="/contact"
-                class="btn primary-btn hover:shadow-[0 8px 20px rgb(56 87 241 / 30%)] inline-block w-full hover:scale-105"
+              <a href="/contact" class="btn btn-primary inline-block w-full"
                 >Get in Touch</a
               >
             </li>

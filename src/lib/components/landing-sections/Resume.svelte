@@ -86,11 +86,9 @@
   />
 
   <div class="container relative items-start justify-between gap-x-6 lg:flex">
-    <div
-      class="nightwind-prevent !top-48 w-full text-gray-100 lg:!sticky lg:pr-20"
-    >
+    <div class="!top-48 w-full text-gray-100 lg:!sticky lg:pr-20">
       <span
-        class="pre-line-top-title nightwind-prevent mb-4 text-xl leading-normal before:bg-gray-100"
+        class="pre-line-top-title mb-4 text-xl leading-normal before:bg-gray-100"
         >Resume</span
       >
       <h2 class="h2 mt-4">Experiences.</h2>

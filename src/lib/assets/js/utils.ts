@@ -40,9 +40,9 @@ export async function fetchBlogs({
   }));
 
   return blogs;
-};
+}
 
-export async function fetchMemes({offset = 0, limit = 0} = {}) {
+export async function fetchMemes({ offset = 0, limit = 0 } = {}) {
   let memes = await Promise.all(
     // TODO replace glob for non-import glob
     Object.entries(import.meta.glob("/src/lib/memes/*.png")).map(
@@ -64,7 +64,7 @@ export async function fetchMemes({offset = 0, limit = 0} = {}) {
   }
 
   return memes;
-};
+}
 
 // export async function fetchMeme() {
 //   return

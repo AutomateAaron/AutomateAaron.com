@@ -33,14 +33,14 @@ module.exports = {
       },
       colorClasses: [
         "gradient",
-        "ring",
-        "ring-offset",
-        "divide",
-        "placeholder",
       ],
     },
 
     extend: {
+      aspectRatio: {
+        '4/3': '4 / 3',
+        '3/2': '3 / 2',
+      },
       colors: {
         primary: colors.violet,
         gray: colors.gray,

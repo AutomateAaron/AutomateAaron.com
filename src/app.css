@@ -67,6 +67,7 @@
   }
 
   /* #endregion  /**======== Typography =========== */
+
 }
 
 @layer components {
@@ -239,12 +240,35 @@
   }
   /* #endregion  /**======== Syntax Highlighting ============ */
 
+
   .btn {
-    @apply transform rounded-lg px-8 py-4 text-center text-base transition-all;
+    @apply font-semibold rounded-lg px-6 py-3 text-center transition-all active:duration-100 active:scale-95 bg-gray-700 hover:scale-105 border-2 border-gray-700 text-gray-100 hover:text-gray-100 hover:shadow-xl;
   }
 
-  .primary-btn {
-    @apply border text-gray-100 bg-primary-700 border-primary-700 hover:bg-primary-700 hover:border-primary-700 active:bg-primary-700 active:border-primary-700;
+  .btn-outline {
+    @apply bg-transparent dark:bg-transparent text-gray-700 hover:text-gray-700;
+  }
+
+
+  .btn-primary {
+    @apply bg-primary-700 border-primary-700 text-gray-200;
+  }
+
+  .btn-light {
+    @apply bg-gray-200 border-gray-200 text-gray-700 hover:text-gray-700;
+  }
+
+
+  .btn-outline {
+    @apply bg-transparent dark:bg-transparent;
+  }
+
+  .btn-outline.btn-primary {
+    @apply text-primary-700
+  }
+
+  .btn-outline.btn-light {
+    @apply text-gray-200
   }
 
   .pre-line-top-title {

@@ -70,7 +70,7 @@
           >
             <a
               href="contact"
-              class="rounded-lg px-8 py-4 font-semibold bg-gray-100 text-primary-700 hover:scale-110"
+              class="btn btn-light text-primary-700 hover:text-primary-700"
               >Get In Touch</a
             >
           </div>

@@ -8,7 +8,7 @@
   let meme = data.meme;
 </script>
 
-<article class="relative pb-8 pt-36 lg:py-40 xl:py-44">
+<article class="relative overflow-hidden pb-8 pt-36 lg:py-40 xl:py-44">
   <div class="container">
     <div class="lg:mx-24 xl:mx-36">
       <div class="relative mx-auto">

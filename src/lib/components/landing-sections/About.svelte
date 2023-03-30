@@ -5,7 +5,7 @@
   import BreathingBlob from "../svg/BreathingBlob.svelte";
 </script>
 
-<section id="about" class="overflow-hidden py-12 lg:py-16 xl:py-24">
+<section id="about" class="overflow-hidden py-12 md:py-16 xl:py-24">
   <div class="container">
     <!-- heading -->
     <div>
@@ -17,23 +17,23 @@
     </div>
 
     <!-- content -->
-    <div class="relative items-center justify-between lg:flex">
+    <div class="relative items-center justify-center md:flex">
       <!-- image -->
-      <div class="relative lg:w-2/5">
+      <div class="relative md:w-1/2 lg:w-2/5">
         <img
           src={AboutImage}
           alt="about-img"
           style="-webkit-mask:url({AboutMaskImage});-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;-webkit-mask-position:center center"
         />
 
-        <div class="absolute -left-[16%] -top-[7%] transform animate-move-top">
+        <!-- <div class="absolute -left-[16%] -top-[7%] transform animate-move-top">
           <Figure classNames="h-36 w-36" />
-        </div>
+        </div> -->
       </div>
 
       <!-- text -->
       <div
-        class="relative mx-4 -mt-48 rounded-xl p-6 text-gray-100 bg-gray-800 dark:text-gray-100 dark:bg-gray-700 lg:mt-8 lg:w-3/5 lg:-translate-x-12 lg:p-12 "
+        class="relative z-10 mx-4 -mt-48 rounded-xl p-6 text-gray-100 bg-gray-800 dark:text-gray-100 dark:bg-gray-700 md:mx-0 md:-ml-12 md:-mt-0 md:w-3/5 md:p-12"
       >
         <h3 class="h3">Who am I?</h3>
         <p class="mb-6 text-gray-200 dark:text-gray-100">
@@ -46,20 +46,16 @@
         </p>
 
         <div class="-m-2">
-          <a
-            href="/contact"
-            class="border-lg m-2 inline-block rounded-lg border-2 px-8 py-4 text-center text-base duration-300 ease-in-out text-gray-100 bg-primary-700 border-primary-700 hover:scale-110 hover:shadow-lg"
-            >Contact me</a
+          <a href="/contact" class="btn btn-primary m-2 inline-block"
+            >Contact Me</a
           >
-          <a
-            href="/"
-            class="border-lg m-2 inline-block rounded-lg border-2 px-8 py-4 text-center text-base duration-300 ease-in-out text-gray-100 border-gray-100 hover:scale-110 hover:shadow-lg dark:text-gray-100 dark:border-gray-100"
-            >Let's Chat</a
+          <a href="/contact" class="btn btn-light btn-outline m-2 inline-block"
+            >Lets chat!</a
           >
         </div>
       </div>
 
-      <div class="absolute -right-[12%] -top-[20%] -z-50 hidden lg:block">
+      <div class="absolute -right-[12%] -top-[20%] -z-50 hidden md:block">
         <BreathingBlob
           gradientId="aaa"
           class="h-80 w-80 rotate-45 text-gray-200"
