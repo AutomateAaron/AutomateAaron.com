@@ -56,9 +56,33 @@
       <h2 class="h2 text-center">Check Some of My Recent Work</h2>
     </div>
 
-    <div class="mt-12 grid-cols-2 md:grid">
+    <div class="mt-12 md:columns-2">
       {#each portfolio as item, i}
-        <PortfolioCard {item} index={i} />
+        <div class="mb-8 md:m-6">
+          <a href="/">
+            <div class="group">
+              <img
+                src={item?.image?.src}
+                alt={item?.image?.alt}
+                class="w-full rounded-xl group-hover:shadow-xl"
+              />
+
+              <div class="overflow-hidden">
+                <span
+                  class="text-gray mb-5 mt-7 inline-block text-lg leading-none"
+                  >{item?.category}</span
+                >
+                <h3 class="h3">{item?.title}</h3>
+
+                <span
+                  class="pre-line-text-xl before:!bg-primary relative mb-4 translate-y-20 leading-normal text-primary-700 group-hover:translate-y-0 xl:inline-block xl:translate-x-2 xl:transform"
+                >
+                  <span class="text-gray-800">—</span> See Details
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
       {/each}
     </div>
   </div>

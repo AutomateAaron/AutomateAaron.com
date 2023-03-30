@@ -7,11 +7,11 @@
 
 <div class="mb-8 md:m-6">
   <a href="/">
-    <div class={`group ${index === 3 && "md:-mt-44 lg:-mt-56 xl:-mt-64"}`}>
+    <div class={`group`}>
       <img
         src={item?.image?.src}
         alt={item?.image?.alt}
-        class="w-full rounded-xl transition-all duration-300 group-hover:shadow-xl"
+        class="w-full rounded-xl group-hover:shadow-xl"
       />
 
       <div class="overflow-hidden">
@@ -21,7 +21,7 @@
         <h3 class="h3">{item?.title}</h3>
 
         <span
-          class="pre-line-text-xl before:!bg-primary relative mb-4 translate-y-20 leading-normal transition-all duration-300 ease-in-out text-primary-700 group-hover:translate-y-0 xl:inline-block xl:translate-x-2 xl:transform"
+          class="pre-line-text-xl before:!bg-primary relative mb-4 translate-y-20 leading-normal text-primary-700 group-hover:translate-y-0 xl:inline-block xl:translate-x-2 xl:transform"
         >
           <span class="text-gray-800">—</span> See Details
         </span>
