@@ -1,10 +1,10 @@
 import { blogsPerPage } from "$lib/config";
 
-export const fetchBlogs = async ({
+export async function fetchBlogs({
   offset = 0,
   limit = blogsPerPage,
   category = "",
-} = {}) => {
+}) {
   let blogs = await Promise.all(
     Object.entries(import.meta.glob("/src/lib/blogs/*.md")).map(
       async ([path, resolver]) => {
@@ -42,7 +42,7 @@ export const fetchBlogs = async ({
   return blogs;
 };
 
-export const fetchMemes = async ({ offset = 0, limit = 0 } = {}) => {
+export async function fetchMemes({offset = 0, limit = 0} = {}) {
   let memes = await Promise.all(
     // TODO replace glob for non-import glob
     Object.entries(import.meta.glob("/src/lib/memes/*.png")).map(
@@ -65,3 +65,13 @@ export const fetchMemes = async ({ offset = 0, limit = 0 } = {}) => {
 
   return memes;
 };
+
+// export async function fetchMeme() {
+//   return
+// }
+
+// export const fetchMeme = async ({
+//   slug: string;
+// }) => {
+//   return slug;
+// }

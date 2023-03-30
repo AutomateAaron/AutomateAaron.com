@@ -157,34 +157,6 @@
 </header>
 
 <style lang="postcss">
-  :root {
-    --header-outer-height: theme("spacing.36");
-    --header-inner-height: theme("spacing.20");
-    --header-height-difference: calc(
-      var(--header-outer-height) - var(--header-inner-height)
-    );
-  }
-
-  /* Sticky header */
-  #header-outer {
-    /* Make it stick */
-    height: var(--header-outer-height);
-    position: sticky;
-    top: calc(
-      var(--header-height-difference) * -1
-    ); /* Multiply by -1 to get a negative value */
-    display: flex;
-    align-items: center;
-    margin-bottom: calc(var(--header-outer-height) * -1);
-  }
-
-  #header-inner {
-    /* Make it stick */
-    height: var(--header-inner-height);
-    position: sticky;
-    top: 0;
-  }
-
   .navbar-toggle-icon {
     @apply mb-[5px] block h-0.5 w-6 transition-all duration-300 ease-linear bg-primary-700;
   }

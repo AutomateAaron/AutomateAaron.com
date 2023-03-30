@@ -4,7 +4,7 @@
   export let memes: IMeme[];
 </script>
 
-<div class="relative mt-12 columns-sm gap-4 space-y-4">
+<div class="relative mt-12 columns-xs gap-4 space-y-4">
   {#each memes as meme}
     <div class="group w-full overflow-hidden rounded-lg">
       <a href="/memes/{meme.slug}">

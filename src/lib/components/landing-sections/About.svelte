@@ -35,14 +35,14 @@
       <div
         class="relative mx-4 -mt-48 rounded-xl p-6 text-gray-100 bg-gray-800 dark:text-gray-100 dark:bg-gray-700 lg:mt-8 lg:w-3/5 lg:-translate-x-12 lg:p-12 "
       >
-        <h3 class="h3">Mission Statement</h3>
+        <h3 class="h3">Who am I?</h3>
         <p class="mb-6 text-gray-200 dark:text-gray-100">
           As a the leader in <a target="_blank" href="/">Google Cloud memes</a>,
           I know a thing or two about both communicating Google Cloud concepts
-          and building applications on the platform. As a self proclaimed fan
-          boy also, I keep up-to-date with Google’s newest offerings so you
-          don’t have to. My goal is to streamline your GCP usage so you can
-          fosus on what matters: growing your business.
+          and building applications on the platform. And, as a self proclaimed
+          fan boy, I keep up-to-date with Google’s newest offerings so you don’t
+          have to. My goal is to streamline your GCP usage so your business can
+          focus on what matters: your business.
         </p>
 
         <div class="-m-2">

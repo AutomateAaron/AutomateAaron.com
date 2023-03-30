@@ -70,7 +70,7 @@
           class="mb-4 inline-block w-full text-center text-xl leading-normal"
           >Testimonials</span
         >
-        <h2 class="h2 text-center">What People Are Saying About Me?</h2>
+        <h2 class="h2 text-center">What People Are Saying?</h2>
       </div>
 
       <div class="mt-12">

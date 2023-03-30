@@ -16,7 +16,7 @@
         <p class="mb-4">Like the comic section of a newspaper...</p>
       </div>
     </div>
-    <div class="relative max-h-[80vh] overflow-hidden">
+    <div class="relative max-h-[60vh] overflow-hidden">
       <div
         class="pointer-events-none absolute bottom-0 z-20 h-1/3 w-full bg-gradient-to-t from-gray-100 to-transparent"
       />

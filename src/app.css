@@ -58,6 +58,14 @@
     @apply font-serif;
   }
 
+  p > a {
+    @apply underline;
+  }
+
+  a {
+    @apply hover:text-primary-700;
+  }
+
   /* #endregion  /**======== Typography =========== */
 }
 
