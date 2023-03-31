@@ -18,15 +18,32 @@ export const blogsPerPage = 10;
 // Edit this to alter the main nav menu. (Also used by the footer and mobile nav.)
 export const navItems = [
   {
-    title: "Blog",
-    route: "/blog",
+    title: "Home",
+    route: "/#home",
   },
   {
     title: "About",
-    route: "/about",
+    route: "/#about",
   },
   {
-    title: "Contact",
-    route: "/contact",
+    title: "Services",
+    route: "/#services",
+  },
+  {
+    title: "Blog",
+    route: "/#blog",
+  },
+  {
+    title: "Memes",
+    route: "/#memes",
+  },
+
+  {
+    title: "Resume",
+    route: "/#resume",
+  },
+  {
+    title: "Reviews",
+    route: "/#reviews",
   },
 ];

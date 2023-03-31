@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
   * {
-    @apply scroll-smooth duration-300 ease-in-out;
+    @apply duration-300 ease-in-out;
   }
 
   /* #region  /**=========== Typography =========== */

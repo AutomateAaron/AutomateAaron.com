@@ -50,15 +50,10 @@
 -->
 <div class="layout" class:open={$isMenuOpen}>
   <Header />
-  {#key data.path}
-    <main
-      id="main"
-      tabindex="-1"
-      in:fade={transitionIn}
-      out:fade={transitionOut}
-    >
-      <slot />
-    </main>
-  {/key}
+  <!-- {#key data.path} -->
+  <main id="main" tabindex="-1" in:fade={transitionIn} out:fade={transitionOut}>
+    <slot />
+  </main>
+  <!-- {/key} -->
   <Footer />
 </div>

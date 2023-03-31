@@ -5,49 +5,18 @@
   import Moon from "$lib/components/svg/Moon.svelte";
   import Sun from "$lib/components/svg/Sun.svelte";
   import { onMount } from "svelte";
+  import { navItems } from "$lib/config";
 
   let outerElement;
   let outerHeight;
-  let backgroundColorArr = [255, 255, 255];
 
   let innerElement;
   let innerHeight;
   let heightDifference = 0;
+
   let scrollY = 0;
   let darkMode = false;
   let showMobileMenu = false;
-
-  const navItems: INavItem[] = [
-    {
-      name: "Home",
-      href: "/#home",
-    },
-    {
-      name: "About",
-      href: "/#about",
-    },
-    {
-      name: "Services",
-      href: "/#services",
-    },
-    {
-      name: "Blog",
-      href: "/#blog",
-    },
-    {
-      name: "Memes",
-      href: "/#memes",
-    },
-
-    {
-      name: "Resume",
-      href: "/#resume",
-    },
-    {
-      name: "Reviews",
-      href: "/#reviews",
-    },
-  ];
 
   function toggleDarkMode() {
     darkMode = !darkMode;
@@ -71,7 +40,7 @@
 
 <svelte:window on:scroll={handleOnScroll} />
 
-<header bind:this={outerElement} class="sticky -top-8 z-40 -mb-28 h-28">
+<header bind:this={outerElement} class="sticky -top-8 z-30 -mb-28 h-28">
   <div
     class="mx-4 w-auto rounded-b-xl pt-8 md:mx-0 {scrollY > heightDifference
       ? 'shadow-lg bg-gray-100'
@@ -90,9 +59,9 @@
           {#each navItems as item}
             <li>
               <a
-                href={item.href}
+                href={item.route}
                 class="hover:text-primary active:text-primary p-2 text-center text-lg transition-all duration-300 ease-in-out"
-                >{item.name}</a
+                >{item.title}</a
               >
             </li>
           {/each}
