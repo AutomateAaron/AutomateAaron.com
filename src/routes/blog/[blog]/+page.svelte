@@ -49,7 +49,7 @@
     <main class="my-16 lg:mx-40 xl:mx-48">
       <svelte:component this={BlogContent} />
     </main>
-    {#if categories}
+    <!-- {#if categories}
       <aside
         class="mt-16 flex items-center text-base text-gray-600 lg:mx-40 xl:mx-48"
       >
@@ -64,6 +64,6 @@
           {/each}
         </ul>
       </aside>
-    {/if}
+    {/if} -->
   </div>
 </article>

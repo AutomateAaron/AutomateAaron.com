@@ -31,20 +31,21 @@
       href: "/#services",
     },
     {
-      name: "Resume",
-      href: "/#resume",
-    },
-    {
-      name: "Reviews",
-      href: "/#reviews",
-    },
-    {
       name: "Blog",
       href: "/#blog",
     },
     {
       name: "Memes",
       href: "/#memes",
+    },
+
+    {
+      name: "Resume",
+      href: "/#resume",
+    },
+    {
+      name: "Reviews",
+      href: "/#reviews",
     },
   ];
 

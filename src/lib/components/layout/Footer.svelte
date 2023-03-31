@@ -69,7 +69,7 @@
             class="mt-8 flex justify-center md:mt-0 md:items-end md:justify-end"
           >
             <a
-              href="contact"
+              href="/contact"
               class="btn btn-light text-primary-700 hover:text-primary-700"
               >Get In Touch</a
             >

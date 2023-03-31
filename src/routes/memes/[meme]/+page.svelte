@@ -5,17 +5,30 @@
   import FigureSmall from "$lib/components/svg/FigureSmall.svelte";
 
   export let data;
-  let meme = data.meme;
+
+  const { slug, title, image } = data.meme;
 </script>
+
+<svelte:head>
+  <!-- Be sure to add your image files and un-comment the lines below -->
+  <title>{title}</title>
+  <meta data-key="description" name="description" content={title} />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={title} />
+  <!-- <meta name="twitter:title" content={title} /> -->
+  <!-- <meta property="og:description" content={title} /> -->
+  <!-- <meta name="twitter:description" content={title} /> -->
+  <!-- <meta property="og:image" content="https://yourdomain.com/image_path" /> -->
+  <!-- <meta property="og:image:width" content={coverWidth} /> -->
+  <!-- <meta property="og:image:height" content={coverHeight} /> -->
+  <!-- <meta name="twitter:image" content="https://yourdomain.com/image_path" /> -->
+</svelte:head>
 
 <article class="relative overflow-hidden pb-8 pt-36 lg:py-40 xl:py-44">
   <div class="container">
     <div class="lg:mx-24 xl:mx-36">
-      <div class="relative mx-auto">
-        <!-- TODO fix centering -->
-        <div class="mx-auto">
-          <img class="rounded-xl" src={meme} alt="TODO" />
-        </div>
+      <div class="relative">
+        <img class="rounded-xl" src={image} alt={title} />
         <FigureSmall
           class="absolute left-0 top-0 -z-10 -ml-8 -mt-8 h-20 w-20 animate-move-top lg:-ml-12 lg:-mt-12 lg:h-32 lg:w-32"
         />

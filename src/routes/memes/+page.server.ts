@@ -1,6 +1,9 @@
-export const load = async ({ url, fetch }) => {
-  const memesRes = await fetch(`${url.origin}/api/memes.json`);
-  const memes = await memesRes.json();
+import { fetchMemes } from '$lib/assets/js/utils';
 
-  return { memes };
+export const load = async ({ url, fetch }) => {
+  const memes = await fetchMemes()
+
+  return {
+    memes: memes
+  };
 };

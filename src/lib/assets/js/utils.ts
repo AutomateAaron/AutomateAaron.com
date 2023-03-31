@@ -1,10 +1,15 @@
 import { blogsPerPage } from "$lib/config";
+import type { IMeme } from "$lib/types/generalTypes";
+
+import path from "path";
+import glob from "glob";
+import fs from 'fs';
 
 export async function fetchBlogs({
   offset = 0,
   limit = blogsPerPage,
   category = "",
-}) {
+} = {}) {
   let blogs = await Promise.all(
     Object.entries(import.meta.glob("/src/lib/blogs/*.md")).map(
       async ([path, resolver]) => {
@@ -43,35 +48,43 @@ export async function fetchBlogs({
 }
 
 export async function fetchMemes({ offset = 0, limit = 0 } = {}) {
-  let memes = await Promise.all(
-    // TODO replace glob for non-import glob
-    Object.entries(import.meta.glob("/src/lib/memes/*.png")).map(
-      async ([path, resolver]) => {
-        const image = path;
-        const title = path;
-        const slug = path.split("/").pop().slice(0, -4);
-        return { slug, image, title };
-      }
-    )
-  );
+
+  let paths = glob.sync('./static/memes/*.png')
+  paths = paths.sort((a, b) => fs.statSync(b).mtime.getTime() - fs.statSync(a).mtime.getTime())
 
   if (offset) {
-    memes = memes.slice(offset);
+    paths = paths.slice(offset);
   }
 
-  if (limit && limit < memes.length && limit != -1) {
-    memes = memes.slice(0, limit);
+  if (limit && limit < paths.length && limit != -1) {
+    paths = paths.slice(0, limit);
   }
+
+  let memes = paths.map(getMemeFromPath)
 
   return memes;
 }
 
-// export async function fetchMeme() {
-//   return
-// }
+export async function fetchMeme(slug: string) {
+  let memes = await fetchMemes()
+  for (let i in memes) {
+    let meme = memes[i]
+    if (meme.slug == slug) {
+      return meme
+    }
+  }
+  return null;
+}
 
-// export const fetchMeme = async ({
-//   slug: string;
-// }) => {
-//   return slug;
-// }
+export function getMemeFromPath(pathStr: string) {
+
+  let parsed = path.parse(pathStr)
+
+  let meme: IMeme = {
+    slug: parsed.name,
+    image: '/memes/' + parsed.base,
+    title: parsed.name,
+  }
+
+  return meme;
+}

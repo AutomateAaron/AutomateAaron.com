@@ -24,7 +24,7 @@
     </div>
 
     <div class="mt-8 flex justify-center">
-      <a href="memes" class="btn btn-outline"> See All Memes </a>
+      <a href="/memes" class="btn btn-outline"> See All Memes </a>
     </div>
   </div>
 </section>

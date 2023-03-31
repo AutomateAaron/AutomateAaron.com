@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { IBlog, IMeme } from "$lib/types/generalTypes";
-  import PostsList from "$lib/components/blog/BlogsList.svelte";
   import { siteDescription } from "$lib/config";
   import MemesList from "$lib/components/memes/MemesList.svelte";
 
