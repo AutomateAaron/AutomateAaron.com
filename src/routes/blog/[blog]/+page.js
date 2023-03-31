@@ -1,6 +1,5 @@
 import { error } from "@sveltejs/kit";
 
-
 export const load = async ({ params }) => {
   try {
     const blog = await import(`../../../lib/blogs/${params.blog}.md`);

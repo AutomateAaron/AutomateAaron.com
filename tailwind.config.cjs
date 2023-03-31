@@ -31,15 +31,13 @@ module.exports = {
           600: colors.violet[500],
         },
       },
-      colorClasses: [
-        "gradient",
-      ],
+      colorClasses: ["gradient"],
     },
 
     extend: {
       aspectRatio: {
-        '4/3': '4 / 3',
-        '3/2': '3 / 2',
+        "4/3": "4 / 3",
+        "3/2": "3 / 2",
       },
       colors: {
         primary: colors.violet,

@@ -1,9 +1,9 @@
-import { fetchMemes } from '$lib/assets/js/utils';
+import { fetchMemes } from "$lib/assets/js/utils";
 
 export const load = async ({ url, fetch }) => {
-  const memes = await fetchMemes()
+  const memes = await fetchMemes();
 
   return {
-    memes: memes
+    memes: memes,
   };
 };

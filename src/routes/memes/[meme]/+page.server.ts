@@ -1,7 +1,6 @@
 import { fetchMeme } from "$lib/assets/js/utils";
 import { error } from "@sveltejs/kit";
 
-
 export const load = async ({ params }) => {
   const meme = await fetchMeme(params.meme);
 
@@ -10,6 +9,6 @@ export const load = async ({ params }) => {
       meme: meme,
     };
   } else {
-    throw error(404, 'Meme Not Found');
+    throw error(404, "Meme Not Found");
   }
 };
