@@ -62,13 +62,13 @@
     @apply font-serif;
   }
 
-  p > a {
+  /* p > a {
     @apply underline;
   }
 
   a {
     @apply hover:text-primary-700;
-  }
+  } */
 
   /* #endregion  /**======== Typography =========== */
 }
@@ -243,7 +243,20 @@
   }
   /* #endregion  /**======== Syntax Highlighting ============ */
 
+
+  /* a.btn {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+  } */
+
   .btn {
+    @apply hover:scale-105 rounded-lg border-4
+  }
+
+  /* .btn {
     @apply rounded-lg border-2 px-6 py-3 text-center font-semibold transition-all text-gray-100 bg-gray-700 border-gray-700 hover:scale-105 hover:shadow-xl hover:text-gray-100 active:scale-95 active:duration-100;
   }
 
@@ -269,7 +282,7 @@
 
   .btn-outline.btn-light {
     @apply text-gray-200;
-  }
+  } */
 
   .pre-line-top-title {
     @apply relative ml-8 -translate-x-1/2 transform before:absolute before:-left-8 before:top-1/2 before:h-0.5 before:w-5 before:bg-gray-900;

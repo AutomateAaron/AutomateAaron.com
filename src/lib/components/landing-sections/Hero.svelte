@@ -35,7 +35,10 @@
           guidance.
         </p>
 
-        <a href="/contact" class="btn btn-primary inline-block">Contact me</a>
+        <a href="/contact">
+          <button class="btn-primary btn-lg btn inline-block">Contact me</button
+          >
+        </a>
       </div>
 
       <div
@@ -70,10 +73,10 @@
           />
 
           <div
-            class="group absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-opacity-50 bg-gray-800 dark:bg-opacity-50 dark:bg-gray-800"
+            class="group absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-gray-800 bg-opacity-50 dark:bg-gray-800 dark:bg-opacity-50"
           >
             <div
-              class="flex aspect-square h-2/5 transform items-center justify-center rounded-full transition-all duration-300 ease-in-out bg-gray-100 text-primary-700 group-hover:scale-110 group-hover:text-gray-100 group-hover:bg-primary-700"
+              class="flex aspect-square h-2/5 transform items-center justify-center rounded-full bg-gray-100 text-primary-700 transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:bg-primary-700 group-hover:text-gray-100"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +115,7 @@
 
 {#if showModal}
   <div
-    class="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-opacity-70 p-2 bg-black"
+    class="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-black bg-opacity-70 p-2"
   >
     <div class="relative aspect-video w-full max-w-4xl">
       <iframe

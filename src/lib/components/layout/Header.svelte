@@ -43,7 +43,7 @@
 <header bind:this={outerElement} class="sticky -top-8 z-30 -mb-28 h-28">
   <div
     class="mx-4 w-auto rounded-b-xl pt-8 md:mx-0 {scrollY > heightDifference
-      ? 'shadow-lg bg-gray-100'
+      ? 'bg-gray-100 shadow-lg'
       : 'bg-transparent'}"
   >
     <div
@@ -77,9 +77,9 @@
           {/if}
         </button>
 
-        <a href="/contact" class="btn btn-primary hidden md:block"
-          >Get in Touch</a
-        >
+        <a href="/contact">
+          <button class="btn-primary btn hidden md:block">Get in Touch</button>
+        </a>
 
         <button
           class="md:hidden"
@@ -95,7 +95,7 @@
     {#if showMobileMenu}
       <div
         transition:slide={{ duration: 400 }}
-        class="rounded-xl shadow-lg bg-gray-100 md:hidden"
+        class="rounded-xl bg-gray-100 shadow-lg md:hidden"
       >
         <nav class="px-5 py-4 ">
           <ul class="space-y-2">
@@ -111,7 +111,7 @@
             {/each}
 
             <li>
-              <a href="/contact" class="btn btn-primary inline-block w-full"
+              <a href="/contact" class="btn-primary btn inline-block w-full"
                 >Get in Touch</a
               >
             </li>
@@ -124,7 +124,7 @@
 
 <style lang="postcss">
   .navbar-toggle-icon {
-    @apply mb-[5px] block h-0.5 w-6 transition-all duration-300 ease-linear bg-primary-700;
+    @apply mb-[5px] block h-0.5 w-6 bg-primary-700 transition-all duration-300 ease-linear;
   }
 
   .icon-1 {

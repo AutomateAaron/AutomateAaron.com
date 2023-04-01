@@ -1,6 +1,8 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 const nightwind = require("nightwind");
+const daisyui = require("daisyui");
+
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -75,5 +77,5 @@ module.exports = {
       mono: ['"Source Code Pro"', ...defaultTheme.fontFamily.mono],
     },
   },
-  plugins: [nightwind],
+  plugins: [daisyui],
 };

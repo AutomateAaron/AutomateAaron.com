@@ -33,7 +33,7 @@
 
       <!-- text -->
       <div
-        class="relative z-10 mx-4 -mt-48 rounded-xl p-6 text-gray-100 bg-gray-800 dark:text-gray-100 dark:bg-gray-700 md:mx-0 md:-ml-12 md:-mt-0 md:w-3/5 md:p-12"
+        class="relative z-10 mx-4 -mt-48 rounded-xl bg-gray-800 p-6 text-gray-100 dark:bg-gray-700 dark:text-gray-100 md:mx-0 md:-ml-12 md:-mt-0 md:w-3/5 md:p-12"
       >
         <h3 class="h3">Who am I?</h3>
         <p class="mb-6 text-gray-200 dark:text-gray-100">
@@ -46,12 +46,12 @@
         </p>
 
         <div class="-m-2">
-          <a href="/contact" class="btn btn-primary m-2 inline-block"
-            >Contact Me</a
+          <a href="/contact" class="m-2 inline-block"
+            ><button class="btn-primary btn">Contact Me</button></a
           >
-          <a href="/contact" class="btn btn-light btn-outline m-2 inline-block"
-            >Lets chat!</a
-          >
+          <a href="/contact" class="m-2 inline-block">
+            <button class="btn-light btn-outline btn ">Lets chat!</button>
+          </a>
         </div>
       </div>
 
