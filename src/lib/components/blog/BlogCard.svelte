@@ -18,11 +18,9 @@
       </div>
     </div>
 
-    <div class="relative -mt-16 rounded-xl p-8 shadow-xl bg-gray-50 lg:ml-8">
-      <span class="pre-line-top-title text-base text-primary-700"
-        >{blog.date}</span
-      >
-      <h4 class="h5 mb-0 mt-5 group-hover:text-primary-700">{blog.title}</h4>
+    <div class="relative -mt-16 rounded-xl bg-base-100 p-8 shadow-xl lg:ml-8">
+      <span class="pre-line-top-title text-base text-primary">{blog.date}</span>
+      <h4 class="h5 mb-0 mt-5 group-hover:text-primary">{blog.title}</h4>
     </div>
   </a>
 </div>

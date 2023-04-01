@@ -6,18 +6,15 @@
 </script>
 
 <div
-  class="mb-12 h-[500px] w-full rounded-xl p-8 shadow-xl bg-gray-100 md:h-[520px] lg:h-[620px] xl:h-[520px]"
+  class="mb-12 h-[500px] w-full rounded-xl bg-base-100 p-8 shadow-xl md:h-[520px] lg:h-[620px] xl:h-[520px]"
 >
   <!-- render icon -->
   {#if service?.icon}
     <div class="relative mb-4 flex h-32 w-24 items-end justify-start">
       <div class="absolute left-0 top-0">
-        <ServiceCardBlob class="z-20 text-gray-200" />
+        <ServiceCardBlob class="z-20 text-base-300" />
       </div>
-      <svelte:component
-        this={service?.icon}
-        class="z-30 h-16 text-primary-700"
-      />
+      <svelte:component this={service?.icon} class="z-20 h-16 text-primary" />
     </div>
   {/if}
 

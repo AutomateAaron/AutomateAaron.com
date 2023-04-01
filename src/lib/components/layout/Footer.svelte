@@ -39,27 +39,23 @@
   ];
 </script>
 
-<footer class="relative mt-40 bg-gray-800 dark:bg-gray-700">
-  <div class="z-00 relative text-gray-100">
-    <svg viewBox="0 0 1920 79"
-      ><path
-        d="M0 0h1920v79L0 0z"
-        data-name="Path 1450"
-        fill="currentColor"
-      /></svg
-    >
+<footer class="relative mt-40 text-accent-content">
+  <div class="absolute -top-10 -z-40 mt-10 h-full w-full overflow-hidden">
+    <div
+      class="absolute top-36 -z-40 h-full w-full skew-y-2 transform overflow-hidden bg-accent"
+    />
   </div>
 
   <div class="container">
     <!-- contact -->
     {#if $page.url.pathname != "/contact"}
       <div
-        class="relative -mt-48 overflow-hidden rounded-xl px-10 py-16 text-gray-100 bg-primary-700 md:px-20 lg:py-20 xl:py-24"
+        class="relative overflow-hidden rounded-xl bg-primary px-10 py-16 text-primary-content md:px-20 lg:py-20 xl:py-24"
       >
         <div class="relative z-10 justify-between gap-4 md:flex">
           <div class="">
             <span
-              class="pre-line-top-title text-xl leading-none before:bg-gray-100"
+              class="pre-line-top-title text-xl leading-none before:bg-primary-content"
               >Contact Me</span
             >
             <h2 class="h2 mt-5 text-left md:mb-0">Let's Start a Project</h2>
@@ -68,22 +64,20 @@
           <div
             class="mt-8 flex justify-center md:mt-0 md:items-end md:justify-end"
           >
-            <a
-              href="/contact"
-              class="btn btn-light text-primary-700 hover:text-primary-700"
-              >Get In Touch</a
+            <a href="/contact"
+              ><button class="btn-outline btn text-primary-content"
+                >Get In Touch</button
+              ></a
             >
           </div>
         </div>
 
-        <div
-          class="absolute -top-[43%] left-[2%] z-0 transform opacity-10 text-gray-800"
-        >
+        <div class="absolute -top-[43%] left-[2%] z-0 text-primary-focus">
           <Shape1 class="h-80 w-[357px] animate-spin-slow" />
         </div>
 
         <div
-          class="absolute -right-[9%] top-[12%] z-0 rotate-[80deg] transform animate-move-top opacity-10 text-gray-800"
+          class="absolute -right-[9%] top-[12%] z-0 rotate-[80deg] transform animate-move-top text-primary-focus"
         >
           <Shape2 class="h-52 w-60 " />
         </div>
@@ -92,7 +86,7 @@
 
     <!-- footer -->
     <div
-      class="flex flex-col items-center space-y-12 py-12 text-gray-100 dark:text-gray-100 lg:flex-row lg:items-center lg:justify-between lg:py-20"
+      class="flex flex-col items-center space-y-12 py-12 lg:flex-row lg:items-center lg:justify-between lg:py-20"
     >
       <div>
         <img src={Logo} alt="" />
@@ -117,7 +111,7 @@
             class="flex w-full items-center justify-center space-x-3 lg:justify-start"
           >
             <span class="flex w-6 items-center justify-center">
-              <Phone classNames="fill-gray-100 w-4" />
+              <Phone classNames="fill-accent-content w-4" />
             </span>
             <span>+(609) 555 1212</span>
           </a>
@@ -127,7 +121,7 @@
             class="flex w-full items-center justify-center space-x-3 lg:justify-start"
           >
             <span class="flex w-6 items-center justify-center">
-              <Envelope classNames="fill-gray-100 w-6 stroke-gray-20" />
+              <Envelope classNames="fill-accent-content w-6" />
             </span>
             <span>Hello@AaronNBrock.com</span>
           </a>
@@ -136,7 +130,7 @@
             class="flex w-full items-center justify-center space-x-3 lg:justify-start"
           >
             <span class="flex w-6 items-center justify-center">
-              <Location classNames="fill-gray-100 w-4 stroke-gray-20" />
+              <Location classNames="fill-accent-content w-4" />
             </span>
             <span>1234 Main Street, Anytown, USA 12345</span>
           </span>
@@ -148,7 +142,7 @@
   <!-- copyright -->
   <div>
     <div
-      class="container grid-cols-2 border-t border-[rgba(255,255,255,.2)] py-10 lg:grid"
+      class="container grid-cols-2 border-t border-accent-content py-10 lg:grid"
     >
       <p class="text-center lg:text-left">
         All right reserved copyright © Aaron N. Brock 2023
@@ -162,7 +156,7 @@
           <a href={item?.url} class="group">
             <svelte:component
               this={item?.icon}
-              classNames="h-5 fill-gray-100 group-hover:fill-primary-700 transition-colors"
+              classNames="h-5 fill-accent-content group-hover:fill-primary transition-colors"
             />
           </a>
         {/each}

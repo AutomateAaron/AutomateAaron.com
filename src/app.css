@@ -6,7 +6,7 @@
   html {
     @apply scroll-smooth;
   }
-  
+
   * {
     @apply duration-300 ease-in-out;
   }
@@ -54,7 +54,7 @@
 
   body,
   .body {
-    @apply font-sans text-base leading-normal text-gray-800 bg-gray-100 selection:text-gray-100 selection:bg-primary-900 md:text-xl;
+    @apply bg-base-200 font-sans text-base leading-normal text-base-content selection:bg-primary-focus selection:text-base-200 md:text-xl;
   }
 
   p,
@@ -67,7 +67,7 @@
   }
 
   a {
-    @apply hover:text-primary-700;
+    @apply hover:text-primary;
   } */
 
   /* #endregion  /**======== Typography =========== */
@@ -116,12 +116,12 @@
 
   /* Code blocks */
   pre[class*="language-"] {
-    @apply my-4 overflow-auto rounded-xl p-4 shadow bg-gray-50 border-gray-200;
+    @apply my-4 overflow-auto rounded-xl border-base-100 bg-base-100 p-4 shadow;
   }
 
   /* Inline code */
   :not(pre) > code[class*="language-"] {
-    @apply overflow-auto rounded-xl px-2 py-1 bg-gray-50;
+    @apply overflow-auto rounded-xl bg-base-100 px-2 py-1;
   }
 
   .token.comment,
@@ -143,7 +143,7 @@
   .token.punctuation,
   .token.operator {
     color: #393a34; /* no highlight */
-    @apply text-gray-800;
+    @apply text-base-content;
   }
 
   .token.url,
@@ -211,7 +211,7 @@
   }
 
   .token.directive.tag .tag {
-    @apply text-gray-800 bg-yellow-600;
+    @apply bg-yellow-600 text-base-content;
   }
 
   /* overrides color-values for the Line Numbers plugin
@@ -243,7 +243,6 @@
   }
   /* #endregion  /**======== Syntax Highlighting ============ */
 
-
   /* a.btn {
     -webkit-appearance: button;
     -moz-appearance: button;
@@ -253,38 +252,10 @@
   } */
 
   .btn {
-    @apply hover:scale-105 rounded-lg border-4
+    @apply rounded-lg border-4 hover:scale-105;
   }
-
-  /* .btn {
-    @apply rounded-lg border-2 px-6 py-3 text-center font-semibold transition-all text-gray-100 bg-gray-700 border-gray-700 hover:scale-105 hover:shadow-xl hover:text-gray-100 active:scale-95 active:duration-100;
-  }
-
-  .btn-outline {
-    @apply bg-transparent text-gray-700 hover:text-gray-700 dark:bg-transparent;
-  }
-
-  .btn-primary {
-    @apply text-gray-200 bg-primary-700 border-primary-700;
-  }
-
-  .btn-light {
-    @apply text-gray-700 bg-gray-200 border-gray-200 hover:text-gray-700;
-  }
-
-  .btn-outline {
-    @apply bg-transparent dark:bg-transparent;
-  }
-
-  .btn-outline.btn-primary {
-    @apply text-primary-700;
-  }
-
-  .btn-outline.btn-light {
-    @apply text-gray-200;
-  } */
 
   .pre-line-top-title {
-    @apply relative ml-8 -translate-x-1/2 transform before:absolute before:-left-8 before:top-1/2 before:h-0.5 before:w-5 before:bg-gray-900;
+    @apply relative ml-8 -translate-x-1/2 transform before:absolute before:-left-8 before:top-1/2 before:h-0.5 before:w-5 before:bg-base-content;
   }
 }

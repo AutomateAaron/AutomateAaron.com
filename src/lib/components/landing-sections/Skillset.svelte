@@ -56,10 +56,8 @@
 
       <div class="grid grid-cols-3">
         {#each skills as skill}
-          <span
-            class="border-gray-5 flex items-center justify-start space-x-2 border-t p-1"
-          >
-            <Check classNames="h-5 w-5 text-primary-700 fill-current" />
+          <span class="flex items-center justify-start space-x-2 border-t p-1">
+            <Check classNames="h-5 w-5 text-primary fill-current" />
             <span class="text-xl leading-normal">{skill}</span>
           </span>
         {/each}
@@ -73,6 +71,6 @@
 
   <div class="absolute -bottom-[0%] right-[2%] -z-20 hidden transform lg:block">
     <!-- <SkillBlob classNames="h-72 w-72" /> -->
-    <BreathingBlob gradientId="ddd" class="h-72 w-72 rotate-90 text-gray-200" />
+    <BreathingBlob gradientId="ddd" class="h-72 w-72 rotate-90 text-base-300" />
   </div>
 </section>

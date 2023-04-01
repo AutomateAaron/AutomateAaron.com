@@ -36,7 +36,7 @@
         />
         <BreathingBlob
           gradientId="blog"
-          class=" absolute -left-24 -top-24 -z-20 h-40 w-40 text-gray-200 lg:-left-44 lg:-top-44 lg:h-80 lg:w-80"
+          class=" absolute -left-24 -top-24 -z-20 h-40 w-40 text-base-300 lg:-left-44 lg:-top-44 lg:h-80 lg:w-80"
         />
       </div>
     </div>
@@ -49,21 +49,19 @@
     <main class="my-16 lg:mx-40 xl:mx-48">
       <svelte:component this={BlogContent} />
     </main>
-    <!-- {#if categories}
-      <aside
-        class="mt-16 flex items-center text-base text-gray-600 lg:mx-40 xl:mx-48"
-      >
+    {#if categories}
+      <aside class="mt-16 flex items-center text-base lg:mx-40 xl:mx-48">
         <span>Categories:</span>
         <ul class="inline-block">
           {#each categories as category}
-            <li class="float-left ml-4 rounded-xl px-2 py-1 bg-primary-100">
-              <a href="/blog/category/{category}/">
-                #{category}
+            <li class="float-left ml-4">
+              <a href="/blog/">
+                <span class="badge-secondary badge">#{category}</span>
               </a>
             </li>
           {/each}
         </ul>
       </aside>
-    {/if} -->
+    {/if}
   </div>
 </article>

@@ -18,13 +18,13 @@
     </div>
     <div class="relative max-h-[60vh] overflow-hidden">
       <div
-        class="pointer-events-none absolute bottom-0 z-20 h-1/3 w-full bg-gradient-to-t from-gray-100 to-transparent"
+        class="pointer-events-none absolute bottom-0 z-20 h-1/3 w-full bg-gradient-to-t from-base-200 to-transparent"
       />
       <MemesList {memes} />
     </div>
 
     <div class="mt-8 flex justify-center">
-      <a href="/memes" class="btn btn-outline"> See All Memes </a>
+      <a href="/memes" class="btn-outline btn text-neutral"> See All Memes </a>
     </div>
   </div>
 </section>

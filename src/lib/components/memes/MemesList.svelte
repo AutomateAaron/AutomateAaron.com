@@ -19,7 +19,7 @@
 {#if selected}
   <div class="fixed left-0 top-0 z-50 ">
     <div
-      class="absolute flex h-screen w-screen items-center justify-center bg-opacity-70 p-2 bg-black"
+      class="absolute flex h-screen w-screen items-center justify-center bg-black bg-opacity-70 p-2"
     >
       <img src={selected.image} alt={selected.title} />
     </div>

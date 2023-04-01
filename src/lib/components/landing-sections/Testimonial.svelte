@@ -61,7 +61,7 @@
 <section id="reviews" class="my-36">
   <div class="relative">
     <div
-      class="absolute bottom-0 left-0 right-0 top-0 -z-40 skew-y-2 transform bg-gray-200"
+      class="absolute bottom-0 left-0 right-0 top-0 -z-40 skew-y-2 transform bg-base-300"
     />
 
     <div class="container overflow-hidden py-24">
@@ -78,7 +78,7 @@
           {#each testimonials as item, i}
             <SplideSlide>
               <div
-                class="h-full rounded-xl px-8 py-12 bg-gray-100 md:px-12 md:py-16"
+                class="h-full rounded-xl bg-base-200 px-8 py-12 md:px-12 md:py-16"
               >
                 <div>
                   {#each Array(item.star) as star, i}
@@ -92,11 +92,11 @@
 
                 <div>
                   <span
-                    class="pre-line-top-title text-base font-bold leading-none text-gray-600"
+                    class="pre-line-top-title text-base font-bold leading-none"
                   >
                     {item.name}
                   </span>
-                  <span class="text-base leading-none text-gray-400">
+                  <span class="text-base leading-none opacity-50">
                     | {item.time}</span
                   >
                 </div>

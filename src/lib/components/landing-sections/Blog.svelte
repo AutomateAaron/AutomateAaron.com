@@ -19,17 +19,21 @@
 
       <div class="hidden lg:block">
         <a href="blog" class="inline-block">
-          <button class="btn-outline btn-lg btn">See All Blogs</button>
+          <button class="btn-outline btn-lg btn text-neutral"
+            >See All Blogs</button
+          >
         </a>
       </div>
     </div>
     <BlogsList {blogs} />
 
     <div class="mt-8 flex justify-center lg:hidden">
-      <a href="blog" class="btn-outline btn inline-block"> See All Blogs </a>
+      <a href="blog" class="btn-outline btn inline-block text-neutral">
+        See All Blogs
+      </a>
     </div>
     <div class="absolute -right-[10%] -top-[5%] -z-20">
-      <BlogBlob class="h-96 w-96 animate-spin-slow text-gray-200" />
+      <BlogBlob class="h-96 w-96 animate-spin-slow text-base-300" />
     </div>
   </div>
 </section>

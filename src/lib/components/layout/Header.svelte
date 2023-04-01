@@ -43,7 +43,7 @@
 <header bind:this={outerElement} class="sticky -top-8 z-30 -mb-28 h-28">
   <div
     class="mx-4 w-auto rounded-b-xl pt-8 md:mx-0 {scrollY > heightDifference
-      ? 'bg-gray-100 shadow-lg'
+      ? 'bg-base-200 shadow-lg'
       : 'bg-transparent'}"
   >
     <div
@@ -60,7 +60,7 @@
             <li>
               <a
                 href={item.route}
-                class="hover:text-primary active:text-primary p-2 text-center text-lg transition-all duration-300 ease-in-out"
+                class="p-2 text-center text-lg transition-all duration-300 ease-in-out hover:text-primary active:text-primary"
                 >{item.title}</a
               >
             </li>
@@ -95,7 +95,7 @@
     {#if showMobileMenu}
       <div
         transition:slide={{ duration: 400 }}
-        class="rounded-xl bg-gray-100 shadow-lg md:hidden"
+        class="rounded-xl bg-base-200 shadow-lg md:hidden"
       >
         <nav class="px-5 py-4 ">
           <ul class="space-y-2">
@@ -103,9 +103,9 @@
               <li>
                 <a
                   on:click={() => (showMobileMenu = false)}
-                  href={item.href}
-                  class="hover:text-primary active:text-primary p-2 text-center text-lg transition-all duration-300 ease-in-out"
-                  >{item.name}</a
+                  href={item.route}
+                  class="p-2 text-center text-lg transition-all duration-300 ease-in-out hover:text-primary active:text-primary"
+                  >{item.title}</a
                 >
               </li>
             {/each}
@@ -124,7 +124,7 @@
 
 <style lang="postcss">
   .navbar-toggle-icon {
-    @apply mb-[5px] block h-0.5 w-6 bg-primary-700 transition-all duration-300 ease-linear;
+    @apply mb-[5px] block h-0.5 w-6 bg-base-content transition-all duration-300 ease-linear;
   }
 
   .icon-1 {

@@ -82,15 +82,16 @@
 
 <section id="resume" class="relative mb-10 py-12 md:py-24 lg:mb-24 lg:py-36">
   <div
-    class="z-00 absolute bottom-0 left-0 right-0 top-0 -skew-y-2 transform bg-gray-800 dark:bg-gray-700"
+    class="z-00 absolute bottom-0 left-0 right-0 top-0 -skew-y-2 transform bg-accent "
   />
 
-  <div class="container relative items-start justify-between gap-x-6 lg:flex">
-    <div class="!top-48 w-full text-gray-100 lg:!sticky lg:pr-20">
+  <div class="container relative items-start justify-between gap-x-6  lg:flex">
+    <div class="!top-48 w-full text-accent-content lg:!sticky lg:pr-20">
       <span
-        class="pre-line-top-title mb-4 text-xl leading-normal before:bg-gray-100"
-        >Resume</span
+        class="pre-line-top-title mb-4 text-xl leading-normal before:bg-accent-content"
       >
+        Resume
+      </span>
       <h2 class="h2 mt-4">Experiences.</h2>
       <p class="mb-4">
         What? You don’t want to just take my word for it that I know what I’m
@@ -98,21 +99,21 @@
       </p>
 
       <div
-        class="mt-12 flex items-center justify-between duration-300 ease-in-out text-gray-100 hover:scale-105 hover:shadow-lg"
+        class="mt-12 flex items-center justify-between hover:scale-105 hover:shadow-lg "
       >
         <button
-          class="w-full rounded-l-2xl border-2 border-r-0 py-4
+          class="w-full rounded-l-2xl border-4 border-r-0 py-4
 					{currentTab == ActiveTab.Achievements
-            ? 'bg-primary-700 border-primary-700'
-            : 'dark:text-gray-100'}"
+            ? 'border-primary bg-primary text-primary-content'
+            : 'border-accent-content'}"
           on:click={() => setActiveTab(ActiveTab.Achievements)}
           >Achievements</button
         >
         <button
-          class="w-full rounded-r-2xl border-2 border-l-0 py-4 
+          class="w-full rounded-r-2xl border-4 border-l-0 py-4 
 					{currentTab == ActiveTab.Experience
-            ? 'bg-primary-700 border-primary-700'
-            : 'dark:text-gray-100'}"
+            ? 'border-primary bg-primary text-primary-content'
+            : 'border-accent-content'}"
           on:click={() => setActiveTab(ActiveTab.Experience)}>Experience</button
         >
       </div>
@@ -122,9 +123,9 @@
       {#each resume as section}
         {#if section.title === currentTab}
           {#each section.items as item}
-            <div class="rounded-xl p-8 bg-gray-100">
+            <div class="rounded-xl bg-base-200 p-8">
               <span
-                class="pre-line-top-title text-xl leading-normal text-primary-700 before:bg-primary-700"
+                class="pre-line-top-title text-xl leading-normal text-primary before:bg-primary"
                 >{item.date}</span
               >
               <h4

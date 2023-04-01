@@ -71,8 +71,7 @@
   <div>
     <div class="container">
       <div class="lg:w-1/2">
-        <span
-          class="pre-line-top-title mb-4 text-xl leading-normal text-gray-800"
+        <span class="pre-line-top-title mb-4 text-xl leading-normal leading"
           >Area of Work</span
         >
         <h2 class="h2 mt-4">Google Cloud</h2>
@@ -109,10 +108,10 @@
   </div>
 
   <div class="absolute -bottom-[4%] left-[-2%] -z-20 hidden transform lg:block">
-    <BreathingBlob gradientId="ccc" class="h-96 w-96 rotate-45 text-gray-200" />
+    <BreathingBlob gradientId="ccc" class="h-96 w-96 rotate-45 text-base-300" />
   </div>
 
-  <ServiceBg class="absolute right-0 top-0 z-[-2] w-3/5 text-gray-200" />
+  <ServiceBg class="absolute right-0 top-0 z-[-2] w-3/5 text-base-300" />
 </section>
 
 <style lang="postcss">

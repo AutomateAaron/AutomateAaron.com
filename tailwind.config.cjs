@@ -3,11 +3,11 @@ const colors = require("tailwindcss/colors");
 const nightwind = require("nightwind");
 const daisyui = require("daisyui");
 
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
   content: ["./src/**/*.{html,js,svelte,ts,md}"],
+
   theme: {
     container: {
       center: true,
@@ -41,10 +41,6 @@ module.exports = {
         "4/3": "4 / 3",
         "3/2": "3 / 2",
       },
-      colors: {
-        primary: colors.violet,
-        gray: colors.gray,
-      },
       animation: {
         "spin-slow": "spin 40s linear infinite",
         "move-top": "move-top 4s linear infinite",
@@ -77,5 +73,33 @@ module.exports = {
       mono: ['"Source Code Pro"', ...defaultTheme.fontFamily.mono],
     },
   },
+
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          "primary": colors.violet[700],
+          "primary-content": colors.slate[100],
+          "secondary": "#F9D72F",
+
+          "accent": colors.slate[800],
+          "accent-content": colors.slate[200],
+
+          "neutral": colors.slate[600],
+          "neutral-content": colors.slate[50],
+          "base-100": colors.slate[50],
+          "base-200": colors.slate[100],
+          "base-300": colors.slate[200],
+          "base-content": colors.slate[800],
+          "info": "#3ABFF8",
+          "success": "#36D399",
+          "warning": "#FBBD23",
+          "error": "#F87272",
+        },
+      },
+    ],
+  },
+
+
   plugins: [daisyui],
 };

@@ -33,10 +33,10 @@
 
       <!-- text -->
       <div
-        class="relative z-10 mx-4 -mt-48 rounded-xl bg-gray-800 p-6 text-gray-100 dark:bg-gray-700 dark:text-gray-100 md:mx-0 md:-ml-12 md:-mt-0 md:w-3/5 md:p-12"
+        class="relative z-10 mx-4 -mt-48 rounded-xl bg-accent p-6 text-accent-content md:mx-0 md:-ml-12 md:-mt-0 md:w-3/5 md:p-12"
       >
         <h3 class="h3">Who am I?</h3>
-        <p class="mb-6 text-gray-200 dark:text-gray-100">
+        <p class="mb-6">
           As a the leader in <a target="_blank" href="/">Google Cloud memes</a>,
           I know a thing or two about both communicating Google Cloud concepts
           and building applications on the platform. And, as a self proclaimed
@@ -50,7 +50,9 @@
             ><button class="btn-primary btn">Contact Me</button></a
           >
           <a href="/contact" class="m-2 inline-block">
-            <button class="btn-light btn-outline btn ">Lets chat!</button>
+            <button class="btn-outline btn text-accent-content"
+              >Lets chat!</button
+            >
           </a>
         </div>
       </div>
@@ -58,7 +60,7 @@
       <div class="absolute -right-[12%] -top-[20%] -z-50 hidden md:block">
         <BreathingBlob
           gradientId="aaa"
-          class="h-80 w-80 rotate-45 text-gray-200"
+          class="h-80 w-80 rotate-45 text-base-300"
         />
       </div>
     </div>

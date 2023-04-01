@@ -18,13 +18,12 @@
     <!-- text -->
     <div class="relative w-full text-center md:text-left">
       <div class="relative">
-        <span
-          class="pre-line-top-title mb-4 text-xl leading-normal text-gray-800"
+        <span class="pre-line-top-title mb-4 text-xl leading-normal"
           >Hello there,</span
         >
 
         <h1 class="h1 mt-4">
-          Let’s make <br /> <span class="text-primary-700">Google Cloud</span>
+          Let’s make <br /> <span class="text-primary">Google Cloud</span>
           <br /> simple
         </h1>
 
@@ -46,7 +45,7 @@
       >
         <BreathingBlob
           gradientId="hero"
-          class="h-56 w-56 text-gray-100 md:h-96 md:w-96"
+          class="h-56 w-56 text-base-200 md:h-96 md:w-96"
         />
       </div>
     </div>
@@ -63,7 +62,7 @@
 
         <!-- video -->
         <button
-          class="absolute -bottom-[5%] left-0 right-0 mx-auto aspect-3/2 w-2/5 min-w-[8rem] overflow-hidden rounded-lg border-2 border-gray-100 md:-left-1/2 md:right-1/2 md:top-2/3"
+          class="absolute -bottom-[5%] left-0 right-0 mx-auto aspect-3/2 w-2/5 min-w-[8rem] overflow-hidden rounded-lg border-2 border-base-200 md:-left-1/2 md:right-1/2 md:top-2/3"
           on:click={() => (showModal = true)}
         >
           <img
@@ -73,10 +72,10 @@
           />
 
           <div
-            class="group absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-gray-800 bg-opacity-50 dark:bg-gray-800 dark:bg-opacity-50"
+            class="group absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-base-content bg-opacity-50"
           >
             <div
-              class="flex aspect-square h-2/5 transform items-center justify-center rounded-full bg-gray-100 text-primary-700 transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:bg-primary-700 group-hover:text-gray-100"
+              class="flex aspect-square h-2/5 transform items-center justify-center rounded-full bg-base-200 text-primary transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:bg-primary group-hover:text-base-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -103,11 +102,11 @@
   </div>
 
   <!-- gray bg -->
-  <HeroBg class="absolute left-0 top-0 -z-50 w-[65%] text-gray-200" />
+  <HeroBg class="absolute left-0 top-0 -z-50 w-[65%] text-base-300" />
 
   <!-- figure -->
   <div
-    class="absolute -left-32 bottom-5 -z-10 hidden transform animate-move-top md:block"
+    class="absolute -left-32 bottom-5 z-10 hidden transform animate-move-top md:block"
   >
     <Figure class="h-52 w-52" />
   </div>
