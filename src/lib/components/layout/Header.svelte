@@ -42,19 +42,19 @@
 
 <header bind:this={outerElement} class="sticky -top-8 z-30 -mb-28 h-28">
   <div
-    class="mx-4 w-auto rounded-b-xl pt-8 md:mx-0 {scrollY > heightDifference
-      ? 'bg-base-200 shadow-lg'
+    class="mx-4 w-auto rounded-b-xl px-4 pt-8 md:mx-0 {scrollY >
+    heightDifference
+      ? 'bg-base-200 md:shadow-lg'
       : 'bg-transparent'}"
   >
-    <div
-      bind:this={innerElement}
-      class="container flex h-16 items-center justify-between md:h-20"
-    >
-      <a href="/">
-        <img src={Logo} alt="" class="h-10 w-10" />
-      </a>
+    <div bind:this={innerElement} class="container navbar px-4">
+      <div class="navbar-start">
+        <a href="/">
+          <img src={Logo} alt="" class="h-10 w-10" />
+        </a>
+      </div>
 
-      <nav class="hidden md:block">
+      <nav class="navbar-center hidden md:block">
         <ul class="flex items-center justify-center">
           {#each navItems as item}
             <li>
@@ -68,7 +68,7 @@
         </ul>
       </nav>
 
-      <div class="flex items-center justify-end space-x-6">
+      <div class="navbar-end flex items-center justify-end space-x-6">
         <button on:click={toggleDarkMode}>
           {#if darkMode}
             <Sun classNames="h-6 w-6 text-primary" />
@@ -111,15 +111,19 @@
             {/each}
 
             <li>
-              <a href="/contact" class="btn-primary btn inline-block w-full"
-                >Get in Touch</a
-              >
+              <a href="/contact" class=" inline-block w-full">
+                <button class="btn-primary btn w-full">Get in Touch</button>
+              </a>
             </li>
           </ul>
         </nav>
       </div>
     {/if}
   </div>
+
+  <!-- <div class="container navbar bg-base-100">
+    <a class="btn-ghost btn text-xl normal-case">daisyUI</a>
+  </div> -->
 </header>
 
 <style lang="postcss">

@@ -78,28 +78,27 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          "primary": colors.violet[700],
+          primary: colors.violet[700],
           "primary-content": colors.slate[100],
-          "secondary": "#F9D72F",
+          secondary: "#F9D72F",
 
-          "accent": colors.slate[800],
+          accent: colors.slate[800],
           "accent-content": colors.slate[200],
 
-          "neutral": colors.slate[600],
+          neutral: colors.slate[600],
           "neutral-content": colors.slate[50],
           "base-100": colors.slate[50],
           "base-200": colors.slate[100],
           "base-300": colors.slate[200],
           "base-content": colors.slate[800],
-          "info": "#3ABFF8",
-          "success": "#36D399",
-          "warning": "#FBBD23",
-          "error": "#F87272",
+          info: "#3ABFF8",
+          success: "#36D399",
+          warning: "#FBBD23",
+          error: "#F87272",
         },
       },
     ],
   },
-
 
   plugins: [daisyui],
 };

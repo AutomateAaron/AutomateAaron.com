@@ -71,7 +71,7 @@
   <div>
     <div class="container">
       <div class="lg:w-1/2">
-        <span class="pre-line-top-title mb-4 text-xl leading-normal leading"
+        <span class="pre-line-top-title leading mb-4 text-xl leading-normal"
           >Area of Work</span
         >
         <h2 class="h2 mt-4">Google Cloud</h2>
