@@ -44,7 +44,7 @@
   <div
     class="mx-4 w-auto rounded-b-xl px-4 pt-8 md:mx-0 {scrollY >
     heightDifference
-      ? 'bg-base-200 md:shadow-lg'
+      ? 'bg-base-100 md:shadow-lg'
       : 'bg-transparent'}"
   >
     <div bind:this={innerElement} class="container navbar px-4">
