@@ -173,7 +173,8 @@
         class="relative z-10 -mb-16 rounded-xl bg-base-300 p-6 pb-20 shadow-lg md:-mr-20 md:w-4/5 md:pb-6 md:pr-20"
       >
         <h3 class="h3">Or, drop me a line...</h3>
-        <form class="form-control space-y-4" action="/action_page.php">
+
+        <form name="contact" method="POST" class="form-control space-y-4">
           <label for="message" class="label">
             <span class="label-text">Your Message</span>
           </label>
@@ -187,7 +188,7 @@
             placeholder="Bilbo@TheShire.net"
             class="input w-full max-w-xs"
           />
-          <button class="btn-primary btn w-min">Send</button>
+          <button type="submit" class="btn-primary btn w-min">Send</button>
         </form>
       </div>
       <!-- image -->

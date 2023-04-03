@@ -65,11 +65,10 @@
   p > a {
     @apply underline;
   }
-  
-  
+
   a {
     @apply hover:text-primary;
-  } 
+  }
 
   /* #endregion  /**======== Typography =========== */
 }

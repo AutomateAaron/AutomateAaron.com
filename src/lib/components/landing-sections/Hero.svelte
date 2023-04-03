@@ -113,7 +113,6 @@
   </div>
 </section>
 
-
 <!-- not using daisyui model since -->
 {#if showModal}
   <div
