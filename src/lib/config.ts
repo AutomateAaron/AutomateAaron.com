@@ -5,6 +5,14 @@
  * PLEASE BE SURE TO UPDATE THEM ALL! Thank you!
  **/
 
+import type { ISocialMediaLink } from "$lib/types/generalTypes";
+
+import Facebook from "$lib/components/svg/social-media/Facebook.svelte";
+import Github from "$lib/components/svg/social-media/Github.svelte";
+import Linkedin from "$lib/components/svg/social-media/Linkedin.svelte";
+import Medium from "$lib/components/svg/social-media/Medium.svelte";
+import Twitter from "$lib/components/svg/social-media/Twitter.svelte";
+
 export const siteTitle = "My Awesome Blog";
 export const siteDescription = "Built with the SvelteKit Static Blog Starter";
 export const siteURL = "example.com";
@@ -45,5 +53,47 @@ export const navItems = [
   {
     title: "Reviews",
     route: "/#reviews",
+  },
+];
+
+export const siteMap = [
+  {
+    title: "Home",
+    route: "/",
+  },
+  {
+    title: "Blog",
+    route: "/blog",
+  },
+  {
+    title: "Memes",
+    route: "/memes",
+  },
+  {
+    title: "Contact",
+    route: "/contact",
+  },
+];
+
+export const socialMediaLinks: ISocialMediaLink[] = [
+  {
+    url: "https://github.com/AaronNBrock",
+    icon: Github,
+  },
+  {
+    url: "https://www.linkedin.com/in/AaronNBrock/",
+    icon: Linkedin,
+  },
+  {
+    url: "https://www.facebook.com/AaronNBrock/",
+    icon: Facebook,
+  },
+  {
+    url: "https://twitter.com/AaronNBrock",
+    icon: Twitter,
+  },
+  {
+    url: "https://medium.com/@AaronNBrock",
+    icon: Medium,
   },
 ];

@@ -80,7 +80,10 @@
   };
 </script>
 
-<section id="resume" class="relative mb-10 py-12 md:py-24 lg:mb-24 lg:py-36">
+<section
+  id="resume"
+  class="relative mb-10 mt-36 py-12 md:py-24 lg:mb-24 lg:py-36"
+>
   <div
     class="z-00 absolute bottom-0 left-0 right-0 top-0 -skew-y-2 transform bg-accent "
   />

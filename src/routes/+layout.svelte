@@ -56,6 +56,5 @@
   </main>
   <!-- {/key} -->
   <Footer />
+  <div id="teleport" />
 </div>
-
-<div id="teleport" />

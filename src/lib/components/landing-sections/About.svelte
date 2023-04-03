@@ -33,7 +33,7 @@
 
       <!-- text -->
       <div
-        class="relative z-10 mx-4 -mt-48 rounded-xl bg-accent p-6 text-accent-content md:mx-0 md:-ml-12 md:-mt-0 md:w-3/5 md:p-12"
+        class="relative z-10 mx-4 -mt-48 rounded-xl bg-accent p-6 text-accent-content md:mx-0 md:-ml-12 md:-mt-0 md:w-1/2 md:p-12"
       >
         <h3 class="h3">Who am I?</h3>
         <p class="mb-6">

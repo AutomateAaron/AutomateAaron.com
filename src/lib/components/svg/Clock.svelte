@@ -1,5 +1,5 @@
-<script lang="ts">
-  export let classNames = "";
+<script>
+  import About from "../landing-sections/About.svelte";
 </script>
 
 <svg
@@ -8,7 +8,7 @@
   viewBox="0 0 24 24"
   stroke-width="1.5"
   stroke="currentColor"
-  class={classNames}
+  {...$$props}
 >
   <path
     stroke-linecap="round"

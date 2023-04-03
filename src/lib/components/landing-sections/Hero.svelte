@@ -2,7 +2,7 @@
   import HeroImage from "$lib/assets/images/hero/hero.jpg";
   import HeroMaskSvg from "$lib/assets/images/hero/hero-mask-svg.svg";
   import PopupThumb from "$lib/assets/images/hero/popup-thumb.jpg";
-  import Figure from "../svg/Figure.svelte";
+  import Figure from "$lib/components/svg/Figure.svelte";
   import HeroBg from "$lib/components/svg/landing-sections/hero/HeroBg.svelte";
 
   import Close from "../svg/Close.svelte";

@@ -4,23 +4,20 @@
 
   export let memes: IMeme[];
 
-  export let selected: IMeme | null = null;
+  export const selected: IMeme | null = null;
 </script>
 
 <div class="relative mt-12 columns-xs gap-4 space-y-4">
   {#each memes as meme}
-    <div class="group w-full overflow-hidden rounded-lg">
+    <div id="{meme.slug}-thumb" class="group w-full overflow-hidden rounded-lg">
       <a href="#{meme.slug}">
         <img src={meme.image} alt={meme.title} class="group-hover:scale-110" />
       </a>
     </div>
     <!-- Put this part before </body> tag -->
-    <div use:teleport class="modal" id={meme.slug}>
-      <div class="modal-action">
-        <a href="#" class="btn">Yay!</a>
-      </div>
-      <img class="max-h-screen" src={meme.image} alt={meme.title} />
-    </div>
+    <a href="#close" use:teleport class="modal" id={meme.slug}>
+      <img class="float-left max-h-screen" src={meme.image} alt={meme.title} />
+    </a>
   {/each}
 </div>
 

@@ -25,8 +25,8 @@
 <About />
 <Services />
 <Blog {blogs} />
-<Meme {memes} />
 <Resume />
-<Portfolio />
+<Meme {memes} />
+<!-- <Portfolio /> -->
 <Testimonial />
 <Skillset />
