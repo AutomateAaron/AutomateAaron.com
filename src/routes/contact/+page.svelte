@@ -179,7 +179,7 @@
           </label>
           <textarea
             id="message"
-            class="textarea-primary textarea h-48 duration-0 md:h-36 lg:h-24"
+            class="textarea h-48 duration-0 md:h-36 lg:h-24"
             placeholder="So...  I'm having this issue with..."
           />
           <input

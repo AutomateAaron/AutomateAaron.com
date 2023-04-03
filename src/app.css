@@ -62,13 +62,14 @@
     @apply font-serif;
   }
 
-  /* p > a {
+  p > a {
     @apply underline;
   }
-
+  
+  
   a {
     @apply hover:text-primary;
-  } */
+  } 
 
   /* #endregion  /**======== Typography =========== */
 }

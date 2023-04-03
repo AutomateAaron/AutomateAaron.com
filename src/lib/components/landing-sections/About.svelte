@@ -37,12 +37,16 @@
       >
         <h3 class="h3">Who am I?</h3>
         <p class="mb-6">
-          As a the leader in <a target="_blank" href="/">Google Cloud memes</a>,
-          I know a thing or two about both communicating Google Cloud concepts
-          and building applications on the platform. And, as a self proclaimed
-          fan boy, I keep up-to-date with Google’s newest offerings so you don’t
-          have to. My goal is to streamline your GCP usage so your business can
-          focus on what matters: your business.
+          As a the leader in <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.reddit.com/r/googlecloud/top/?t=all"
+            >Google Cloud memes</a
+          >, I know a thing or two about both communicating Google Cloud
+          concepts and building applications on the platform. And, as a self
+          proclaimed fan boy, I keep up-to-date with Google’s newest offerings
+          so you don’t have to. My goal is to streamline your GCP usage so your
+          business can focus on what matters: your business.
         </p>
 
         <div class="-m-2">

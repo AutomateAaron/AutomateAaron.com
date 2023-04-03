@@ -69,13 +69,14 @@
       </nav>
 
       <div class="navbar-end flex items-center justify-end space-x-6">
-        <button on:click={toggleDarkMode}>
+        <!-- Disabling until I implement a themes -->
+        <!-- <button on:click={toggleDarkMode}>
           {#if darkMode}
             <Sun classNames="h-6 w-6 text-primary" />
           {:else}
             <Moon classNames="h-6 w-6 text-primary" />
           {/if}
-        </button>
+        </button> -->
 
         <a href="/contact">
           <button class="btn-primary btn hidden md:block">Get in Touch</button>
@@ -120,10 +121,6 @@
       </div>
     {/if}
   </div>
-
-  <!-- <div class="container navbar bg-base-100">
-    <a class="btn-ghost btn text-xl normal-case">daisyUI</a>
-  </div> -->
 </header>
 
 <style lang="postcss">

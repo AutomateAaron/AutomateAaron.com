@@ -7,6 +7,7 @@
 
   import Close from "../svg/Close.svelte";
   import BreathingBlob from "../svg/BreathingBlob.svelte";
+  import { teleport } from "$lib/assets/js/clientUtils";
 
   let showModal = false;
 </script>
@@ -112,13 +113,15 @@
   </div>
 </section>
 
+
+<!-- not using daisyui model since -->
 {#if showModal}
   <div
     class="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-black bg-opacity-70 p-2"
   >
     <div class="relative aspect-video w-full max-w-4xl">
       <iframe
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        src="https://www.youtube.com/embed/b7YOu2u_3R0"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
