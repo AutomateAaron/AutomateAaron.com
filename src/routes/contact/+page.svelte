@@ -114,13 +114,13 @@
         <h4 class="h4">Socials</h4>
         <div class="my-auto">
           <div class="-m-4">
-            <div class="flex flex-wrap items-center justify-center lg:mt-0">
+            <div class="flex flex-wrap items-center justify-center">
               {#each socialMediaLinks as item}
                 <a
                   href={item?.url}
                   target="_blank"
                   rel="noreferrer"
-                  class="btn-outline btn-primary btn-square btn m-2"
+                  class="btn-outline btn-primary btn-square btn m-1 xl:m-2"
                 >
                   <svelte:component
                     this={item?.icon}
@@ -184,45 +184,11 @@
             placeholder="So...  I'm having this issue with..."
           />
           <input
-            type="text"
+            type="email"
             placeholder="Bilbo@TheShire.net"
             class="input w-full max-w-xs"
           />
           <button type="submit" class="btn-primary btn w-min">Send</button>
-        </form>
-
-        <form
-          name="netlify-form-example"
-          method="POST"
-          netlify-honeypot="bot-field"
-          data-netlify="true"
-        >
-          <input type="hidden" name="form-name" value="netlify-form-example" />
-          <label for="name">Name</label>
-          <input
-            name="name"
-            id="name"
-            required
-            placeholder="Name"
-            type="text"
-          />
-          <label for="email">Email</label>
-          <input
-            name="email"
-            id="email"
-            required
-            placeholder="Email"
-            type="email"
-          />
-          <label for="message">Message</label>
-          <input
-            name="message"
-            id="message"
-            required
-            placeholder="Message"
-            type="text"
-          />
-          <input type="submit" value="Submit" />
         </form>
       </div>
       <!-- image -->
