@@ -146,7 +146,7 @@
         <p>
           If you prefer communicating via ye 'ol email that's an option too,
           shoot me an email {" "}<a
-            class="btn-sm btn font-sans capitalize hover:text-neutral-content"
+            class="btn-outline btn-primary btn-sm btn font-sans capitalize"
             href="mailto:Aaron@AaronNBrock.com "
           >
             Aaron@AaronNBrock.com
