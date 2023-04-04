@@ -12,14 +12,6 @@
   import BreathingBlob from "$lib/components/svg/BreathingBlob.svelte";
 
   import { socialMediaLinks } from "$lib/config.js";
-
-  const contactOptions: IContactOption[] = [
-    {
-      icon: Phone,
-      title: "Email",
-      description: "Drop me a ",
-    },
-  ];
 </script>
 
 <svelte:head>
@@ -87,7 +79,7 @@
     <h1 class="text-center">Contact Me</h1>
     <!-- contact options -->
     <div
-      class="items-stretch justify-between space-y-8 py-12 lg:flex lg:space-x-8 lg:space-y-0 lg:py-24"
+      class="items-stretch justify-evenly space-y-8 py-12 md:flex md:space-x-8 md:space-y-0 lg:py-24"
     >
       <div
         class="column flex w-full flex-col rounded-xl bg-base-100 p-8 text-base-content shadow-xl"
@@ -120,46 +112,47 @@
         </div>
 
         <h4 class="h4">Socials</h4>
-        <div
-          class="mt-12 flex items-center justify-center space-x-6 lg:mt-0 lg:justify-end"
-        >
-          {#each socialMediaLinks as item}
-            <a
-              href={item?.url}
-              target="_blank"
-              rel="noreferrer"
-              class="btn-outline btn-primary btn-square btn"
-            >
-              <svelte:component
-                this={item?.icon}
-                class="h-1/2 w-1/2 fill-current"
-              />
-            </a>
-          {/each}
+        <div class="my-auto">
+          <div class="-m-4">
+            <div class="flex flex-wrap items-center justify-center lg:mt-0">
+              {#each socialMediaLinks as item}
+                <a
+                  href={item?.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn-outline btn-primary btn-square btn m-2"
+                >
+                  <svelte:component
+                    this={item?.icon}
+                    class="h-1/2 w-1/2 fill-current"
+                  />
+                </a>
+              {/each}
+            </div>
+          </div>
         </div>
       </div>
 
-      {#each contactOptions as item}
-        <div class="w-full rounded-xl bg-base-100 p-8 shadow-xl">
-          {#if item.icon}
-            <div
-              class="relative z-0 mb-4 flex h-32 w-24 items-end justify-start"
-            >
-              <svelte:component
-                this={item.icon}
-                classNames="h-16 z-10 text-primary"
-              />
+      <div class="w-full rounded-xl bg-base-100 p-8 shadow-xl">
+        <div class="relative z-0 mb-4 flex h-32 w-24 items-end justify-start">
+          <Phone class="z-10 h-16 text-primary" />
 
-              <div class="z-00 absolute left-0 top-0">
-                <ContactCardBlob class="text-base-300" />
-              </div>
-            </div>
-          {/if}
-
-          <h4 class="h4">{item.title}</h4>
-          <p class="mb-4">{item.description}</p>
+          <div class="z-00 absolute left-0 top-0">
+            <ContactCardBlob class="text-base-300" />
+          </div>
         </div>
-      {/each}
+
+        <h4 class="h4">Email</h4>
+        <p>
+          If you prefer communicating via ye 'ol email that's an option too,
+          shoot me an email {" "}<a
+            class="btn-sm btn font-sans capitalize hover:text-neutral-content"
+            href="mailto:Aaron@AaronNBrock.com "
+          >
+            Aaron@AaronNBrock.com
+          </a>
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -172,7 +165,7 @@
       <div
         class="relative z-10 -mb-16 rounded-xl bg-base-300 p-6 pb-20 shadow-lg md:-mr-20 md:w-4/5 md:pb-6 md:pr-20"
       >
-        <h3 class="h3">Or, drop me a line...</h3>
+        <h3 class="h3">Or, drop me a line here...</h3>
 
         <!-- <form name="contact" method="POST" class="form-control space-y-4">
           <label for="message" class="label">
