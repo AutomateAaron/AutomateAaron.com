@@ -196,9 +196,6 @@
             <label>Your Name: <input type="text" name="name" /></label>
           </p>
           <p>
-            <label>Your Email: <input type="email" name="email" /></label>
-          </p>
-          <p>
             <label
               >Your Role: <select name="role[]" multiple>
                 <option value="leader">Leader</option>
