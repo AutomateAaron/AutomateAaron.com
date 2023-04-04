@@ -180,11 +180,13 @@
           </label>
           <textarea
             id="message"
+            name="message"
             class="textarea h-48 duration-0 md:h-36 lg:h-24"
             placeholder="So...  I'm having this issue with..."
           />
           <input
             type="email"
+            name="email"
             placeholder="Bilbo@TheShire.net"
             class="input w-full max-w-xs"
           />
