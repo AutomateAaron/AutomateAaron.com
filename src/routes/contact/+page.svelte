@@ -174,7 +174,7 @@
       >
         <h3 class="h3">Or, drop me a line...</h3>
 
-        <form name="contact" method="POST" class="form-control space-y-4">
+        <!-- <form name="contact" method="POST" class="form-control space-y-4">
           <label for="message" class="label">
             <span class="label-text">Your Message</span>
           </label>
@@ -189,6 +189,29 @@
             class="input w-full max-w-xs"
           />
           <button type="submit" class="btn-primary btn w-min">Send</button>
+        </form> -->
+
+        <form name="contact" method="POST" data-netlify="true">
+          <p>
+            <label>Your Name: <input type="text" name="name" /></label>
+          </p>
+          <p>
+            <label>Your Email: <input type="email" name="email" /></label>
+          </p>
+          <p>
+            <label
+              >Your Role: <select name="role[]" multiple>
+                <option value="leader">Leader</option>
+                <option value="follower">Follower</option>
+              </select></label
+            >
+          </p>
+          <p>
+            <label>Message: <textarea name="message" /></label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
         </form>
       </div>
       <!-- image -->
