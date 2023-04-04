@@ -191,7 +191,7 @@
           <button type="submit" class="btn-primary btn w-min">Send</button>
         </form> -->
 
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="potato" method="POST" data-netlify="true">
           <p>
             <label>Your Name: <input type="text" name="name" /></label>
           </p>
