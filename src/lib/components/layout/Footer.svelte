@@ -57,7 +57,7 @@
 
     <!-- footer -->
     <div
-      class="flex flex-col items-center space-y-12 py-12 lg:flex-row lg:items-center lg:justify-between lg:py-20"
+      class="flex flex-col items-center space-y-12 py-12 lg:flex-row lg:items-start lg:justify-between lg:py-20"
     >
       <div>
         <img src={Logo} alt="" />
@@ -79,7 +79,7 @@
         <h4 class="h4 mb-6 text-center lg:text-left">Address</h4>
 
         <div class="flex flex-col items-center space-y-2 lg:items-start">
-          <a
+          <!-- <a
             href="tel:+6095551212"
             class="flex w-full items-center justify-center space-x-3 lg:justify-start"
           >
@@ -87,7 +87,7 @@
               <Phone classNames="fill-accent-content w-4" />
             </span>
             <span>+(609) 555 1212</span>
-          </a>
+          </a> -->
 
           <a
             href="mailto:hello@aaronnbrock.com"
@@ -105,7 +105,7 @@
             <span class="flex w-6 items-center justify-center">
               <Location classNames="fill-accent-content w-4" />
             </span>
-            <span>1234 Main Street, Anytown, USA 12345</span>
+            <span>Anywhere</span>
           </span>
         </div>
       </div>
