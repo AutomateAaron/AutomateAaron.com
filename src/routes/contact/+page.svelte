@@ -167,7 +167,14 @@
       >
         <h3 class="h3">Or, drop me a line here...</h3>
 
-        <!-- <form name="contact" method="POST" class="form-control space-y-4">
+        <form
+          name="netlify-form-example"
+          method="POST"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+          class="form-control space-y-4"
+        >
+          <input type="hidden" name="form-name" value="netlify-form-example" />
           <label for="message" class="label">
             <span class="label-text">Your Message</span>
           </label>
@@ -182,7 +189,7 @@
             class="input w-full max-w-xs"
           />
           <button type="submit" class="btn-primary btn w-min">Send</button>
-        </form> -->
+        </form>
 
         <form
           name="netlify-form-example"
