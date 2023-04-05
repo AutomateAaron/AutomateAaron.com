@@ -12,9 +12,9 @@
 
   import { siteTitle, socialMediaLinks } from "$lib/config.js";
   import { teleport } from "$lib/assets/js/clientUtils";
-  import { enhance } from "$app/forms";
+  import { enhance, type SubmitFunction } from "$app/forms";
   import type { ActionResult } from "@sveltejs/kit";
-
+  import { error } from "@sveltejs/kit";
   // function handleSubmit(event: SubmitEvent) {
   //   const formData = new FormData(event.target as HTMLFormElement);
 
@@ -27,18 +27,17 @@
   //     .catch((error) => alert(error));
   // }
 
-  function handleSubmit({
+  let message: {
+    type: "success" | "error";
+    message: string;
+  };
+
+  const handleSubmit: SubmitFunction = function ({
     form,
     data,
     action,
     cancel,
     controller,
-  }: {
-    action: URL;
-    data: FormData;
-    form: HTMLFormElement;
-    controller: AbortController;
-    cancel(): void;
   }) {
     // `form` is the `<form>` element
     // `data` is its `FormData` object
@@ -46,21 +45,36 @@
     // `cancel()` will prevent the submission
     // `submitter` is the `HTMLElement` that caused the form to be submitted
 
-    console.log(action);
+    cancel();
 
-    return async ({
-      result,
-      update,
-    }: {
-      result: ActionResult;
-      update(): void;
-    }) => {
+    fetch(action.href, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(data as any).toString(),
+    })
+      .then((response) => {
+        if (response.ok) {
+          message = {
+            type: "success",
+            message: "Message submitted successfully!",
+          };
+        }
+        throw new Error(response.statusText);
+      })
+      .catch((error) => {
+        message = {
+          type: "error",
+          message: error,
+        };
+      });
+
+    return async ({ result, update }) => {
       console.log("Results:");
       console.log(result);
       // `result` is an `ActionResult` object
       // `update` is a function which triggers the logic that would be triggered if this callback wasn't set    };
     };
-  }
+  };
 </script>
 
 <svelte:head>
@@ -226,6 +240,7 @@
         <h3 class="h3">Or, drop me a line here...</h3>
 
         <form
+          use:enhance={handleSubmit}
           name="contact"
           method="POST"
           netlify-honeypot="bot-field"
@@ -249,6 +264,45 @@
             class="input w-full max-w-xs"
           />
           <button type="submit" class="btn-primary btn w-min">Send</button>
+          {#if message}
+            {#if message.type == "success"}
+              <div class="alert alert-success shadow-lg">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 flex-shrink-0 stroke-current"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    ><path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    /></svg
+                  >
+                  <span>{message.message}</span>
+                </div>
+              </div>
+            {:else if message.type == "error"}
+              <div class="alert alert-error shadow-lg">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 flex-shrink-0 stroke-current"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    ><path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    /></svg
+                  >
+                  <span>{message.message}</span>
+                </div>
+              </div>
+            {/if}
+          {/if}
         </form>
       </div>
       <!-- image -->
