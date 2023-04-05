@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-  <title>Blog</title>
+  <title>Memes | {siteDescription}</title>
   <meta data-key="description" name="description" content={siteDescription} />
 </svelte:head>
 

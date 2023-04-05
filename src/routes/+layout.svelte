@@ -13,7 +13,7 @@
 
   import Header from "$lib/components/layout/Header.svelte";
   import Footer from "$lib/components/layout/Footer.svelte";
-  import { navItems, siteMap } from "$lib/config";
+  import { navItems, siteDescription, siteMap } from "$lib/config";
   import { preloadCode } from "$app/navigation";
   import { onMount } from "svelte";
   import TawkTo from "$lib/components/TawkTo.svelte";

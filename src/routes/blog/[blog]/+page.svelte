@@ -17,13 +17,16 @@
   <meta data-key="description" name="description" content={excerpt} />
   <meta property="og:type" content="article" />
   <meta property="og:title" content={title} />
-  <meta name="twitter:title" content={title} />
   <meta property="og:description" content={excerpt} />
+  <meta property="og:image" content={image} />
+  <meta property="og:image:alt" content={imageAlt} />
+
+  <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={excerpt} />
-  <!-- <meta property="og:image" content="https://yourdomain.com/image_path" /> -->
+  <meta name="twitter:image" content={image} />
+
   <!-- <meta property="og:image:width" content={coverWidth} /> -->
   <!-- <meta property="og:image:height" content={coverHeight} /> -->
-  <!-- <meta name="twitter:image" content="https://yourdomain.com/image_path" /> -->
 </svelte:head>
 
 <article class="relative overflow-hidden pb-8 pt-36 lg:py-40 xl:py-44">

@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { IBlog } from "$lib/types/generalTypes";
   import PostsList from "$lib/components/blog/BlogsList.svelte";
-  import { siteDescription } from "$lib/config";
+  import { siteDescription, siteTitle } from "$lib/config";
 
   export let data;
 
@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-  <title>Blog</title>
+  <title>Blog | {siteTitle}</title>
   <meta data-key="description" name="description" content={siteDescription} />
 </svelte:head>
 

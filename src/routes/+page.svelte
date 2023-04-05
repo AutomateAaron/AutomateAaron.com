@@ -8,7 +8,7 @@
   import Services from "$lib/components/landing-sections/Services.svelte";
   import Skillset from "$lib/components/landing-sections/Skillset.svelte";
   import Testimonial from "$lib/components/landing-sections/Testimonial.svelte";
-  import { siteTitle } from "$lib/config";
+  import { siteDescription, siteTitle } from "$lib/config";
   import type { IBlog, IMeme } from "$lib/types/generalTypes";
 
   export let data;
@@ -19,6 +19,7 @@
 
 <svelte:head>
   <title>{siteTitle}</title>
+  <meta data-key="description" name="description" content={siteDescription} />
 </svelte:head>
 
 <Hero />

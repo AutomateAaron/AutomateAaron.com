@@ -32,10 +32,7 @@
         type: "success" | "error";
         message: string;
       }
-    | undefined = {
-    type: "error",
-    message: "potato",
-  };
+    | undefined;
 
   const handleSubmit: SubmitFunction = function ({
     form,
@@ -85,7 +82,7 @@
 </script>
 
 <svelte:head>
-  <title>{siteTitle}</title>
+  <title>Contact | {siteTitle}</title>
 </svelte:head>
 
 <div use:teleport>
@@ -264,11 +261,13 @@
             name="message"
             class="textarea h-48 duration-0 md:h-36 lg:h-24"
             placeholder="So...  I'm having this issue with..."
+            required
           />
           <input
             type="email"
             name="email"
             placeholder="Bilbo@TheShire.net"
+            required
             class="input w-full max-w-xs"
           />
           <button type="submit" class="btn-primary btn w-min">Send</button>
