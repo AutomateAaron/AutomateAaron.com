@@ -46,7 +46,7 @@
     // `cancel()` will prevent the submission
     // `submitter` is the `HTMLElement` that caused the form to be submitted
 
-    console.log(data);
+    console.log(action);
 
     return async ({
       result,
@@ -226,7 +226,7 @@
         <h3 class="h3">Or, drop me a line here...</h3>
 
         <form
-          use:enhance={handleSubmit}
+          use:enhance
           name="contact"
           method="POST"
           netlify-honeypot="bot-field"
