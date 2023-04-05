@@ -12,6 +12,53 @@
 
   import { socialMediaLinks } from "$lib/config.js";
   import { teleport } from "$lib/assets/js/clientUtils";
+  import { enhance } from "$app/forms";
+  import type { ActionResult } from "@sveltejs/kit";
+
+  // function handleSubmit(event: SubmitEvent) {
+  //   const formData = new FormData(event.target as HTMLFormElement);
+
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: new URLSearchParams(formData).toString(),
+  //   })
+  //     .then(() => navigate("/thank-you/"))
+  //     .catch((error) => alert(error));
+  // }
+  function handleSubmit({
+    form,
+    data,
+    action,
+    cancel,
+    controller,
+  }: {
+    action: URL;
+    data: FormData;
+    form: HTMLFormElement;
+    controller: AbortController;
+    cancel(): void;
+  }) {
+    // `form` is the `<form>` element
+    // `data` is its `FormData` object
+    // `action` is the URL to which the form is posted
+    // `cancel()` will prevent the submission
+    // `submitter` is the `HTMLElement` that caused the form to be submitted
+
+    console.log(data);
+
+    return async ({
+      result,
+      update,
+    }: {
+      result: ActionResult;
+      update(): void;
+    }) => {
+      console.log("Result type: " + result.type);
+      // `result` is an `ActionResult` object
+      // `update` is a function which triggers the logic that would be triggered if this callback wasn't set    };
+    };
+  }
 </script>
 
 <div use:teleport>
@@ -173,6 +220,7 @@
         <h3 class="h3">Or, drop me a line here...</h3>
 
         <form
+          use:enhance={handleSubmit}
           name="contact"
           method="POST"
           netlify-honeypot="bot-field"

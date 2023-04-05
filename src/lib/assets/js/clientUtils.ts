@@ -1,5 +1,4 @@
-export function teleport(node, name = "teleport") {
-  console.log(node);
+export function teleport(node: HTMLElement, name = "teleport") {
   const teleportContainer = document.getElementById(name);
 
   teleportContainer.appendChild(node);
