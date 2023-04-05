@@ -227,7 +227,7 @@
           data-netlify="true"
           class="form-control space-y-4"
         >
-          <input type="hidden" name="form-name" value="netlify-form-example" />
+          <input type="hidden" name="form-name" value="contact" />
           <label for="message" class="label">
             <span class="label-text">Your Message</span>
           </label>
