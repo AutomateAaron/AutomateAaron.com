@@ -59,11 +59,11 @@
 
   p,
   .p {
-    @apply font-serif;
+    @apply font-serif mb-4;
   }
 
   p > a {
-    @apply underline;
+    @apply underline ;
   }
 
   a {

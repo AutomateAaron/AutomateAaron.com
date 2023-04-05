@@ -1,5 +1,4 @@
 <script lang="ts">
-  import type { IContactOption } from "$lib/types/generalTypes";
   import Clock from "$lib/components/svg/Clock.svelte";
 
   import Figure from "$lib/components/svg/Figure.svelte";
@@ -12,9 +11,10 @@
   import BreathingBlob from "$lib/components/svg/BreathingBlob.svelte";
 
   import { socialMediaLinks } from "$lib/config.js";
+  import { teleport } from "$lib/assets/js/clientUtils";
 </script>
 
-<svelte:head>
+<div use:teleport>
   <script type="text/javascript">
     (function (C, A, L) {
       let p = function (a, ar) {
@@ -54,7 +54,7 @@
       hideEventTypeDetails: false,
     });
   </script>
-</svelte:head>
+</div>
 
 <section class="relative mt-44">
   <div
@@ -82,7 +82,7 @@
       class="items-stretch justify-evenly space-y-8 py-12 md:flex md:space-x-8 md:space-y-0 lg:py-24"
     >
       <div
-        class="column flex w-full flex-col rounded-xl bg-base-100 p-8 text-base-content shadow-xl"
+        class="flex w-full flex-col rounded-xl bg-base-100 p-8 text-base-content shadow-xl"
       >
         <div class="relative z-0 mb-4 flex h-32 w-24 items-end justify-start">
           <Clock class="z-10 h-16 text-primary" />
@@ -92,17 +92,20 @@
         </div>
 
         <h4 class="h4">Let's Chat</h4>
+        <p>Blah blah blah</p>
 
-        <button
-          data-cal-link="aaronnbrock/lets-chat"
-          class="btn-outline btn-primary btn my-auto w-fit"
-        >
-          Schedule a Call
-        </button>
+        <div class="mt-auto">
+          <button
+            data-cal-link="aaronnbrock/lets-chat"
+            class="btn-outline btn-primary btn w-fit"
+          >
+            Schedule a Call
+          </button>
+        </div>
       </div>
 
       <div
-        class="column flex w-full flex-col rounded-xl bg-base-100 p-8 text-base-content shadow-xl"
+        class="flex w-full flex-col rounded-xl bg-base-100 p-8 text-base-content shadow-xl"
       >
         <div class="relative z-0 mb-4 flex h-32 w-24 items-end justify-start">
           <LocationOutline class="z-10 h-16 text-primary" />
@@ -112,28 +115,29 @@
         </div>
 
         <h4 class="h4">Socials</h4>
-        <div class="my-auto">
-          <div class="-m-4">
-            <div class="flex flex-wrap items-center justify-center">
-              {#each socialMediaLinks as item}
-                <a
-                  href={item?.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  class="btn-outline btn-primary btn-square btn m-1 xl:m-2"
-                >
-                  <svelte:component
-                    this={item?.icon}
-                    class="h-1/2 w-1/2 fill-current"
-                  />
-                </a>
-              {/each}
+        <p>Add me on the whatever social you prefer!</p>
+        <div class="-m-1 mt-auto">
+          {#each socialMediaLinks as item}
+            <div class="inline-block">
+              <a
+                href={item?.url}
+                target="_blank"
+                rel="noreferrer"
+                class="btn-outline btn-primary btn-square btn m-1"
+              >
+                <svelte:component
+                  this={item?.icon}
+                  class="h-1/2 w-1/2 fill-current"
+                />
+              </a>
             </div>
-          </div>
+          {/each}
         </div>
       </div>
 
-      <div class="w-full rounded-xl bg-base-100 p-8 shadow-xl">
+      <div
+        class="flex w-full flex-col rounded-xl bg-base-100 p-8 text-base-content shadow-xl"
+      >
         <div class="relative z-0 mb-4 flex h-32 w-24 items-end justify-start">
           <Phone class="z-10 h-16 text-primary" />
 
@@ -145,13 +149,14 @@
         <h4 class="h4">Email</h4>
         <p>
           If you prefer communicating via ye 'ol email that's an option too,
-          shoot me an email {" "}<a
-            class="btn-outline btn-primary btn-sm btn font-sans capitalize"
-            href="mailto:Aaron@AaronNBrock.com "
-          >
-            Aaron@AaronNBrock.com
-          </a>
+          shoot me an email.
         </p>
+        <a
+          class="btn-outline btn-primary btn mt-auto w-fit font-sans capitalize"
+          href="mailto:Aaron@AaronNBrock.com "
+        >
+          Aaron@AaronNBrock.com
+        </a>
       </div>
     </div>
   </div>
@@ -168,7 +173,7 @@
         <h3 class="h3">Or, drop me a line here...</h3>
 
         <form
-          name="netlify-form-example"
+          name="contact"
           method="POST"
           netlify-honeypot="bot-field"
           data-netlify="true"
