@@ -244,6 +244,7 @@
           name="contact"
           method="POST"
           netlify-honeypot="bot-field"
+          enctype="multipart/form-data"
           data-netlify="true"
           class="form-control space-y-4"
         >
