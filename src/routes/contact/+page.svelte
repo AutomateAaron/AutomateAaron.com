@@ -27,9 +27,14 @@
   //     .catch((error) => alert(error));
   // }
 
-  let message: {
-    type: "success" | "error";
-    message: string;
+  let message:
+    | {
+        type: "success" | "error";
+        message: string;
+      }
+    | undefined = {
+    type: "error",
+    message: "potato",
   };
 
   const handleSubmit: SubmitFunction = function ({
@@ -148,7 +153,7 @@
     <h1 class="text-center">Contact Me</h1>
     <!-- contact options -->
     <div
-      class="items-stretch justify-evenly space-y-8 py-12 md:flex md:space-x-8 md:space-y-0 lg:py-24"
+      class="items-stretch justify-evenly space-y-8 py-12 md:flex md:space-x-4 md:space-y-0 lg:py-24 xl:space-x-8"
     >
       <div
         class="flex w-full flex-col rounded-xl bg-base-100 p-8 text-base-content shadow-xl"
@@ -267,46 +272,77 @@
             class="input w-full max-w-xs"
           />
           <button type="submit" class="btn-primary btn w-min">Send</button>
-          {#if message}
-            {#if message.type == "success"}
-              <div class="alert alert-success shadow-lg">
-                <div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 flex-shrink-0 stroke-current"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    ><path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    /></svg
-                  >
-                  <span>{message.message}</span>
-                </div>
-              </div>
-            {:else if message.type == "error"}
-              <div class="alert alert-error shadow-lg">
-                <div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 flex-shrink-0 stroke-current"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    ><path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    /></svg
-                  >
-                  <span>{message.message}</span>
-                </div>
-              </div>
-            {/if}
-          {/if}
         </form>
+
+        {#if message}
+          {#if message.type == "success"}
+            <div class="alert alert-success mt-4 shadow-lg">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 flex-shrink-0 stroke-current"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  /></svg
+                >
+                <span>{message.message}</span>
+              </div>
+              <div class="flex-none">
+                <button
+                  on:click={() => {
+                    message = undefined;
+                  }}
+                  class="btn-ghost btn-sm btn">Deny</button
+                >
+              </div>
+            </div>
+          {:else if message.type == "error"}
+            <div class="alert alert-error mt-4 shadow-lg">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 flex-shrink-0 stroke-current"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  /></svg
+                >
+                <span>{message.message}</span>
+              </div>
+              <div class="flex-none">
+                <button
+                  on:click={() => {
+                    message = undefined;
+                  }}
+                  class="btn-ghost btn-square btn-sm btn"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    ><path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    /></svg
+                  >
+                </button>
+              </div>
+            </div>
+          {/if}
+        {/if}
       </div>
       <!-- image -->
       <div class="relative z-10 md:mt-0 md:w-1/2 lg:w-1/5">
