@@ -58,6 +58,7 @@
             type: "success",
             message: "Message submitted successfully!",
           };
+          return;
         }
         throw new Error(response.statusText);
       })
