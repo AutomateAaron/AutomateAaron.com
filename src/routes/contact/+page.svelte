@@ -10,7 +10,7 @@
   import AboutMaskImage from "$lib/assets/images/about/about-mask-svg.svg";
   import BreathingBlob from "$lib/components/svg/BreathingBlob.svelte";
 
-  import { socialMediaLinks } from "$lib/config.js";
+  import { siteTitle, socialMediaLinks } from "$lib/config.js";
   import { teleport } from "$lib/assets/js/clientUtils";
   import { enhance } from "$app/forms";
   import type { ActionResult } from "@sveltejs/kit";
@@ -26,6 +26,7 @@
   //     .then(() => navigate("/thank-you/"))
   //     .catch((error) => alert(error));
   // }
+
   function handleSubmit({
     form,
     data,
@@ -61,6 +62,10 @@
     };
   }
 </script>
+
+<svelte:head>
+  <title>{siteTitle}</title>
+</svelte:head>
 
 <div use:teleport>
   <script type="text/javascript">
