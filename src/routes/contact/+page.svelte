@@ -226,7 +226,6 @@
         <h3 class="h3">Or, drop me a line here...</h3>
 
         <form
-          use:enhance
           name="contact"
           method="POST"
           netlify-honeypot="bot-field"
