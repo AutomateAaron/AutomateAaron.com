@@ -54,7 +54,8 @@
       result: ActionResult;
       update(): void;
     }) => {
-      console.log("Result:" + result);
+      console.log("Results:");
+      console.log(result);
       // `result` is an `ActionResult` object
       // `update` is a function which triggers the logic that would be triggered if this callback wasn't set    };
     };
