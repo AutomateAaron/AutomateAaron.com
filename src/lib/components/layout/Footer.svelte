@@ -4,7 +4,6 @@
   import Shape1 from "$lib/components/svg/footer/Shape1.svelte";
   import Shape2 from "$lib/components/svg/footer/Shape2.svelte";
   import Location from "~icons/ic/baseline-location-on";
-  import Phone from "$lib/components/svg/Phone.svelte";
   import { socialMediaLinks, siteMap } from "$lib/config.js";
 
   import { page } from "$app/stores";

@@ -2,6 +2,7 @@
   import ClockIcon from "~icons/ic/round-schedule";
   import SocialIcon from "~icons/ic/outline-people-alt";
   import EmailIcon from "~icons/ic/outline-email";
+  import SpinnerIcon from "~icons/svg-spinners/blocks-shuffle-3";
 
   import Figure from "$lib/components/svg/Figure.svelte";
   import CardBlob from "$lib/components/svg/CardBlob.svelte";
@@ -12,7 +13,7 @@
 
   import { siteTitle, socialMediaLinks } from "$lib/config.js";
   import { teleport } from "$lib/assets/js/clientUtils";
-  import type { SubmitFunction } from "$app/forms";
+  import { enhance, type SubmitFunction } from "$app/forms";
 
   let message:
     | {
@@ -20,6 +21,8 @@
         message: string;
       }
     | undefined;
+
+  let submitting = false;
 
   const handleSubmit: SubmitFunction = function ({
     form,
@@ -33,37 +36,26 @@
     // `action` is the URL to which the form is posted
     // `cancel()` will prevent the submission
     // `submitter` is the `HTMLElement` that caused the form to be submitted
-
-    cancel();
-
-    fetch(action.href, {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(data as any).toString(),
-    })
-      .then((response) => {
-        if (response.ok) {
-          message = {
-            type: "success",
-            message: "Message submitted successfully!",
-          };
-          form.reset();
-          return;
-        }
-        throw new Error(response.statusText);
-      })
-      .catch((error) => {
-        message = {
-          type: "error",
-          message: error,
-        };
-      });
+    submitting = true;
 
     return async ({ result, update }) => {
+      submitting = false;
+
       console.log("Results:");
       console.log(result);
       // `result` is an `ActionResult` object
       // `update` is a function which triggers the logic that would be triggered if this callback wasn't set    };
+      if (result.type === "success") {
+        message = {
+          type: "success",
+          message: "Message submitted successfully!",
+        };
+      } else {
+        message = {
+          type: "error",
+          message: `error: ${result.status}`,
+        };
+      }
     };
   };
 </script>
@@ -231,6 +223,7 @@
         <h3 class="h3">Or, drop me a line here...</h3>
 
         <form
+          use:enhance={handleSubmit}
           enctype="application/x-www-form-urlencoded"
           name="contact"
           method="POST"
@@ -257,7 +250,10 @@
             required
             class="input w-full max-w-xs"
           />
-          <button type="submit" class="btn-primary btn w-min">Send</button>
+          <button type="submit" class="btn-primary btn self-start">
+            Send
+            {#if submitting}<SpinnerIcon class="ml-2 inline" />{/if}
+          </button>
         </form>
 
         {#if message}

@@ -3,8 +3,10 @@
   import "@splidejs/svelte-splide/css";
 
   import type { IService } from "$lib/types/generalTypes";
-  import Branding from "../svg/landing-sections/service/Branding.svelte";
-  import Creative from "../svg/landing-sections/service/Creative.svelte";
+  import Teaching from "~icons/ic/outline-menu-book";
+  import Tuning from "~icons/ic/outline-pie-chart";
+  import Templates from "~icons/ic/outline-file-copy";
+
   import Web from "../svg/landing-sections/service/Web.svelte";
   import ServiceBg from "../svg/landing-sections/service/ServiceBg.svelte";
   import ServiceCard from "./ServiceCard.svelte";
@@ -16,19 +18,19 @@
       title: "Teaching",
       description:
         "Learn to use Google Cloud like a pro. From the basics to advanced strategies, I’ll give you the knowledge and skills you need to fully leverage the power of Google Cloud.",
-      icon: Creative,
+      icon: Teaching,
     },
     {
       title: "Tuning",
       description:
         "Take control of your Google Cloud costs. From identifying and eliminating unnecessary expenses to implementing cost-saving strategies, I’ll help you get the most out of your investment.",
-      icon: Web,
+      icon: Tuning,
     },
     {
       title: "Templates",
       description:
         "Streamline your Google Cloud operations with templates. From deployments to scaling, templates provide you with a proven foundation to build upon, and allow you to focus on growing your business.",
-      icon: Branding,
+      icon: Templates,
     },
   ];
 

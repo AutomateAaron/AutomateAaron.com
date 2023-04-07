@@ -1,7 +1,7 @@
 <script lang="ts">
   import SkillImage from "$lib/assets/images/skill/skill_image.jpg";
   import SkillMask from "$lib/assets/images/skill/skill-mask-svg.svg";
-  import Check from "../svg/Check.svelte";
+  import Check from "~icons/mdi/check-bold";
   import Figure from "../svg/Figure.svelte";
   // import SkillBlob from '../svg/Homepage/Skill/SkillBlob.svelte';
   import FigureSmall from "../svg/FigureSmall.svelte";
@@ -57,7 +57,7 @@
       <div class="grid grid-cols-3">
         {#each skills as skill}
           <span class="flex items-center justify-start space-x-2 border-t p-1">
-            <Check classNames="h-5 w-5 text-primary fill-current" />
+            <Check class="h-5 w-5 fill-current text-primary" />
             <span class="text-xl leading-normal">{skill}</span>
           </span>
         {/each}

@@ -17,7 +17,10 @@
       <div class="absolute left-0 top-0">
         <CardBlob class="z-20 text-base-300" />
       </div>
-      <svelte:component this={service?.icon} class="z-20 h-16 text-primary" />
+      <svelte:component
+        this={service?.icon}
+        class="z-20 h-16 w-16 text-primary"
+      />
     </div>
   {/if}
 
