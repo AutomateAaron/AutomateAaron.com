@@ -1,10 +1,10 @@
 <script lang="ts">
-  import Clock from "$lib/components/svg/Clock.svelte";
+  import ClockIcon from "~icons/ic/round-schedule";
+  import SocialIcon from "~icons/ic/outline-people-alt";
+  import EmailIcon from "~icons/ic/outline-email";
 
   import Figure from "$lib/components/svg/Figure.svelte";
-  import LocationOutline from "$lib/components/svg/LocationOutline.svelte";
-  import Phone from "$lib/components/svg/Phone.svelte";
-  import ContactCardBlob from "$lib/components/svg/contact/ContactCardBlob.svelte";
+  import CardBlob from "$lib/components/svg/CardBlob.svelte";
   import FigureSmall from "$lib/components/svg/FigureSmall.svelte";
   import ContactImage from "$lib/assets/images/contact/contact.jpg";
   import AboutMaskImage from "$lib/assets/images/about/about-mask-svg.svg";
@@ -12,20 +12,7 @@
 
   import { siteTitle, socialMediaLinks } from "$lib/config.js";
   import { teleport } from "$lib/assets/js/clientUtils";
-  import { enhance, type SubmitFunction } from "$app/forms";
-  import type { ActionResult } from "@sveltejs/kit";
-  import { error } from "@sveltejs/kit";
-  // function handleSubmit(event: SubmitEvent) {
-  //   const formData = new FormData(event.target as HTMLFormElement);
-
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: new URLSearchParams(formData).toString(),
-  //   })
-  //     .then(() => navigate("/thank-you/"))
-  //     .catch((error) => alert(error));
-  // }
+  import type { SubmitFunction } from "$app/forms";
 
   let message:
     | {
@@ -127,7 +114,7 @@
   </script>
 </div>
 
-<section class="relative mt-44">
+<section class="relative mb-20 mt-44">
   <div
     class="absolute -left-[7%] top-[15%] -z-10 hidden transform animate-move-top lg:block"
   >
@@ -156,9 +143,9 @@
         class="flex w-full flex-col rounded-xl bg-base-100 p-8 text-base-content shadow-xl"
       >
         <div class="relative z-0 mb-4 flex h-32 w-24 items-end justify-start">
-          <Clock class="z-10 h-16 text-primary" />
+          <ClockIcon class="z-10 h-16 w-16 text-primary" />
           <div class="z-00 absolute left-0 top-0">
-            <ContactCardBlob class="text-base-300" />
+            <CardBlob class="text-base-300" />
           </div>
         </div>
 
@@ -179,14 +166,14 @@
         class="flex w-full flex-col rounded-xl bg-base-100 p-8 text-base-content shadow-xl"
       >
         <div class="relative z-0 mb-4 flex h-32 w-24 items-end justify-start">
-          <LocationOutline class="z-10 h-16 text-primary" />
+          <SocialIcon class="z-10 h-16 w-16 text-primary" />
           <div class="z-00 absolute left-0 top-0">
-            <ContactCardBlob class="text-base-300" />
+            <CardBlob class="text-base-300" />
           </div>
         </div>
 
         <h4 class="h4">Socials</h4>
-        <p>Add me on the whatever social you prefer!</p>
+        <p>Add me on the whatever social media platform you prefer!</p>
         <div class="-m-1 mt-auto">
           {#each socialMediaLinks as item}
             <div class="inline-block">
@@ -210,10 +197,10 @@
         class="flex w-full flex-col rounded-xl bg-base-100 p-8 text-base-content shadow-xl"
       >
         <div class="relative z-0 mb-4 flex h-32 w-24 items-end justify-start">
-          <Phone class="z-10 h-16 text-primary" />
+          <EmailIcon class="z-10 h-16 w-16 text-primary" />
 
           <div class="z-00 absolute left-0 top-0">
-            <ContactCardBlob class="text-base-300" />
+            <CardBlob class="text-base-300" />
           </div>
         </div>
 
@@ -236,24 +223,19 @@
 <section class="overflow-hidden py-20">
   <div class="container">
     <!-- content -->
-    <div class="relative items-center justify-center md:flex">
+    <div class="items-center justify-center md:flex">
       <!-- text -->
       <div
-        class="relative z-10 -mb-16 rounded-xl bg-base-300 p-6 pb-20 shadow-lg md:-mr-20 md:w-4/5 md:pb-6 md:pr-20"
+        class="relative z-10 -mb-16 rounded-xl bg-base-300 p-6 pb-20 shadow-lg md:-mr-20 md:mb-12 md:w-4/5 md:pb-6 md:pr-20"
       >
         <h3 class="h3">Or, drop me a line here...</h3>
 
-        <form method="POST" use:enhance>
-          <input type="text" />
-          <button type="submit">Send</button>
-        </form>
-
         <form
-          use:enhance
+          enctype="application/x-www-form-urlencoded"
           name="contact"
           method="POST"
+          action="/contact/submitted"
           netlify-honeypot="bot-field"
-          enctype="multipart/form-data"
           data-netlify="true"
           class="form-control space-y-4"
         >
@@ -366,14 +348,14 @@
       <div class="relative z-10 md:mt-0 md:w-1/2 lg:w-1/5">
         <img
           src={ContactImage}
-          alt="about-img"
+          alt="about-img z-10"
           style="-webkit-mask:url({AboutMaskImage});-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;-webkit-mask-position:center center"
         />
-      </div>
-      <div class="absolute -right-[12%] -top-[20%] -z-50 hidden md:block">
+        <FigureSmall
+          class="absolute -right-6 -top-12 -z-10 h-24 w-24 animate-move-top"
+        />
         <BreathingBlob
-          gradientId="aaa"
-          class="h-80 w-80 rotate-45 text-base-300"
+          class="absolute -right-40 -top-48 -z-20 h-64 w-64 rotate-90 text-base-300"
         />
       </div>
     </div>

@@ -7,6 +7,8 @@ export default defineConfig({
     sveltekit(),
     Icons({
       compiler: "svelte",
+      scale: 1.2,
+
       // experimental
       autoInstall: true,
     }),

@@ -1,16 +1,16 @@
 <script lang="ts">
   import Logo from "$lib/assets/images/widget-logo.png";
-  import Envelope from "$lib/components/svg/Envelope.svelte";
+  import EmailIcon from "~icons/ic/baseline-email";
   import Shape1 from "$lib/components/svg/footer/Shape1.svelte";
   import Shape2 from "$lib/components/svg/footer/Shape2.svelte";
-  import Location from "$lib/components/svg/Location.svelte";
+  import Location from "~icons/ic/baseline-location-on";
   import Phone from "$lib/components/svg/Phone.svelte";
   import { socialMediaLinks, siteMap } from "$lib/config.js";
 
   import { page } from "$app/stores";
 </script>
 
-<footer class="relative mt-40 text-accent-content">
+<footer class="relative text-accent-content">
   <div class="absolute -top-10 -z-40 mt-10 h-full w-full overflow-hidden">
     <div
       class="absolute top-36 -z-40 h-full w-full skew-y-2 transform overflow-hidden bg-accent"
@@ -94,7 +94,7 @@
             class="flex w-full items-center justify-center space-x-3 lg:justify-start"
           >
             <span class="flex w-6 items-center justify-center">
-              <Envelope classNames="fill-accent-content w-6" />
+              <EmailIcon classNames="fill-accent-content w-6" />
             </span>
             <span>Hello@AaronNBrock.com</span>
           </a>

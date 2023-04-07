@@ -7,11 +7,11 @@
 
 import type { ISocialMediaLink } from "$lib/types/generalTypes";
 
-import Facebook from "$lib/components/svg/social-media/Facebook.svelte";
-import Github from "$lib/components/svg/social-media/Github.svelte";
-import Linkedin from "$lib/components/svg/social-media/Linkedin.svelte";
-import Medium from "$lib/components/svg/social-media/Medium.svelte";
-import Twitter from "$lib/components/svg/social-media/Twitter.svelte";
+import Facebook from "~icons/fa6-brands/facebook-f";
+import Github from "~icons/fa6-brands/github";
+import Linkedin from "~icons/fa6-brands/linkedin-in";
+import Medium from "~icons/fa6-brands/medium";
+import Twitter from "~icons/fa6-brands/twitter";
 
 export const siteTitle = "Aaron N. Brock";
 export const siteDescription = "How to make Google Cloud easier.";

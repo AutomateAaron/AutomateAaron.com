@@ -45,6 +45,6 @@
   </main>
   <Footer />
   <div id="teleport" />
-  <TawkTo />
-  <GoogleAnalytics />
+  <!-- <TawkTo />
+  <GoogleAnalytics /> -->
 </div>

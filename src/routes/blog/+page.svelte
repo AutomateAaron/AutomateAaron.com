@@ -13,7 +13,7 @@
   <meta data-key="description" name="description" content={siteDescription} />
 </svelte:head>
 
-<section class="container mt-48">
+<section class="container my-48">
   <h1>Blog</h1>
 
   <PostsList {blogs} />
