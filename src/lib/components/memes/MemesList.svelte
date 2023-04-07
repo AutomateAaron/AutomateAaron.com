@@ -11,7 +11,11 @@
   {#each memes as meme}
     <div id="{meme.slug}-thumb" class="group w-full overflow-hidden rounded-lg">
       <a href="#{meme.slug}">
-        <img src={meme.image} alt={meme.title} class="group-hover:scale-110" />
+        <img
+          src={meme.image}
+          alt={meme.title}
+          class="duration-300 ease-in-out group-hover:scale-110"
+        />
       </a>
     </div>
     <!-- Put this part before </body> tag -->

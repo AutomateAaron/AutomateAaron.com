@@ -13,12 +13,10 @@ import Linkedin from "$lib/components/svg/social-media/Linkedin.svelte";
 import Medium from "$lib/components/svg/social-media/Medium.svelte";
 import Twitter from "$lib/components/svg/social-media/Twitter.svelte";
 
-export const siteTitle = "My Awesome Blog";
-export const siteDescription = "Built with the SvelteKit Static Blog Starter";
-export const siteURL = "example.com";
-export const siteLink =
-  "https://github.com/josh-collinsworth/sveltekit-blog-starter";
-export const siteAuthor = "- find and change this text in src/lib/config.js";
+export const siteTitle = "Aaron N. Brock";
+export const siteDescription = "How to make Google Cloud easier.";
+export const siteURL = "aaronnbrock.com";
+export const siteAuthor = "@AaronNBrock";
 
 // Controls how many blogs are shown per page on the main blog index pages
 export const blogsPerPage = 10;

@@ -243,8 +243,13 @@
       >
         <h3 class="h3">Or, drop me a line here...</h3>
 
+        <form method="POST" use:enhance>
+          <input type="text" />
+          <button type="submit">Send</button>
+        </form>
+
         <form
-          use:enhance={handleSubmit}
+          use:enhance
           name="contact"
           method="POST"
           netlify-honeypot="bot-field"

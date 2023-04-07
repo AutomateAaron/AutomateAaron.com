@@ -33,9 +33,12 @@ export interface IPortfolio {
 }
 
 export interface IResumeSectionItem {
+  date?: Date | string;
+  toDate?: Date | string;
   title: string;
-  description: string;
-  date: string;
+  company?: string;
+  description?: string;
+  bullets?: string[];
 }
 
 export interface IResumeSection {
