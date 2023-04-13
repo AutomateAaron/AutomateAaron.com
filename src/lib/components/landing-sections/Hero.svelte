@@ -12,9 +12,9 @@
   let showModal = false;
 </script>
 
-<section id="home" class="relative pb-8 pt-36 md:py-40 xl:py-44">
+<section id="home" class="section relative">
   <div
-    class="container relative items-center justify-between space-y-16 md:flex md:space-x-28 md:space-y-0"
+    class="container relative items-center justify-between space-y-16 pt-8 md:flex md:space-x-28 md:space-y-0"
   >
     <!-- text -->
     <div class="relative w-full text-center md:text-left">
@@ -106,11 +106,9 @@
   <HeroBg class="absolute left-0 top-0 -z-50 w-[65%] text-base-300" />
 
   <!-- figure -->
-  <div
-    class="absolute -left-32 bottom-5 z-10 hidden transform animate-move-top md:block"
-  >
-    <Figure class="h-52 w-52" />
-  </div>
+  <Figure
+    class="absolute -bottom-20 -left-32 -z-10 hidden h-52 w-52 transform animate-move-top md:block"
+  />
 </section>
 
 <!-- not using daisyui model since -->

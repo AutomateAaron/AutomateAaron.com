@@ -26,9 +26,9 @@
   ];
 </script>
 
-<section id="skill" class="relative">
+<section id="skill" class="section relative">
   <div
-    class="container grid-cols-2 items-center gap-x-16 space-y-8 py-12 lg:grid lg:space-y-0 lg:pb-24 lg:pt-20 xl:pb-36 xl:pt-24"
+    class="container grid-cols-2 items-center gap-x-16 space-y-8 py-12 lg:grid lg:space-y-0"
   >
     <div class="relative">
       <!-- <img src={SkillImage} alt="" /> -->
@@ -69,8 +69,8 @@
     <FigureSmall class="h-24 w-24 animate-move-top" />
   </div>
 
-  <div class="absolute -bottom-[0%] right-[2%] -z-20 hidden transform lg:block">
-    <!-- <SkillBlob classNames="h-72 w-72" /> -->
-    <BreathingBlob gradientId="ddd" class="h-72 w-72 rotate-90 text-base-300" />
-  </div>
+  <BreathingBlob
+    gradientId="ddd"
+    class="absolute -bottom-[0%] right-[2%] -z-20 hidden h-72 w-72 rotate-90 transform text-base-300 lg:block"
+  />
 </section>

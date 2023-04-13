@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { IResumeSectionItem } from "$lib/types/generalTypes";
   import ResumeCard from "./ResumeCard.svelte";
+  import ArrowOutward from "~icons/ic/baseline-arrow-outward";
 
   let achievements: IResumeSectionItem[] = [
     {
@@ -61,7 +62,7 @@
       ],
     },
     {
-      title: "Automation Intern",
+      title: "Data Engineering Intern",
       company: "Soterea",
       date: "JUN 2019 - AUG 2019",
       bullets: [
@@ -120,10 +121,7 @@
   ];
 </script>
 
-<section
-  id="resume"
-  class="relative mb-10 mt-36 py-12 md:py-24 lg:mb-24 lg:py-36"
->
+<section id="resume" class="section relative">
   <div
     class="z-00 absolute bottom-0 left-0 right-0 top-0 -skew-y-2 transform bg-accent "
   />
@@ -149,17 +147,25 @@
       <h2 class="h2 mt-4">Experience</h2>
       <p class="mb-4">
         What? You don’t want to just take my word for it that I know what I’m
-        talking about? I guess some healthy scepticism is a good thing.
+        talking about? I guess some healthy scepticism is a good thing. You can
+        also view the <a
+          href="https://docs.google.com/document/d/1vvDZQ8Nv_ri-R9qq2x2SKSxa0-2YTJV9Gu3Vx_UPhW4/edit?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Google Docs<ArrowOutward class="inline h-[1em] w-[1em]" />
+        </a>
+        version.
       </p>
       <div
         class="tabs tabs-boxed inline-block bg-accent-content duration-300 hover:scale-105"
       >
-        <label class="tab-label tab1-label tab tab-lg" for="tab1"
-          >Experience</label
-        >
-        <label class="tab-label tab2-label tab tab-lg" for="tab2"
-          >Achievements</label
-        >
+        <label class="tab-label tab1-label tab tab-lg" for="tab1">
+          Experience
+        </label>
+        <label class="tab-label tab2-label tab tab-lg" for="tab2">
+          Achievements
+        </label>
       </div>
     </div>
 

@@ -7,6 +7,8 @@
   import { socialMediaLinks, siteMap } from "$lib/config.js";
 
   import { page } from "$app/stores";
+  import MailTo from "../MailTo.svelte";
+  import ClickToCopy from "../ClickToCopy.svelte";
 </script>
 
 <footer class="relative text-accent-content">
@@ -19,7 +21,7 @@
   <div class="container">
     <!-- contact -->
     <div
-      class="relative overflow-hidden rounded-xl bg-primary px-10 py-16 text-primary-content md:px-20 lg:py-20 xl:py-24"
+      class="relative overflow-hidden rounded-xl bg-primary px-10 py-16 text-primary-content md:px-20 md:py-20 xl:py-24"
     >
       <div class="relative z-10 justify-between gap-4 md:flex">
         <div class="">
@@ -56,17 +58,17 @@
 
     <!-- footer -->
     <div
-      class="flex flex-col items-center space-y-12 py-12 lg:flex-row lg:items-start lg:justify-between lg:py-20"
+      class="flex flex-col items-center space-y-12 py-12 md:flex-row md:items-start md:justify-between md:py-20"
     >
       <div>
         <img src={Logo} alt="" />
       </div>
 
       <div>
-        <h4 class="h4 mb-6 text-center lg:text-left">Sitemap</h4>
+        <h4 class="h4 mb-6 text-center md:text-left">Sitemap</h4>
 
         <nav
-          class="flex flex-col flex-wrap items-center space-y-2 lg:items-start"
+          class="flex flex-col flex-wrap items-center space-y-2 md:items-start"
         >
           {#each siteMap as item}
             <a href={item.route}>{item.title}</a>
@@ -75,36 +77,28 @@
       </div>
 
       <div>
-        <h4 class="h4 mb-6 text-center lg:text-left">Address</h4>
+        <h4 class="h4 mb-6 text-center md:text-left">Address</h4>
 
-        <div class="flex flex-col items-center space-y-2 lg:items-start">
-          <!-- <a
-            href="tel:+6095551212"
-            class="flex w-full items-center justify-center space-x-3 lg:justify-start"
+        <div class="flex flex-col items-center space-y-2 md:items-start">
+          <ClickToCopy
+            class="tooltip-primary duration-300 hover:text-primary"
+            copyText="Hello@AaronNBrock.com"
           >
-            <span class="flex w-6 items-center justify-center">
-              <Phone classNames="fill-accent-content w-4" />
-            </span>
-            <span>+(609) 555 1212</span>
-          </a> -->
+            <div
+              class="flex w-full items-center justify-center space-x-3 md:justify-start"
+            >
+              <EmailIcon class="mr-4" />
+              Hello@AaronNBrock.com
+            </div>
+          </ClickToCopy>
 
-          <a
-            href="mailto:hello@aaronnbrock.com"
-            class="flex w-full items-center justify-center space-x-3 lg:justify-start"
-          >
-            <span class="flex w-6 items-center justify-center">
-              <EmailIcon classNames="fill-accent-content w-6" />
-            </span>
-            <span>Hello@AaronNBrock.com</span>
-          </a>
+          <div class="tooltip" data-tip="Click to Copy!" />
 
           <span
-            class="flex w-full items-center justify-center space-x-3 lg:justify-start"
+            class="flex w-full items-center justify-center space-x-3 md:justify-start"
           >
-            <span class="flex w-6 items-center justify-center">
-              <Location classNames="fill-accent-content w-4" />
-            </span>
-            <span>Anywhere</span>
+            <Location class="mr-4" />
+            Anywhere
           </span>
         </div>
       </div>
@@ -114,15 +108,15 @@
   <!-- copyright -->
   <div>
     <div
-      class="container grid-cols-2 border-t border-accent-content py-10 lg:grid"
+      class="container grid-cols-2 border-t border-accent-content py-10 md:grid"
     >
-      <p class="text-center lg:text-left">
+      <p class="text-center md:text-left">
         All right reserved copyright © Aaron N. Brock 2023
       </p>
 
       <!-- social media links -->
       <div
-        class="mt-12 flex items-center justify-center space-x-6 lg:mt-0 lg:justify-end"
+        class="mt-12 flex items-center justify-center space-x-6 md:mt-0 md:justify-end"
       >
         {#each socialMediaLinks as item}
           <a href={item?.url} target="_blank" rel="noreferrer" class="group">

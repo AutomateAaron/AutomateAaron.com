@@ -14,6 +14,8 @@
   import { siteTitle, socialMediaLinks } from "$lib/config.js";
   import { teleport } from "$lib/assets/js/clientUtils";
   import { enhance, type SubmitFunction } from "$app/forms";
+  import ClickToCopy from "$lib/components/ClickToCopy.svelte";
+  import Breadcrumbs from "$lib/components/Breadcrumbs.svelte";
 
   let message:
     | {
@@ -31,18 +33,11 @@
     cancel,
     controller,
   }) {
-    // `form` is the `<form>` element
-    // `data` is its `FormData` object
-    // `action` is the URL to which the form is posted
-    // `cancel()` will prevent the submission
-    // `submitter` is the `HTMLElement` that caused the form to be submitted
     submitting = true;
 
     return async ({ result, update }) => {
       submitting = false;
 
-      console.log("Results:");
-      console.log(result);
       // `result` is an `ActionResult` object
       // `update` is a function which triggers the logic that would be triggered if this callback wasn't set    };
       if (result.type === "success") {
@@ -106,30 +101,15 @@
   </script>
 </div>
 
-<section class="relative mb-20 mt-44">
-  <div
-    class="absolute -left-[7%] top-[15%] -z-10 hidden transform animate-move-top lg:block"
-  >
-    <Figure class="h-52 w-52 text-base-content" />
-  </div>
-
-  <div
-    class="absolute right-[10%] top-[15%] -z-10 hidden animate-move-top lg:block"
-  >
-    <FigureSmall class="h-24 w-24 text-base-content" />
-  </div>
-
-  <div
-    class="amin_spin absolute right-[2%] top-[6%] -z-20 hidden transform lg:block"
-  >
-    <BreathingBlob class="h-52 w-52 text-base-300" />
-  </div>
-
+<section class="section relative overflow-hidden">
   <div class="container relative">
-    <h1 class="text-center">Contact Me</h1>
+    <div class="mb-8 flex flex-col items-center text-center">
+      <h1 class="mb-2">Contact Me</h1>
+      <Breadcrumbs />
+    </div>
     <!-- contact options -->
     <div
-      class="items-stretch justify-evenly space-y-8 py-12 md:flex md:space-x-4 md:space-y-0 lg:py-24 xl:space-x-8"
+      class="items-stretch justify-evenly space-y-8 md:flex md:space-x-4 md:space-y-0 xl:space-x-8"
     >
       <div
         class="flex w-full flex-col rounded-xl bg-base-100 p-8 text-base-content shadow-xl"
@@ -201,18 +181,38 @@
           If you prefer communicating via ye 'ol email that's an option too,
           shoot me an email.
         </p>
-        <a
-          class="btn-outline btn-primary btn mt-auto w-fit font-sans capitalize"
-          href="mailto:Aaron@AaronNBrock.com "
+
+        <ClickToCopy
+          class="tooltip-primary w-fit"
+          copyText="Aaron@AaronNBrock.com"
         >
-          Aaron@AaronNBrock.com
-        </a>
+          <div class="btn-outline btn-primary btn capitalize">
+            Aaron@AaronNBrock.com
+          </div>
+        </ClickToCopy>
       </div>
     </div>
   </div>
+  <div
+    class="absolute -left-[7%] top-[15%] -z-10 hidden transform animate-move-top lg:block"
+  >
+    <Figure class="h-52 w-52 text-base-content" />
+  </div>
+
+  <div
+    class="absolute right-[10%] top-[15%] -z-10 hidden animate-move-top lg:block"
+  >
+    <FigureSmall class="h-24 w-24 text-base-content" />
+  </div>
+
+  <div
+    class="amin_spin absolute right-[2%] top-[6%] -z-20 hidden transform lg:block"
+  >
+    <BreathingBlob class="h-52 w-52 text-base-300" />
+  </div>
 </section>
 
-<section class="overflow-hidden py-20">
+<section class="section relative overflow-hidden">
   <div class="container">
     <!-- content -->
     <div class="items-center justify-center md:flex">

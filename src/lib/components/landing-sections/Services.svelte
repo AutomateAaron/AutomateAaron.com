@@ -69,7 +69,7 @@
   };
 </script>
 
-<section id="services" class="relative overflow-hidden py-12 lg:pb-72 lg:pt-24">
+<section id="services" class="section relative overflow-hidden">
   <div>
     <div class="container">
       <div class="lg:w-1/2">

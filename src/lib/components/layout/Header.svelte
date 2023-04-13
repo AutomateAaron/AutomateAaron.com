@@ -49,7 +49,7 @@
   >
     <div
       bind:this={innerElement}
-      class="container flex w-full items-center px-4 py-2"
+      class="container flex w-full items-center py-2"
     >
       <div class="flex w-1/2 items-center justify-start gap-4">
         <a href="/">

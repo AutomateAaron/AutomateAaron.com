@@ -6,6 +6,8 @@
   import BreathingBlob from "$lib/components/svg/BreathingBlob.svelte";
   import Figure from "$lib/components/svg/Figure.svelte";
   import ServiceBg from "$lib/components/svg/landing-sections/service/ServiceBg.svelte";
+  import { page } from "$app/stores";
+  import Breadcrumbs from "$lib/components/Breadcrumbs.svelte";
 
   export let data;
 
@@ -17,9 +19,12 @@
   <meta data-key="description" name="description" content={siteDescription} />
 </svelte:head>
 
-<section class="relative overflow-hidden py-48">
+<section class="section relative overflow-hidden">
   <div class="container relative">
-    <h1>Blog</h1>
+    <div class="mb-8 flex flex-col items-start">
+      <h1 class="mb-2">Blog</h1>
+      <Breadcrumbs />
+    </div>
 
     <PostsList {blogs} />
     <FigureSmall

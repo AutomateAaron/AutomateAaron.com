@@ -5,7 +5,7 @@
   import BreathingBlob from "../svg/BreathingBlob.svelte";
 </script>
 
-<section id="about" class="overflow-hidden py-12 md:py-16 xl:py-24">
+<section id="about" class="section overflow-hidden">
   <div class="container">
     <!-- heading -->
     <div>
@@ -33,7 +33,7 @@
 
       <!-- text -->
       <div
-        class="relative z-10 mx-4 -mt-48 rounded-xl bg-accent p-6 text-accent-content md:mx-0 md:-ml-12 md:-mt-0 md:w-1/2 md:p-12"
+        class="relative z-10 mx-4 -mt-48 rounded-xl bg-accent p-6 text-accent-content md:mx-0 md:-ml-12 md:-mt-0 md:w-1/2 md:p-8 lg:p-12"
       >
         <h3 class="h3">Who am I?</h3>
         <p class="mb-6">
@@ -41,22 +41,22 @@
             target="_blank"
             rel="noreferrer"
             href="https://www.reddit.com/r/googlecloud/top/?t=all"
-            >Google Cloud memes</a
-          >, I know a thing or two about both communicating Google Cloud
-          concepts and building applications on the platform. And, as a self
-          proclaimed fan boy, I keep up-to-date with Google’s newest offerings
-          so you don’t have to. My goal is to streamline your GCP usage so your
-          business can focus on what matters: your business.
+          >
+            Google Cloud memes
+          </a>, I know a thing or two about both communicating Google Cloud
+          concepts and building applications on the platform. My goal is to
+          streamline your GCP usage so your business can focus on what matters:
+          your business.
         </p>
 
         <div class="-m-2">
-          <a href="/contact" class="m-2 inline-block"
-            ><button class="btn-primary btn">Contact Me</button></a
-          >
           <a href="/contact" class="m-2 inline-block">
-            <button class="btn-outline btn text-accent-content"
-              >Lets chat!</button
-            >
+            <button class="btn-primary btn">Lets chat!</button>
+          </a>
+          <a href="/#resume" class="m-2 inline-block">
+            <button class="btn-outline btn text-accent-content">
+              View Resume
+            </button>
           </a>
         </div>
       </div>

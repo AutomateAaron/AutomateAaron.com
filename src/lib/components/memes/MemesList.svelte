@@ -3,11 +3,13 @@
   import type { IMeme } from "$lib/types/generalTypes";
 
   export let memes: IMeme[];
+  let clazz: string = "";
 
+  export { clazz as class };
   export const selected: IMeme | null = null;
 </script>
 
-<div class="relative mt-12 columns-xs gap-4 space-y-4">
+<div class="relative columns-3xs gap-4 space-y-4 {clazz}">
   {#each memes as meme}
     <div id="{meme.slug}-thumb" class="group w-full overflow-hidden rounded-lg">
       <a href="#{meme.slug}">

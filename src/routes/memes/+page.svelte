@@ -6,6 +6,7 @@
   import ServiceBg from "$lib/components/svg/landing-sections/service/ServiceBg.svelte";
   import FigureSmall from "$lib/components/svg/FigureSmall.svelte";
   import BreathingBlob from "$lib/components/svg/BreathingBlob.svelte";
+  import Breadcrumbs from "$lib/components/Breadcrumbs.svelte";
 
   export let data;
 
@@ -17,11 +18,15 @@
   <meta data-key="description" name="description" content={siteDescription} />
 </svelte:head>
 
-<section class="overflow-hidden py-48">
+<section class="section overflow-hidden">
   <div class="container relative">
-    <h1>Memes</h1>
+    <div class="mb-8 flex flex-col items-end text-center">
+      <h1 class="mb-2">Memes</h1>
+      <Breadcrumbs />
+    </div>
 
     <MemesList {memes} />
+
     <FigureSmall
       class="absolute left-1/4 top-32 -z-10 -ml-8 -mt-8 h-20 w-20 animate-move-left lg:-ml-12 lg:-mt-12 lg:h-32 lg:w-32"
     />

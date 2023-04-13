@@ -58,10 +58,10 @@
   };
 </script>
 
-<section id="reviews" class="my-36">
+<section id="reviews" class="section">
   <div class="relative">
     <div
-      class="absolute bottom-0 left-0 right-0 top-0 -z-40 skew-y-2 transform bg-base-300"
+      class=" absolute bottom-0 left-0 right-0 top-0 -z-40 skew-y-2 transform bg-base-300"
     />
 
     <div class="container overflow-hidden py-24">

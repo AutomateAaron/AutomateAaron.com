@@ -5,8 +5,8 @@
   export let memes: IMeme[];
 </script>
 
-<section id="memes" class="relative my-20">
-  <div class="container relative z-10 ">
+<section id="memes" class="section relative">
+  <div class="container relative">
     <div class="items-end justify-between">
       <div class="text-right">
         <span class="pre-line-top-title mb-4 text-xl leading-normal">
@@ -20,7 +20,7 @@
       <div
         class="pointer-events-none absolute bottom-0 z-20 h-1/3 w-full bg-gradient-to-t from-base-200 to-transparent"
       />
-      <MemesList {memes} />
+      <MemesList {memes} class="my-8" />
     </div>
 
     <div class="mt-8 flex justify-center">

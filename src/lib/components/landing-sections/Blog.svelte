@@ -6,8 +6,8 @@
   export let blogs: IBlog[];
 </script>
 
-<section id="blog" class="relative overflow-hidden py-20 lg:py-12">
-  <div class="container relative z-10 ">
+<section id="blog" class="section relative overflow-hidden">
+  <div class="container relative z-10">
     <div class="items-end justify-between lg:flex">
       <div>
         <span class="pre-line-top-title mb-4 text-xl leading-normal">
@@ -25,7 +25,7 @@
         </a>
       </div>
     </div>
-    <BlogsList {blogs} />
+    <BlogsList {blogs} class="my-8" />
 
     <div class="mt-8 flex justify-center lg:hidden">
       <a href="blog" class="inline-block">

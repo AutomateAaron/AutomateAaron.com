@@ -1,8 +1,8 @@
 <!-- This page handles any error encountered by the site. -->
 <script>
   import Plus from "~icons/ic/baseline-plus";
-  import LeftArrow from "~icons/mdi/arrow-left-thin";
-  import RightArrow from "~icons/mdi/arrow-right-thin";
+  import LeftArrow from "~icons/ic/baseline-arrow-left";
+  import RightArrow from "~icons/ic/baseline-arrow-right";
   import Figure from "$lib/components/svg/Figure.svelte";
   import FigureSmall from "$lib/components/svg/FigureSmall.svelte";
   import BreathingBlob from "$lib/components/svg/BreathingBlob.svelte";
@@ -10,7 +10,7 @@
 </script>
 
 <section
-  class="relative flex h-screen items-center justify-center overflow-hidden overflow-x-hidden"
+  class="relative flex h-screen items-center justify-center overflow-hidden"
 >
   <div
     class="relative rounded-xl bg-base-100 px-12 py-12 shadow-xl md:px-24 md:py-12"
@@ -22,14 +22,18 @@
     {#if $page.error}
       <span class="mb-6 inline-block">{$page.error.message}</span>
     {/if}
-    <p>Maybe ?</p>
-
-    <a href="/" class="btn-outline btn-primary btn ">
-      <LeftArrow class="mr-2 align-middle" />Home
-    </a>
-    <a href="/" class="btn-outline btn-primary btn ">
-      Contact<RightArrow class="ml-2 align-middle" />
-    </a>
+    <p>
+      Maybe send message about it so I can fix it?<br />
+      <span class="text-sm opacity-50">(or just go back to the home page)</span>
+    </p>
+    <div class="flex gap-4">
+      <a href="/" class="btn-outline btn-primary btn">
+        <LeftArrow class="align-middle text-3xl" />Home
+      </a>
+      <a href="/" class="btn-outline btn-primary btn ">
+        Contact<RightArrow class="align-middle text-3xl" />
+      </a>
+    </div>
     <FigureSmall
       class="absolute -bottom-12 -right-12 -z-10 h-36 w-36 animate-spin-slow"
     />
