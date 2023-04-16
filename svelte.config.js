@@ -6,6 +6,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeExternalLinks from 'rehype-external-links'
 
 
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   extensions: [".svelte", ".md"],
@@ -22,6 +23,7 @@ const config = {
         rehypeAutolinkHeadings,
         [rehypeExternalLinks, { target: "_blank", rel: "noreferrer", }]
       ],
+
     }),
   ],
 

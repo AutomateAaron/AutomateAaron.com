@@ -2,8 +2,7 @@
   import { slide } from "svelte/transition";
   import type { INavItem } from "$lib/types/generalTypes";
   import Logo from "$lib/assets/images/logo.png";
-  import Moon from "~icons/ic/outline-nightlight";
-  import Sun from "~icons/ic/outline-wb-sunny";
+
   import { onMount } from "svelte";
   import { navItems } from "$lib/config";
 
@@ -78,7 +77,7 @@
           <Moon class="swap-off h-6 w-6 text-current" />
         </label> -->
         <a href="/contact">
-          <button class="btn-primary btn hidden md:block">Get in Touch</button>
+          <button class="btn-primary btn hidden md:block">Let's Chat!</button>
         </a>
 
         <button

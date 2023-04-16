@@ -341,7 +341,7 @@
         {/if}
       </div>
       <!-- image -->
-      <div class="relative z-10 md:mt-0 md:w-1/2 lg:w-1/5">
+      <div class="relative z-10 md:w-1/2 lg:w-1/5">
         <img
           src={ContactImage}
           alt="about-img z-10"

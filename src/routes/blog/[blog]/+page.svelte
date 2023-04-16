@@ -6,6 +6,12 @@
   import FigureSmall from "$lib/components/svg/FigureSmall.svelte";
   import { page } from "$app/stores";
   import { enhance, type SubmitFunction } from "$app/forms";
+  import ContactImage from "$lib/assets/images/contact/contact.jpg";
+  import AboutMaskImage from "$lib/assets/images/about/about-mask-svg.svg";
+
+  import CheckIcon from "~icons/ic/outline-check";
+  import ErrorIcon from "~icons/ic/outline-error";
+  import type { ActionResult } from "@sveltejs/kit";
 
   export let data;
 
@@ -14,15 +20,7 @@
 
   const { BlogContent } = data;
 
-  let message:
-    | {
-        type: "success" | "error";
-        message: string;
-      }
-    | undefined;
-
-  let error = undefined;
-  let submitting = false;
+  let formResult: ActionResult;
   let readMore = false;
 
   const handleSubmit: SubmitFunction = function ({
@@ -39,21 +37,10 @@
     // `submitter` is the `HTMLElement` that caused the form to be submitted
 
     return async ({ result, update }) => {
-      submitting = false;
-
       // `result` is an `ActionResult` object
       // `update` is a function which triggers the logic that would be triggered if this callback wasn't set    };
-      if (result.type === "success") {
-        message = {
-          type: "success",
-          message: "Subscribed!",
-        };
-      } else {
-        message = {
-          type: "error",
-          message: `error: ${result.status}`,
-        };
-      }
+      console.log(result);
+      formResult = result;
     };
   };
 </script>
@@ -76,7 +63,7 @@
   <!-- <meta property="og:image:height" content={coverHeight} /> -->
 </svelte:head>
 
-<article class="section relative overflow-hidden">
+<article class="section relative overflow-hidden pb-0">
   <div class="container relative mb-8">
     <h1 class="mb-2 text-center">{title}</h1>
     <Breadcrumbs path={$page.url.pathname} class="mx-auto mb-2 max-w-max" />
@@ -95,7 +82,11 @@
       class=" absolute -left-24 -top-24 -z-20 h-40 w-40 text-base-300 lg:-left-60 lg:-top-44 lg:h-80 lg:w-80"
     />
   </div>
-  <div class="relative {readMore ? '' : 'max-h-screen'} mb-16 overflow-hidden">
+  <div
+    class="relative {readMore
+      ? ''
+      : 'max-h-screen'} mb-16 overflow-hidden duration-300"
+  >
     <div class="container">
       <div class="mx-auto max-w-2xl">
         <svelte:component this={BlogContent} />
@@ -121,46 +112,6 @@
       />
     {/if}
   </div>
-
-  <div class="container flex justify-center">
-    <div class="rounded-xl bg-base-100 p-8 shadow duration-300 hover:shadow-xl">
-      <h4 class="text-center md:text-left">
-        {readMore ? "Is it later?" : "Want More?"}
-      </h4>
-      <form
-        use:enhance={handleSubmit}
-        enctype="application/x-www-form-urlencoded"
-        name="email"
-        method="POST"
-        action="/contact/submitted"
-        netlify-honeypot="bot-field"
-        data-netlify="true"
-        class="flex flex-col flex-wrap justify-center gap-4 md:flex-row "
-      >
-        <input type="hidden" name="form-name" value="contact" />
-
-        <div class="input-group w-max">
-          <input
-            type="email"
-            name="email"
-            placeholder="brian@vghs.edu"
-            class="input-bordered input"
-            required
-          />
-          <button type="submit" class="btn-primary btn">Subscribe</button>
-        </div>
-        {#if !readMore}
-          <button
-            on:click={() => {
-              readMore = true;
-            }}
-            class="btn-ghost btn">Maybe Later...</button
-          >
-        {/if}
-      </form>
-    </div>
-  </div>
-
   <Figure
     class="absolute -right-14 top-96 hidden h-36 w-36 animate-move-top lg:block"
   />
@@ -170,3 +121,104 @@
       : 'z-20'}  -ml-12 -mt-12 hidden h-32 w-32 animate-move-top lg:block"
   />
 </article>
+
+<section class="section relative !pt-0 ">
+  <div
+    class="container flex flex-col-reverse items-center justify-center gap-8 lg:flex-row lg:items-start"
+  >
+    {#if readMore}
+      <div class="">
+        <div class="relative flex max-w-xl items-center justify-center">
+          <div class="relative -mr-24 w-full">
+            <img
+              src={ContactImage}
+              alt="about-img"
+              style="-webkit-mask:url({AboutMaskImage});-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;-webkit-mask-position:center center"
+            />
+          </div>
+          <div class="flex-col rounded-xl bg-base-100 p-8 pl-24 shadow-xl">
+            <h4 class="mb-0">Aaron N. Brock</h4>
+            <div class="divider my-2" />
+            <p class="text-sm">
+              I'm a Cloud Engineer with a background in DevOps Engineering,
+              Cloud Gaming, and self-driving buses. Now, I empower
+              transformations at innovative startups.
+            </p>
+            <a
+              href="/contact"
+              class="btn-outline btn-primary btn-sm btn self-end"
+            >
+              Contact Me
+            </a>
+          </div>
+          <FigureSmall
+            class="absolute -left-4 -top-12 -z-10 h-20 w-20 animate-move-left"
+          />
+        </div>
+      </div>
+    {/if}
+    <div class="rounded-xl bg-base-100 p-8 shadow-xl duration-300">
+      {#if !formResult}
+        <h5 class="text-center md:text-left">
+          {readMore ? "Is it Later?" : "Want more?"}
+        </h5>
+        <form
+          use:enhance={handleSubmit}
+          enctype="application/x-www-form-urlencoded"
+          name="email"
+          method="POST"
+          action="/contact/submitted"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+          class="flex flex-wrap gap-4"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+
+          <div class="input-group w-max">
+            <input
+              type="email"
+              name="email"
+              placeholder="brian@vghs.edu"
+              class="input-bordered input max-w-sm"
+              required
+            />
+            <button type="submit" class="btn-primary btn">Subscribe</button>
+          </div>
+          {#if !readMore}
+            <button
+              on:click={() => {
+                readMore = true;
+              }}
+              class="btn-ghost btn">Maybe Later...</button
+            >
+          {/if}
+        </form>
+      {:else if formResult.type === "success"}
+        <h5 class="text-center md:text-left">Mailing List</h5>
+        <div class="alert alert-success shadow-lg">
+          <div>
+            <CheckIcon />
+            <span>Subscribed! Thank you.</span>
+          </div>
+        </div>
+      {:else if formResult.type === "error"}
+        <h5 class="text-center md:text-left">Mailing List</h5>
+        <div class="alert alert-error shadow-lg">
+          <div>
+            <ErrorIcon />
+            <span>Error {formResult.status}: {formResult.error.message}</span>
+          </div>
+        </div>
+      {:else}
+        <h5>Mailing List</h5>
+        <div class="alert alert-warning shadow-lg">
+          <div>
+            <ErrorIcon />
+            <span>Form responded with "{formResult.type}", not sure why...</span
+            >
+          </div>
+        </div>
+      {/if}
+    </div>
+  </div>
+</section>
