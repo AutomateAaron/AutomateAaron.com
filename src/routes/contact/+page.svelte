@@ -17,14 +17,12 @@
   import ClickToCopy from "$lib/components/ClickToCopy.svelte";
   import Breadcrumbs from "$lib/components/Breadcrumbs.svelte";
 
-  let message:
-    | {
-        type: "success" | "error";
-        message: string;
-      }
-    | undefined;
+  import CheckIcon from "~icons/ic/outline-check";
+  import ErrorIcon from "~icons/ic/outline-error";
+  import CloseIcon from "~icons/ic/baseline-close";
+  import type { ActionResult } from "@sveltejs/kit";
 
-  let submitting = false;
+  let formResult: ActionResult | undefined;
 
   const handleSubmit: SubmitFunction = function ({
     form,
@@ -33,25 +31,15 @@
     cancel,
     controller,
   }) {
-    submitting = true;
-
     return async ({ result, update }) => {
-      submitting = false;
-
       // `result` is an `ActionResult` object
-      // `update` is a function which triggers the logic that would be triggered if this callback wasn't set    };
-      if (result.type === "success") {
-        message = {
-          type: "success",
-          message: "Message submitted successfully!",
-        };
-      } else {
-        message = {
-          type: "error",
-          message: `error: ${result.status}`,
-        };
-      }
+      // `update` is a function which triggers the logic that would be triggered if this callback wasn't set
+      formResult = result;
     };
+  };
+
+  const deleteFormResult = function () {
+    formResult = undefined;
   };
 </script>
 
@@ -252,93 +240,54 @@
           />
           <button type="submit" class="btn-primary btn self-start">
             Send
-            {#if submitting}<SpinnerIcon class="ml-2 inline" />{/if}
           </button>
-        </form>
-
-        {#if message}
-          {#if message.type == "success"}
-            <div class="alert alert-success mt-4 shadow-lg">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 flex-shrink-0 stroke-current"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  ><path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  /></svg
-                >
-                <span>{message.message}</span>
-              </div>
-              <div class="flex-none">
+          {#if formResult}
+            {#if formResult.type === "success"}
+              <div class="alert alert-success shadow-lg">
+                <div>
+                  <CheckIcon />
+                  <span>Subscribed! Thank you.</span>
+                </div>
                 <button
-                  on:click={() => {
-                    message = undefined;
-                  }}
+                  on:click={deleteFormResult}
                   class="btn-ghost btn-square btn-sm btn"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    ><path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    /></svg
-                  ></button
-                >
-              </div>
-            </div>
-          {:else if message.type == "error"}
-            <div class="alert alert-error mt-4 shadow-lg">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 flex-shrink-0 stroke-current"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  ><path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  /></svg
-                >
-                <span>{message.message}</span>
-              </div>
-              <div class="flex-none">
-                <button
-                  on:click={() => {
-                    message = undefined;
-                  }}
-                  class="btn-ghost btn-square btn-sm btn"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    ><path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    /></svg
-                  >
+                  <CloseIcon />
                 </button>
               </div>
-            </div>
+            {:else if formResult.type === "error"}
+              <div class="alert alert-error shadow-lg">
+                <div>
+                  <ErrorIcon />
+                  <span
+                    >Error {formResult.status}: {formResult.error.message}</span
+                  >
+                </div>
+                <button
+                  on:click={deleteFormResult}
+                  class="btn-ghost btn-square btn-sm btn"
+                >
+                  <CloseIcon />
+                </button>
+              </div>
+            {:else}
+              <div class="alert alert-warning shadow-lg">
+                <div>
+                  <ErrorIcon />
+                  <span
+                    >Form responded with "{formResult.type}", not sure why...</span
+                  >
+                </div>
+                <button
+                  on:click={deleteFormResult}
+                  class="btn-ghost btn-square btn-sm btn"
+                >
+                  <CloseIcon />
+                </button>
+              </div>
+            {/if}
           {/if}
-        {/if}
+        </form>
       </div>
       <!-- image -->
       <div class="relative z-10 md:w-1/2 lg:w-1/5">
