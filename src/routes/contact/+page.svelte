@@ -32,6 +32,7 @@
     controller,
   }) {
     return async ({ result, update }) => {
+      console.log(result);
       // `result` is an `ActionResult` object
       // `update` is a function which triggers the logic that would be triggered if this callback wasn't set
       formResult = result;
@@ -215,7 +216,6 @@
           enctype="application/x-www-form-urlencoded"
           name="contact"
           method="POST"
-          action="/contact/submitted"
           netlify-honeypot="bot-field"
           data-netlify="true"
           class="form-control space-y-4"
