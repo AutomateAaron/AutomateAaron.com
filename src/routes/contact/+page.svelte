@@ -211,7 +211,7 @@
         <h3 class="h3">Or, drop me a line here...</h3>
 
         <form
-          use:enhance={handleSubmit}
+          use:enhance
           enctype="application/x-www-form-urlencoded"
           name="contact"
           method="POST"
