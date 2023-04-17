@@ -28,8 +28,8 @@
     <BlogsList {blogs} class="my-8" />
 
     <div class="mt-8 flex justify-center lg:hidden">
-      <a href="blog" class="inline-block">
-        <button class="btn-outline btn text-neutral">See All Blogs</button>
+      <a href="blog" class="btn-outline btn inline-block text-neutral">
+        <div class="inline-block align-middle">See All Blogs</div>
       </a>
     </div>
     <div class="absolute -right-[10%] -top-[5%] -z-20">

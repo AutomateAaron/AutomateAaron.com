@@ -132,9 +132,7 @@
       <Breadcrumbs />
     </div>
     <!-- contact options -->
-    <div
-      class="items-stretch justify-evenly space-y-8 md:flex md:space-x-4 md:space-y-0 xl:space-x-8"
-    >
+    <div class="grid gap-4 lg:grid-cols-3 xl:gap-8">
       <div
         class="flex w-full flex-col rounded-xl bg-base-100 p-8 text-base-content shadow-xl"
       >
@@ -170,18 +168,21 @@
 
         <h4 class="h4">Socials</h4>
         <p>Add me on the whatever social media platform you prefer!</p>
-        <div class="-m-1 mt-auto">
+        <div class="mt-auto flex max-w-max flex-wrap justify-center gap-1">
           {#each socialMediaLinks as item}
-            <div class="inline-block">
+            <div
+              class="tooltip tooltip-primary"
+              data-tip="{item.url.replace('https://', '')} ↗"
+            >
               <a
-                href={item?.url}
+                href={item.url}
                 target="_blank"
                 rel="noreferrer"
-                class="btn-outline btn-primary btn-square btn m-1"
+                class="btn-outline btn-primary btn-square btn-sm btn"
               >
                 <svelte:component
-                  this={item?.icon}
-                  class="h-1/2 w-1/2 fill-current"
+                  this={item.icon}
+                  class="h-2/3 w-2/3 fill-current"
                 />
               </a>
             </div>
@@ -207,10 +208,10 @@
         </p>
 
         <ClickToCopy
-          class="tooltip-primary w-fit"
+          class="tooltip-primary mt-auto w-fit"
           copyText="Aaron@AaronNBrock.com"
         >
-          <div class="btn-outline btn-primary btn capitalize">
+          <div class="btn-outline btn-primary btn-sm btn capitalize">
             Aaron@AaronNBrock.com
           </div>
         </ClickToCopy>

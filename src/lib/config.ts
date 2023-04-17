@@ -12,6 +12,8 @@ import Github from "~icons/fa6-brands/github";
 import Linkedin from "~icons/fa6-brands/linkedin-in";
 import Medium from "~icons/fa6-brands/medium";
 import Twitter from "~icons/fa6-brands/twitter";
+import Instagram from "~icons/fa6-brands/instagram";
+
 
 export const siteTitle = "Aaron N. Brock";
 export const siteDescription = "How to make Google Cloud easier.";
@@ -78,11 +80,11 @@ export const socialMediaLinks: ISocialMediaLink[] = [
     icon: Github,
   },
   {
-    url: "https://www.linkedin.com/in/AaronNBrock/",
+    url: "https://linkedin.com/in/AaronNBrock",
     icon: Linkedin,
   },
   {
-    url: "https://www.facebook.com/AaronNBrock/",
+    url: "https://facebook.com/AaronNBrock",
     icon: Facebook,
   },
   {
@@ -92,5 +94,9 @@ export const socialMediaLinks: ISocialMediaLink[] = [
   {
     url: "https://medium.com/@AaronNBrock",
     icon: Medium,
+  },
+  {
+    url: "https://instagram.com/AutomateAaron",
+    icon: Instagram,
   },
 ];

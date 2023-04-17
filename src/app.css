@@ -189,7 +189,7 @@
   /* === Code blocks === */
   /* General Codeblock */
   pre[class*="language-"] {
-    @apply overflow-auto lg:my-8 xl:my-12 relative my-4 rounded-xl border-base-100 bg-base-100 p-4 shadow hover:shadow-xl duration-300;
+    @apply overflow-auto lg:my-8 xl:my-12 relative my-4 rounded-xl border-base-100 bg-base-100 p-4 shadow hover:shadow-lg duration-300;
   }
   /* Expanding Codeblock */
   pre[class*="language-"] {

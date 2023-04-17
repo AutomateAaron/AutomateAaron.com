@@ -169,8 +169,10 @@
     class="container flex flex-col-reverse items-center justify-center gap-8 lg:flex-row lg:items-start"
   >
     {#if readMore}
-      <div class="">
-        <div class="relative flex max-w-xl items-center justify-center">
+      <div class="relative">
+        <div
+          class="group relative flex max-w-xl items-center justify-center duration-300 ease-in-out hover:scale-105"
+        >
           <div class="relative -mr-24 w-full">
             <img
               src={ContactImage}
@@ -178,7 +180,9 @@
               style="-webkit-mask:url({AboutMaskImage});-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;-webkit-mask-position:center center"
             />
           </div>
-          <div class="flex-col rounded-xl bg-base-100 p-8 pl-24 shadow-xl">
+          <div
+            class="flex-col rounded-xl bg-base-100 p-8 pl-24 shadow duration-300 ease-in-out group-hover:shadow-xl"
+          >
             <h4 class="mb-0">Aaron N. Brock</h4>
             <div class="divider my-2" />
             <p class="text-sm">
@@ -188,22 +192,29 @@
             </p>
             <a
               href="/contact"
-              class="btn-outline btn-primary btn-sm btn self-end"
+              class="btn-primary btn-sm btn [.group:not(:hover)_&]:btn-outline hover:!scale-125 hover:text-primary-content group-hover:scale-110"
             >
               Contact Me
             </a>
           </div>
-          <FigureSmall
-            class="absolute -left-4 -top-12 -z-10 h-20 w-20 animate-move-left"
-          />
         </div>
+        <FigureSmall
+          class="absolute -left-4 -top-12 -z-10 h-20 w-20 animate-move-left"
+        />
       </div>
     {/if}
-    <div class="rounded-xl bg-base-100 p-8 shadow-xl duration-300">
-      {#if !formResult}
-        <h5 class="text-center md:text-left">
+    <div
+      class="group rounded-xl bg-base-100 p-8 shadow duration-300 ease-in-out focus-within:scale-105 focus-within:shadow-xl hover:scale-105 hover:shadow-xl"
+    >
+      <h5 class="text-center md:text-left">
+        {#if formResult}
+          Mailing List
+        {:else}
           {readMore ? "Is it Later?" : "Want more?"}
-        </h5>
+        {/if}
+      </h5>
+
+      {#if !formResult}
         <form
           use:enhance={handleSubmit}
           enctype="application/x-www-form-urlencoded"
@@ -212,53 +223,64 @@
           action="/contact/submitted"
           netlify-honeypot="bot-field"
           data-netlify="true"
-          class="flex flex-wrap gap-4"
+          class="flex flex-wrap gap-4 duration-300 ease-in-out group-focus-within:scale-105 group-hover:scale-105"
         >
           <input type="hidden" name="form-name" value="contact" />
 
-          <div class="input-group w-max">
+          <div
+            class="input-group w-max duration-300 ease-in-out group-focus-within:shadow-lg group-hover:shadow-lg"
+          >
             <input
               type="email"
               name="email"
               placeholder="brian@vghs.edu"
-              class="input-bordered input max-w-sm"
+              class="input-bordered input-primary input input-sm max-w-sm"
               required
             />
-            <button type="submit" class="btn-primary btn">Subscribe</button>
+            <button type="submit" class="btn-primary btn-sm btn">
+              Subscribe
+            </button>
           </div>
           {#if !readMore}
             <button
               on:click={() => {
                 readMore = true;
               }}
-              class="btn-ghost btn">Maybe Later...</button
+              class="btn-ghost btn-sm btn duration-300 ease-in-out group-focus-within:shadow group-hover:shadow"
+              >Maybe Later...</button
             >
           {/if}
         </form>
-      {:else if formResult.type === "success"}
-        <h5 class="text-center md:text-left">Mailing List</h5>
-        <div class="alert alert-success shadow-lg">
-          <div>
-            <CheckIcon />
-            <span>Subscribed! Thank you.</span>
-          </div>
-        </div>
-      {:else if formResult.type === "error"}
-        <h5 class="text-center md:text-left">Mailing List</h5>
-        <div class="alert alert-error shadow-lg">
-          <div>
-            <ErrorIcon />
-            <span>Error {formResult.status}: {formResult.error.message}</span>
-          </div>
-        </div>
       {:else}
-        <h5>Mailing List</h5>
-        <div class="alert alert-warning shadow-lg">
-          <div>
-            <ErrorIcon />
-            <span>Form responded with "{formResult.type}", not sure why...</span
-            >
-          </div>
+        <div
+          class="duration-300 ease-in-out group-focus-within:scale-105 group-hover:scale-105"
+        >
+          {#if formResult.type === "success"}
+            <div class="alert alert-success shadow-lg">
+              <div>
+                <CheckIcon />
+                <span>Subscribed! Thank you.</span>
+              </div>
+            </div>
+          {:else if formResult.type === "error"}
+            <div class="alert alert-error shadow-lg">
+              <div>
+                <ErrorIcon />
+                <span
+                  >Error {formResult.status}: {formResult.error.message}</span
+                >
+              </div>
+            </div>
+          {:else}
+            <div class="alert alert-warning shadow-lg">
+              <div>
+                <ErrorIcon />
+                <span
+                  >Form responded with "{formResult.type}", not sure why...</span
+                >
+              </div>
+            </div>
+          {/if}
         </div>
       {/if}
     </div>
