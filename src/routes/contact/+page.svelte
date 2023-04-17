@@ -281,7 +281,7 @@
               <div class="alert alert-success shadow-lg">
                 <div>
                   <CheckIcon />
-                  <span>Subscribed! Thank you.</span>
+                  <span>Message Sent. I'll get back to you Soon™</span>
                 </div>
                 <button
                   on:click={deleteFormResult}

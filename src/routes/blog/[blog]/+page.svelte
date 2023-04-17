@@ -20,7 +20,7 @@
 
   const { BlogContent } = data;
 
-  let formResult: ActionResult;
+  let formResult: ActionResult | undefined;
   let readMore = false;
 
   const handleSubmit: SubmitFunction = async function ({
