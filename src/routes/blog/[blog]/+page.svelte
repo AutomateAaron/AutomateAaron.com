@@ -150,7 +150,7 @@
     </div>
     {#if !readMore}
       <div
-        class="pointer-events-none absolute bottom-0 z-20 h-1/2 w-full bg-gradient-to-t from-base-200 to-transparent"
+        class="pointer-events-none absolute bottom-0 z-20 h-96 max-h-full w-full bg-gradient-to-t from-base-200 to-transparent"
       />
     {/if}
   </div>
