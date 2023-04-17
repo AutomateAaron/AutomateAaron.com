@@ -21,7 +21,6 @@
   import ErrorIcon from "~icons/ic/outline-error";
   import CloseIcon from "~icons/ic/baseline-close";
   import type { ActionResult } from "@sveltejs/kit";
-  import { NUMBER_OF_PROCESSORS } from "$env/static/private";
 
   let formResult: ActionResult | undefined;
 
