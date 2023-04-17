@@ -30,6 +30,7 @@
     cancel,
     controller,
   }) {
+    readMore = true;
     cancel();
     try {
       const response = await fetch(action, {
