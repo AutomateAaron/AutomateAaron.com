@@ -218,14 +218,14 @@
         <form
           use:enhance={handleSubmit}
           enctype="application/x-www-form-urlencoded"
-          name="email"
+          name="mailing-list"
           method="POST"
           action="/contact/submitted"
           netlify-honeypot="bot-field"
           data-netlify="true"
           class="flex flex-wrap gap-4 duration-300 ease-in-out group-focus-within:scale-105 group-hover:scale-105"
         >
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="mailing-list" />
 
           <div
             class="input-group w-max duration-300 ease-in-out group-focus-within:shadow-lg group-hover:shadow-lg"
