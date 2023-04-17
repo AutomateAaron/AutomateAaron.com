@@ -23,25 +23,54 @@
   let formResult: ActionResult;
   let readMore = false;
 
-  const handleSubmit: SubmitFunction = function ({
+  const handleSubmit: SubmitFunction = async function ({
     form,
     data,
     action,
     cancel,
     controller,
   }) {
-    // `form` is the `<form>` element
-    // `data` is its `FormData` object
-    // `action` is the URL to which the form is posted
-    // `cancel()` will prevent the submission
-    // `submitter` is the `HTMLElement` that caused the form to be submitted
+    cancel();
+    try {
+      const response = await fetch(action, {
+        method: "POST",
+        headers: {
+          accept: "application/json",
+          "x-sveltekit-action": "true",
+        },
+        cache: "no-store",
+        body: data,
+        signal: controller.signal,
+      });
 
-    return async ({ result, update }) => {
-      // `result` is an `ActionResult` object
-      // `update` is a function which triggers the logic that would be triggered if this callback wasn't set    };
-      console.log(result);
-      formResult = result;
-    };
+      if (response.ok) {
+        form.reset();
+        formResult = {
+          type: "success",
+          status: response.status,
+        };
+      } else {
+        const contentType = response.headers.get("content-type");
+        if (contentType && contentType.indexOf("application/json") !== -1) {
+          let data = await response.json();
+          formResult = {
+            type: data.type || "error",
+            status: response.status,
+            error: data.error || new Error(data),
+          };
+        } else {
+          let text = await response.text();
+          formResult = {
+            type: "error",
+            status: response.status,
+            error: new Error(text),
+          };
+        }
+      }
+    } catch (error) {
+      console.log("catching error");
+      formResult = { type: "error", error };
+    }
   };
 </script>
 

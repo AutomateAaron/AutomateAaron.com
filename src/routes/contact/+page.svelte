@@ -21,22 +21,58 @@
   import ErrorIcon from "~icons/ic/outline-error";
   import CloseIcon from "~icons/ic/baseline-close";
   import type { ActionResult } from "@sveltejs/kit";
+  import { NUMBER_OF_PROCESSORS } from "$env/static/private";
 
   let formResult: ActionResult | undefined;
 
-  const handleSubmit: SubmitFunction = function ({
+  const handleSubmit: SubmitFunction = async function ({
     form,
     data,
     action,
     cancel,
     controller,
   }) {
-    return async ({ result, update }) => {
-      console.log(result);
-      // `result` is an `ActionResult` object
-      // `update` is a function which triggers the logic that would be triggered if this callback wasn't set
-      formResult = result;
-    };
+    cancel();
+    try {
+      const response = await fetch(action, {
+        method: "POST",
+        headers: {
+          accept: "application/json",
+          "x-sveltekit-action": "true",
+        },
+        cache: "no-store",
+        body: data,
+        signal: controller.signal,
+      });
+
+      if (response.ok) {
+        form.reset();
+        formResult = {
+          type: "success",
+          status: response.status,
+        };
+      } else {
+        const contentType = response.headers.get("content-type");
+        if (contentType && contentType.indexOf("application/json") !== -1) {
+          let data = await response.json();
+          formResult = {
+            type: data.type || "error",
+            status: response.status,
+            error: data.error || new Error(data),
+          };
+        } else {
+          let text = await response.text();
+          formResult = {
+            type: "error",
+            status: response.status,
+            error: new Error(text),
+          };
+        }
+      }
+    } catch (error) {
+      console.log("catching error");
+      formResult = { type: "error", error };
+    }
   };
 
   const deleteFormResult = function () {
