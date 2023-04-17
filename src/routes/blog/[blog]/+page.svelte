@@ -191,8 +191,9 @@
             <div class="divider my-2" />
             <p class="text-sm">
               I'm a Cloud Engineer with a background in DevOps Engineering,
-              Cloud Gaming, and self-driving buses. Now, I empower
-              transformations at innovative startups.
+              Software Development, Cloud Gaming, and self-driving buses. Now, I
+              empower innovative startups & small businesses like yours to
+              leverage the cloud!
             </p>
             <a
               href="/contact"

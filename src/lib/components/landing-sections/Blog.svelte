@@ -29,7 +29,7 @@
 
     <div class="mt-8 flex justify-center lg:hidden">
       <a href="blog" class="btn-outline btn inline-block text-neutral">
-        <div class="inline-block align-middle">See All Blogs</div>
+        <div class="flex h-full items-center justify-center">See All Blogs</div>
       </a>
     </div>
     <div class="absolute -right-[10%] -top-[5%] -z-20">
