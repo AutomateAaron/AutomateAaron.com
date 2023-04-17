@@ -12,6 +12,7 @@
   import CheckIcon from "~icons/ic/outline-check";
   import ErrorIcon from "~icons/ic/outline-error";
   import type { ActionResult } from "@sveltejs/kit";
+  import { subscribed } from "$lib/stores.js";
 
   export let data;
 
@@ -22,6 +23,16 @@
 
   let formResult: ActionResult | undefined;
   let readMore = false;
+
+  subscribed.subscribe((value) => {
+    if (value) {
+      formResult = {
+        type: "success",
+        status: 200,
+      };
+      readMore = true;
+    }
+  });
 
   const handleSubmit: SubmitFunction = async function ({
     form,
@@ -46,6 +57,7 @@
 
       if (response.ok) {
         form.reset();
+        subscribed.set(true);
         formResult = {
           type: "success",
           status: response.status,
