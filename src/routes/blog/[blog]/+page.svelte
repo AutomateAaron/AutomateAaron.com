@@ -11,8 +11,9 @@
 
   import CheckIcon from "~icons/ic/outline-check";
   import ErrorIcon from "~icons/ic/outline-error";
+  import CloseIcon from "~icons/ic/baseline-close";
   import type { ActionResult } from "@sveltejs/kit";
-  import { subscribed } from "$lib/stores.js";
+  import { subscribed } from "../../../lib/stores.js";
 
   export let data;
 
@@ -85,6 +86,9 @@
       formResult = { type: "error", error };
     }
   };
+  const deleteFormResult = function () {
+    formResult = undefined;
+  };
 </script>
 
 <svelte:head>
@@ -150,7 +154,7 @@
     </div>
     {#if !readMore}
       <div
-        class="pointer-events-none absolute bottom-0 z-20 h-96 max-h-full w-full bg-gradient-to-t from-base-200 to-transparent"
+        class="pointer-events-none absolute bottom-0 z-20 h-1/4 max-h-full w-full bg-gradient-to-t from-base-200 to-transparent"
       />
     {/if}
   </div>
@@ -260,24 +264,42 @@
               <div>
                 <CheckIcon />
                 <span>Subscribed! Thank you.</span>
+                <button
+                  on:click={deleteFormResult}
+                  class="btn-ghost btn-square btn-sm btn"
+                >
+                  <CloseIcon />
+                </button>
               </div>
             </div>
           {:else if formResult.type === "error"}
             <div class="alert alert-error shadow-lg">
               <div>
                 <ErrorIcon />
-                <span
-                  >Error {formResult.status}: {formResult.error.message}</span
+                <span>
+                  Error {formResult.status}: {formResult.error.message}
+                </span>
+                <button
+                  on:click={deleteFormResult}
+                  class="btn-ghost btn-square btn-sm btn"
                 >
+                  <CloseIcon />
+                </button>
               </div>
             </div>
           {:else}
             <div class="alert alert-warning shadow-lg">
               <div>
                 <ErrorIcon />
-                <span
-                  >Form responded with "{formResult.type}", not sure why...</span
+                <span>
+                  Form responded with "{formResult.type}", not sure why...
+                </span>
+                <button
+                  on:click={deleteFormResult}
+                  class="btn-ghost btn-square btn-sm btn"
                 >
+                  <CloseIcon />
+                </button>
               </div>
             </div>
           {/if}
