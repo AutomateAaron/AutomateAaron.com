@@ -342,3 +342,28 @@
     @apply relative ml-8 -translate-x-1/2 transform before:absolute before:-left-8 before:top-1/2 before:h-0.5 before:w-5 before:bg-base-content;
   }
 }
+
+@layer utilities {
+  .mask-left {
+    -webkit-mask-image: url("/mask/left-mask.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center center;
+
+    mask-image: url("/mask/left-mask.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center center;
+  }
+  .mask-right {
+    -webkit-mask-image: url("/mask/right-mask.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center center;
+
+    mask-image: url("/mask/right-mask.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center center;
+  }
+}

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Logo from "$lib/assets/images/widget-logo.png";
+  import Logo from "$lib/components/svg/logo.svelte";
   import EmailIcon from "~icons/ic/baseline-email";
   import Shape1 from "$lib/components/svg/footer/Shape1.svelte";
   import Shape2 from "$lib/components/svg/footer/Shape2.svelte";
@@ -7,7 +7,6 @@
   import { socialMediaLinks, siteMap } from "$lib/config.js";
 
   import { page } from "$app/stores";
-  import MailTo from "../MailTo.svelte";
   import ClickToCopy from "../ClickToCopy.svelte";
 </script>
 
@@ -58,10 +57,10 @@
 
     <!-- footer -->
     <div
-      class="flex flex-col items-center space-y-12 py-12 md:flex-row md:items-start md:justify-between md:py-20"
+      class="flex flex-col items-center gap-12 py-12 md:flex-row md:items-start md:justify-between md:py-20"
     >
       <div>
-        <img src={Logo} alt="" />
+        <Logo class="h-40 w-40" />
       </div>
 
       <div>

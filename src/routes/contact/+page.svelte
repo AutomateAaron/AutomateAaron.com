@@ -2,14 +2,13 @@
   import ClockIcon from "~icons/ic/round-schedule";
   import SocialIcon from "~icons/ic/outline-people-alt";
   import EmailIcon from "~icons/ic/outline-email";
-  import SpinnerIcon from "~icons/svg-spinners/blocks-shuffle-3";
 
   import Figure from "$lib/components/svg/Figure.svelte";
   import CardBlob from "$lib/components/svg/CardBlob.svelte";
   import FigureSmall from "$lib/components/svg/FigureSmall.svelte";
-  import ContactImage from "$lib/assets/images/contact/contact.jpg";
-  import AboutMaskImage from "$lib/assets/images/about/about-mask-svg.svg";
+  import ProfilePicture from "$lib/assets/images/profile-picture.jpg?run";
   import BreathingBlob from "$lib/components/svg/BreathingBlob.svelte";
+  import Img from "@zerodevx/svelte-img";
 
   import { siteTitle, socialMediaLinks } from "$lib/config.js";
   import { teleport } from "$lib/assets/js/clientUtils";
@@ -327,11 +326,7 @@
       </div>
       <!-- image -->
       <div class="relative z-10 md:w-1/2 lg:w-1/5">
-        <img
-          src={ContactImage}
-          alt="about-img z-10"
-          style="-webkit-mask:url({AboutMaskImage});-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;-webkit-mask-position:center center"
-        />
+        <Img src={ProfilePicture} alt="" class="mask-right" />
         <FigureSmall
           class="absolute -right-6 -top-12 -z-10 h-24 w-24 animate-move-top"
         />

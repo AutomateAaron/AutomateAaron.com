@@ -1,7 +1,8 @@
 <script lang="ts">
-  import HeroImage from "$lib/assets/images/hero/hero.jpg";
-  import HeroMaskSvg from "$lib/assets/images/hero/hero-mask-svg.svg";
-  import PopupThumb from "$lib/assets/images/hero/popup-thumb.jpg";
+  import HeroImage from "$lib/assets/images/hero.jpg?run";
+  import PopupThumb from "$lib/assets/images/hero-video-thumbnail.jpg?run&lqip=32";
+  import Img from "@zerodevx/svelte-img";
+
   import Figure from "$lib/components/svg/Figure.svelte";
   import HeroBg from "$lib/components/svg/landing-sections/hero/HeroBg.svelte";
 
@@ -54,19 +55,14 @@
     <!-- image -->
     <div class="relative w-full">
       <div class="relative">
-        <img
-          src={HeroImage}
-          alt=""
-          class=""
-          style="-webkit-mask:url({HeroMaskSvg});-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;-webkit-mask-position:center center"
-        />
+        <Img src={HeroImage} loading="eager" class="mask-right" />
 
         <!-- video -->
         <button
           class="absolute -bottom-[5%] left-0 right-0 mx-auto aspect-3/2 w-2/5 min-w-[8rem] overflow-hidden rounded-lg border-2 border-base-200 md:-left-1/2 md:right-1/2 md:top-2/3"
           on:click={() => (showModal = true)}
         >
-          <img
+          <Img
             src={PopupThumb}
             alt=""
             class="h-full w-full object-cover object-center"

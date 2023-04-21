@@ -6,8 +6,8 @@
   import FigureSmall from "$lib/components/svg/FigureSmall.svelte";
   import { page } from "$app/stores";
   import { enhance, type SubmitFunction } from "$app/forms";
-  import ContactImage from "$lib/assets/images/contact/contact.jpg";
-  import AboutMaskImage from "$lib/assets/images/about/about-mask-svg.svg";
+  import ProfilePicture from "$lib/assets/images/profile-picture.jpg?run";
+  import Img from "@zerodevx/svelte-img";
 
   import CheckIcon from "~icons/ic/outline-check";
   import ErrorIcon from "~icons/ic/outline-error";
@@ -143,7 +143,7 @@
               {#each categories as category}
                 <li class="float-left ml-4">
                   <a href="/blog/">
-                    <span class="badge badge-secondary">#{category}</span>
+                    <span class="badge-secondary badge">#{category}</span>
                   </a>
                 </li>
               {/each}
@@ -178,11 +178,7 @@
           class="group relative flex max-w-xl items-center justify-center duration-300 ease-in-out hover:scale-105"
         >
           <div class="relative -mr-24 w-full">
-            <img
-              src={ContactImage}
-              alt="about-img"
-              style="-webkit-mask:url({AboutMaskImage});-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;-webkit-mask-position:center center"
-            />
+            <Img src={ProfilePicture} alt="about-img" class="mask-left" />
           </div>
           <div
             class="flex-col rounded-xl bg-base-100 p-8 pl-24 shadow duration-300 ease-in-out group-hover:shadow-xl"

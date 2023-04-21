@@ -1,7 +1,7 @@
 <script lang="ts">
   import { slide } from "svelte/transition";
   import type { INavItem } from "$lib/types/generalTypes";
-  import Logo from "$lib/assets/images/logo.png";
+  import Logo from "$lib/components/svg/logo.svelte";
 
   import { onMount } from "svelte";
   import { navItems } from "$lib/config";
@@ -52,7 +52,7 @@
     >
       <div class="flex w-1/2 items-center justify-start gap-4">
         <a href="/">
-          <img src={Logo} alt="" class="h-10 w-10" />
+          <Logo class="h-10 w-10" />
         </a>
       </div>
 

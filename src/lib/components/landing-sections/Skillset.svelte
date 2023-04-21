@@ -1,9 +1,9 @@
 <script lang="ts">
-  import SkillImage from "$lib/assets/images/skill/skill_image.jpg";
-  import SkillMask from "$lib/assets/images/skill/skill-mask-svg.svg";
+  import SkillImage from "$lib/assets/images/skillset.jpg?run";
   import Check from "~icons/mdi/check-bold";
   import Figure from "../svg/Figure.svelte";
-  // import SkillBlob from '../svg/Homepage/Skill/SkillBlob.svelte';
+  import Img from "@zerodevx/svelte-img";
+
   import FigureSmall from "../svg/FigureSmall.svelte";
   import BreathingBlob from "../svg/BreathingBlob.svelte";
 
@@ -32,12 +32,7 @@
   >
     <div class="relative">
       <!-- <img src={SkillImage} alt="" /> -->
-      <img
-        src={SkillImage}
-        alt=""
-        class=""
-        style="-webkit-mask:url({SkillMask});-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;-webkit-mask-position:center center"
-      />
+      <Img src={SkillImage} class="mask-left" />
 
       <div class="absolute -left-[13%] -top-[2%] -z-10 transform ">
         <Figure class="h-36 w-36 animate-move-top" />

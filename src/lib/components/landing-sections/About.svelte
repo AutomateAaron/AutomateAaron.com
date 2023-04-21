@@ -1,7 +1,7 @@
 <script lang="ts">
-  import AboutImage from "$lib/assets/images/about/about.jpg";
-  import AboutMaskImage from "$lib/assets/images/about/about-mask-svg.svg";
-  import Figure from "../svg/Figure.svelte";
+  import AboutImage from "$lib/assets/images/about.jpg?run";
+  import Img from "@zerodevx/svelte-img";
+
   import BreathingBlob from "../svg/BreathingBlob.svelte";
 </script>
 
@@ -20,11 +20,7 @@
     <div class="relative items-center justify-center md:flex">
       <!-- image -->
       <div class="relative md:w-1/2 lg:w-2/5">
-        <img
-          src={AboutImage}
-          alt="about-img"
-          style="-webkit-mask:url({AboutMaskImage});-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;-webkit-mask-position:center center"
-        />
+        <Img src={AboutImage} alt="about-img" class="mask-left" />
 
         <!-- <div class="absolute -left-[16%] -top-[7%] transform animate-move-top">
           <Figure classNames="h-36 w-36" />
