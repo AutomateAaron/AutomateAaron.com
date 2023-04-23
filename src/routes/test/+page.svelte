@@ -14,11 +14,8 @@
         use:netlifyForm
         name="test-form"
         method="POST"
-        netlify-honeypot="bot-field"
-        data-netlify="true"
         class="flex flex-col gap-6"
       >
-        <input type="hidden" name="form-name" value="test-form" />
         <label for="name">
           <span class="text-lg">Name</span>
           <input

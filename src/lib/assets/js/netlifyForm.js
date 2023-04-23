@@ -1,18 +1,51 @@
-import { applyAction, deserialize } from "$app/forms";
+import { applyAction, deserialize, enhance } from "$app/forms";
 import { invalidateAll } from "$app/navigation";
-import { DEV } from 'esm-env';
+import { DEV } from "esm-env";
 
 
-
+// Based off: https://github.com/sveltejs/kit/blob/d257d37d3cac94f30befa9fe38c2987f84fb551a/packages/kit/src/runtime/app/forms.js#L27
 /** @type {import('$app/forms').enhance} */
 export function netlifyForm(form, submit = () => { }) {
   if (
     DEV &&
-		/** @type {HTMLFormElement} */ (HTMLFormElement.prototype.cloneNode.call(form)).method !==
+    /** @type {HTMLFormElement} */ (HTMLFormElement.prototype.cloneNode.call(form)).method !==
     'post'
   ) {
-    throw new Error('use:enhance can only be used on <form> fields with method="POST"');
+    throw new Error('use:netlifyForm can only be used on <form> fields with method="POST"');
   }
+
+  // Add Netlify Form Attribute
+  form.setAttribute("data-netlify", "true")
+  // Add hidden formName element
+  let formName = form.getAttribute("name")
+  if (!formName) {
+    throw new Error('use:netlifyForm must have a "name" attribute specified');
+  }
+  const formNameElement = document.createElement("input");
+  formNameElement.setAttribute("type", "hidden")
+  formNameElement.setAttribute("name", "form-name")
+  formNameElement.setAttribute("value", formName)
+  form.insertBefore(formNameElement, form.firstChild);
+
+  // Add bot-feild
+  form.setAttribute("netlify-honeypot", "bot-field")
+
+  const botFieldLabelElement = document.createElement("label");
+  botFieldLabelElement.innerHTML = "Don't fill this out if you're human:"
+  // Hide element w/o using diplay:none or visibility:hidden
+  botFieldLabelElement.style.position = "absolute"
+  botFieldLabelElement.style.overflow = "hidden"
+  botFieldLabelElement.style.height = "0px"
+  botFieldLabelElement.style.width = "0px"
+  botFieldLabelElement.style.pointerEvents = "none"
+
+  const botFieldInputElement = document.createElement("input");
+  botFieldInputElement.setAttribute("name", "bot-field")
+  botFieldInputElement.setAttribute("type", "text")
+  botFieldLabelElement.append(botFieldInputElement)
+
+  form.insertBefore(botFieldLabelElement, form.firstChild)
+
 
   /**
    * @param {{
@@ -92,9 +125,14 @@ export function netlifyForm(form, submit = () => { }) {
         signal: controller.signal
       });
 
+      // const contentType = response.headers.get("content-type");
+
+
       result = deserialize(await response.text());
       if (result.type === 'error') result.status = response.status;
+
     } catch (error) {
+      console.log(error)
       if (/** @type {any} */ (error)?.name === 'AbortError') return;
       result = { type: 'error', error };
     }
