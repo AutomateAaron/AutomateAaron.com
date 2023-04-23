@@ -4,7 +4,6 @@
   import BreathingBlob from "$lib/components/svg/BreathingBlob.svelte";
   import Figure from "$lib/components/svg/Figure.svelte";
   import FigureSmall from "$lib/components/svg/FigureSmall.svelte";
-  import { page } from "$app/stores";
   import ProfilePicture from "$lib/assets/images/profile-picture.jpg?run";
   import Img from "@zerodevx/svelte-img";
 
@@ -14,6 +13,7 @@
   import type { ActionResult } from "@sveltejs/kit";
   import { subscribed } from "../../../lib/stores.js";
   import { netlifyEnhance } from "$lib/assets/js/netlifyForm.js";
+  import MailingList from "$lib/components/MailingList.svelte";
 
   export let data;
 
@@ -22,22 +22,7 @@
 
   const { BlogContent } = data;
 
-  let formResult: ActionResult | undefined;
-  let readMore = false;
-
-  subscribed.subscribe((value) => {
-    if (value) {
-      formResult = {
-        type: "success",
-        status: 200,
-      };
-      readMore = true;
-    }
-  });
-
-  const deleteFormResult = function () {
-    formResult = undefined;
-  };
+  let interacted = false;
 </script>
 
 <svelte:head>
@@ -61,7 +46,7 @@
 <article class="section relative overflow-hidden pb-0">
   <div class="container relative mb-8">
     <h1 class="mb-2 text-center">{title}</h1>
-    <Breadcrumbs path={$page.url.pathname} class="mx-auto mb-2 max-w-max" />
+    <Breadcrumbs class="mx-auto mb-2 max-w-max" />
 
     <img
       class="mx-auto max-h-[50vh] rounded-xl object-contain"
@@ -78,7 +63,7 @@
     />
   </div>
   <div
-    class="relative {readMore
+    class="relative {interacted
       ? ''
       : 'max-h-screen'} mb-16 overflow-hidden duration-300"
   >
@@ -101,7 +86,7 @@
         {/if}
       </div>
     </div>
-    {#if !readMore}
+    {#if !interacted}
       <div
         class="pointer-events-none absolute bottom-0 z-20 h-1/4 max-h-full w-full bg-gradient-to-t from-base-200 to-transparent"
       />
@@ -111,7 +96,7 @@
     class="absolute -right-14 top-96 hidden h-36 w-36 animate-move-top lg:block"
   />
   <FigureSmall
-    class="absolute bottom-96 left-0 {readMore
+    class="absolute bottom-96 left-0 {interacted
       ? '-z-10'
       : 'z-20'}  -ml-12 -mt-12 hidden h-32 w-32 animate-move-top lg:block"
   />
@@ -121,7 +106,7 @@
   <div
     class="container flex flex-col-reverse items-center justify-center gap-8 lg:flex-row lg:items-start"
   >
-    {#if readMore}
+    {#if interacted}
       <div class="relative">
         <div
           class="group relative flex max-w-xl items-center justify-center duration-300 ease-in-out hover:scale-[1.03]"
@@ -153,104 +138,6 @@
         />
       </div>
     {/if}
-    <div
-      class="group rounded-xl bg-base-100 p-8 shadow duration-300 ease-in-out focus-within:scale-[1.03] focus-within:shadow-xl hover:scale-[1.03] hover:shadow-xl"
-    >
-      <h5 class="text-center md:text-left">
-        {#if formResult}
-          Mailing List
-        {:else}
-          {readMore ? "Is it Later?" : "Want more?"}
-        {/if}
-      </h5>
-
-      {#if !formResult}
-        <form
-          use:netlifyEnhance={() => {
-            return async ({ result }) => {
-              formResult = result;
-            };
-          }}
-          enctype="application/x-www-form-urlencoded"
-          name="mailing-list"
-          method="POST"
-          action="/contact/submitted"
-          class="flex flex-wrap gap-4 duration-300 ease-in-out group-focus-within:scale-[1.03] group-hover:scale-[1.03]"
-        >
-          <input type="hidden" name="form-name" value="mailing-list" />
-
-          <div class="input-group w-max duration-300 ease-in-out">
-            <input
-              type="email"
-              name="email"
-              placeholder="brian@vghs.edu"
-              class="input-bordered input-primary input input-sm max-w-sm"
-              required
-            />
-            <button type="submit" class="btn-primary btn-sm btn">
-              Subscribe
-            </button>
-          </div>
-          {#if !readMore}
-            <button
-              on:click={() => {
-                readMore = true;
-              }}
-              class="btn-ghost btn-sm btn duration-300 ease-in-out group-focus-within:shadow group-hover:shadow"
-              >Maybe Later...</button
-            >
-          {/if}
-        </form>
-      {:else}
-        <div
-          class="duration-300 ease-in-out group-focus-within:scale-105 group-hover:scale-[1.03]"
-        >
-          {#if formResult.type === "success"}
-            <div class="alert alert-success shadow-lg">
-              <div>
-                <CheckIcon />
-                <span>Subscribed! Thank you.</span>
-                <button
-                  on:click={deleteFormResult}
-                  class="btn-ghost btn-square btn-sm btn"
-                >
-                  <CloseIcon />
-                </button>
-              </div>
-            </div>
-          {:else if formResult.type === "error"}
-            <div class="alert alert-error shadow-lg">
-              <div>
-                <ErrorIcon />
-                <span>
-                  Error {formResult.status}: {formResult.error.message}
-                </span>
-                <button
-                  on:click={deleteFormResult}
-                  class="btn-ghost btn-square btn-sm btn"
-                >
-                  <CloseIcon />
-                </button>
-              </div>
-            </div>
-          {:else}
-            <div class="alert alert-warning shadow-lg">
-              <div>
-                <ErrorIcon />
-                <span>
-                  Form responded with "{formResult.type}", not sure why...
-                </span>
-                <button
-                  on:click={deleteFormResult}
-                  class="btn-ghost btn-square btn-sm btn"
-                >
-                  <CloseIcon />
-                </button>
-              </div>
-            </div>
-          {/if}
-        </div>
-      {/if}
-    </div>
+    <MailingList bind:interacted />
   </div>
 </section>

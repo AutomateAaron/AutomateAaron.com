@@ -52,6 +52,7 @@
     "@fontsource/source-serif-pro": "^4.5.9",
     "@zerodevx/svelte-img": "^1.2.10",
     "daisyui": "^2.51.5",
+    "esm-env": "^1.0.0",
     "glob": "^10.2.2",
     "nightwind": "^1.1.13",
     "rehype-external-links": "^2.0.1"

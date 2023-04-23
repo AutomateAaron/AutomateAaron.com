@@ -18,5 +18,5 @@ export const load: Load = async ({ params }) => {
     }
   }
 
-  throw error(404, "Meme Not Found");
+  throw error(404, "Shortlink Not Found");
 };

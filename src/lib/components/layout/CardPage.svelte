@@ -6,7 +6,7 @@
 
 <section class="relative h-screen overflow-hidden">
   <div class="container flex h-full items-center justify-center">
-    <div class="relative w-max rounded-xl bg-base-100 p-8 shadow-xl md:p-12">
+    <div class="relative w-max">
       <slot />
 
       <slot name="card-elements">
