@@ -30,7 +30,7 @@
       <a href="/" class="btn-outline btn-primary btn">
         <LeftArrow class="align-middle text-3xl" />Home
       </a>
-      <a href="/" class="btn-outline btn-primary btn ">
+      <a href="/contact" class="btn-outline btn-primary btn ">
         Contact<RightArrow class="align-middle text-3xl" />
       </a>
     </div>

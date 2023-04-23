@@ -5,7 +5,7 @@ import { DEV } from "esm-env";
 
 // Based off: https://github.com/sveltejs/kit/blob/d257d37d3cac94f30befa9fe38c2987f84fb551a/packages/kit/src/runtime/app/forms.js#L27
 /** @type {import('$app/forms').enhance} */
-export function netlifyForm(form, submit = () => { }) {
+export function netlifyEnhance(form, submit = () => { }) {
   if (
     DEV &&
     /** @type {HTMLFormElement} */ (HTMLFormElement.prototype.cloneNode.call(form)).method !==
@@ -125,11 +125,29 @@ export function netlifyForm(form, submit = () => { }) {
         signal: controller.signal
       });
 
-      // const contentType = response.headers.get("content-type");
 
+      const contentType = response.headers.get("content-type");
 
-      result = deserialize(await response.text());
-      if (result.type === 'error') result.status = response.status;
+      if (contentType && contentType === "application/json") {
+        result = deserialize(await response.text());
+        if (result.type === 'error') result.status = response.status;
+      } else {
+        if (response.ok) {
+          result = {
+            type: "success",
+            status: response.status,
+            data: {
+              "content": await response.text()
+            }
+          }
+        } else {
+          result = {
+            type: "error",
+            status: response.status,
+            error: new Error(await response.text())
+          }
+        }
+      }
 
     } catch (error) {
       console.log(error)

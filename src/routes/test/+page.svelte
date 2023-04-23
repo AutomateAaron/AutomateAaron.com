@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { netlifyForm } from "$lib/assets/js/netlifyForm";
+  import { netlifyEnhance } from "$lib/assets/js/netlifyForm";
   import BreathingBlob from "$lib/components/svg/BreathingBlob.svelte";
   import Figure from "$lib/components/svg/Figure.svelte";
   import FigureSmall from "$lib/components/svg/FigureSmall.svelte";
@@ -11,7 +11,7 @@
       <h1 class="mb-0 flex items-center">Hello, World!</h1>
 
       <form
-        use:netlifyForm
+        use:netlifyEnhance
         name="test-form"
         method="POST"
         class="flex flex-col gap-6"
