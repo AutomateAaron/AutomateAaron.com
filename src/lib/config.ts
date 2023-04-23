@@ -1,11 +1,4 @@
-/**
- * All of these values are used throughout the site – for example,
- * in the <meta> tags, in the footer, and in the RSS feed.
- *
- * PLEASE BE SURE TO UPDATE THEM ALL! Thank you!
- **/
-
-import type { ISocialMediaLink } from "$lib/types/generalTypes";
+import type { IShortLink, ISocialMediaLink } from '$lib/types';
 
 import Facebook from "~icons/fa6-brands/facebook-f";
 import Github from "~icons/fa6-brands/github";
@@ -16,14 +9,13 @@ import Instagram from "~icons/fa6-brands/instagram";
 
 
 export const siteTitle = "Aaron N. Brock";
-export const siteDescription = "How to make Google Cloud easier.";
+export const siteDescription = "How to make Google Cloud simpler.";
 export const siteURL = "aaronnbrock.com";
 export const siteAuthor = "@AaronNBrock";
 
 // Controls how many blogs are shown per page on the main blog index pages
 export const blogsPerPage = 10;
 
-// Edit this to alter the main nav menu. (Also used by the footer and mobile nav.)
 export const navItems = [
   {
     title: "Home",
@@ -100,3 +92,18 @@ export const socialMediaLinks: ISocialMediaLink[] = [
     icon: Instagram,
   },
 ];
+
+export const shortLinks: IShortLink[] = [
+  {
+    slug: "docker-slidedeck",
+    url: "https://docs.google.com/presentation/d/1wywdYRcQy4L_zoU6RKTUgoxs9l7VVerjKESQAzwzIqY/edit?usp=sharing",
+  },
+  {
+    slug: "terraform-slidedeck",
+    url: "https://docs.google.com/presentation/d/1ptP4sr_cC5qeZEuUA6fwJYF9eaLM2O9qaRtFE8bKwsg/edit?usp=sharing",
+  },
+  {
+    slug: "git-slidedeck",
+    url: "https://docs.google.com/presentation/d/1Q_zAEgMn9pkFs1pKL_BJ5Ru4jb61sDPX6CjRFVd7yr0/edit?usp=sharing",
+  }
+]

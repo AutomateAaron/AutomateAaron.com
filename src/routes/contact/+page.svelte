@@ -12,7 +12,6 @@
 
   import { siteTitle, socialMediaLinks } from "$lib/config.js";
   import { teleport } from "$lib/assets/js/clientUtils";
-  import { enhance, type SubmitFunction } from "$app/forms";
   import ClickToCopy from "$lib/components/ClickToCopy.svelte";
   import Breadcrumbs from "$lib/components/Breadcrumbs.svelte";
 
@@ -20,58 +19,9 @@
   import ErrorIcon from "~icons/ic/outline-error";
   import CloseIcon from "~icons/ic/baseline-close";
   import type { ActionResult } from "@sveltejs/kit";
+  import { netlifyEnhance } from "$lib/assets/js/netlifyForm";
 
   let formResult: ActionResult | undefined;
-
-  const handleSubmit: SubmitFunction = async function ({
-    form,
-    data,
-    action,
-    cancel,
-    controller,
-  }) {
-    cancel();
-    try {
-      const response = await fetch(action, {
-        method: "POST",
-        headers: {
-          accept: "application/json",
-          "x-sveltekit-action": "true",
-        },
-        cache: "no-store",
-        body: data,
-        signal: controller.signal,
-      });
-
-      if (response.ok) {
-        form.reset();
-        formResult = {
-          type: "success",
-          status: response.status,
-        };
-      } else {
-        const contentType = response.headers.get("content-type");
-        if (contentType && contentType.indexOf("application/json") !== -1) {
-          let data = await response.json();
-          formResult = {
-            type: data.type || "error",
-            status: response.status,
-            error: data.error || new Error(data),
-          };
-        } else {
-          let text = await response.text();
-          formResult = {
-            type: "error",
-            status: response.status,
-            error: new Error(text),
-          };
-        }
-      }
-    } catch (error) {
-      console.log("catching error");
-      formResult = { type: "error", error };
-    }
-  };
 
   const deleteFormResult = function () {
     formResult = undefined;
@@ -247,32 +197,37 @@
         <h3 class="h3">Or, drop me a line here...</h3>
 
         <form
-          use:enhance={handleSubmit}
-          enctype="application/x-www-form-urlencoded"
+          use:netlifyEnhance={() => {
+            return async ({ result }) => {
+              formResult = result;
+            };
+          }}
           name="contact"
           method="POST"
-          netlify-honeypot="bot-field"
-          data-netlify="true"
-          class="form-control space-y-4"
+          class="flex flex-col space-y-4"
         >
-          <input type="hidden" name="form-name" value="contact" />
-          <label for="message" class="label">
-            <span class="label-text">Your Message</span>
+          <label for="message">
+            <span class="text-lg">Name</span>
+            <textarea
+              name="message"
+              id="message"
+              class="textarea w-full md:h-36 lg:h-24"
+              placeholder="So...  I'm having this issue with..."
+              required
+            />
           </label>
-          <textarea
-            id="message"
-            name="message"
-            class="textarea h-48 duration-0 md:h-36 lg:h-24"
-            placeholder="So...  I'm having this issue with..."
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Bilbo@TheShire.net"
-            required
-            class="input w-full max-w-xs"
-          />
+
+          <label for="email">
+            <span class="sr-only block text-lg">Email</span>
+            <input
+              name="email"
+              id="email"
+              type="email"
+              placeholder="Bilbo@TheShire.net"
+              class="input-bordered input w-full max-w-xs"
+            />
+          </label>
+
           <button type="submit" class="btn-primary btn self-start">
             Send
           </button>

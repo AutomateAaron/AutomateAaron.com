@@ -128,7 +128,7 @@ export function netlifyEnhance(form, submit = () => { }) {
 
       const contentType = response.headers.get("content-type");
 
-      if (contentType && contentType === "application/json") {
+      if (contentType && contentType.indexOf("application/json") !== -1) {
         result = deserialize(await response.text());
         if (result.type === 'error') result.status = response.status;
       } else {

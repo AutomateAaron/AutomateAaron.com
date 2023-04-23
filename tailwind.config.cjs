@@ -1,6 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
-const nightwind = require("nightwind");
 const daisyui = require("daisyui");
 
 /** @type {import('tailwindcss').Config} */
@@ -97,6 +96,9 @@ module.exports = {
           success: "#36D399",
           warning: "#FBBD23",
           error: "#F87272",
+
+          "--rounded-btn": "1rem",
+          "--border-btn": "0.25rem",
         },
       },
     ],

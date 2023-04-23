@@ -1,5 +1,5 @@
 import { blogsPerPage } from "$lib/config";
-import type { IMeme } from "$lib/types/generalTypes";
+import type { IMeme } from "$lib/types";
 
 import path from "path";
 import glob from "glob";

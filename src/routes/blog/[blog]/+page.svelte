@@ -5,7 +5,6 @@
   import Figure from "$lib/components/svg/Figure.svelte";
   import FigureSmall from "$lib/components/svg/FigureSmall.svelte";
   import { page } from "$app/stores";
-  import { enhance, type SubmitFunction } from "$app/forms";
   import ProfilePicture from "$lib/assets/images/profile-picture.jpg?run";
   import Img from "@zerodevx/svelte-img";
 
@@ -14,6 +13,7 @@
   import CloseIcon from "~icons/ic/baseline-close";
   import type { ActionResult } from "@sveltejs/kit";
   import { subscribed } from "../../../lib/stores.js";
+  import { netlifyEnhance } from "$lib/assets/js/netlifyForm.js";
 
   export let data;
 
@@ -35,57 +35,6 @@
     }
   });
 
-  const handleSubmit: SubmitFunction = async function ({
-    form,
-    data,
-    action,
-    cancel,
-    controller,
-  }) {
-    readMore = true;
-    cancel();
-    try {
-      const response = await fetch(action, {
-        method: "POST",
-        headers: {
-          accept: "application/json",
-          "x-sveltekit-action": "true",
-        },
-        cache: "no-store",
-        body: data,
-        signal: controller.signal,
-      });
-
-      if (response.ok) {
-        form.reset();
-        subscribed.set(true);
-        formResult = {
-          type: "success",
-          status: response.status,
-        };
-      } else {
-        const contentType = response.headers.get("content-type");
-        if (contentType && contentType.indexOf("application/json") !== -1) {
-          let data = await response.json();
-          formResult = {
-            type: data.type || "error",
-            status: response.status,
-            error: data.error || new Error(data),
-          };
-        } else {
-          let text = await response.text();
-          formResult = {
-            type: "error",
-            status: response.status,
-            error: new Error(text),
-          };
-        }
-      }
-    } catch (error) {
-      console.log("catching error");
-      formResult = { type: "error", error };
-    }
-  };
   const deleteFormResult = function () {
     formResult = undefined;
   };
@@ -175,13 +124,13 @@
     {#if readMore}
       <div class="relative">
         <div
-          class="group relative flex max-w-xl items-center justify-center duration-300 ease-in-out hover:scale-105"
+          class="group relative flex max-w-xl items-center justify-center duration-300 ease-in-out hover:scale-[1.03]"
         >
           <div class="relative -mr-24 w-full">
             <Img src={ProfilePicture} alt="about-img" class="mask-left" />
           </div>
           <div
-            class="flex-col rounded-xl bg-base-100 p-8 pl-24 shadow duration-300 ease-in-out group-hover:shadow-xl"
+            class="flex-col rounded-xl bg-base-100 p-8 pl-24 shadow duration-300 ease-in-out group-hover:shadow-lg"
           >
             <h4 class="mb-0">Aaron N. Brock</h4>
             <div class="divider my-2" />
@@ -193,7 +142,7 @@
             </p>
             <a
               href="/contact"
-              class="btn-primary btn-sm btn [.group:not(:hover)_&]:btn-outline hover:!scale-125 hover:text-primary-content group-hover:scale-110"
+              class="btn-primary btn-sm btn [.group:not(:hover)_&]:btn-outline hover:text-primary-content"
             >
               Contact Me
             </a>
@@ -205,7 +154,7 @@
       </div>
     {/if}
     <div
-      class="group rounded-xl bg-base-100 p-8 shadow duration-300 ease-in-out focus-within:scale-105 focus-within:shadow-xl hover:scale-105 hover:shadow-xl"
+      class="group rounded-xl bg-base-100 p-8 shadow duration-300 ease-in-out focus-within:scale-[1.03] focus-within:shadow-xl hover:scale-[1.03] hover:shadow-xl"
     >
       <h5 class="text-center md:text-left">
         {#if formResult}
@@ -217,20 +166,20 @@
 
       {#if !formResult}
         <form
-          use:enhance={handleSubmit}
+          use:netlifyEnhance={() => {
+            return async ({ result }) => {
+              formResult = result;
+            };
+          }}
           enctype="application/x-www-form-urlencoded"
           name="mailing-list"
           method="POST"
           action="/contact/submitted"
-          netlify-honeypot="bot-field"
-          data-netlify="true"
-          class="flex flex-wrap gap-4 duration-300 ease-in-out group-focus-within:scale-105 group-hover:scale-105"
+          class="flex flex-wrap gap-4 duration-300 ease-in-out group-focus-within:scale-[1.03] group-hover:scale-[1.03]"
         >
           <input type="hidden" name="form-name" value="mailing-list" />
 
-          <div
-            class="input-group w-max duration-300 ease-in-out group-focus-within:shadow-lg group-hover:shadow-lg"
-          >
+          <div class="input-group w-max duration-300 ease-in-out">
             <input
               type="email"
               name="email"
@@ -254,7 +203,7 @@
         </form>
       {:else}
         <div
-          class="duration-300 ease-in-out group-focus-within:scale-105 group-hover:scale-105"
+          class="duration-300 ease-in-out group-focus-within:scale-105 group-hover:scale-[1.03]"
         >
           {#if formResult.type === "success"}
             <div class="alert alert-success shadow-lg">

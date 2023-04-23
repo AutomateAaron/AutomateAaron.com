@@ -69,3 +69,8 @@ export interface IContactOption {
   title: string;
   description: string;
 }
+
+export interface IShortLink {
+  slug: string;
+  url: string;
+}

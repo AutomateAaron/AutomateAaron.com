@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+
   html {
     @apply scroll-smooth;
   }
@@ -138,6 +139,15 @@
   }
 
   /* #endregion  /**======== Typography =========== */
+
+  /* #region  /**========= DaisyUI Config ========= */
+  .btn:hover,
+  .btn-active {
+    @apply scale-110;
+  }
+
+  /* #endregion  /**====== DaisyUI Config ========= */
+
 }
 
 @layer components {
@@ -332,11 +342,11 @@
     appearance: button;
 
     text-decoration: none;
-  } */
+  } 
 
   .btn {
     @apply rounded-lg border-4 hover:scale-105;
-  }
+  }*/
 
   .pre-line-top-title {
     @apply relative ml-8 -translate-x-1/2 transform before:absolute before:-left-8 before:top-1/2 before:h-0.5 before:w-5 before:bg-base-content;
