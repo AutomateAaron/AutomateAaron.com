@@ -13,11 +13,12 @@
       <form
         use:netlifyForm
         enctype="application/x-www-form-urlencoded"
-        name="contact"
+        name="test-form"
         method="POST"
         data-netlify="true"
         class="flex flex-col gap-6"
       >
+        <input type="hidden" name="form-name" value="test-form" />
         <label for="name">
           <span class="text-lg">Name</span>
           <input
