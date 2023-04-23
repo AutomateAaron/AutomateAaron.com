@@ -12,9 +12,9 @@
 
       <form
         use:netlifyForm
-        enctype="application/x-www-form-urlencoded"
         name="test-form"
         method="POST"
+        netlify-honeypot="bot-field"
         data-netlify="true"
         class="flex flex-col gap-6"
       >
@@ -22,6 +22,7 @@
         <label for="name">
           <span class="text-lg">Name</span>
           <input
+            name="name"
             id="name"
             type="text"
             placeholder="John Smith"
@@ -31,6 +32,7 @@
         <label for="email">
           <span class="text-lg">Email</span>
           <input
+            name="email"
             id="email"
             type="email"
             placeholder="JohnSnow@winterfell.com"
@@ -41,6 +43,7 @@
         <label for="remember-me" class="flex cursor-pointer items-center gap-2">
           <input
             id="remember-me"
+            name="remember-me"
             type="checkbox"
             checked={false}
             class="checkbox-primary checkbox"
