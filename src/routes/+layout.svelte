@@ -34,17 +34,14 @@
   });
 </script>
 
-<!-- 
-	The below markup is used on every page in the site. The <slot> is where the page's
-	actual contents will show up.
--->
-<!-- <base target="_blank" /> -->
 <div id="teleport" />
-<Header />
-<main id="main" tabindex="-1">
-  <slot />
-</main>
-<Footer />
+<div class="relative min-h-screen">
+  <Header />
+  <main id="main" tabindex="-1">
+    <slot />
+  </main>
+  <Footer />
+</div>
 
 <TawkTo />
 <GoogleAnalytics />

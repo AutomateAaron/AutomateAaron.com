@@ -1,15 +1,63 @@
-<script>
-  // import Img from "@zerodevx/svelte-img";
-  // import AboutImage from "$lib/assets/images/about/about-new.jpg?run";
-  import About from "$lib/components/landing-sections/About.svelte";
-  import Hero from "$lib/components/landing-sections/Hero.svelte";
+<script lang="ts">
+  import { netlifyForm } from "$lib/assets/js/netlifyForm";
+  import BreathingBlob from "$lib/components/svg/BreathingBlob.svelte";
+  import Figure from "$lib/components/svg/Figure.svelte";
+  import FigureSmall from "$lib/components/svg/FigureSmall.svelte";
 </script>
 
-<Hero />
-<About />
+<section class="relative h-screen overflow-hidden">
+  <div class="container flex h-full items-center justify-center">
+    <div class="relative w-max rounded-xl bg-base-100 p-8 shadow-xl md:p-12">
+      <h1 class="mb-0 flex items-center">Hello, World!</h1>
 
-<!-- <section class="section flex h-screen items-center justify-center">
-  <div class="bg-base-100 p-8">
-    <Img class="w-36" src={AboutImage} />
+      <form
+        use:netlifyForm
+        enctype="application/x-www-form-urlencoded"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        class="flex flex-col gap-6"
+      >
+        <label for="name">
+          <span class="text-lg">Name</span>
+          <input
+            id="name"
+            type="text"
+            placeholder="John Smith"
+            class="input-bordered input w-full"
+          />
+        </label>
+        <label for="email">
+          <span class="text-lg">Email</span>
+          <input
+            id="email"
+            type="email"
+            placeholder="JohnSnow@winterfell.com"
+            class="input-bordered input w-full"
+          />
+        </label>
+
+        <label for="remember-me" class="flex cursor-pointer items-center gap-2">
+          <input
+            id="remember-me"
+            type="checkbox"
+            checked={false}
+            class="checkbox-primary checkbox"
+          />
+          <span class="select-none text-sm">Remember me</span>
+        </label>
+
+        <button type="submit" class="btn-primary btn self-start">Submit</button>
+      </form>
+
+      <FigureSmall
+        class="absolute -bottom-12 -right-12 -z-10 h-36 w-36 animate-move-top"
+      />
+      <BreathingBlob
+        class="absolute -left-32 -top-32 -z-30 h-64 w-64 text-base-300"
+      />
+    </div>
   </div>
-</section> -->
+
+  <Figure class="absolute -left-32 bottom-4 -z-10 h-48 w-48 animate-move-top" />
+</section>
