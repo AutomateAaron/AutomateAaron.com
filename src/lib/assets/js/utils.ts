@@ -2,7 +2,7 @@ import { blogsPerPage } from "$lib/config";
 import type { IMeme } from "$lib/types";
 
 import path from "path";
-import glob from "glob";
+import { glob } from "glob";
 import fs from "fs";
 
 export async function fetchBlogs({
@@ -48,7 +48,8 @@ export async function fetchBlogs({
 }
 
 export async function fetchMemes({ offset = 0, limit = 0 } = {}) {
-  let paths = glob.sync("./static/memes/*.png");
+  let paths = await glob("./static/memes/*.png");
+
   paths = paths.sort(
     (a, b) => fs.statSync(b).mtime.getTime() - fs.statSync(a).mtime.getTime()
   );

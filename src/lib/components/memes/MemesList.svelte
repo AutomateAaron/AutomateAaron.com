@@ -1,6 +1,6 @@
 <script lang="ts">
   import { teleport } from "$lib/assets/js/clientUtils";
-  import type { IMeme } from "$lib/types/generalTypes";
+  import type { IMeme } from "$lib/types";
 
   export let memes: IMeme[];
   let clazz: string = "";

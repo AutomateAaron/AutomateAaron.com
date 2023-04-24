@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { IBlog, IMeme } from "$lib/types/generalTypes";
+  import type { IMeme } from "$lib/types/";
   import MemesList from "../memes/MemesList.svelte";
 
   export let memes: IMeme[];
