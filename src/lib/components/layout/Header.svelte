@@ -1,138 +1,121 @@
 <script lang="ts">
-  import { slide } from "svelte/transition";
-  import type { INavItem } from "$lib/types/generalTypes";
-  import Logo from "$lib/components/svg/logo.svelte";
+	import { slide } from 'svelte/transition';
+	import { onMount } from 'svelte';
+	import Logo from '$lib/components/svg/logo.svelte';
 
-  import { onMount } from "svelte";
-  import { navItems } from "$lib/config";
+	import { navItems } from '$lib/config';
 
-  let outerElement;
-  let outerHeight;
+	let outerElement: HTMLElement;
+	let outerHeight;
 
-  let innerElement;
-  let innerHeight;
-  let heightDifference = 0;
+	let innerElement: HTMLElement;
+	let innerHeight;
+	let heightDifference = 0;
 
-  let scrollY = 0;
-  let darkMode = false;
-  let showMobileMenu = false;
+	let scrollY = 0;
+	let showMobileMenu = false;
 
-  function toggleDarkMode() {
-    darkMode = !darkMode;
+	const handleOnScroll = () => {
+		scrollY = window.scrollY;
+	};
 
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }
-  const handleOnScroll = () => {
-    scrollY = window.scrollY;
-  };
-
-  onMount(() => {
-    outerHeight = parseInt(window.getComputedStyle(outerElement).height, 10);
-    innerHeight = parseInt(window.getComputedStyle(innerElement).height, 10);
-    heightDifference = outerHeight - innerHeight;
-  });
+	onMount(() => {
+		outerHeight = parseInt(window.getComputedStyle(outerElement).height, 10);
+		innerHeight = parseInt(window.getComputedStyle(innerElement).height, 10);
+		heightDifference = outerHeight - innerHeight;
+	});
 </script>
 
 <svelte:window on:scroll={handleOnScroll} />
 
 <header bind:this={outerElement} class="sticky -top-8 z-30 -mb-28 h-28">
-  <div
-    class="mx-4 w-auto rounded-b-xl px-4 pt-8 duration-300 md:mx-0 {scrollY >
-    heightDifference
-      ? 'bg-base-100 shadow-lg'
-      : 'bg-transparent'}"
-  >
-    <div
-      bind:this={innerElement}
-      class="container flex w-full items-center py-2"
-    >
-      <div class="flex w-1/2 items-center justify-start gap-4">
-        <a href="/">
-          <Logo class="h-10 w-10" />
-        </a>
-      </div>
+	<div
+		class="mx-4 w-auto rounded-b-xl px-4 pt-8 duration-300 md:mx-0 {scrollY > heightDifference
+			? 'bg-base-100 shadow-lg'
+			: 'bg-transparent'}"
+	>
+		<div bind:this={innerElement} class="container flex w-full items-center py-2">
+			<div class="flex w-1/2 items-center justify-start gap-4">
+				<a href="/">
+					<Logo class="h-10 w-10" />
+				</a>
+			</div>
 
-      <nav class="hidden flex-shrink-0 md:block">
-        <ul class="flex items-center justify-center">
-          {#each navItems as item}
-            <li>
-              <a
-                href={item.route}
-                class="p-2 text-center text-lg transition-all duration-300 ease-in-out hover:text-primary active:text-primary"
-                >{item.title}</a
-              >
-            </li>
-          {/each}
-        </ul>
-      </nav>
+			<nav class="hidden flex-shrink-0 md:block">
+				<ul class="flex items-center justify-center">
+					{#each navItems as item}
+						<li>
+							<a
+								href={item.route}
+								class="p-2 text-center text-lg transition-all duration-300 ease-in-out hover:text-primary active:text-primary"
+								>{item.title}</a
+							>
+						</li>
+					{/each}
+				</ul>
+			</nav>
 
-      <div class="flex w-1/2 items-center justify-end gap-4">
-        <!-- <label class="swap-rotate swap">
+			<div class="flex w-1/2 items-center justify-end gap-4">
+				<!-- <label class="swap-rotate swap">
           <input type="checkbox" checked />
           <Sun class="swap-on h-6 w-6 text-primary" />
           <Moon class="swap-off h-6 w-6 text-current" />
         </label> -->
-        <a href="/contact">
-          <button class="btn-primary btn hidden md:block">Let's Chat!</button>
-        </a>
+				<a href="/contact">
+					<button class="btn-primary btn hidden md:block">Let's Chat!</button>
+				</a>
 
-        <button
-          class="md:hidden"
-          on:click={() => (showMobileMenu = !showMobileMenu)}
-        >
-          <span class="navbar-toggle-icon {showMobileMenu && 'icon-1'}" />
-          <span class="navbar-toggle-icon {showMobileMenu && 'opacity-0'}" />
-          <span class="navbar-toggle-icon {showMobileMenu && 'icon-3'}" />
-        </button>
-      </div>
-    </div>
-    <!-- mobile nav -->
-    {#if showMobileMenu}
-      <div
-        transition:slide={{ duration: 400 }}
-        class="rounded-xl bg-base-100 md:hidden"
-      >
-        <nav class="px-5 py-4 ">
-          <ul class="space-y-2">
-            {#each navItems as item}
-              <li>
-                <a
-                  on:click={() => (showMobileMenu = false)}
-                  href={item.route}
-                  class="p-2 text-center text-lg transition-all duration-300 ease-in-out hover:text-primary active:text-primary"
-                  >{item.title}</a
-                >
-              </li>
-            {/each}
+				<button class="md:hidden" on:click={() => (showMobileMenu = !showMobileMenu)}>
+					<span class="navbar-toggle-icon {showMobileMenu && 'icon-1'}" />
+					<span class="navbar-toggle-icon {showMobileMenu && 'opacity-0'}" />
+					<span class="navbar-toggle-icon {showMobileMenu && 'icon-3'}" />
+				</button>
+			</div>
+		</div>
+		<!-- mobile nav -->
+		{#if showMobileMenu}
+			<div transition:slide={{ duration: 400 }} class="rounded-xl bg-base-100 md:hidden">
+				<nav class="px-5 py-4">
+					<ul class="space-y-2">
+						{#each navItems as item}
+							<li>
+								<a
+									on:click={() => (showMobileMenu = false)}
+									href={item.route}
+									class="p-2 text-center text-lg transition-all duration-300 ease-in-out hover:text-primary active:text-primary"
+									>{item.title}</a
+								>
+							</li>
+						{/each}
 
-            <li>
-              <a href="/contact" class=" inline-block w-full">
-                <button class="btn-primary btn w-full">Get in Touch</button>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    {/if}
-  </div>
+						<li>
+							<a
+								on:click={() => (showMobileMenu = false)}
+								href="/contact"
+								class="btn-primary btn flex items-center hover:text-primary-content"
+							>
+								Get in Touch
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		{/if}
+	</div>
 </header>
 
 <style lang="postcss">
-  .navbar-toggle-icon {
-    @apply mb-[5px] block h-0.5 w-6 bg-base-content transition-all duration-300 ease-linear;
-  }
+	.navbar-toggle-icon {
+		@apply mb-[5px] block h-0.5 w-6 bg-base-content transition-all duration-300 ease-linear;
+	}
 
-  .icon-1 {
-    transform: rotate(45deg);
-    transform-origin: 10% 10%;
-  }
+	.icon-1 {
+		transform: rotate(45deg);
+		transform-origin: 10% 10%;
+	}
 
-  .icon-3 {
-    transform: rotate(-45deg);
-    transform-origin: 10% 90%;
-  }
+	.icon-3 {
+		transform: rotate(-45deg);
+		transform-origin: 10% 90%;
+	}
 </style>

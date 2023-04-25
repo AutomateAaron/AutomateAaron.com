@@ -1,4 +1,4 @@
-import type { ComponentType } from "svelte";
+import type { ComponentType } from 'svelte';
 
 // export interface IImage {
 //   src: string;
@@ -6,71 +6,71 @@ import type { ComponentType } from "svelte";
 // }
 
 export interface INavItem {
-  name: string;
-  href: string;
+	name: string;
+	href: string;
 }
 
 export interface IMeme {
-  slug: string;
-  image: string;
-  title: string;
+	slug: string;
+	image: string;
+	title: string;
 }
 
 export interface IBlog {
-  slug: string;
-  image: string;
-  imageAlt: string;
-  title: string;
-  date: string;
+	slug: string;
+	image: string;
+	imageAlt: string;
+	title: string;
+	date: string;
 }
 
 export interface IPortfolio {
-  slug: string;
-  category: string;
-  title: string;
-  image: string;
-  imageAlt: string;
+	slug: string;
+	category: string;
+	title: string;
+	image: string;
+	imageAlt: string;
 }
 
 export interface IResumeSectionItem {
-  date?: Date | string;
-  toDate?: Date | string;
-  title: string;
-  company?: string;
-  description?: string;
-  bullets?: string[];
+	date?: Date | string;
+	toDate?: Date | string;
+	title: string;
+	company?: string;
+	description?: string;
+	bullets?: string[];
 }
 
 export interface IResumeSection {
-  title: string;
-  items: IResumeSectionItem[];
+	title: string;
+	items: IResumeSectionItem[];
 }
 
 export interface IService {
-  title: string;
-  description: string;
-  icon: ComponentType;
+	title: string;
+	description: string;
+	icon: ComponentType;
 }
 
 export interface ITestimonial {
-  name: string;
-  comment: string;
-  time: string;
-  star: number;
+	name: string;
+	comment: string;
+	time: string;
+	star: number;
 }
 
 export interface ISocialMediaLink {
-  url: string;
-  icon: ComponentType;
+	url: string;
+	icon: ComponentType;
 }
 
 export interface IContactOption {
-  icon: ComponentType;
-  title: string;
-  description: string;
+	icon: ComponentType;
+	title: string;
+	description: string;
 }
 
 export interface IShortLink {
-  slug: string;
-  url: string;
+	slug: string;
+	url: string;
 }

@@ -1,13 +1,13 @@
 ---
-title: "A Markdown blog with a Svelte component"
-date: "2021-12-01"
-updated: "2021-12-01"
+title: 'A Markdown blog with a Svelte component'
+date: '2021-12-01'
+updated: '2021-12-01'
 categories:
-  - "sveltekit"
-  - "markdown"
-  - "svelte"
-image: "/images/jerry-zhang-ePpaQC2c1xA-unsplash.jpg"
-imageAlt: "TODO: Alt Text"
+  - 'sveltekit'
+  - 'markdown'
+  - 'svelte'
+image: '/images/jerry-zhang-ePpaQC2c1xA-unsplash.jpg'
+imageAlt: 'TODO: Alt Text'
 excerpt: This blog demonstrates how to include a Svelte component in a Markdown blog.
 ---
 

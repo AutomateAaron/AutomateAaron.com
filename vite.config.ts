@@ -1,18 +1,18 @@
-import { sveltekit } from "@sveltejs/kit/vite";
-import { defineConfig } from "vite";
-import Icons from "unplugin-icons/vite";
-import { imagetools } from '@zerodevx/svelte-img/vite'
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
+import Icons from 'unplugin-icons/vite';
+import { imagetools } from '@zerodevx/svelte-img/vite';
 
 export default defineConfig({
-  plugins: [
-    sveltekit(),
-    Icons({
-      compiler: "svelte",
-      scale: 1,
+	plugins: [
+		sveltekit(),
+		Icons({
+			compiler: 'svelte',
+			scale: 1,
 
-      // experimental
-      autoInstall: true,
-    }),
-    imagetools(),
-  ],
+			// experimental
+			autoInstall: true
+		}),
+		imagetools()
+	]
 });

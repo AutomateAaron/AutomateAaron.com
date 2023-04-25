@@ -1,14 +1,14 @@
 ---
-title: "Syntax highlighting with mdsvex"
-date: "2021-12-01"
-updated: "2021-12-01"
+title: 'Syntax highlighting with mdsvex'
+date: '2021-12-01'
+updated: '2021-12-01'
 categories:
-  - "sveltekit"
-  - "web"
-  - "css"
-  - "markdown"
-image: "/images/linus-nylund-Q5QspluNZmM-unsplash.jpg"
-imageAlt: "TODO: Alt Text"
+  - 'sveltekit'
+  - 'web'
+  - 'css'
+  - 'markdown'
+image: '/images/linus-nylund-Q5QspluNZmM-unsplash.jpg'
+imageAlt: 'TODO: Alt Text'
 excerpt: This blog shows you how syntax highlighting works here.
 ---
 
@@ -24,9 +24,9 @@ And that will render just like so:
 
 ```css
 .my-css-class {
-  color: #ffd100;
-  box-sizing: border-box;
-  /* etc... */
+	color: #ffd100;
+	box-sizing: border-box;
+	/* etc... */
 }
 ```
 
@@ -65,7 +65,7 @@ Highlighted code sample:
 
 ```js
 const invertNumberInRange = (num, range) => {
-  return range - num;
+	return range - num;
 };
 
 invertNumberInRange(25, 100); // 75

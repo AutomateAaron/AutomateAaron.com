@@ -1,9 +1,21 @@
 {
-  "[svelte]": {
-    "editor.defaultFormatter": "svelte.svelte-vscode"
-  },
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "editor.tabSize": 2,
-  "workbench.editor.labelFormat": "short"
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode"
+	},
+
+	// Soon my sweet auto-fixing friend...
+	// "editor.codeActionsOnSave": {
+	// 	"source.fixAll.eslint": true
+	// },
+
+	"editor.tabSize": 2,
+
+	"workbench.editor.labelFormat": "short",
+	"svelte.enable-ts-plugin": true,
+
+	"eslint.validate": ["javascript", "svelte"]
 }

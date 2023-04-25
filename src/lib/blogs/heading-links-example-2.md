@@ -1,12 +1,12 @@
 ---
-title: "Automatic heading links in mdsvex"
-date: "2020-10-26"
-updated: "2020-11-01"
+title: 'Automatic heading links in mdsvex'
+date: '2020-10-26'
+updated: '2020-11-01'
 categories:
-  - "sveltekit"
-  - "markdown"
-image: "/images/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
-imageAlt: "TODO: Alt Text"
+  - 'sveltekit'
+  - 'markdown'
+image: '/images/jefferson-santos-fCEJGBzAkrU-unsplash.jpg'
+imageAlt: 'TODO: Alt Text'
 excerpt: Check out how heading links work with this starter in this blog.
 ---
 

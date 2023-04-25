@@ -410,12 +410,7 @@
 					<g opacity="0.3" clip-path="url(#SVGID_28_)">
 						<g>
 							<defs>
-								<rect
-									id="SVGID_29_"
-									y="-26.72"
-									width="1025.02"
-									height="1025.018"
-								/>
+								<rect id="SVGID_29_" y="-26.72" width="1025.02" height="1025.018" />
 							</defs>
 							<clipPath id="SVGID_30_">
 								<use xlink:href="#SVGID_29_" overflow="visible" />
@@ -448,13 +443,7 @@
 					<g opacity="0.8" clip-path="url(#SVGID_34_)">
 						<g>
 							<defs>
-								<rect
-									id="SVGID_35_"
-									x="-311.818"
-									y="-229.58"
-									width="1405.638"
-									height="1377.705"
-								/>
+								<rect id="SVGID_35_" x="-311.818" y="-229.58" width="1405.638" height="1377.705" />
 							</defs>
 							<clipPath id="SVGID_36_">
 								<use xlink:href="#SVGID_35_" overflow="visible" />
@@ -487,13 +476,7 @@
 					<g opacity="0.3" clip-path="url(#SVGID_40_)">
 						<g>
 							<defs>
-								<rect
-									id="SVGID_41_"
-									x="13.025"
-									y="-23.06"
-									width="980.642"
-									height="1025.78"
-								/>
+								<rect id="SVGID_41_" x="13.025" y="-23.06" width="980.642" height="1025.78" />
 							</defs>
 							<clipPath id="SVGID_42_">
 								<use xlink:href="#SVGID_41_" overflow="visible" />
@@ -526,13 +509,7 @@
 					<g opacity="0.4" clip-path="url(#SVGID_46_)">
 						<g>
 							<defs>
-								<rect
-									id="SVGID_47_"
-									x="184.475"
-									y="326.547"
-									width="593.908"
-									height="287.4"
-								/>
+								<rect id="SVGID_47_" x="184.475" y="326.547" width="593.908" height="287.4" />
 							</defs>
 							<clipPath id="SVGID_48_">
 								<use xlink:href="#SVGID_47_" overflow="visible" />
