@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { IBlog } from '$lib/types/generalTypes';
+	import type { IBlog } from '$lib/types';
 	import BlogBlob from '$lib/components/svg/landing-sections/blog/BlogBlob.svelte';
 	import BlogsList from '$lib/components/blog/BlogsList.svelte';
 
@@ -21,7 +21,10 @@
 				</a>
 			</div>
 		</div>
-		<BlogsList {blogs} class="my-8" />
+		<BlogsList
+			{blogs}
+			class="my-8 mx-auto sm:max-w-lg xl:max-w-none sm:grid-cols-1 xl:grid-cols-3"
+		/>
 
 		<div class="mt-8 flex justify-center lg:hidden">
 			<a href="blog" class="btn-outline btn inline-block text-neutral">

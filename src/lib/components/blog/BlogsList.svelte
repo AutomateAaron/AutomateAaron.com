@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { IBlog } from '$lib/types/generalTypes';
+	import type { IBlog } from '$lib/types';
 
 	let clazz = '';
 

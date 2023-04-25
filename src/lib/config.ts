@@ -109,4 +109,8 @@ export const shortLinks: IShortLink[] = [
 		slug: 'git-cheatsheet',
 		url: 'https://education.github.com/git-cheat-sheet-education.pdf',
 	},
+	{
+		slug: 'hello-docker-github',
+		url: 'https://github.com/AaronNBrock/hello-docker/',
+	},
 ];

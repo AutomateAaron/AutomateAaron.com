@@ -144,7 +144,7 @@
 				</a>
 				version.
 			</p>
-			<div class="tabs tabs-boxed inline-block bg-accent-content duration-300 hover:scale-105">
+			<div class="tabs tabs-boxed inline-block bg-accent-content duration-300 hover:scale-[1.03]">
 				<label class="tab-label tab1-label tab tab-lg" for="tab1"> Experience </label>
 				<label class="tab-label tab2-label tab tab-lg" for="tab2"> Achievements </label>
 			</div>
@@ -162,70 +162,6 @@
 				{/each}
 			</div>
 		</div>
-
-		<!-- <div class="!top-48 w-full text-accent-content lg:!sticky lg:pr-20">
-      <span
-        class="pre-line-top-title mb-4 text-xl leading-normal before:bg-accent-content"
-      >
-        Resume
-      </span>
-      <h2 class="h2 mt-4">Experiences.</h2>
-      <p class="mb-4">
-        What? You don’t want to just take my word for it that I know what I’m
-        talking about? I guess some healthy scepticism is a good thing.
-      </p>
-
-       <div
-        class="mt-12 flex items-center justify-between hover:scale-105 hover:shadow-lg "
-      >
-        <button
-          class="w-full rounded-l-2xl border-4 border-r-0 py-4
-					{currentTab == ActiveTab.Achievements
-            ? 'border-primary bg-primary text-primary-content'
-            : 'border-accent-content'}"
-          on:click={() => setActiveTab(ActiveTab.Achievements)}
-          >Achievements</button
-        >
-        <button
-          class="w-full rounded-r-2xl border-4 border-l-0 py-4 
-					{currentTab == ActiveTab.Experience
-            ? 'border-primary bg-primary text-primary-content'
-            : 'border-accent-content'}"
-          on:click={() => setActiveTab(ActiveTab.Experience)}>Experience</button
-        >
-      </div> 
-    </div>
-
-    <div class="mt-8 w-full space-y-8">
-      {#each resume as section}
-        {#if section.title === currentTab}
-          {#each section.items as item}
-            <div class="rounded-xl bg-base-200 p-8 pr-4">
-              <span
-                class="pre-line-top-title text-xl leading-normal text-primary before:bg-primary"
-              >
-                {item.date}
-              </span>
-              <h4 class="mt-5 text-2xl font-semibold leading-tight md:text-3xl">
-                {item.title}<span class="font-serif font-light"
-                  >, {item.company}</span
-                >
-              </h4>
-              {#if item.description}
-                <p class="text-xl leading-normal">{item.description}</p>
-              {/if}
-              {#if item.bullets}
-                <ul class="list-inside list-disc text-base">
-                  {#each item.bullets as bullet}
-                    <li>{bullet}</li>
-                  {/each}
-                </ul>
-              {/if}
-            </div>
-          {/each}
-        {/if}
-      {/each}
-    </div> -->
 	</div>
 </section>
 
