@@ -2,7 +2,7 @@
 	import Star from '../svg/Star.svelte';
 	import '@splidejs/svelte-splide/css';
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
-	import type { ITestimonial } from '$lib/types/generalTypes';
+	import type { ITestimonial } from '$lib/types';
 
 	const testimonials: ITestimonial[] = [
 		{

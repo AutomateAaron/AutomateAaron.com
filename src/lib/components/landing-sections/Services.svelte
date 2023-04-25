@@ -2,7 +2,7 @@
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
 	import '@splidejs/svelte-splide/css';
 
-	import type { IService } from '$lib/types/generalTypes';
+	import type { IService } from '$lib/types';
 	import Teaching from '~icons/ic/outline-menu-book';
 	import Tuning from '~icons/ic/outline-pie-chart';
 	import Templates from '~icons/ic/outline-file-copy';

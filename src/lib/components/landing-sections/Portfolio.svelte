@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { IPortfolio } from '$lib/types/generalTypes';
+	import type { IPortfolio } from '$lib/types';
 	import Portfolio1 from '$lib/assets/images/portfolio/portfolio1.png';
 	import Portfolio2 from '$lib/assets/images/portfolio/portfolio2.png';
 	import Portfolio3 from '$lib/assets/images/portfolio/portfolio3.png';

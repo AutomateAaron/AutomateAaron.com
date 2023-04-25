@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { IBlog } from '$lib/types/generalTypes';
+	import type { IBlog } from '$lib/types';
 	import PostsList from '$lib/components/blog/BlogsList.svelte';
 	import { siteDescription, siteTitle } from '$lib/config';
 	import FigureSmall from '$lib/components/svg/FigureSmall.svelte';

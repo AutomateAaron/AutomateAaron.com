@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { IResumeSectionItem } from '$lib/types/generalTypes';
+	import type { IResumeSectionItem } from '$lib/types';
 
 	export let item: IResumeSectionItem;
 

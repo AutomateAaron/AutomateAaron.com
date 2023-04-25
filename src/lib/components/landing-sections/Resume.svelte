@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { IResumeSectionItem } from '$lib/types/generalTypes';
+	import type { IResumeSectionItem } from '$lib/types';
 	import ResumeCard from './ResumeCard.svelte';
 	import ArrowOutward from '~icons/ic/baseline-arrow-outward';
 
@@ -14,13 +14,13 @@
 			title: 'GCP Associate Cloud Engineer',
 			description:
 				'"An Associate Cloud Engineer deploys applications, monitors operations, and manages enterprise solutions. This individual is able to use Google Cloud Console and the command-line interface to perform common platform-based tasks to maintain one or more deployed solutions that leverage Google-managed or self-managed services on Google Cloud." ~ Google Cloud',
-			date: 'NOV 2018',
+			date: new Date(2018, 11, 1),
 		},
 		{
 			title: 'Eagle Scout',
 			description:
 				'"Since 1912, the Eagle Scout rank has represented a milestone of accomplishment—perhaps without equal—that is recognized across the country and even the world." ~ Scouting.org',
-			date: 'NOV 2018',
+			date: new Date(2018, 11, 1),
 		},
 	];
 

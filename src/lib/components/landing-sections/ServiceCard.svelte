@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { IService } from '$lib/types/generalTypes';
+	import type { IService } from '$lib/types';
 	import CardBlob from '$lib/components/svg/CardBlob.svelte';
 
 	export let service: IService;
