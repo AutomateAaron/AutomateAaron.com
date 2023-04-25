@@ -10,29 +10,29 @@
 			comment:
 				"Love having Aaron on my delivery team. He's very much on top of things, often getting things done before we realize it. Moreover, he's been fantastic at collaborating with other coworkers on the delivery team as well as running meetings with client stakeholders. We've gotten great feedback on him personally from the client.",
 			time: 'Sep 21, 2020',
-			star: 5
+			star: 5,
 		},
 		{
 			name: 'Paul Kordes',
 			comment:
 				'Aaron immediately jumped in suggesting Postgres for storing TF state which we ended up using at the customer! Now in my first engagement with him he has jumped right back in assisting with k8s installs of Jenkins and Artifactory. He has patiently helped me out with some things about Rancher I did not know and paired throughout.  He is super fun and easy to work with. He very quickly figured out every bump in the road with the helm installs.',
 			time: 'Sep 23, 2020',
-			star: 5
+			star: 5,
 		},
 		{
 			name: 'Jason Lutz',
 			comment:
 				"Working with Aaron was a great experience, he had a lot of patience with me and I saw my coding skills improved greatly. Also, Aaron's presentation skills are excellent which makes demos fun. Keep being an enthusiastic influence!",
 			time: 'Sep 22, 2020',
-			star: 5
+			star: 5,
 		},
 		{
 			name: 'Henry Gallo',
 			comment:
 				'Aaron is an outstanding technical driven person, I have seen Aaron grow in multiple areas including his interaction with the stakeholder. He earns the teams and stakeholder trust in every engagement he has ever been on. Time after time he has proven to have excellent technical chaps. For Aaron "There is always I way" I personally would take Aaron with me on any engagement, should the opportunity present itself. Aaon is a very responsible individual and takes feedback and applies his learnings almost immediately.',
 			time: 'Oct 25, 2020',
-			star: 5
-		}
+			star: 5,
+		},
 	];
 
 	const options = {
@@ -47,14 +47,14 @@
 		breakpoints: {
 			1023: {
 				perPage: 1,
-				gap: '1rem'
-			}
+				gap: '1rem',
+			},
 		},
 		classes: {
 			// Add classes for pagination.
 			pagination: 'splide__pagination testimonial-slide-pagination', // container
-			page: 'splide__pagination__page testimonial-slide-page' // each button
-		}
+			page: 'splide__pagination__page testimonial-slide-page', // each button
+		},
 	};
 </script>
 

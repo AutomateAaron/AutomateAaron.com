@@ -6,7 +6,7 @@ export const load = async ({ params }) => {
 
 		return {
 			BlogContent: blog.default,
-			meta: { ...blog.metadata, slug: params.blog }
+			meta: { ...blog.metadata, slug: params.blog },
 		};
 	} catch (err) {
 		throw error(404, err);

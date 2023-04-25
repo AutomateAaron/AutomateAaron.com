@@ -8,6 +8,6 @@ export const load = async ({ url, fetch }) => {
 
 	return {
 		blogs,
-		memes
+		memes,
 	};
 };

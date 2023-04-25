@@ -14,7 +14,7 @@ module.exports = {
 				DEFAULT: '1rem',
 				sm: '2rem',
 				lg: '3rem',
-				xl: '4rem'
+				xl: '4rem',
 			},
 			// default breakpoints but with 40px removed
 			screens: {
@@ -22,8 +22,8 @@ module.exports = {
 				md: defaultTheme.screens['sm'],
 				lg: defaultTheme.screens['md'],
 				xl: defaultTheme.screens['lg'],
-				'2xl': defaultTheme.screens['xl']
-			}
+				'2xl': defaultTheme.screens['xl'],
+			},
 		},
 		nightwind: {
 			colors: {
@@ -31,31 +31,31 @@ module.exports = {
 					900: colors.violet[200],
 					800: colors.violet[300],
 					700: colors.violet[400],
-					600: colors.violet[500]
-				}
+					600: colors.violet[500],
+				},
 			},
-			colorClasses: ['gradient']
+			colorClasses: ['gradient'],
 		},
 
 		extend: {
 			aspectRatio: {
 				'4/3': '4 / 3',
-				'3/2': '3 / 2'
+				'3/2': '3 / 2',
 			},
 			animation: {
 				'spin-slow': 'spin 40s linear infinite',
 				'move-top': 'move-top 4s linear infinite',
-				'move-left': 'move-left 4s linear infinite'
+				'move-left': 'move-left 4s linear infinite',
 			},
 			keyframes: {
 				'move-top': {
 					'0%, 100%': { transform: 'translateY(-10px)' },
-					'50%': { transform: 'translateY(10px)' }
+					'50%': { transform: 'translateY(10px)' },
 				},
 				'move-left': {
 					'0%, 100%': { transform: 'translateX(-10px)' },
-					'50%': { transform: 'translateX(10px)' }
-				}
+					'50%': { transform: 'translateX(10px)' },
+				},
 			},
 			borderRadius: {
 				sm: defaultTheme.borderRadius['md'],
@@ -64,15 +64,15 @@ module.exports = {
 				lg: defaultTheme.borderRadius['2xl'],
 				xl: defaultTheme.borderRadius['3xl'],
 				'2xl': '2rem',
-				'3xl': '2.5rem'
-			}
+				'3xl': '2.5rem',
+			},
 		},
 
 		fontFamily: {
 			sans: ['"Source Sans Pro"', ...defaultTheme.fontFamily.sans],
 			serif: ['"Source Serif Pro"', ...defaultTheme.fontFamily.serif],
-			mono: ['"Source Code Pro"', ...defaultTheme.fontFamily.mono]
-		}
+			mono: ['"Source Code Pro"', ...defaultTheme.fontFamily.mono],
+		},
 	},
 
 	daisyui: {
@@ -98,11 +98,11 @@ module.exports = {
 					error: '#F87272',
 
 					'--rounded-btn': '1rem',
-					'--border-btn': '0.25rem'
-				}
-			}
-		]
+					'--border-btn': '0.25rem',
+				},
+			},
+		],
 	},
 
-	plugins: [daisyui]
+	plugins: [daisyui],
 };

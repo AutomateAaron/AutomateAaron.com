@@ -19,7 +19,7 @@
 			tokenPath += `/${t}`;
 			return {
 				label: t,
-				href: tokenPath
+				href: tokenPath,
 			};
 		});
 

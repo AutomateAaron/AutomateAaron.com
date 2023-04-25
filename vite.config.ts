@@ -11,8 +11,8 @@ export default defineConfig({
 			scale: 1,
 
 			// experimental
-			autoInstall: true
+			autoInstall: true,
 		}),
-		imagetools()
-	]
+		imagetools(),
+	],
 });

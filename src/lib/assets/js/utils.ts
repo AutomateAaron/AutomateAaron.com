@@ -34,7 +34,7 @@ export async function fetchBlogs({ offset = 0, limit = blogsPerPage, category = 
 		image: blog.image,
 		imageAlt: blog.imageAlt,
 		date: blog.date,
-		categories: blog.categories
+		categories: blog.categories,
 	}));
 
 	return blogs;
@@ -75,7 +75,7 @@ export function getMemeFromPath(pathStr: string) {
 	const meme: IMeme = {
 		slug: parsed.name,
 		image: `/memes/${parsed.base}`,
-		title: parsed.name
+		title: parsed.name,
 	};
 
 	return meme;

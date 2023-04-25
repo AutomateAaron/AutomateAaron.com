@@ -7,6 +7,6 @@ export function teleport(node: HTMLElement, name = 'teleport') {
 	return {
 		destroy() {
 			node.remove();
-		}
+		},
 	};
 }

@@ -22,7 +22,7 @@
 		'Java',
 		'Javascript',
 		'VueJS',
-		'Ansible'
+		'Ansible',
 	];
 </script>
 

@@ -18,20 +18,20 @@
 			title: 'Teaching',
 			description:
 				'Learn to use Google Cloud like a pro. From the basics to advanced strategies, I’ll give you the knowledge and skills you need to fully leverage the power of Google Cloud.',
-			icon: Teaching
+			icon: Teaching,
 		},
 		{
 			title: 'Tuning',
 			description:
 				'Take control of your Google Cloud costs. From identifying and eliminating unnecessary expenses to implementing cost-saving strategies, I’ll help you get the most out of your investment.',
-			icon: Tuning
+			icon: Tuning,
 		},
 		{
 			title: 'Templates',
 			description:
 				'Streamline your Google Cloud operations with templates. From deployments to scaling, templates provide you with a proven foundation to build upon, and allow you to focus on growing your business.',
-			icon: Templates
-		}
+			icon: Templates,
+		},
 	];
 
 	const options = {
@@ -48,12 +48,12 @@
 		breakpoints: {
 			640: {
 				perPage: 1,
-				gap: 10
+				gap: 10,
 			},
 			768: {
 				perPage: 2,
-				gap: 30
-			}
+				gap: 30,
+			},
 		},
 		classes: {
 			// Add classes for arrows.
@@ -64,8 +64,8 @@
 
 			// Add classes for pagination.
 			pagination: 'splide__pagination service-slide-pagination', // container
-			page: 'splide__pagination__page service-slide-page' // each button
-		}
+			page: 'splide__pagination__page service-slide-page', // each button
+		},
 	};
 </script>
 

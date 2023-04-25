@@ -18,95 +18,95 @@ export const blogsPerPage = 10;
 export const navItems = [
 	{
 		title: 'Home',
-		route: '/#home'
+		route: '/#home',
 	},
 	{
 		title: 'About',
-		route: '/#about'
+		route: '/#about',
 	},
 	{
 		title: 'Services',
-		route: '/#services'
+		route: '/#services',
 	},
 	{
 		title: 'Blog',
-		route: '/#blog'
+		route: '/#blog',
 	},
 	{
 		title: 'Resume',
-		route: '/#resume'
+		route: '/#resume',
 	},
 	{
 		title: 'Memes',
-		route: '/#memes'
+		route: '/#memes',
 	},
 	{
 		title: 'Reviews',
-		route: '/#reviews'
-	}
+		route: '/#reviews',
+	},
 ];
 
 export const siteMap = [
 	{
 		title: 'Home',
-		route: '/'
+		route: '/',
 	},
 	{
 		title: 'Blog',
-		route: '/blog'
+		route: '/blog',
 	},
 	{
 		title: 'Memes',
-		route: '/memes'
+		route: '/memes',
 	},
 	{
 		title: 'Contact',
-		route: '/contact'
-	}
+		route: '/contact',
+	},
 ];
 
 export const socialMediaLinks: ISocialMediaLink[] = [
 	{
 		url: 'https://github.com/AaronNBrock',
-		icon: Github
+		icon: Github,
 	},
 	{
 		url: 'https://linkedin.com/in/AaronNBrock',
-		icon: Linkedin
+		icon: Linkedin,
 	},
 	{
 		url: 'https://facebook.com/AaronNBrock',
-		icon: Facebook
+		icon: Facebook,
 	},
 	{
 		url: 'https://twitter.com/AaronNBrock',
-		icon: Twitter
+		icon: Twitter,
 	},
 	{
 		url: 'https://medium.com/@AaronNBrock',
-		icon: Medium
+		icon: Medium,
 	},
 	{
 		url: 'https://instagram.com/AutomateAaron',
-		icon: Instagram
-	}
+		icon: Instagram,
+	},
 ];
 
 export const shortLinks: IShortLink[] = [
 	{
 		slug: 'docker-slidedeck',
-		url: 'https://docs.google.com/presentation/d/1wywdYRcQy4L_zoU6RKTUgoxs9l7VVerjKESQAzwzIqY/edit?usp=sharing'
+		url: 'https://docs.google.com/presentation/d/1wywdYRcQy4L_zoU6RKTUgoxs9l7VVerjKESQAzwzIqY/edit?usp=sharing',
 	},
 	{
 		slug: 'terraform-slidedeck',
-		url: 'https://docs.google.com/presentation/d/1ptP4sr_cC5qeZEuUA6fwJYF9eaLM2O9qaRtFE8bKwsg/edit?usp=sharing'
+		url: 'https://docs.google.com/presentation/d/1ptP4sr_cC5qeZEuUA6fwJYF9eaLM2O9qaRtFE8bKwsg/edit?usp=sharing',
 	},
 	{
 		slug: 'git-slidedeck',
-		url: 'https://docs.google.com/presentation/d/1Q_zAEgMn9pkFs1pKL_BJ5Ru4jb61sDPX6CjRFVd7yr0/edit?usp=sharing'
+		url: 'https://docs.google.com/presentation/d/1Q_zAEgMn9pkFs1pKL_BJ5Ru4jb61sDPX6CjRFVd7yr0/edit?usp=sharing',
 	},
 	{
 		slug: 'git-cheatsheet',
-		url: 'https://education.github.com/git-cheat-sheet-education.pdf'
-	}
+		url: 'https://education.github.com/git-cheat-sheet-education.pdf',
+	},
 ];

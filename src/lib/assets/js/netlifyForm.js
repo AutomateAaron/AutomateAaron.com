@@ -106,7 +106,7 @@ export function netlifyEnhance(form, submit = () => {}) {
 				data,
 				form,
 				// @ts-ignore
-				submitter: event.submitter
+				submitter: event.submitter,
 			})) ?? fallback_callback;
 		if (cancelled) return;
 
@@ -118,11 +118,11 @@ export function netlifyEnhance(form, submit = () => {}) {
 				method: 'POST',
 				headers: {
 					accept: 'application/json',
-					'x-sveltekit-action': 'true'
+					'x-sveltekit-action': 'true',
 				},
 				cache: 'no-store',
 				body: data,
-				signal: controller.signal
+				signal: controller.signal,
 			});
 
 			const contentType = response.headers.get('content-type');
@@ -135,14 +135,14 @@ export function netlifyEnhance(form, submit = () => {}) {
 					type: 'success',
 					status: response.status,
 					data: {
-						content: await response.text()
-					}
+						content: await response.text(),
+					},
 				};
 			} else {
 				result = {
 					type: 'error',
 					status: response.status,
-					error: new Error(await response.text())
+					error: new Error(await response.text()),
 				};
 			}
 		} catch (error) {
@@ -157,7 +157,7 @@ export function netlifyEnhance(form, submit = () => {}) {
 			form,
 			update: (opts) => fallback_callback({ action, result, reset: opts?.reset }),
 			// @ts-expect-error generic constraints stuff we don't care about
-			result
+			result,
 		});
 	}
 
@@ -168,6 +168,6 @@ export function netlifyEnhance(form, submit = () => {}) {
 		destroy() {
 			// @ts-expect-error
 			HTMLFormElement.prototype.removeEventListener.call(form, 'submit', handle_submit);
-		}
+		},
 	};
 }

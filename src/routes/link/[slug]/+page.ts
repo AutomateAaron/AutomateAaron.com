@@ -9,7 +9,7 @@ export const load: Load = async ({ params }) => {
 
 			return {
 				// image: image,
-				shortLink
+				shortLink,
 			};
 		}
 	}

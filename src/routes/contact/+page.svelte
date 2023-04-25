@@ -67,7 +67,7 @@
 		// Important: Make sure to add `data-cal-link="aaronnbrock/lets-chat"` attribute to the element you want to open Cal on click
 		Cal('ui', {
 			styles: { branding: { brandColor: '#000000' } },
-			hideEventTypeDetails: false
+			hideEventTypeDetails: false,
 		});
 	</script>
 </div>
