@@ -104,5 +104,9 @@ export const shortLinks: IShortLink[] = [
 	{
 		slug: 'git-slidedeck',
 		url: 'https://docs.google.com/presentation/d/1Q_zAEgMn9pkFs1pKL_BJ5Ru4jb61sDPX6CjRFVd7yr0/edit?usp=sharing'
+	},
+	{
+		slug: 'git-cheatsheet',
+		url: 'https://education.github.com/git-cheat-sheet-education.pdf'
 	}
 ];
