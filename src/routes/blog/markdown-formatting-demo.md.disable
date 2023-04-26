@@ -1,12 +1,11 @@
 ---
 title: 'Markdown Formatting Demo'
-date: 2020-09-13T12:49:27+06:00
-featureImage: images/allpost/allPost-6.jpg
-postImage: images/single-blog/feature-image.jpg
----
-
-This example Markdown file compliments of [markdown-it.github.io](https://markdown-it.github.io/)
-
+date: '2020-09-13'
+image: /images/markdown-formatting-demo.jpg
+imageAlt: 'Markdown Formatting Demo'
+categories:
+  - 'markdown'
+excerpt: 'Ever wonder what happens when you run Docker inside of Docker? In this blog we explore that rabbit hole.'
 ---
 
 # h1 Heading 8-)
@@ -15,17 +14,7 @@ This example Markdown file compliments of [markdown-it.github.io](https://markdo
 
 ### h3 Heading
 
-#### h4 Heading
-
-##### h5 Heading
-
-###### h6 Heading
-
 ## Horizontal Rules
-
----
-
----
 
 ---
 
@@ -206,8 +195,6 @@ with lazy continuation.
 Term 2 with _inline markup_
 
 : Definition 2
-
-        { some code, part of Definition 2 }
 
     Third paragraph of definition 2.
 

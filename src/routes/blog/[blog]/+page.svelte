@@ -53,10 +53,11 @@
 	</div>
 	<div class="relative {interacted ? '' : 'max-h-screen'} mb-16 overflow-hidden duration-300">
 		<div class="container">
-			<div class="mx-auto max-w-2xl">
+			<div class="mx-auto prose xl:prose-slate lg:prose-xl">
 				<svelte:component this={BlogContent} />
+
 				{#if categories}
-					<aside class="mt-16 flex items-center text-base">
+					<aside class="mt-16 flex items-center text-base not-prose">
 						<span>Categories:</span>
 						<ul class="inline-block">
 							{#each categories as category}

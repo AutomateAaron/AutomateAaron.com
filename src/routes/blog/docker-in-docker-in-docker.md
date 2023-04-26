@@ -1,7 +1,7 @@
 ---
 title: 'Docker in Docker in Docker in...'
 date: '2021-10-26'
-image: /images/turtles-all-the-way-down.jpg
+image: ./images/turtles-all-the-way-down.jpg
 imageAlt: 'Turtles, all the way down!'
 categories:
   - 'docker'

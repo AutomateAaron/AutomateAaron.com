@@ -65,9 +65,27 @@
 
 	/* #endregion  /**======== Scroll Bar =========== */
 
-	/* #region  /**=========== Typography =========== */
+	/* #region  /**========= Default Styling ======== */
 
-	/* Headers general */
+	/* #region General */
+	body,
+	.body {
+		@apply bg-base-200 text-base text-base-content selection:bg-primary-focus selection:text-base-200 md:text-lg lg:text-xl;
+	}
+/* 
+	p,
+	.p {
+		@apply mb-4 font-serif;
+	}
+
+	p > a {
+		@apply underline;
+	}
+
+	a {
+		@apply duration-300 hover:text-primary;
+	} */
+
 	h0,
 	h1,
 	h2,
@@ -115,32 +133,16 @@
 		@apply text-base md:text-lg lg:text-2xl;
 	}
 
-	body,
-	.body {
-		@apply bg-base-200 font-sans text-base leading-normal text-base-content selection:bg-primary-focus selection:text-base-200 md:text-xl;
-	}
+	/* #endregion General */
 
-	p,
-	.p {
-		@apply mb-4 font-serif;
-	}
 
-	p > a {
-		@apply underline;
-	}
-
-	a {
-		@apply duration-300 hover:text-primary;
-	}
-
-	/* #endregion  /**======== Typography =========== */
+	/* #endregion  /**======== Default Styling =========== */
 
 	/* #region  /**========= DaisyUI Config ========= */
 	.btn:hover,
 	.btn-active {
 		@apply scale-110;
 	}
-
 	/* #endregion  /**====== DaisyUI Config ========= */
 }
 
@@ -192,7 +194,7 @@
 	/* === Code blocks === */
 	/* General Codeblock */
 	pre[class*='language-'] {
-		@apply relative my-4 overflow-auto rounded-xl border-base-100 bg-base-100 p-4 shadow duration-300 hover:shadow-lg lg:my-8 xl:my-12;
+		@apply relative my-4 overflow-auto text-base-content rounded-xl border-base-100 bg-base-100 p-4 shadow duration-300 hover:shadow-lg lg:my-8 xl:my-12;
 	}
 	/* Expanding Codeblock */
 	pre[class*='language-'] {

@@ -1,8 +1,12 @@
 <script lang="ts">
 	let clazz = '';
 
-	export let blogs;
-
+	export let blogs: {
+		slug: string | undefined;
+		metadata: any;
+		content: any;
+	}[];
+	console.log(blogs);
 	export { clazz as class };
 </script>
 

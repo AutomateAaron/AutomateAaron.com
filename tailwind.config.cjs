@@ -1,6 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
 const daisyui = require('daisyui');
+const typography = require('@tailwindcss/typography');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -104,5 +105,5 @@ module.exports = {
 		],
 	},
 
-	plugins: [daisyui],
+	plugins: [typography, daisyui],
 };
