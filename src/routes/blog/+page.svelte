@@ -1,13 +1,12 @@
 <script lang="ts">
-	import type { IBlog } from '$lib/types';
-	import PostsList from '$lib/components/blog/BlogsList.svelte';
 	import { siteDescription, siteTitle } from '$lib/config';
 	import FigureSmall from '$lib/components/svg/FigureSmall.svelte';
 	import BreathingBlob from '$lib/components/svg/BreathingBlob.svelte';
 	import Figure from '$lib/components/svg/Figure.svelte';
 	import ServiceBg from '$lib/components/svg/landing-sections/service/ServiceBg.svelte';
-	import { page } from '$app/stores';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
+
+	import BlogsList from '$lib/components/blog/BlogsList.svelte';
 
 	export let data;
 
@@ -26,7 +25,7 @@
 			<Breadcrumbs />
 		</div>
 
-		<PostsList {blogs} />
+		<BlogsList {blogs} />
 		<FigureSmall
 			class="absolute left-3/4 top-32 -z-10 -ml-8 -mt-8 h-20 w-20 animate-move-left lg:-ml-12 lg:-mt-12 lg:h-32 lg:w-32"
 		/>

@@ -23,7 +23,7 @@
 		</div>
 		<BlogsList
 			{blogs}
-			class="my-8 mx-auto sm:max-w-lg xl:max-w-none sm:grid-cols-1 xl:grid-cols-3"
+			class="mx-auto my-8 sm:max-w-lg sm:grid-cols-1 xl:max-w-none xl:grid-cols-3"
 		/>
 
 		<div class="mt-8 flex justify-center lg:hidden">

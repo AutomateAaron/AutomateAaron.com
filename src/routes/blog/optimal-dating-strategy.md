@@ -1,16 +1,14 @@
 ---
 title: 'Optimal Dating Strategy'
-date: '2021-10-26'
+date: '2021-10-22'
 image: /images/optimal-dating-strategy.jpg
-imageAlt: 'Optimal Dating Strategy'
+imageAlt: 'Optimal Dating Strategy!'
 categories:
-- 'docker'
-excerpt: 'We've been using algorthms to make everything in our life easier, why not dating?'
+  - 'algorithm'
+excerpt: 'Ever wonder what the optimal dating strategy is?'
 ---
 
-# An Optimal Dating Strategy
-
-## Introduction
+## Intro
 
 Love is complicated. But… so is the weather, and somehow we manage to predict it (albeit with varying degrees of accuracy). One might wonder, even if only as a thought experiment, what is the optimal strategy for dating such that one is guaranteed the best possible spouse? Now, before we can start down this path, we must first define the axioms of the problem space. The dating equivalent of Physic's “Assume a massless frictionless object”. As well as clearly defining what we're optimizing for, so we have a way of measuring success.
 

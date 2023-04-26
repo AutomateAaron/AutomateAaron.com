@@ -64,7 +64,7 @@ export const siteMap = [
 		route: '/contact',
 	},
 	{
-		title: 'ShortLinks',
+		title: 'Short Links',
 		route: '/link',
 	},
 ];

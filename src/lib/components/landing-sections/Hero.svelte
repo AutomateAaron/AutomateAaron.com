@@ -50,13 +50,13 @@
 
 				<!-- video -->
 				<button
-					class="absolute -bottom-[5%] left-0 right-0 mx-auto aspect-3/2 w-2/5 min-w-[8rem] overflow-hidden rounded-lg border-2 border-base-200 md:-left-1/2 md:right-1/2 md:top-2/3"
+					class="group absolute hover:border-primary duration-300 -bottom-[5%] left-0 right-0 mx-auto aspect-3/2 w-2/5 min-w-[8rem] overflow-hidden rounded-lg border-4 border-base-200 md:-left-1/2 md:right-1/2 md:top-2/3"
 					on:click={() => (showModal = true)}
 				>
 					<Img src={PopupThumb} alt="" class="h-full w-full object-cover object-center" />
 
 					<div
-						class="group absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-base-content bg-opacity-50"
+						class="absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-base-content bg-opacity-50"
 					>
 						<div
 							class="flex aspect-square h-2/5 transform items-center justify-center rounded-full bg-base-200 text-primary transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:bg-primary group-hover:text-base-200"

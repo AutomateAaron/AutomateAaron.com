@@ -6,7 +6,7 @@
 </script>
 
 <section class="relative h-screen overflow-hidden">
-	<div class="relative container flex h-full items-center justify-center">
+	<div class="container relative flex h-full items-center justify-center">
 		<div class="relative w-max">
 			<slot />
 
@@ -16,7 +16,7 @@
 			</slot>
 		</div>
 		<slot name="container-elements">
-			<Shape1 class="absolute -top-20 right-0 text-base-300 w-52 animate-spin-slow" />
+			<Shape1 class="absolute -top-20 right-0 w-52 animate-spin-slow text-base-300" />
 		</slot>
 	</div>
 

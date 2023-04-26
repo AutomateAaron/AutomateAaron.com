@@ -11,14 +11,14 @@
 </script>
 
 <CardPage>
-	<div class="bg-base-100 p-8 lg:p-12 rounded-xl shadow">
+	<div class="rounded-xl bg-base-100 p-8 shadow lg:p-12">
 		<h2>Short Links</h2>
 		<ul class="space-y-2">
 			{#each shortLinks as shortLink}
 				<li>
 					<ClickToCopy
 						copyText={url + '/' + shortLink.slug}
-						class="btn btn-square btn-sm btn-primary capitalize mr-2 tooltip-left tooltip-primary"
+						class="btn-primary tooltip-left tooltip-primary btn-square btn-sm btn mr-2 capitalize"
 					>
 						<CopyIcon class="inline h-2/3 w-2/3 fill-current" />
 					</ClickToCopy>

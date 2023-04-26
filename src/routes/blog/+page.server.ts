@@ -1,9 +1,10 @@
-export const load = async ({ url, fetch }) => {
-	const blogRes = await fetch(`${url.origin}/api/blogs.json`);
-	const blogs = await blogRes.json();
+import { fetchBlogs } from '$lib/assets/js/utils';
+import type { Load } from '@sveltejs/kit';
 
-	const totalRes = await fetch(`${url.origin}/api/blogs/count`);
-	const total = await totalRes.json();
+export const load: Load = async ({ params }) => {
+	const blogs = fetchBlogs();
 
-	return { blogs, total };
+	return {
+		blogs: blogs,
+	};
 };

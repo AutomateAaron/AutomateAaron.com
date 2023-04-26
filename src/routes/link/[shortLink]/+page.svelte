@@ -28,4 +28,4 @@
 		{/if}
 	</MailingList>
 </CardPage>
-<Img src={image} class="min-h-[120vh] w-full absolute top-0 -z-40 opacity-20 object-cover" />
+<Img src={image} class="absolute top-0 -z-40 min-h-[120vh] w-full object-cover opacity-20" />

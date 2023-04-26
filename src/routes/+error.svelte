@@ -15,7 +15,7 @@
 </script>
 
 <CardPage>
-	<div class="bg-base-100 p-8 lg:p-12 rounded-xl shadow">
+	<div class="rounded-xl bg-base-100 p-8 shadow lg:p-12">
 		<h1 class="mb-0 flex items-center">
 			<span>{$page.status}</span>
 			<Plus class="rotate-45 align-text-bottom text-error" />
@@ -43,7 +43,7 @@
 		/>
 	</svelte:fragment>
 	<svelte:fragment slot="container-elements">
-		<Shape1 class="absolute -top-20 right-0 text-base-300 w-52 animate-move-left" />
+		<Shape1 class="absolute -top-20 right-0 w-52 animate-move-left text-base-300" />
 	</svelte:fragment>
 	<svelte:fragment slot="page-elements">
 		<Figure class="absolute -left-36 bottom-0 -z-10 h-48 w-48 animate-bounce" />
