@@ -63,6 +63,10 @@ export const siteMap = [
 		title: 'Contact',
 		route: '/contact',
 	},
+	{
+		title: 'ShortLinks',
+		route: '/link',
+	},
 ];
 
 export const socialMediaLinks: ISocialMediaLink[] = [

@@ -1,12 +1,13 @@
 <script lang="ts">
-	import { redirect } from '@sveltejs/kit';
 	import { goto } from '$app/navigation';
+	import Img from '@zerodevx/svelte-img';
 	import MailingList from '$lib/components/MailingList.svelte';
 	import CardPage from '$lib/components/layout/CardPage.svelte';
-	import type { IShortLink } from '$lib/types/index.js';
 
 	export let data;
-	const { shortLink } = data;
+	const { image, shortLink } = data;
+
+	console.log(image);
 
 	let interacted = false;
 
@@ -27,3 +28,4 @@
 		{/if}
 	</MailingList>
 </CardPage>
+<Img src={image} class="min-h-[120vh] w-full absolute top-0 -z-40 opacity-20 object-cover" />

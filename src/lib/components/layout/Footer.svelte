@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Logo from '$lib/components/svg/logo.svelte';
 	import EmailIcon from '~icons/ic/baseline-email';
-	import Shape1 from '$lib/components/svg/footer/Shape1.svelte';
-	import Shape2 from '$lib/components/svg/footer/Shape2.svelte';
+	import Shape1 from '$lib/components/svg/Shape1.svelte';
+	import Shape2 from '$lib/components/svg/Shape2.svelte';
 	import Location from '~icons/ic/baseline-location-on'; // eslint-disable-line
 
 	import { socialMediaLinks, siteMap } from '$lib/config.js';
