@@ -52,6 +52,7 @@
 		"@zerodevx/svelte-img": "^1.2.10",
 		"daisyui": "^2.51.6",
 		"esm-env": "^1.0.0",
-		"glob": "^10.2.2"
+		"glob": "^10.2.2",
+		"svelte-local-storage-store": "^0.4.0"
 	}
 }

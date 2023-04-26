@@ -1,13 +1,5 @@
-import { writable } from 'svelte/store';
-import { browser } from '$app/environment';
+import { persisted } from 'svelte-local-storage-store';
 
-let storedSubscribed = 'false';
-if (browser) {
-	storedSubscribed = localStorage.getItem('subscribed') || 'false';
-}
-
-export const subscribed = writable(storedSubscribed === 'true');
-
-if (browser) {
-	subscribed.subscribe((value) => localStorage.setItem('subscribed', value.toString()));
-}
+// First param `preferences` is the local storage key.
+// Second param is the initial value.
+export const mailingListEmail = persisted('mailingListEmail', '');

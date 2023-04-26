@@ -3,7 +3,7 @@
 	import CheckIcon from '~icons/ic/outline-check';
 	import ErrorIcon from '~icons/ic/outline-error';
 	import CloseIcon from '~icons/ic/baseline-close';
-	import { subscribed } from '$lib/stores.js';
+	import { mailingListEmail } from '$lib/stores.js';
 	import { netlifyEnhance } from '$lib/assets/js/netlifyForm.js';
 
 	export let message = 'Want more?';
@@ -18,7 +18,7 @@
 	export let interacted = false;
 
 	let formResult: ActionResult | undefined;
-	subscribed.subscribe((value) => {
+	mailingListEmail.subscribe((value) => {
 		if (value) {
 			formResult = {
 				type: 'success',
@@ -28,6 +28,18 @@
 			interacted = true;
 		}
 	});
+
+	const handleSubmit = ({ data }: { data: FormData }) => {
+		interacted = true;
+		let email = data.get('email')?.toString();
+
+		return async ({ result }: { result: ActionResult }) => {
+			formResult = result;
+			if (result.type === 'success' && email) {
+				mailingListEmail.set(email);
+			}
+		};
+	};
 
 	const deleteFormResult = function () {
 		formResult = undefined;
@@ -51,15 +63,12 @@
 
 	{#if !formResult}
 		<form
-			use:netlifyEnhance={() =>
-				async ({ result }) => {
-					formResult = result;
-				}}
+			use:netlifyEnhance={handleSubmit}
 			enctype="application/x-www-form-urlencoded"
 			name="mailing-list"
 			method="POST"
 			action="/contact/submitted"
-			class="flex flex-wrap gap-4 duration-300 ease-in-out group-focus-within:scale-[1.03] group-hover:scale-[1.03]"
+			class="flex justify-center flex-wrap gap-4 duration-300 ease-in-out group-focus-within:scale-[1.03] group-hover:scale-[1.03]"
 		>
 			<input type="hidden" name="form-name" value="mailing-list" />
 
