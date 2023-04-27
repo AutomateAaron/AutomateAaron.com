@@ -15,7 +15,7 @@ export default defineConfig({
 		}),
 		imagetools({
 			// By default, directives are `?width=480;1024;1920&format=avif;webp;jpg`
-			defaultDirectives: () => new URLSearchParams('?lqip=64'),
+			defaultDirectives: () => new URLSearchParams('?width=480;1024&format=avif;jpg&lqip=32'),
 		}),
 	],
 });
