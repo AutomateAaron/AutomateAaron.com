@@ -5,7 +5,7 @@
 	import Figure from '$lib/components/svg/Figure.svelte';
 	import ServiceBg from '$lib/components/svg/landing-sections/service/ServiceBg.svelte';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-	import BlogsList from '$lib/components/blog/BlogsList.svelte';
+	import BlogsList from '$lib/components/BlogsList.svelte';
 
 	export let data;
 

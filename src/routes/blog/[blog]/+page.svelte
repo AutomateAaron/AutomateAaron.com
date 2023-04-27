@@ -10,27 +10,24 @@
 	import MailingList from '$lib/components/MailingList.svelte';
 
 	export let data;
-
-	const { title, excerpt, date, updated, image, imageAlt, categories } = data.meta;
-
-	const { BlogContent } = data;
+	const { blog } = data;
 
 	let interacted = false;
 </script>
 
 <svelte:head>
 	<!-- Be sure to add your image files and un-comment the lines below -->
-	<title>{title}</title>
-	<meta data-key="description" name="description" content={excerpt} />
+	<title>{blog.metadata.title}</title>
+	<meta data-key="description" name="description" content={blog.metadata.excerpt} />
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={excerpt} />
-	<meta property="og:image" content={image} />
-	<meta property="og:image:alt" content={imageAlt} />
+	<meta property="og:title" content={blog.metadata.title} />
+	<meta property="og:description" content={blog.metadata.excerpt} />
+	<!-- <meta property="og:image" content={image} /> -->
+	<meta property="og:image:alt" content={blog.metadata.imageAlt} />
 
-	<meta name="twitter:title" content={title} />
-	<meta name="twitter:description" content={excerpt} />
-	<meta name="twitter:image" content={image} />
+	<meta name="twitter:title" content={blog.metadata.title} />
+	<meta name="twitter:description" content={blog.metadata.excerpt} />
+	<!-- <meta name="twitter:image" content={image} /> -->
 
 	<!-- <meta property="og:image:width" content={coverWidth} /> -->
 	<!-- <meta property="og:image:height" content={coverHeight} /> -->
@@ -38,10 +35,15 @@
 
 <article class="section relative overflow-hidden pb-0">
 	<div class="container relative mb-8">
-		<h1 class="mb-2 text-center">{title}</h1>
+		<h1 class="mb-2 text-center">{blog.metadata.title}</h1>
 		<Breadcrumbs class="mx-auto mb-2 max-w-max" />
+		<Img
+			src={blog.image}
+			alt={blog.metadata.imageAlt}
+			class="mx-auto w-max max-h-[50vh] rounded-xl object-contain"
+		/>
 
-		<img class="mx-auto max-h-[50vh] rounded-xl object-contain" src={image} alt={imageAlt} />
+		<!-- <img class="mx-auto max-h-[50vh] rounded-xl object-contain" src={image} alt={imageAlt} /> -->
 
 		<FigureSmall
 			class="absolute -left-12 top-0 -z-10 -mt-8 h-20 w-20 animate-move-top lg:-ml-12 lg:-mt-12 lg:h-32 lg:w-32"
@@ -54,13 +56,13 @@
 	<div class="relative {interacted ? '' : 'max-h-screen'} mb-16 overflow-hidden duration-300">
 		<div class="container">
 			<div class="mx-auto prose xl:prose-slate lg:prose-xl">
-				<svelte:component this={BlogContent} />
+				<svelte:component this={blog.default} />
 
-				{#if categories}
+				{#if blog.metadata.categories}
 					<aside class="mt-16 flex items-center text-base not-prose">
 						<span>Categories:</span>
 						<ul class="inline-block">
-							{#each categories as category}
+							{#each blog.metadata.categories as category}
 								<li class="float-left ml-4">
 									<a href="/blog/">
 										<span class="badge-secondary badge">#{category}</span>

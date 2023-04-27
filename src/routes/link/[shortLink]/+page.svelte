@@ -7,8 +7,6 @@
 	export let data;
 	const { image, shortLink } = data;
 
-	console.log(image);
-
 	let interacted = false;
 
 	$: if (interacted) {

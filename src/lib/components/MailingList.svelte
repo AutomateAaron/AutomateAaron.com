@@ -24,7 +24,6 @@
 				type: 'success',
 				status: 200,
 			};
-			console.log('setting readmore to true');
 			interacted = true;
 		}
 	});

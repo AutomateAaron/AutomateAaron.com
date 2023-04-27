@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { IBlog } from '$lib/types';
 	import BlogBlob from '$lib/components/svg/landing-sections/blog/BlogBlob.svelte';
-	import BlogsList from '$lib/components/blog/BlogsList.svelte';
+	import BlogsList from '$lib/components/BlogsList.svelte';
 
 	export let blogs: IBlog[];
 </script>

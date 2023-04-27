@@ -1,14 +1,16 @@
+import { fetchBlog } from '$lib/assets/js/clientUtils.js';
 import { error } from '@sveltejs/kit';
 
 export const load = async ({ params }) => {
 	try {
-		const blog = await import(`../${params.blog}.md`);
-
+		const blog = await fetchBlog(params.blog);
 		return {
-			BlogContent: blog.default,
-			meta: { ...blog.metadata, slug: params.blog },
+			blog: blog
 		};
 	} catch (err) {
-		throw error(404, err);
+		if (err instanceof Error) {
+			throw error(404, err);
+		}
+		throw err
 	}
 };

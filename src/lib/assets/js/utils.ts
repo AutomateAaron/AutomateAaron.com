@@ -7,7 +7,6 @@ import { blogsPerPage } from '$lib/config';
 export async function fetchBlogs({ offset = 0, limit = blogsPerPage, category = '' } = {}) {
 	let blogs = await Promise.all(
 		Object.entries(import.meta.glob('/src/routes/blog/*.md')).map(async ([path, resolver]) => {
-			// console.log(path);
 			const slug = path.split('/').pop()?.split('.')[0];
 
 			const blog = await resolver();

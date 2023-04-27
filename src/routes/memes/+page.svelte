@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { siteDescription } from '$lib/config';
-	import MemesList from '$lib/components/memes/MemesList.svelte';
+	import MemesList from '$lib/components/MemesList.svelte';
 	import Figure from '$lib/components/svg/Figure.svelte';
 	import ServiceBg from '$lib/components/svg/landing-sections/service/ServiceBg.svelte';
 	import FigureSmall from '$lib/components/svg/FigureSmall.svelte';
@@ -8,8 +8,6 @@
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 
 	export let data;
-
-	let potato;
 
 	const { memes } = data;
 </script>

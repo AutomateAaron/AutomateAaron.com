@@ -72,7 +72,7 @@
 	.body {
 		@apply bg-base-200 text-base text-base-content selection:bg-primary-focus selection:text-base-200 md:text-lg lg:text-xl;
 	}
-/* 
+
 	p,
 	.p {
 		@apply mb-4 font-serif;
@@ -84,7 +84,7 @@
 
 	a {
 		@apply duration-300 hover:text-primary;
-	} */
+	}
 
 	h0,
 	h1,
