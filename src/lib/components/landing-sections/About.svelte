@@ -53,7 +53,7 @@
 			</div>
 
 			<div class="absolute -right-[12%] -top-[20%] -z-50 hidden md:block">
-				<BreathingBlob gradientId="aaa" class="h-80 w-80 rotate-45 text-base-300" />
+				<BreathingBlob class="h-80 w-80 rotate-45 text-base-300" />
 			</div>
 		</div>
 	</div>

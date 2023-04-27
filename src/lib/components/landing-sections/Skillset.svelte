@@ -61,7 +61,6 @@
 	</div>
 
 	<BreathingBlob
-		gradientId="ddd"
 		class="absolute -bottom-[0%] right-[2%] -z-20 hidden h-72 w-72 rotate-90 transform text-base-300 lg:block"
 	/>
 </section>

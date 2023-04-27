@@ -38,7 +38,7 @@
 			<div
 				class="absolute -top-32 left-1/2 -z-10 -ml-56 text-center md:-left-[35%] md:-top-[45%] md:ml-auto"
 			>
-				<BreathingBlob gradientId="hero" class="h-56 w-56 text-base-200 md:h-96 md:w-96" />
+				<BreathingBlob class="h-56 w-56 text-base-200 md:h-96 md:w-96" />
 			</div>
 		</div>
 

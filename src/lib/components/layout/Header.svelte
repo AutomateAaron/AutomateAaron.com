@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import Logo from '$lib/components/svg/logo.svelte';
+	import Logo from '$lib/components/svg/Logo.svelte';
 
 	import { navItems } from '$lib/config';
 

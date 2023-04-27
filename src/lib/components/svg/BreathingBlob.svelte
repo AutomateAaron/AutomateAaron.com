@@ -1,7 +1,12 @@
+<script context="module">
+	let counter = 0;
+	function getId() {
+		return `breathing-blob-${counter++}`;
+	}
+</script>
+
 <script lang="ts">
-	// export inputProps;
-	// export let classNames = '';
-	export let gradientId = 'a';
+	let gradientId = getId();
 </script>
 
 <!-- #fff -->

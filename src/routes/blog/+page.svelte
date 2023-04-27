@@ -29,7 +29,6 @@
 			class="absolute left-3/4 top-32 -z-10 -ml-8 -mt-8 h-20 w-20 animate-move-left lg:-ml-12 lg:-mt-12 lg:h-32 lg:w-32"
 		/>
 		<BreathingBlob
-			gradientId="blog"
 			class="absolute -right-8 -top-60 -z-10  h-64 w-64 -rotate-90 text-base-200"
 		/>
 	</div>

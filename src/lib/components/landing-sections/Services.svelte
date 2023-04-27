@@ -104,7 +104,7 @@
 	</div>
 
 	<div class="absolute -bottom-[4%] left-[-2%] -z-20 hidden transform lg:block">
-		<BreathingBlob gradientId="ccc" class="h-96 w-96 rotate-45 text-base-300" />
+		<BreathingBlob class="h-96 w-96 rotate-45 text-base-300" />
 	</div>
 
 	<ServiceBg class="absolute right-0 top-0 z-[-2] w-3/5 text-base-300" />

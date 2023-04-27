@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Logo from '$lib/components/svg/logo.svelte';
+	import Logo from '$lib/components/svg/Logo.svelte';
 	import EmailIcon from '~icons/ic/baseline-email';
 	import Shape1 from '$lib/components/svg/Shape1.svelte';
 	import Shape2 from '$lib/components/svg/Shape2.svelte';
