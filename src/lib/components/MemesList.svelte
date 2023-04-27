@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { teleport } from '$lib/assets/js/clientUtils';
 	import Img from '@zerodevx/svelte-img';
 
 	export let memes;
@@ -7,7 +6,6 @@
 	let clazz = '';
 
 	export { clazz as class };
-	export const selected: IMeme | null = null;
 </script>
 
 <div class="relative columns-3xs gap-4 space-y-4 {clazz}">
@@ -26,10 +24,10 @@
 		<a
 			href="#close"
 			id={meme.slug}
-			class="hidden target:block fixed -top-4 left-0 w-screen h-screen z-50"
+			class="fixed -top-4 left-0 z-50 hidden h-screen w-screen target:block"
 		>
-			<div class="flex justify-center items-center w-full h-full bg-black bg-opacity-25">
-				<Img src={meme.default} class="max-h-screen m-auto object-contain w-min" />
+			<div class="flex h-full w-full items-center justify-center bg-black bg-opacity-25">
+				<Img src={meme.default} class="m-auto max-h-screen w-min object-contain" />
 			</div>
 		</a>
 	{/each}

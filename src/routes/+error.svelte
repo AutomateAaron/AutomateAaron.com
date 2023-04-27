@@ -10,8 +10,6 @@
 	import { page } from '$app/stores';
 	import CardPage from '$lib/components/layout/CardPage.svelte';
 	import Shape1 from '$lib/components/svg/Shape1.svelte';
-
-	var test = 'test';
 </script>
 
 <CardPage>

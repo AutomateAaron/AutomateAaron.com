@@ -135,7 +135,6 @@
 
 	/* #endregion General */
 
-
 	/* #endregion  /**======== Default Styling =========== */
 
 	/* #region  /**========= DaisyUI Config ========= */
@@ -194,7 +193,7 @@
 	/* === Code blocks === */
 	/* General Codeblock */
 	pre[class*='language-'] {
-		@apply relative my-4 overflow-auto text-base-content rounded-xl border-base-100 bg-base-100 p-4 shadow duration-300 hover:shadow-lg lg:my-8 xl:my-12;
+		@apply relative my-4 overflow-auto rounded-xl border-base-100 bg-base-100 p-4 text-base-content shadow duration-300 hover:shadow-lg lg:my-8 xl:my-12;
 	}
 	/* Expanding Codeblock */
 	pre[class*='language-'] {

@@ -11,8 +11,6 @@
 
 	export let data;
 
-	const potato = 'test';
-
 	const { blogs } = data;
 	const { memes } = data;
 </script>

@@ -1,14 +1,13 @@
 <script lang="ts">
 	import Img from '@zerodevx/svelte-img';
-	import HeroImage from '$lib/assets/images/hero.jpg?run';
-	import PopupThumb from '$lib/assets/images/hero-video-thumbnail.jpg?run&lqip=32';
+	import HeroImage from '$lib/assets/images/hero.jpg?run&lqip=32';
+	import PopupThumb from '$lib/assets/images/hero-video-thumbnail.jpg?run';
 
 	import Figure from '$lib/components/svg/Figure.svelte';
 	import HeroBg from '$lib/components/svg/landing-sections/hero/HeroBg.svelte';
 
 	import Close from '../svg/Close.svelte';
 	import BreathingBlob from '../svg/BreathingBlob.svelte';
-	import { teleport } from '$lib/assets/js/clientUtils';
 
 	let showModal = false;
 </script>
@@ -50,7 +49,7 @@
 
 				<!-- video -->
 				<button
-					class="group absolute hover:border-primary duration-300 -bottom-[5%] left-0 right-0 mx-auto aspect-3/2 w-2/5 min-w-[8rem] overflow-hidden rounded-lg border-4 border-base-200 md:-left-1/2 md:right-1/2 md:top-2/3"
+					class="group absolute -bottom-[5%] left-0 right-0 mx-auto aspect-3/2 w-2/5 min-w-[8rem] overflow-hidden rounded-lg border-4 border-base-200 duration-300 hover:border-primary md:-left-1/2 md:right-1/2 md:top-2/3"
 					on:click={() => (showModal = true)}
 				>
 					<Img src={PopupThumb} alt="" class="h-full w-full object-cover object-center" />

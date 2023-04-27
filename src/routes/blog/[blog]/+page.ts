@@ -5,12 +5,12 @@ export const load = async ({ params }) => {
 	try {
 		const blog = await fetchBlog(params.blog);
 		return {
-			blog: blog
+			blog: blog,
 		};
 	} catch (err) {
 		if (err instanceof Error) {
 			throw error(404, err);
 		}
-		throw err
+		throw err;
 	}
 };

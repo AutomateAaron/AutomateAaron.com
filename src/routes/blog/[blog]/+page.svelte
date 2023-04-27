@@ -40,7 +40,7 @@
 		<Img
 			src={blog.image}
 			alt={blog.metadata.imageAlt}
-			class="mx-auto w-max max-h-[50vh] rounded-xl object-contain"
+			class="mx-auto max-h-[50vh] w-max rounded-xl object-contain"
 		/>
 
 		<!-- <img class="mx-auto max-h-[50vh] rounded-xl object-contain" src={image} alt={imageAlt} /> -->
@@ -55,11 +55,11 @@
 	</div>
 	<div class="relative {interacted ? '' : 'max-h-screen'} mb-16 overflow-hidden duration-300">
 		<div class="container">
-			<div class="mx-auto prose xl:prose-slate lg:prose-xl">
+			<div class="prose mx-auto lg:prose-xl xl:prose-slate">
 				<svelte:component this={blog.default} />
 
 				{#if blog.metadata.categories}
-					<aside class="mt-16 flex items-center text-base not-prose">
+					<aside class="not-prose mt-16 flex items-center text-base">
 						<span>Categories:</span>
 						<ul class="inline-block">
 							{#each blog.metadata.categories as category}

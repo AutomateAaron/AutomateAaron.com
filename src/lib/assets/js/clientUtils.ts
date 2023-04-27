@@ -1,11 +1,10 @@
-import { error } from "@sveltejs/kit";
-
+import { error } from '@sveltejs/kit';
 
 export function teleport(node: HTMLElement, name = 'teleport') {
 	const teleportContainer = document.getElementById(name);
 
 	if (teleportContainer === null) {
-		throw Error(`No element with id "${name}" to teleport to!`)
+		throw Error(`No element with id "${name}" to teleport to!`);
 	}
 
 	teleportContainer.appendChild(node);
@@ -19,11 +18,10 @@ export function teleport(node: HTMLElement, name = 'teleport') {
 }
 
 export async function loadImage(path: string) {
-
 	// Strip non alphanumaric from the beginning of the string:
-	const replaceExp = /^[^a-zA-Z0-9]+/
+	const replaceExp = /^[^a-zA-Z0-9]+/;
 
-	path = path.replace(replaceExp, '')
+	path = path.replace(replaceExp, '');
 
 	let images = import.meta.glob('../images/**/*.{jpg,jpeg,png}', {
 		query: { run: '' },
@@ -32,18 +30,23 @@ export async function loadImage(path: string) {
 
 	images = Object.fromEntries(
 		Object.entries(images).map(([k, v]) => [k.replace(replaceExp, ''), v])
-	)
+	);
 
-	const image = images[path]
+	const image = images[path];
 
 	if (image === undefined) {
-		throw error(404, `image "${path}" not found`)
+		throw error(404, `image "${path}" not found`);
 	}
 
-	return image
+	return image;
 }
 
-export async function fetchBlogs({ offset = 0, limit = 0, category = '', loadBlogImage = true} = {}) {
+export async function fetchBlogs({
+	offset = 0,
+	limit = 0,
+	category = '',
+	loadBlogImage = true,
+} = {}) {
 	let blogs = await Promise.all(
 		Object.entries(import.meta.glob('/src/routes/blog/*.md')).map(async ([path, resolver]) => {
 			const slug = path.split('/').pop()?.split('.')[0];
@@ -76,7 +79,6 @@ export async function fetchBlogs({ offset = 0, limit = 0, category = '', loadBlo
 }
 
 export async function fetchBlog(slug: string, { loadBlogImage = true } = {}) {
-
 	const blog = await import(`../../../routes/blog/${slug}.md`);
 
 	return {
@@ -87,18 +89,14 @@ export async function fetchBlog(slug: string, { loadBlogImage = true } = {}) {
 	};
 }
 
-export async function fetchMemes({ offset = 0, limit = 0} = {}) {
-
-
-
+export async function fetchMemes({ offset = 0, limit = 0 } = {}) {
 	let memes = await Promise.all(
 		Object.entries(
-			import.meta.glob('../images/memes/*.{jpg,jpeg,png}', 
-			{
+			import.meta.glob('../images/memes/*.{jpg,jpeg,png}', {
 				query: { run: '' },
 				eager: true,
-			})).map(async ([path, meme]) => {
-
+			})
+		).map(async ([path, meme]) => {
 			const slug = path.split('/').pop()?.split('.')[0];
 
 			// console.log(resolver)
@@ -113,19 +111,12 @@ export async function fetchMemes({ offset = 0, limit = 0} = {}) {
 		})
 	);
 
-	// console.log(memes)
+	if (offset) {
+		memes = memes.slice(offset);
+	}
 
-
-	// if (category) {
-	// 	blogs = blogs.filter((blog) => blog.metadata.categories.includes(category));
-	// }
-
-	// if (offset) {
-	// 	blogs = blogs.slice(offset);
-	// }
-
-	// if (limit && limit < blogs.length && limit != -1) {
-	// 	blogs = blogs.slice(0, limit);
-	// }
+	if (limit && limit < memes.length && limit != -1) {
+		memes = memes.slice(0, limit);
+	}
 	return memes;
 }
