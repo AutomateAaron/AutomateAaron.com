@@ -14,13 +14,12 @@
 				<p class="mb-4">Like the comic section of a newspaper...</p>
 			</div>
 		</div>
-		<div class="relative max-h-[60vh] overflow-hidden">
+		<div class="relative overflow-hidden my-8 max-h-[300vh]">
 			<div
-				class="pointer-events-none absolute bottom-0 z-20 h-1/3 w-full bg-gradient-to-t from-base-200 to-transparent"
+				class="pointer-events-none absolute bottom-0 z-20 h-60 w-full bg-gradient-to-t from-base-200 to-transparent"
 			/>
-			<MemesList {memes} class="my-8" />
+			<MemesList {memes} class="-mb-48" />
 		</div>
-
 		<div class="mt-8 flex justify-center">
 			<a href="/memes" class="btn-outline btn text-neutral"> See All Memes </a>
 		</div>
