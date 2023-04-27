@@ -97,6 +97,7 @@ export async function fetchMemes({ offset = 0, limit = 0 } = {}) {
 			import.meta.glob('../images/memes/*.{jpg,jpeg,png}', {
 				query: {
 					run: '',
+					format: 'avif',
 				},
 				eager: true,
 			})
