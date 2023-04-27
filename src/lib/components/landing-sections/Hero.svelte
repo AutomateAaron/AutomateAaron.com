@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Img from '@zerodevx/svelte-img';
-	import HeroImage from '$lib/assets/images/hero.jpg?run&lqip=32';
+	import HeroImage from '$lib/assets/images/hero.jpg?run';
 	import PopupThumb from '$lib/assets/images/hero-video-thumbnail.jpg?run';
 
 	import Figure from '$lib/components/svg/Figure.svelte';

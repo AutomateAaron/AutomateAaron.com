@@ -23,8 +23,10 @@ export async function loadImage(path: string) {
 
 	path = path.replace(replaceExp, '');
 
-	let images = import.meta.glob('../images/**/*.{jpg,jpeg,png}', {
-		query: { run: '' },
+	let images = import.meta.glob('../images/blog/**/*.{jpg,jpeg,png}', {
+		query: {
+			run: '',
+		},
 		eager: true,
 	});
 
@@ -93,7 +95,9 @@ export async function fetchMemes({ offset = 0, limit = 0 } = {}) {
 	let memes = await Promise.all(
 		Object.entries(
 			import.meta.glob('../images/memes/*.{jpg,jpeg,png}', {
-				query: { run: '' },
+				query: {
+					run: '',
+				},
 				eager: true,
 			})
 		).map(async ([path, meme]) => {

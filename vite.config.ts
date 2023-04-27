@@ -13,6 +13,9 @@ export default defineConfig({
 			// experimental
 			autoInstall: true,
 		}),
-		imagetools(),
+		imagetools({
+			// By default, directives are `?width=480;1024;1920&format=avif;webp;jpg`
+			defaultDirectives: () => new URLSearchParams('?lqip=64'),
+		}),
 	],
 });

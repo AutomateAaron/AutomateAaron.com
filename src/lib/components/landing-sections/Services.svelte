@@ -7,7 +7,6 @@
 	import Tuning from '~icons/ic/outline-pie-chart';
 	import Templates from '~icons/ic/outline-file-copy';
 
-	import Web from '../svg/landing-sections/service/Web.svelte';
 	import ServiceBg from '../svg/landing-sections/service/ServiceBg.svelte';
 	import ServiceCard from './ServiceCard.svelte';
 	import FigureSmall from '../svg/FigureSmall.svelte';
