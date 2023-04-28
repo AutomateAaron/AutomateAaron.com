@@ -17,6 +17,33 @@ export function teleport(node: HTMLElement, name = 'teleport') {
 	};
 }
 
+export async function loadImageSmall(path: string) {
+	// Strip non alphanumaric from the beginning of the string:
+	const replaceExp = /^[^a-zA-Z0-9]+/;
+
+	path = path.replace(replaceExp, '');
+
+	let images = import.meta.glob('../images/blog/**/*.{jpg,jpeg,png}', {
+		query: {
+			run: '',
+			width: '480;640',
+		},
+		eager: true,
+	});
+
+	images = Object.fromEntries(
+		Object.entries(images).map(([k, v]) => [k.replace(replaceExp, ''), v])
+	);
+
+	const image = images[path];
+
+	if (image === undefined) {
+		throw error(404, `image "${path}" not found`);
+	}
+
+	return image;
+}
+
 export async function loadImage(path: string) {
 	// Strip non alphanumaric from the beginning of the string:
 	const replaceExp = /^[^a-zA-Z0-9]+/;
@@ -59,7 +86,7 @@ export async function fetchBlogs({
 				slug: slug,
 				metadata: blog.metadata,
 				default: blog.default,
-				image: loadBlogImage ? (await loadImage(blog.metadata.image)).default : null,
+				image: loadBlogImage ? (await loadImageSmall(blog.metadata.image)).default : null,
 			};
 		})
 	);

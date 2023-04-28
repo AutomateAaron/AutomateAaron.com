@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Img from '@zerodevx/svelte-img';
-	import HeroImage from '$lib/assets/images/hero.jpg?run';
-	import PopupThumb from '$lib/assets/images/hero-video-thumbnail.jpg?run';
+	import HeroImage from '$lib/assets/images/hero.jpg?width=480;720&run';
+	import PopupThumb from '$lib/assets/images/hero-video-thumbnail.jpg?width=480&run';
 
 	import HeroBg from '$lib/components/svg/landing-sections/hero/HeroBg.svelte';
 

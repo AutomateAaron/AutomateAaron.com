@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Img from '@zerodevx/svelte-img';
-	import AboutImage from '$lib/assets/images/about.jpg?run';
+	import AboutImage from '$lib/assets/images/about.jpg?width=480;720&run';
 
 	import BreathingBlob from '../svg/BreathingBlob.svelte';
 	import Figure from '../Figure.svelte';
