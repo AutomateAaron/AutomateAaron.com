@@ -2,10 +2,9 @@
 	import Img from '@zerodevx/svelte-img';
 	import SkillImage from '$lib/assets/images/skillset.jpg?run';
 	import Check from '~icons/mdi/check-bold';
-	import Figure from '../svg/Figure.svelte';
 
-	import FigureSmall from '../svg/FigureSmall.svelte';
 	import BreathingBlob from '../svg/BreathingBlob.svelte';
+	import Figure from '../Figure.svelte';
 
 	const skills: string[] = [
 		'AWS',
@@ -30,11 +29,9 @@
 	<div class="container grid-cols-2 items-center gap-x-16 space-y-8 py-12 lg:grid lg:space-y-0">
 		<div class="relative">
 			<!-- <img src={SkillImage} alt="" /> -->
-			<Img src={SkillImage} class="mask-left" />
+			<Img src={SkillImage} alt="The last picture of me, I promise." class="mask-left" />
 
-			<div class="absolute -left-[13%] -top-[2%] -z-10 transform">
-				<Figure class="h-36 w-36 animate-move-top" />
-			</div>
+			<Figure class="absolute -left-24 -top-12 -z-10 h-72 w-72 animate-move-y text-base-content" />
 		</div>
 
 		<div class="">
@@ -56,11 +53,11 @@
 		</div>
 	</div>
 
-	<div class="absolute bottom-[5%] right-[10%] -z-10 hidden transform lg:block">
-		<FigureSmall class="h-24 w-24 animate-move-top" />
-	</div>
+	<Figure
+		class="absolute bottom-16 right-36 hidden h-[4.5rem] w-[4.5rem] animate-move-y lg:block"
+	/>
 
 	<BreathingBlob
-		class="absolute -bottom-[0%] right-[2%] -z-20 hidden h-72 w-72 rotate-90 transform text-base-300 lg:block"
+		class="absolute -bottom-0 right-0 -z-20 h-72 w-72 rotate-90 transform text-base-300 lg:right-8"
 	/>
 </section>

@@ -5,9 +5,7 @@
 	import SocialIcon from '~icons/ic/outline-people-alt';
 	import EmailIcon from '~icons/ic/outline-email';
 
-	import Figure from '$lib/components/svg/Figure.svelte';
 	import CardBlob from '$lib/components/svg/CardBlob.svelte';
-	import FigureSmall from '$lib/components/svg/FigureSmall.svelte';
 	import ProfilePicture from '$lib/assets/images/profile-picture.jpg?run';
 	import BreathingBlob from '$lib/components/svg/BreathingBlob.svelte';
 
@@ -20,6 +18,8 @@
 	import ErrorIcon from '~icons/ic/outline-error';
 	import CloseIcon from '~icons/ic/baseline-close';
 	import { netlifyEnhance } from '$lib/assets/js/netlifyForm';
+	import Figure from '$lib/components/Figure.svelte';
+	import FigureSmall from '$lib/components/FigureSmall.svelte';
 
 	let formResult: ActionResult | undefined;
 
@@ -142,17 +142,18 @@
 			</div>
 		</div>
 	</div>
-	<div class="absolute -left-[7%] top-[15%] -z-10 hidden transform animate-move-top lg:block">
-		<Figure class="h-52 w-52 text-base-content" />
-	</div>
 
-	<div class="absolute right-[10%] top-[15%] -z-10 hidden animate-move-top lg:block">
-		<FigureSmall class="h-24 w-24 text-base-content" />
-	</div>
+	<Figure
+		class="absolute left-0 top-24 -z-10 h-72 w-24 transform animate-move-y text-base-content lg:w-36"
+	/>
 
-	<div class="amin_spin absolute right-[2%] top-[6%] -z-20 hidden transform lg:block">
-		<BreathingBlob class="h-52 w-52 text-base-300" />
-	</div>
+	<Figure
+		class="absolute right-36 top-32 -z-10 hidden h-24 w-24 animate-move-y text-base-content lg:block"
+	/>
+
+	<BreathingBlob
+		class="absolute right-6 top-8 -z-20 hidden h-52 w-52 transform text-base-300 lg:block"
+	/>
 </section>
 
 <section class="section relative overflow-hidden">
@@ -173,6 +174,7 @@
 					name="contact"
 					method="POST"
 					class="flex flex-col space-y-4"
+					action="/submitted"
 				>
 					<label for="message">
 						<span class="text-lg">Name</span>
@@ -235,8 +237,10 @@
 			<!-- image -->
 			<div class="relative z-10 md:w-1/2 lg:w-1/5">
 				<Img src={ProfilePicture} alt="" class="mask-right" />
-				<FigureSmall class="absolute -right-6 -top-12 -z-10 h-24 w-24 animate-move-top" />
-				<BreathingBlob class="absolute -right-40 -top-48 -z-20 h-64 w-64 rotate-90 text-base-300" />
+				<FigureSmall class="absolute -right-4 -top-12 -z-10 h-24 w-24 animate-move-y" />
+				<BreathingBlob
+					class="absolute -right-40 -top-48 -z-20 hidden h-64 w-64 rotate-90 text-base-300 lg:block"
+				/>
 			</div>
 		</div>
 	</div>

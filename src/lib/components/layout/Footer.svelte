@@ -43,7 +43,7 @@
 			</div>
 
 			<div
-				class="absolute -right-[9%] top-[12%] z-0 rotate-[80deg] transform animate-move-top text-primary-focus"
+				class="absolute -right-[9%] top-[12%] z-0 rotate-[80deg] transform animate-move-y text-primary-focus"
 			>
 				<Shape2 class="h-52 w-60" />
 			</div>

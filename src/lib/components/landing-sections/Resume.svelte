@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import type { IResumeSectionItem } from '$lib/types';
+	import Figure from '../Figure.svelte';
 	import ResumeCard from './ResumeCard.svelte';
 	import ArrowOutward from '~icons/ic/baseline-arrow-outward';
 
@@ -122,10 +124,23 @@
 </script>
 
 <section id="resume" class="section relative">
-	<div class="z-00 absolute bottom-0 left-0 right-0 top-0 -skew-y-2 transform bg-accent" />
+	<div class="absolute bottom-0 left-0 right-0 top-0 -z-40 -skew-y-2 transform bg-accent" />
 
-	<input class="tab-input tab1-input" type="radio" name="tabs" id="tab1" checked />
-	<input class="tab-input tab2-input" type="radio" name="tabs" id="tab2" />
+	<input
+		on:change={() => goto('#resume')}
+		class="tab-input tab1-input hidden"
+		type="radio"
+		name="tabs"
+		id="tab1"
+		checked
+	/>
+	<input
+		on:change={() => goto('#resume')}
+		class="tab-input tab2-input hidden"
+		type="radio"
+		name="tabs"
+		id="tab2"
+	/>
 
 	<div class="tab-holder container relative items-start justify-between gap-x-6 lg:flex">
 		<div class="!top-48 my-8 text-accent-content lg:!sticky">
@@ -145,8 +160,8 @@
 				version.
 			</p>
 			<div class="tabs tabs-boxed inline-block bg-accent-content duration-300 hover:scale-[1.03]">
-				<label class="tab-label tab1-label tab tab-lg" for="tab1"> Experience </label>
-				<label class="tab-label tab2-label tab tab-lg" for="tab2"> Achievements </label>
+				<label class="tab-label tab1-label tab tab-lg text-accent" for="tab1">Experience</label>
+				<label class="tab-label tab2-label tab tab-lg text-accent" for="tab2">Achievements</label>
 			</div>
 		</div>
 
@@ -163,6 +178,7 @@
 			</div>
 		</div>
 	</div>
+	<Figure class="absolute bottom-24 -z-10 h-24 w-12 animate-move-y text-accent-content" />
 </section>
 
 <style type="postcss">

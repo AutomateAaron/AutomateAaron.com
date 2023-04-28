@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Figure from '$lib/components/Figure.svelte';
 	import About from '$lib/components/landing-sections/About.svelte';
 	import Blog from '$lib/components/landing-sections/Blog.svelte';
 	import Hero from '$lib/components/landing-sections/Hero.svelte';

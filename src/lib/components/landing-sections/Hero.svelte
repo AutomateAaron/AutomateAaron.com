@@ -3,11 +3,11 @@
 	import HeroImage from '$lib/assets/images/hero.jpg?run';
 	import PopupThumb from '$lib/assets/images/hero-video-thumbnail.jpg?run';
 
-	import Figure from '$lib/components/svg/Figure.svelte';
 	import HeroBg from '$lib/components/svg/landing-sections/hero/HeroBg.svelte';
 
 	import Close from '../svg/Close.svelte';
 	import BreathingBlob from '../svg/BreathingBlob.svelte';
+	import Figure from '../Figure.svelte';
 
 	let showModal = false;
 </script>
@@ -45,10 +45,16 @@
 		<!-- image -->
 		<div class="relative w-full">
 			<div class="relative">
-				<Img src={HeroImage} loading="eager" class="mask-right" />
+				<Img
+					src={HeroImage}
+					alt="Hero Image (it's me, I'm the hero)"
+					loading="eager"
+					class="mask-right"
+				/>
 
 				<!-- video -->
 				<button
+					name="VideoPopUp"
 					class="group absolute -bottom-[5%] left-0 right-0 mx-auto aspect-3/2 w-2/5 min-w-[8rem] overflow-hidden rounded-lg border-4 border-base-200 duration-300 hover:border-primary md:-left-1/2 md:right-1/2 md:top-2/3"
 					on:click={() => (showModal = true)}
 				>
@@ -76,9 +82,13 @@
 				</button>
 			</div>
 
-			<div class="absolute left-1/2 top-0 -z-10 -mt-14 -translate-x-1/2 transform">
-				<Figure class="h-36 w-36 animate-move-left" />
-			</div>
+			<!-- <div class="absolute left-1/2 top-0 -z-10 -mt-14 -translate-x-1/2 transform">
+				<Figure class="h-36 w-36 animate-move-x" />
+			</div> -->
+
+			<Figure
+				class="absolute left-1/2 top-0 -z-10 -ml-24 -mt-12 h-12 w-48 animate-move-x text-base-content"
+			/>
 		</div>
 	</div>
 
@@ -87,7 +97,7 @@
 
 	<!-- figure -->
 	<Figure
-		class="absolute -bottom-20 -left-32 -z-10 hidden h-52 w-52 transform animate-move-top md:block"
+		class="absolute -bottom-20 left-0 -z-10 hidden h-48 w-12 animate-move-y text-base-content md:block lg:w-24 "
 	/>
 </section>
 

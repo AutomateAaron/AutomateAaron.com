@@ -56,16 +56,15 @@
 			</nav>
 
 			<div class="flex w-1/2 items-center justify-end gap-4">
-				<!-- <label class="swap-rotate swap">
-          <input type="checkbox" checked />
-          <Sun class="swap-on h-6 w-6 text-primary" />
-          <Moon class="swap-off h-6 w-6 text-current" />
-        </label> -->
 				<a href="/contact">
 					<button class="btn-primary btn hidden md:block">Let's Chat!</button>
 				</a>
 
-				<button class="md:hidden" on:click={() => (showMobileMenu = !showMobileMenu)}>
+				<button
+					name="navigation"
+					class="md:hidden"
+					on:click={() => (showMobileMenu = !showMobileMenu)}
+				>
 					<span class="navbar-toggle-icon {showMobileMenu && 'icon-1'}" />
 					<span class="navbar-toggle-icon {showMobileMenu && 'opacity-0'}" />
 					<span class="navbar-toggle-icon {showMobileMenu && 'icon-3'}" />

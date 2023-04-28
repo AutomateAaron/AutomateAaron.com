@@ -44,18 +44,18 @@ module.exports = {
 				'3/2': '3 / 2',
 			},
 			animation: {
-				'spin-slow': 'spin 40s linear infinite',
-				'move-top': 'move-top 4s linear infinite',
-				'move-left': 'move-left 4s linear infinite',
+				'spin-slow': 'spin 48s linear infinite',
+				'move-y': 'move-y 8s linear infinite',
+				'move-x': 'move-x 8s linear infinite',
 			},
 			keyframes: {
-				'move-top': {
-					'0%, 100%': { transform: 'translateY(-10px)' },
-					'50%': { transform: 'translateY(10px)' },
+				'move-y': {
+					'0%, 100%': { transform: 'translateY(-0.75rem)' },
+					'50%': { transform: 'translateY(0.75rem)' },
 				},
-				'move-left': {
-					'0%, 100%': { transform: 'translateX(-10px)' },
-					'50%': { transform: 'translateX(10px)' },
+				'move-x': {
+					'0%, 100%': { transform: 'translateX(-0.75rem)' },
+					'50%': { transform: 'translateX(0.75rem)' },
 				},
 			},
 			borderRadius: {

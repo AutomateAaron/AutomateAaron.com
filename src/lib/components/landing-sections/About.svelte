@@ -3,6 +3,7 @@
 	import AboutImage from '$lib/assets/images/about.jpg?run';
 
 	import BreathingBlob from '../svg/BreathingBlob.svelte';
+	import Figure from '../Figure.svelte';
 </script>
 
 <section id="about" class="section overflow-hidden">
@@ -18,11 +19,9 @@
 		<div class="relative items-center justify-center md:flex">
 			<!-- image -->
 			<div class="relative md:w-1/2 lg:w-2/5">
-				<Img src={AboutImage} alt="about-img" class="mask-left" />
+				<Img src={AboutImage} alt="Me... thinking." class="mask-left" />
 
-				<!-- <div class="absolute -left-[16%] -top-[7%] transform animate-move-top">
-          <Figure classNames="h-36 w-36" />
-        </div> -->
+				<Figure class="absolute top-0 -z-10 -ml-12 -mt-12 h-36 w-36 animate-move-x" />
 			</div>
 
 			<!-- text -->
@@ -52,9 +51,9 @@
 				</div>
 			</div>
 
-			<div class="absolute -right-[12%] -top-[20%] -z-50 hidden md:block">
-				<BreathingBlob class="h-80 w-80 rotate-45 text-base-300" />
-			</div>
+			<BreathingBlob
+				class="absolute -right-12 -top-12 hidden h-80 w-80 rotate-90 text-base-300 md:block"
+			/>
 		</div>
 	</div>
 </section>

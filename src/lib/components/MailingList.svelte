@@ -66,7 +66,7 @@
 			enctype="application/x-www-form-urlencoded"
 			name="mailing-list"
 			method="POST"
-			action="/contact/submitted"
+			action="/submitted"
 			class="flex flex-wrap justify-center gap-4 duration-300 ease-in-out group-focus-within:scale-[1.03] group-hover:scale-[1.03]"
 		>
 			<input type="hidden" name="form-name" value="mailing-list" />

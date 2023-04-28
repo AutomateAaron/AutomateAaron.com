@@ -9,8 +9,8 @@
 
 	import ServiceBg from '../svg/landing-sections/service/ServiceBg.svelte';
 	import ServiceCard from './ServiceCard.svelte';
-	import FigureSmall from '../svg/FigureSmall.svelte';
 	import BreathingBlob from '../svg/BreathingBlob.svelte';
+	import Figure from '../Figure.svelte';
 
 	const services: IService[] = [
 		{
@@ -99,14 +99,8 @@
 		</div>
 	</div>
 
-	<div class="absolute bottom-[4%] left-[6%] -z-10 hidden transform lg:block">
-		<FigureSmall class="h-24 w-24 animate-move-top" />
-	</div>
-
-	<div class="absolute -bottom-[4%] left-[-2%] -z-20 hidden transform lg:block">
-		<BreathingBlob class="h-96 w-96 rotate-45 text-base-300" />
-	</div>
-
+	<BreathingBlob class="absolute -left-8 bottom-0 -z-20 h-96 w-96 rotate-45 text-base-300" />
+	<Figure class="absolute bottom-12 left-28 -z-10 h-24 w-24 animate-move-y" />
 	<ServiceBg class="absolute right-0 top-0 z-[-2] w-3/5 text-base-300" />
 </section>
 

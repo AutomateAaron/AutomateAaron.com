@@ -3,11 +3,11 @@
 	import Img from '@zerodevx/svelte-img';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import BreathingBlob from '$lib/components/svg/BreathingBlob.svelte';
-	import Figure from '$lib/components/svg/Figure.svelte';
-	import FigureSmall from '$lib/components/svg/FigureSmall.svelte';
 	import ProfilePicture from '$lib/assets/images/profile-picture.jpg?run';
+	import Figure from '$lib/components/Figure.svelte';
 
 	import MailingList from '$lib/components/MailingList.svelte';
+	import FigureSmall from '$lib/components/FigureSmall.svelte';
 
 	export let data;
 	const { blog } = data;
@@ -45,9 +45,7 @@
 
 		<!-- <img class="mx-auto max-h-[50vh] rounded-xl object-contain" src={image} alt={imageAlt} /> -->
 
-		<FigureSmall
-			class="absolute -left-12 top-0 -z-10 -mt-8 h-20 w-20 animate-move-top lg:-ml-12 lg:-mt-12 lg:h-32 lg:w-32"
-		/>
+		<Figure class="absolute -left-12 top-0 -z-10 h-24 w-24 animate-move-y" />
 		<BreathingBlob
 			class=" absolute -left-24 -top-24 -z-20 h-40 w-40 text-base-300 lg:-left-60 lg:-top-44 lg:h-80 lg:w-80"
 		/>
@@ -79,11 +77,11 @@
 			/>
 		{/if}
 	</div>
-	<Figure class="absolute -right-14 top-96 hidden h-36 w-36 animate-move-top lg:block" />
-	<FigureSmall
+	<Figure class="absolute right-0 top-96 hidden h-36 w-12 animate-move-y lg:block" />
+	<Figure
 		class="absolute bottom-96 left-0 {interacted
 			? '-z-10'
-			: 'z-20'}  -ml-12 -mt-12 hidden h-32 w-32 animate-move-top lg:block"
+			: 'z-20'} hidden h-36 w-24 animate-move-y lg:block"
 	/>
 </article>
 
@@ -117,7 +115,9 @@
 						</a>
 					</div>
 				</div>
-				<FigureSmall class="absolute -left-4 -top-12 -z-10 h-20 w-20 animate-move-left" />
+				<FigureSmall
+					class="absolute -left-4 top-4 -z-10 h-20 w-20 animate-move-x text-base-content"
+				/>
 			</div>
 		{/if}
 		<MailingList bind:interacted />

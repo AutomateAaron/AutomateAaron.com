@@ -23,11 +23,11 @@
 			{date}{#if toDate}{` - ${toDate}`}{/if}
 		</span>
 	{/if}
-	<h4 class="mt-5 text-2xl font-semibold leading-tight md:text-3xl">
+	<h3 class="mt-5 text-2xl font-semibold leading-tight md:text-3xl">
 		{title}{#if company}
 			<span class="font-serif font-light">, {company}</span>
 		{/if}
-	</h4>
+	</h3>
 	{#if description}
 		<p class="text-xl leading-normal">{description}</p>
 	{/if}

@@ -13,11 +13,6 @@
 		<div id="{meme.slug}-thumb" class="group w-full overflow-hidden rounded-lg">
 			<a href="#{meme.slug}">
 				<Img src={meme.default} class="duration-300 ease-in-out group-hover:scale-110" />
-				<!-- <img
-					src={meme.image}
-					alt={meme.title}
-					class="duration-300 ease-in-out group-hover:scale-110"
-				/> -->
 			</a>
 		</div>
 		<!-- Put this part before </body> tag -->
@@ -27,7 +22,7 @@
 			class="fixed -top-4 left-0 z-50 hidden h-screen w-screen target:block"
 		>
 			<div class="flex h-full w-full items-center justify-center bg-black bg-opacity-25">
-				<Img src={meme.default} class="m-auto max-h-screen w-min object-contain" />
+				<Img src={meme.default} alt={meme.slug} class="m-auto max-h-screen w-min object-contain" />
 			</div>
 		</a>
 	{/each}

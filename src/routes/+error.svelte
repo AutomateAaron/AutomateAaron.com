@@ -3,13 +3,12 @@
 	import Plus from '~icons/ic/baseline-plus';
 	import LeftArrow from '~icons/ic/baseline-arrow-left';
 	import RightArrow from '~icons/ic/baseline-arrow-right';
-	import Figure from '$lib/components/svg/Figure.svelte';
-	import FigureSmall from '$lib/components/svg/FigureSmall.svelte';
 
 	import BreathingBlob from '$lib/components/svg/BreathingBlob.svelte';
 	import { page } from '$app/stores';
 	import CardPage from '$lib/components/layout/CardPage.svelte';
 	import Shape1 from '$lib/components/svg/Shape1.svelte';
+	import Figure from '$lib/components/Figure.svelte';
 </script>
 
 <CardPage>
@@ -35,15 +34,15 @@
 		</div>
 	</div>
 	<svelte:fragment slot="card-elements">
-		<FigureSmall class="absolute -bottom-12 -right-12 -z-10 h-36 w-36 animate-spin-slow" />
+		<Figure class="absolute -bottom-12 -right-12 -z-10 h-36 w-36 animate-spin-slow" />
 		<BreathingBlob
 			class="absolute -left-32 -top-32 -z-30 h-64 w-64 -rotate-90 animate-pulse text-base-300"
 		/>
 	</svelte:fragment>
 	<svelte:fragment slot="container-elements">
-		<Shape1 class="absolute -top-20 right-0 w-52 animate-move-left text-base-300" />
+		<Shape1 class="absolute -top-20 right-0 w-52 animate-move-x text-base-300" />
 	</svelte:fragment>
 	<svelte:fragment slot="page-elements">
-		<Figure class="absolute -left-36 bottom-0 -z-10 h-48 w-48 animate-bounce" />
+		<Figure class="absolute bottom-0 left-0 -z-10 h-48 w-12 animate-bounce" />
 	</svelte:fragment>
 </CardPage>

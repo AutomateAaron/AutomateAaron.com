@@ -1,11 +1,15 @@
 <script lang="ts">
-	import { netlifyEnhance } from '$lib/assets/js/netlifyForm';
+	import BigFigure from '$lib/components/FigureBig.svelte';
+	import BabyFigure from '$lib/components/FigureSmall.svelte';
 	import CardPage from '$lib/components/layout/CardPage.svelte';
+	import Figure from '../../lib/components/Figure.svelte';
 </script>
 
 <CardPage>
-	<h1 class="mb-0 flex items-center">Hello, World! Potato</h1>
-
+	<Figure class="h-48 w-48 text-red-500" />
+	<BabyFigure class="h-48 w-48 text-blue-500" />
+	<BigFigure class="h-48 w-48 text-blue-500" />
+	<!--
 	<form use:netlifyEnhance name="test-form" method="POST" class="flex flex-col gap-6">
 		<label for="name">
 			<span class="text-lg">Name</span>
@@ -40,5 +44,6 @@
 		</label>
 
 		<button type="submit" class="btn-primary btn self-start">Submit</button>
-	</form>
+	</form> -->
+	<svelte:fragment slot="card-elements">{' '}</svelte:fragment>
 </CardPage>

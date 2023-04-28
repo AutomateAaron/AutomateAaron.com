@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  /* svelte image */
-  --reveal-scale: 1.03;
-  --reveal-opacity-duration: 0.3s;
-  --reveal-transform-duration: 0.3s;
+	/* svelte image */
+	--reveal-scale: 1.03;
+	--reveal-opacity-duration: 0.3s;
+	--reveal-transform-duration: 0.3s;
 }
 
 @layer base {
