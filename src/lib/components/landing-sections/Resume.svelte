@@ -151,7 +151,7 @@
 			<p class="mb-4">
 				What? You don’t want to just take my word for it that I know what I’m talking about? I guess
 				some healthy scepticism is a good thing. You can also view the <a
-					href="https://docs.google.com/document/d/1vvDZQ8Nv_ri-R9qq2x2SKSxa0-2YTJV9Gu3Vx_UPhW4/edit?usp=sharing"
+					href="https://docs.google.com/document/d/1q3EbjUYqKp2T82Ns-qilLLiLrXJLs_K3J4jwU1Lbw8A/edit?usp=sharing"
 					target="_blank"
 					rel="noreferrer"
 				>

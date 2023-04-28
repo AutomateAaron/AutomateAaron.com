@@ -9,7 +9,8 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write . && eslint . --fix"
+		"format": "prettier --plugin-search-dir . --write . && eslint . --fix",
+		"postbuild": "npx svelte-sitemap"
 	},
 	"devDependencies": {
 		"@iconify-json/fa": "^1.1.4",
@@ -24,6 +25,7 @@
 		"@types/gtag.js": "^0.0.12",
 		"@typescript-eslint/eslint-plugin": "^5.59.1",
 		"@typescript-eslint/parser": "^5.59.1",
+		"@zerodevx/svelte-img": "^1.2.10",
 		"autoprefixer": "^10.4.14",
 		"eslint": "^8.39.0",
 		"eslint-config-prettier": "^8.8.0",
@@ -38,6 +40,7 @@
 		"rehype-slug": "^5.1.0",
 		"svelte": "^3.58.0",
 		"svelte-check": "^3.2.0",
+		"svelte-sitemap": "3.0.0-next.7",
 		"tailwindcss": "^3.3.1",
 		"tslib": "^2.5.0",
 		"typescript": "^5.0.4",
@@ -50,7 +53,6 @@
 		"@fontsource/source-sans-pro": "^4.5.11",
 		"@fontsource/source-serif-pro": "^4.5.9",
 		"@tailwindcss/typography": "^0.5.9",
-		"@zerodevx/svelte-img": "^1.2.10",
 		"daisyui": "^2.51.6",
 		"esm-env": "^1.0.0",
 		"glob": "^10.2.2",
