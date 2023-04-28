@@ -11,8 +11,12 @@
 <div class="relative columns-3xs gap-4 space-y-4 {clazz}">
 	{#each memes as meme}
 		<div id="{meme.slug}-thumb" class="group w-full overflow-hidden rounded-lg">
-			<a href="#{meme.slug}">
-				<Img src={meme.default} class="duration-300 ease-in-out group-hover:scale-110" />
+			<a href="#{meme.slug}" aria-label="Open image pop up for {meme.slug}">
+				<Img
+					src={meme.default}
+					alt={meme.slug}
+					class="duration-300 ease-in-out group-hover:scale-110"
+				/>
 			</a>
 		</div>
 		<!-- Put this part before </body> tag -->

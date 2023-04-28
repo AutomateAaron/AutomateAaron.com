@@ -58,7 +58,7 @@
 			</div>
 
 			<div>
-				<h4 class="h4 mb-6 text-center md:text-left">Sitemap</h4>
+				<h2 class="h4 mb-6 text-center md:text-left">Sitemap</h2>
 
 				<nav class="flex flex-col flex-wrap items-center space-y-2 md:items-start">
 					{#each siteMap as item}
@@ -68,7 +68,7 @@
 			</div>
 
 			<div>
-				<h4 class="h4 mb-6 text-center md:text-left">Address</h4>
+				<h2 class="h4 mb-6 text-center md:text-left">Address</h2>
 
 				<div class="flex flex-col items-center space-y-2 md:items-start">
 					<ClickToCopy
@@ -100,7 +100,13 @@
 			<!-- social media links -->
 			<div class="mt-12 flex items-center justify-center space-x-6 md:mt-0 md:justify-end">
 				{#each socialMediaLinks as item}
-					<a href={item?.url} target="_blank" rel="noreferrer" class="group">
+					<a
+						aria-label="Open social media profile"
+						href={item?.url}
+						target="_blank"
+						rel="noreferrer"
+						class="group"
+					>
 						<svelte:component
 							this={item?.icon}
 							class="h-5 fill-accent-content transition-colors group-hover:fill-primary"

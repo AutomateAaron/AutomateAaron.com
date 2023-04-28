@@ -54,7 +54,7 @@
 
 				<!-- video -->
 				<button
-					name="VideoPopUp"
+					aria-label="Video Pop-Up"
 					class="group absolute -bottom-[5%] left-0 right-0 mx-auto aspect-3/2 w-2/5 min-w-[8rem] overflow-hidden rounded-lg border-4 border-base-200 duration-300 hover:border-primary md:-left-1/2 md:right-1/2 md:top-2/3"
 					on:click={() => (showModal = true)}
 				>
