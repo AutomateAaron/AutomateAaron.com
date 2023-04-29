@@ -12,8 +12,7 @@
 
 	export let data;
 
-	const { blogs } = data;
-	const { memes } = data;
+	const { blogMetas, memes } = data;
 </script>
 
 <svelte:head>
@@ -24,7 +23,7 @@
 <Hero />
 <About />
 <Services />
-<Blog {blogs} />
+<Blog {blogMetas} />
 <Resume />
 <Meme {memes} />
 <!-- <Portfolio /> -->

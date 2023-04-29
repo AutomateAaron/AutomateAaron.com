@@ -1,10 +1,9 @@
 <script lang="ts">
-	import type { IBlog } from '$lib/types';
 	import BlogBlob from '$lib/components/svg/GradientBlob.svelte';
 	import BlogsList from '$lib/components/BlogsList.svelte';
 	import Figure from '../Figure.svelte';
 
-	export let blogs: IBlog[];
+	export let blogMetas: any[];
 </script>
 
 <section id="blog" class="section relative overflow-hidden">
@@ -24,7 +23,7 @@
 		</div>
 		<div class="relative">
 			<BlogsList
-				{blogs}
+				{blogMetas}
 				class="mx-auto my-8 sm:max-w-lg sm:grid-cols-1 xl:max-w-none xl:grid-cols-3"
 			/>
 			<Figure class="absolute -bottom-12 -right-12 -z-10 -ml-12 -mt-12 h-24 w-24 animate-move-y" />

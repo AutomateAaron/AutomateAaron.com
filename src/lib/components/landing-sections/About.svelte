@@ -33,10 +33,8 @@
 					As a the leader in <a
 						target="_blank"
 						rel="noreferrer"
-						href="https://www.reddit.com/r/googlecloud/top/?t=all"
-					>
-						Google Cloud memes
-					</a>, I know a thing or two about both communicating Google Cloud concepts and building
+						href="https://www.reddit.com/r/googlecloud/top/?t=all">Google Cloud memes</a
+					>, I know a thing or two about both communicating Google Cloud concepts and building
 					applications on the platform. My goal is to streamline your GCP usage so your business can
 					focus on what matters: your business.
 				</p>

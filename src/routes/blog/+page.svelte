@@ -8,7 +8,7 @@
 
 	export let data;
 
-	const { blogs } = data;
+	const { blogMetas } = data;
 </script>
 
 <svelte:head>
@@ -23,9 +23,8 @@
 			<Breadcrumbs />
 		</div>
 		<div class="relative">
-			<BlogsList titleElement="h2" {blogs} />
+			<BlogsList titleElement="h2" {blogMetas} />
 			<Figure class="absolute -top-12 right-36 -z-10 h-24 w-24 animate-move-x" />
-			<!-- <Figure class="absolute left-36 -bottom-12 -z-10 animate-move-x h-24 w-24" /> -->
 		</div>
 
 		<BreathingBlob class="absolute -right-8 -top-60 -z-10  h-64 w-64 -rotate-90 text-base-200" />

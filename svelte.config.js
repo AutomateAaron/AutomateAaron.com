@@ -15,7 +15,9 @@ const config = {
 		vitePreprocess(),
 		mdsvex({
 			extensions: ['.md'],
-
+			layout: {
+				blog: "/src/lib/components/mdx/BlogLayout.svelte",
+			},
 			rehypePlugins: [
 				rehypeSlug,
 				rehypeAutolinkHeadings,
