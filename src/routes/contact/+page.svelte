@@ -30,6 +30,11 @@
 
 <svelte:head>
 	<title>Contact | {siteTitle}</title>
+	<meta
+		data-key="description"
+		name="description"
+		content="Contact Aaron N. Brock for all your Google Cloud questions"
+	/>
 </svelte:head>
 
 <div use:teleport>

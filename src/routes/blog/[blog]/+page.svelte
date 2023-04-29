@@ -40,6 +40,7 @@
 		<Img
 			src={blog.image}
 			alt={blog.metadata.imageAlt}
+			loading="eager"
 			class="mx-auto max-h-[50vh] w-max rounded-xl object-contain"
 		/>
 
