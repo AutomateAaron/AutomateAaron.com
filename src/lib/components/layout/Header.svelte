@@ -56,9 +56,15 @@
 			</nav>
 
 			<div class="flex w-1/2 items-center justify-end gap-4">
-				<a href="/contact">
-					<button class="btn-primary btn hidden md:block">Let's Chat!</button>
-				</a>
+				<div class="block">
+					<a
+						href="/contact"
+						aria-label="Contact Me"
+						class="btn-primary btn hidden md:flex items-center"
+					>
+						Let's Chat!
+					</a>
+				</div>
 
 				<button
 					name="navigation"

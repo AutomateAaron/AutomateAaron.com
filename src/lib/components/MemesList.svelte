@@ -15,7 +15,7 @@
 				<Img
 					src={meme.default}
 					alt={meme.slug}
-					class="duration-300 ease-in-out group-hover:scale-110"
+					class="duration-300 ease-in-out md:group-hover:scale-110"
 				/>
 			</a>
 		</div>

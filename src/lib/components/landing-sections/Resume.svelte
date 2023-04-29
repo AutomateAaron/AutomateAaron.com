@@ -121,13 +121,28 @@
 			],
 		},
 	];
+	let self: HTMLElement;
+	function scrollToTop() {
+		if (window.scrollY < self.offsetTop) {
+			return;
+		}
+		let viewBottom = window.scrollY + window.innerHeight;
+		let elemBottom = self.offsetHeight + self.offsetTop;
+		if (viewBottom > elemBottom) {
+			window.scrollTo({
+				top: self.offsetHeight + self.offsetTop - window.innerHeight - 20,
+				behavior: 'instant',
+			});
+		}
+		window.scrollTo({ top: self.offsetTop, behavior: 'smooth' });
+	}
 </script>
 
-<section id="resume" class="section relative">
+<section bind:this={self} id="resume" class="section relative">
 	<div class="absolute bottom-0 left-0 right-0 top-0 -z-40 -skew-y-2 transform bg-accent" />
 
 	<input
-		on:change={() => goto('#resume')}
+		on:change={scrollToTop}
 		class="tab-input tab1-input hidden"
 		type="radio"
 		name="tabs"
@@ -135,7 +150,7 @@
 		checked
 	/>
 	<input
-		on:change={() => goto('#resume')}
+		on:change={scrollToTop}
 		class="tab-input tab2-input hidden"
 		type="radio"
 		name="tabs"
@@ -143,7 +158,7 @@
 	/>
 
 	<div class="tab-holder container relative items-start justify-between gap-x-6 lg:flex">
-		<div class="!top-48 my-8 text-accent-content lg:!sticky">
+		<div class="!top-32 my-8 text-accent-content lg:!sticky">
 			<span class="pre-line-top-title mb-4 text-xl leading-normal before:bg-accent-content">
 				Resume
 			</span>

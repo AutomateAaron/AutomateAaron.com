@@ -3,6 +3,7 @@
 	import Img from '@zerodevx/svelte-img';
 	import MailingList from '$lib/components/MailingList.svelte';
 	import CardPage from '$lib/components/layout/CardPage.svelte';
+	import { siteTitle } from '$lib/config.js';
 
 	export let data;
 	const { image, shortLink } = data;
@@ -13,6 +14,10 @@
 		goto(shortLink.url);
 	}
 </script>
+
+<svelte:head>
+	<title>{shortLink.slug} | {siteTitle}</title>
+</svelte:head>
 
 <CardPage>
 	<MailingList bind:interacted>

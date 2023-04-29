@@ -2,7 +2,12 @@
 	import Check from '~icons/mdi/check-bold';
 	import LeftArrow from '~icons/mdi/arrow-left-thin';
 	import CardPage from '$lib/components/layout/CardPage.svelte';
+	import { siteTitle } from '$lib/config';
 </script>
+
+<svelte:head>
+	<title>Submitted | {siteTitle}</title>
+</svelte:head>
 
 <CardPage>
 	<div class="rounded-xl bg-base-100 p-8 shadow duration-300 hover:shadow-xl lg:p-12">

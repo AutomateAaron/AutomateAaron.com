@@ -1,7 +1,7 @@
 <script>
 	import ClickToCopy from '$lib/components/ClickToCopy.svelte';
 	import CardPage from '$lib/components/layout/CardPage.svelte';
-	import { shortLinks } from '$lib/config';
+	import { shortLinks, siteTitle } from '$lib/config';
 	import { onMount } from 'svelte';
 	import CopyIcon from '~icons/ic/baseline-content-copy';
 
@@ -9,6 +9,10 @@
 
 	onMount(() => (url = window.location.href));
 </script>
+
+<svelte:head>
+	<title>ShortLinks | {siteTitle}</title>
+</svelte:head>
 
 <CardPage>
 	<div class="rounded-xl bg-base-100 p-8 shadow lg:p-12">
