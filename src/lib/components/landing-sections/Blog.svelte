@@ -8,17 +8,15 @@
 
 <section id="blog" class="section relative overflow-hidden">
 	<div class="container relative z-10">
-		<div class="items-end justify-between lg:flex">
-			<div class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg prose-condensed mb-8">
+		<div class="items-end justify-between lg:flex mb-16">
+			<div class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg prose-condensed">
 				<span class="pre-line-top-title"> Blog </span>
 				<h2>Recent Articles</h2>
 				<p>Just a place for my thoughts...</p>
 			</div>
 
 			<div class="hidden lg:block">
-				<a href="blog" class="inline-block">
-					<button class="btn-outline btn-lg btn text-neutral">See All Blogs</button>
-				</a>
+				<a href="blog" class="btn-outline btn-lg btn text-neutral"> See All Blogs </a>
 			</div>
 		</div>
 		<div class="relative">

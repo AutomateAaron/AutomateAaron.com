@@ -17,24 +17,24 @@
 	}
 </script>
 
-<div class="my-8 rounded-xl bg-base-200 p-8 pr-4">
+<div class="my-8 rounded-xl bg-base-200 p-8 pr-4 prose max-w-none prose-lg prose-li:my-0">
 	{#if date}
-		<span class="pre-line-top-title text-xl leading-normal text-primary before:bg-primary">
+		<span class="pre-line-top-title text-primary before:bg-primary">
 			{date}{#if toDate}{` - ${toDate}`}{/if}
 		</span>
 	{/if}
-	<h3 class="mt-5 text-2xl font-semibold leading-tight md:text-3xl">
+	<h3 class="mt-2 font-semibold">
 		{title}{#if company}
 			<span class="font-serif font-light">, {company}</span>
 		{/if}
 	</h3>
 	{#if description}
-		<p class="text-xl leading-normal">{description}</p>
+		<p class="leading-normal">{description}</p>
 	{/if}
 	{#if bullets}
-		<ul class="list-inside list-disc space-y-1 text-base lg:space-y-0">
+		<ul class="text-base pl-2">
 			{#each bullets as bullet}
-				<li>{bullet}</li>
+				<li class="pl-0">{bullet}</li>
 			{/each}
 		</ul>
 	{/if}
