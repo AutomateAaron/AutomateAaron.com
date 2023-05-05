@@ -15,8 +15,8 @@
 </svelte:head>
 
 <CardPage>
-	<div class="rounded-xl bg-base-100 p-8 shadow lg:p-12">
-		<h2>Short Links</h2>
+	<div class="rounded-xl bg-base-100 p-8 shadow-lg lg:p-12">
+		<h1 class="h1">Short Links</h1>
 		<ul class="space-y-2">
 			{#each shortLinks as shortLink}
 				<li>
@@ -26,7 +26,7 @@
 					>
 						<CopyIcon class="inline h-2/3 w-2/3 fill-current" />
 					</ClickToCopy>
-					<a href="link/{shortLink.slug}" class="underline">{shortLink.slug}</a>
+					<a href="link/{shortLink.slug}" class="underline lg:text-lg">{shortLink.slug}</a>
 				</li>
 			{/each}
 		</ul>

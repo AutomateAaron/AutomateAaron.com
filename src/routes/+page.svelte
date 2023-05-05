@@ -4,6 +4,7 @@
 	import Blog from '$lib/components/landing-sections/Blog.svelte';
 	import Hero from '$lib/components/landing-sections/Hero.svelte';
 	import Meme from '$lib/components/landing-sections/Meme.svelte';
+	import Pricing from '$lib/components/landing-sections/Pricing.svelte';
 	import Resume from '$lib/components/landing-sections/Resume.svelte';
 	import Services from '$lib/components/landing-sections/Services.svelte';
 	import Skillset from '$lib/components/landing-sections/Skillset.svelte';
@@ -25,6 +26,7 @@
 <Testimonial />
 <Services />
 <Resume />
+<Pricing />
 <Blog {blogMetas} />
 <Meme {memes} />
 <Skillset />

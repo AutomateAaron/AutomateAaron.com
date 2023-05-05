@@ -15,7 +15,7 @@
 	export let imageAlt;
 	export let categories;
 
-	let interacted = false;
+	let interacted = true;
 </script>
 
 <article class="section relative overflow-hidden pb-0">
@@ -82,17 +82,17 @@
 						<Img src={ProfilePicture} alt="about-img" class="mask-left" />
 					</div>
 					<div
-						class="flex-col rounded-xl bg-base-100 p-8 pl-24 shadow duration-300 ease-in-out group-hover:shadow-lg"
+						class="flex-col rounded-xl bg-base-100 p-8 pl-24 shadow duration-300 ease-in-out group-hover:shadow-lg prose prose-condensed"
 					>
-						<h4 class="mb-0">Aaron N. Brock</h4>
-						<div class="divider my-2" />
-						<p class="text-sm">
+						<h2>Aaron N. Brock</h2>
+						<p>
 							I'm a Cloud Engineer with a background in DevOps Engineering, Software Development,
 							Cloud Gaming, and self-driving buses. Now, I empower innovative startups & small
-							businesses like yours to leverage the cloud!
+							businesses like yours to leverage the cloud. If you have any questions, please reach
+							out!
 						</p>
 						<a
-							href="/contact"
+							href="/contact#contact"
 							class="btn-primary btn-sm btn [.group:not(:hover)_&]:btn-outline hover:text-primary-content"
 						>
 							Contact Me

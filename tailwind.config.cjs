@@ -38,7 +38,8 @@ module.exports = {
 				'spin-slow': 'spin 48s linear infinite',
 				'move-y': 'move-y 8s linear infinite',
 				'move-x': 'move-x 8s linear infinite',
-				'wiggle': 'wiggle 500ms linear infinite',
+				'wiggle': 'wiggle 300ms linear 5',
+				'wiggle-zoom': 'wiggle-zoom 1.5s ease-in-out 1',
 			},
 			keyframes: {
 				'move-y': {
@@ -50,8 +51,12 @@ module.exports = {
 					'50%': { transform: 'translateX(0.75rem)' },
 				},
 				'wiggle': {
-					'25%': { transform: 'rotate(5deg)' },
-					'75%': { transform: 'rotate(-5deg)' },
+					'25%': { transform: 'rotate(3deg)' },
+					'75%': { transform: 'rotate(-3deg)' },
+				},
+				'wiggle-zoom': {
+					'0%, 100%': { transform: 'scale(100%)' },
+					'10%, 90%': { transform: 'scale(110%)' },
 				}
 			},
 			borderRadius: {

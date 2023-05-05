@@ -17,7 +17,7 @@
 
 	export let interacted = false;
 
-	let formResult: ActionResult | undefined;
+	export let formResult: ActionResult | undefined = undefined;
 	mailingListEmail.subscribe((value) => {
 		if (value) {
 			formResult = {
@@ -50,7 +50,7 @@
 >
 	<slot>
 		<span class="pre-line-top-title mb-4">Mailing List</span>
-		<h4 class="text-center md:text-left h4">
+		<h3 class="text-center md:text-left h3">
 			{#if formResult}
 				{subscribeMessage}
 			{:else if interacted}
@@ -58,7 +58,7 @@
 			{:else}
 				{message}
 			{/if}
-		</h4>
+		</h3>
 	</slot>
 
 	{#if !formResult}

@@ -31,7 +31,7 @@
 					Effortlessly navigate your way to success on Google Cloud with expert guidance.
 				</p>
 
-				<a href="/contact" class="btn-primary btn-lg btn"> Contact me </a>
+				<a href="/contact#schedule" class="btn-primary btn"> Schedule Consultation </a>
 			</div>
 
 			<div

@@ -62,7 +62,7 @@
 						aria-label="Contact Me"
 						class="btn-primary btn hidden lg:flex items-center hover:text-primary-content"
 					>
-						Free Consult
+						Contact Me
 					</a>
 				</div>
 

@@ -80,6 +80,7 @@
 </div>
 
 <section class="section relative overflow-hidden">
+	<div id="schedule" class="absolute top-0 hidden" />
 	<div class="container relative">
 		<div class="mb-8 flex flex-col items-center text-center">
 			<h1 class="mb-4 h1">Contact Me</h1>
@@ -89,17 +90,24 @@
 		<div class="grid gap-4 lg:grid-cols-3 xl:gap-8">
 			<ContactCard icon={ClockIcon}>
 				<h2>Let's Chat</h2>
-				<p>Schedule a consultation to make sure you're getting the most out of Google Cloud!</p>
+				<p>
+					At no cost to you, I'll to take a look at any Google Cloud problem you're having, or
+					assist in avoiding problems in the future!
+				</p>
 				<svelte:fragment slot="cta">
-					<button data-cal-link="aaronnbrock/lets-chat" class="btn-outline btn-primary btn w-fit">
-						Schedule a Call
+					<button
+						data-cal-link="aaronnbrock/lets-chat"
+						id="schedule-button"
+						class="btn-outline btn-primary btn w-fit"
+					>
+						Schedule a Consultation
 					</button>
 				</svelte:fragment>
 			</ContactCard>
 
 			<ContactCard icon={SocialIcon}>
 				<h2>Socials</h2>
-				<p>Add me on the whatever social media platform you prefer!</p>
+				<p>Or, feel free to reach out to me on whatever social media platform you prefer.</p>
 
 				<div slot="cta" class="mt-auto flex max-w-max flex-wrap justify-center gap-1">
 					{#each socialMediaLinks as item}
@@ -119,7 +127,9 @@
 
 			<ContactCard icon={EmailIcon}>
 				<h2>Email</h2>
-				<p>If you prefer communicating via ye 'ol email that's an option too, shoot me an email.</p>
+				<p>
+					If you prefer communicating via ye 'ol email that's an option too, shoot me an email at:
+				</p>
 
 				<ClickToCopy
 					slot="cta"
@@ -145,7 +155,7 @@
 	/>
 </section>
 
-<section class="section relative overflow-hidden">
+<section id="contact" class="section relative overflow-hidden">
 	<div class="container">
 		<!-- content -->
 		<div class="items-center justify-center md:flex">
@@ -234,3 +244,9 @@
 		</div>
 	</div>
 </section>
+
+<style lang="postcss">
+	#schedule:target ~ * #schedule-button {
+		@apply animate-wiggle;
+	}
+</style>

@@ -158,7 +158,7 @@
 
 	<div class="tab-holder container relative items-start justify-between gap-x-6 lg:flex">
 		<div
-			class="!top-32 prose prose-lg lg:prose-lg xl:prose-xl max-w-lg prose-condensed mb-8 text-accent-content prose-headings:text-accent-content prose-a:text-accent-content lg:!sticky"
+			class="!top-32 prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg prose-condensed text-accent-content prose-headings:text-accent-content prose-a:text-accent-content lg:!sticky min-w-[18rem]"
 		>
 			<span class="pre-line-top-title before:bg-accent-content"> Resume </span>
 			<h2 class="">Experience</h2>
@@ -180,12 +180,12 @@
 		</div>
 
 		<div class="">
-			<div class="tab-content tab1-content w-full lg:w-[40rem]">
+			<div class="tab-content tab1-content w-full lg:w-max">
 				{#each experience as item}
 					<ResumeCard {item} />
 				{/each}
 			</div>
-			<div class="tab-content tab2-content w-full lg:w-[40rem]">
+			<div class="tab-content tab2-content w-full lg:w-max">
 				{#each achievements as item}
 					<ResumeCard {item} />
 				{/each}

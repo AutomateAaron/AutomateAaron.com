@@ -33,13 +33,14 @@ export const navItems = [
 		route: '/#services',
 	},
 	{
-		title: 'Blog',
-		route: '/#blog',
-	},
-	{
 		title: 'Resume',
 		route: '/#resume',
 	},
+	{
+		title: 'Blog',
+		route: '/#blog',
+	},
+
 	{
 		title: 'Memes',
 		route: '/#memes',

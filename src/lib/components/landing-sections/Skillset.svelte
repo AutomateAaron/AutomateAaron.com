@@ -88,6 +88,8 @@
 <style lang="postcss">
 	.pokemon {
 		transition: 0s background-color;
+		transition-delay: 10s;
+		@apply duration-300;
 	}
 
 	.pokemon:hover {

@@ -39,7 +39,7 @@
 				</p>
 
 				<div class="flex flex-wrap gap-2">
-					<a href="/contact" class="btn-primary btn">Schedule a Consultation</a>
+					<a href="/contact" class="btn-primary btn">Schedule Consultation</a>
 					<a href="/#resume" class="btn-outline btn text-accent-content"> View Resume </a>
 				</div>
 			</div>
