@@ -9,10 +9,12 @@
 <section id="about" class="section overflow-hidden">
 	<div class="container">
 		<!-- heading -->
-		<div>
-			<span class="mb-4 inline-block w-full text-center text-xl leading-normal"> About About </span>
-			<h2 class="h2 text-center">About About About</h2>
-			<p class="mb-16 text-center">About About About About About</p>
+		<div
+			class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg mx-auto text-center prose-condensed mb-8"
+		>
+			<span>About About</span>
+			<h2>About About About</h2>
+			<p>About About About About About</p>
 		</div>
 
 		<!-- content -->
@@ -26,26 +28,19 @@
 
 			<!-- text -->
 			<div
-				class="relative z-10 mx-4 -mt-48 rounded-xl bg-accent p-6 text-accent-content md:mx-0 md:-ml-12 md:-mt-0 md:w-1/2 md:p-8 lg:p-12"
+				class="relative z-10 mx-4 -mt-48 rounded-xl bg-accent p-6 text-accent-content md:mx-0 md:-ml-12 md:-mt-0 md:w-1/2 md:p-8 lg:p-12 prose lg:prose-lg xl:prose-xl prose-headings:text-accent-content max-w-none"
 			>
-				<h3 class="h3">Who am I?</h3>
-				<p class="mb-6">
-					As a the leader in <a
-						target="_blank"
-						rel="noreferrer"
-						href="https://www.reddit.com/r/googlecloud/top/?t=all">Google Cloud memes</a
-					>, I know a thing or two about both communicating Google Cloud concepts and building
-					applications on the platform. My goal is to streamline your GCP usage so your business can
-					focus on what matters: your business.
+				<h3>Who am I?</h3>
+				<p>
+					I'm a professional Google Cloud Engineer, with extensive experience enabling startups and
+					small businesses. Through designing cloud native architectures, conducting workshops, and
+					more I've helped hundreds of organizations to maximize their Cloud investment. And, I'd
+					love to help yours too!
 				</p>
 
-				<div class="-m-2">
-					<a href="/contact" class="m-2 inline-block">
-						<button class="btn-primary btn">Lets chat!</button>
-					</a>
-					<a href="/#resume" class="m-2 inline-block">
-						<button class="btn-outline btn text-accent-content"> View Resume </button>
-					</a>
+				<div class="flex flex-wrap gap-2">
+					<a href="/contact" class="btn-primary btn">Schedule a Consultation</a>
+					<a href="/#resume" class="btn-outline btn text-accent-content"> View Resume </a>
 				</div>
 			</div>
 

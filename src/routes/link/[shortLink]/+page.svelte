@@ -21,8 +21,10 @@
 
 <CardPage>
 	<MailingList bind:interacted>
+		<span class="pre-line-top-title mb-4">Mailing List</span>
+
 		{#if interacted}
-			<h5 class="mb-0 text-center md:text-left">Redirecting...</h5>
+			<h4 class="mb-0 text-center md:text-left h4">Redirecting...</h4>
 			<a class="mb-4 block text-sm opacity-50" href={shortLink.url}>
 				(click here if you aren't redirected)
 			</a>

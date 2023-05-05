@@ -14,25 +14,24 @@
 
 <section id="home" class="section relative">
 	<div
-		class="container relative items-center justify-between space-y-16 pt-8 md:flex md:space-x-28 md:space-y-0"
+		class="container relative items-center justify-between gap-16 pt-8 flex flex-col md:flex-row lg:gap-24"
 	>
 		<!-- text -->
-		<div class="relative w-full text-center md:text-left">
-			<div class="relative">
-				<span class="pre-line-top-title mb-4 text-xl leading-normal">Hello there,</span>
+		<div class="relative w-full text-center md:text-left group">
+			<div class="relative prose prose-lg lg:prose-xl xl:prose-2xl prose-condensed">
+				<span class="pre-line-top-title">Hello there,</span>
 
-				<h1 class="h1 mt-4">
-					Let’s make <br /> <span class="text-primary">Google Cloud</span>
+				<h1 class="">
+					Let’s make <br />
+					<span class="rainbow-text text-primary">Google Cloud</span>
 					<br /> simple
 				</h1>
 
-				<p class="mx-auto mb-8 max-w-sm text-lg leading-normal md:mx-0 md:max-w-lg lg:text-2xl">
+				<p class="mx-auto mb-8 max-w-sm leading-normal md:mx-0 md:max-w-lg">
 					Effortlessly navigate your way to success on Google Cloud with expert guidance.
 				</p>
 
-				<a href="/contact">
-					<button class="btn-primary btn-lg btn inline-block">Contact me</button>
-				</a>
+				<a href="/contact" class="btn-primary btn-lg btn"> Contact me </a>
 			</div>
 
 			<div
@@ -93,7 +92,7 @@
 	</div>
 
 	<!-- gray bg -->
-	<HeroBg class="absolute left-0 top-0 -z-50 w-[65%] text-base-300" />
+	<HeroBg class="absolute left-0 top-0 -z-50 w-10/12 md:w-8/12 text-base-300" />
 
 	<!-- figure -->
 	<Figure
@@ -122,3 +121,23 @@
 		</div>
 	</div>
 {/if}
+
+<style lang="postcss">
+	.rainbow-text {
+		background: -webkit-linear-gradient(
+			45deg,
+			theme('colors.primary') 25%,
+			rgba(66, 133, 244, 1) 35%,
+			rgba(219, 68, 55, 1) 45%,
+			rgba(244, 180, 0, 1) 55%,
+			rgba(15, 157, 88, 1) 65%,
+			theme('colors.primary') 75%
+		);
+
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 1000% 100%;
+		animation: gradient 30s linear infinite;
+		animation-delay: 5s;
+	}
+</style>

@@ -26,13 +26,13 @@
 					<span class="pre-line-top-title text-xl leading-none before:bg-primary-content"
 						>Contact Me</span
 					>
-					<h2 class="h2 mt-5 text-left md:mb-0">Let's Start a Project</h2>
+					<h2 class="h3 mt-5 text-left md:mb-0">Optimize your Cloud</h2>
 				</div>
 
 				<div class="mt-8 flex justify-center md:mt-0 md:items-end md:justify-end">
 					{#if $page.url.pathname != '/contact'}
 						<a href="/contact">
-							<button class="btn-outline btn text-primary-content">Get In Touch</button>
+							<button class="btn-outline btn text-primary-content">Schedule a consult</button>
 						</a>
 					{/if}
 				</div>
@@ -43,7 +43,7 @@
 			</div>
 
 			<div
-				class="absolute -right-[9%] top-[12%] z-0 rotate-[80deg] transform animate-move-y text-primary-focus"
+				class="absolute -right-[9%] top-[12%] z-0 rotate-[80deg] transform animate-move-y text-primary-focus hidden md:block"
 			>
 				<Shape2 class="h-52 w-60" />
 			</div>

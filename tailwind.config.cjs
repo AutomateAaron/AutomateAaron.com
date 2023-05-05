@@ -2,6 +2,9 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
 const daisyui = require('daisyui');
 const typography = require('@tailwindcss/typography');
+const plugin = require('tailwindcss/plugin')
+
+console.log(typography.defaultTheme)
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -26,18 +29,6 @@ module.exports = {
 				'2xl': defaultTheme.screens['xl'],
 			},
 		},
-		nightwind: {
-			colors: {
-				primary: {
-					900: colors.violet[200],
-					800: colors.violet[300],
-					700: colors.violet[400],
-					600: colors.violet[500],
-				},
-			},
-			colorClasses: ['gradient'],
-		},
-
 		extend: {
 			aspectRatio: {
 				'4/3': '4 / 3',
@@ -47,6 +38,7 @@ module.exports = {
 				'spin-slow': 'spin 48s linear infinite',
 				'move-y': 'move-y 8s linear infinite',
 				'move-x': 'move-x 8s linear infinite',
+				'wiggle': 'wiggle 500ms linear infinite',
 			},
 			keyframes: {
 				'move-y': {
@@ -57,6 +49,10 @@ module.exports = {
 					'0%, 100%': { transform: 'translateX(-0.75rem)' },
 					'50%': { transform: 'translateX(0.75rem)' },
 				},
+				'wiggle': {
+					'25%': { transform: 'rotate(5deg)' },
+					'75%': { transform: 'rotate(-5deg)' },
+				}
 			},
 			borderRadius: {
 				sm: defaultTheme.borderRadius['md'],
@@ -100,10 +96,27 @@ module.exports = {
 
 					'--rounded-btn': '1rem',
 					'--border-btn': '0.25rem',
+					'--btn-text-case': 'none',
 				},
 			},
 		],
 	},
 
-	plugins: [typography, daisyui],
+	plugins: [
+		typography,
+		daisyui,
+		plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "animation-delay": (value) => {
+            return {
+              "animation-delay": value,
+            };
+          },
+        },
+        {
+          values: theme("transitionDelay"),
+        }
+      );
+    }),],
 };

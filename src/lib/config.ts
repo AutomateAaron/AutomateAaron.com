@@ -25,6 +25,10 @@ export const navItems = [
 		route: '/#about',
 	},
 	{
+		title: 'Reviews',
+		route: '/#reviews',
+	},
+	{
 		title: 'Services',
 		route: '/#services',
 	},
@@ -40,10 +44,7 @@ export const navItems = [
 		title: 'Memes',
 		route: '/#memes',
 	},
-	{
-		title: 'Reviews',
-		route: '/#reviews',
-	},
+
 ];
 
 export const siteMap = [

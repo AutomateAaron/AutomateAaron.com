@@ -30,7 +30,7 @@
 
 <header bind:this={outerElement} class="sticky -top-8 z-30 -mb-28 h-28">
 	<div
-		class="mx-4 w-auto rounded-b-xl px-4 pt-8 duration-300 md:mx-0 {scrollY > heightDifference
+		class="mx-4 w-auto rounded-b-xl px-4 pt-8 duration-300 lg:mx-0 {scrollY > heightDifference
 			? 'bg-base-100 shadow-lg'
 			: 'bg-transparent'}"
 	>
@@ -41,7 +41,7 @@
 				</a>
 			</div>
 
-			<nav class="hidden flex-shrink-0 md:block">
+			<nav class="hidden flex-shrink-0 lg:block">
 				<ul class="flex items-center justify-center">
 					{#each navItems as item}
 						<li>
@@ -60,15 +60,15 @@
 					<a
 						href="/contact"
 						aria-label="Contact Me"
-						class="btn-primary btn hidden md:flex items-center"
+						class="btn-primary btn hidden lg:flex items-center hover:text-primary-content"
 					>
-						Let's Chat!
+						Free Consult
 					</a>
 				</div>
 
 				<button
 					name="navigation"
-					class="md:hidden"
+					class="lg:hidden"
 					on:click={() => (showMobileMenu = !showMobileMenu)}
 				>
 					<span class="navbar-toggle-icon {showMobileMenu && 'icon-1'}" />
@@ -79,7 +79,7 @@
 		</div>
 		<!-- mobile nav -->
 		{#if showMobileMenu}
-			<div transition:slide={{ duration: 400 }} class="rounded-xl bg-base-100 md:hidden">
+			<div transition:slide={{ duration: 400 }} class="rounded-xl bg-base-100 lg:hidden">
 				<nav class="px-5 py-4">
 					<ul class="space-y-2">
 						{#each navItems as item}

@@ -35,7 +35,7 @@
 					<span class="pre-line-top-title text-base text-primary">{blogMeta.date}</span>
 					<svelte:element
 						this={titleElement}
-						class="h5 mb-0 mt-5 group-focus-within:text-primary group-hover:text-primary"
+						class="font-bold text-2xl lg:text-xl xl:text-2xl mt-4 group-focus-within:text-primary group-hover:text-primary"
 					>
 						{blogMeta.title}
 					</svelte:element>

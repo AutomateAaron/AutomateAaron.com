@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import type { IResumeSectionItem } from '$lib/types';
 	import Figure from '../Figure.svelte';
 	import ResumeCard from './ResumeCard.svelte';
@@ -158,11 +157,11 @@
 	/>
 
 	<div class="tab-holder container relative items-start justify-between gap-x-6 lg:flex">
-		<div class="!top-32 my-8 text-accent-content lg:!sticky">
-			<span class="pre-line-top-title mb-4 text-xl leading-normal before:bg-accent-content">
-				Resume
-			</span>
-			<h2 class="h2 mt-4">Experience</h2>
+		<div
+			class="!top-32 prose prose-lg lg:prose-lg xl:prose-xl max-w-lg prose-condensed mb-8 text-accent-content prose-headings:text-accent-content prose-a:text-accent-content lg:!sticky"
+		>
+			<span class="pre-line-top-title before:bg-accent-content"> Resume </span>
+			<h2 class="">Experience</h2>
 			<p class="mb-4">
 				What? You don’t want to just take my word for it that I know what I’m talking about? I guess
 				some healthy scepticism is a good thing. You can also view the <a

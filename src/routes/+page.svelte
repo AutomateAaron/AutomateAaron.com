@@ -22,10 +22,10 @@
 
 <Hero />
 <About />
-<Services />
-<Blog {blogMetas} />
-<Resume />
-<Meme {memes} />
-<!-- <Portfolio /> -->
 <Testimonial />
+<Services />
+<Resume />
+<Blog {blogMetas} />
+<Meme {memes} />
 <Skillset />
+<!-- <Portfolio /> -->

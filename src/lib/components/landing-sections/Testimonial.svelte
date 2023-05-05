@@ -3,6 +3,7 @@
 	import '@splidejs/svelte-splide/css';
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import type { ITestimonial } from '$lib/types';
+	import ServiceBg from '../svg/landing-sections/service/ServiceBg.svelte';
 
 	const testimonials: ITestimonial[] = [
 		{
@@ -39,7 +40,7 @@
 		type: 'slide',
 		perPage: 2,
 		perMove: 1,
-		gap: '3rem',
+		gap: '0rem',
 		arrows: false,
 		pagination: true,
 		autoplay: true,
@@ -47,7 +48,7 @@
 		breakpoints: {
 			1023: {
 				perPage: 1,
-				gap: '1rem',
+				gap: '-1rem',
 			},
 		},
 		classes: {
@@ -58,22 +59,25 @@
 	};
 </script>
 
-<section id="reviews" class="section">
-	<div class="relative">
-		<div class=" absolute bottom-0 left-0 right-0 top-0 -z-40 skew-y-2 transform bg-base-300" />
+<section id="reviews" class="section relative">
+	<!-- <div class=" absolute bottom-0 left-0 right-0 top-0 -z-40 -skew-y-2 transform bg-base-300" /> -->
 
-		<div class="container overflow-hidden py-24">
-			<div>
-				<span class="mb-4 inline-block w-full text-center text-xl leading-normal">Testimonials</span
-				>
-				<h2 class="h2 text-center">What People Are Saying?</h2>
-			</div>
+	<div class="container overflow-hidden">
+		<div
+			class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg prose-condensed mb-8 text-center mx-auto"
+		>
+			<span class="">Testimonials</span>
+			<h2 class="">What People Are Saying?</h2>
+		</div>
 
-			<div class="mt-12">
-				<Splide {options}>
-					{#each testimonials as item, i}
-						<SplideSlide>
-							<div class="h-full rounded-xl bg-base-200 px-8 py-12 md:px-12 md:py-16">
+		<div class="-mx-6 mt-12">
+			<Splide {options}>
+				{#each testimonials as item, i}
+					<SplideSlide>
+						<div class="p-6 h-full">
+							<div
+								class="h-full shadow-lg rounded-xl bg-base-100 p-8 lg:p-12 prose lg:prose-lg max-w-none"
+							>
 								<div>
 									{#each Array(item.star) as star, i}
 										<Star class="inline-block h-5 w-5 fill-yellow-400 text-yellow-400" />
@@ -82,19 +86,20 @@
 
 								<p class="mb-10 mt-6">{item.comment}</p>
 
-								<div>
+								<div class="not-prose">
 									<span class="pre-line-top-title text-base font-bold leading-none">
 										{item.name}
 									</span>
-									<span class="text-base leading-none opacity-50"> | {item.time}</span>
+									<span class="text-base leading-none opacity-70"> | {item.time}</span>
 								</div>
 							</div>
-						</SplideSlide>
-					{/each}
-				</Splide>
-			</div>
+						</div>
+					</SplideSlide>
+				{/each}
+			</Splide>
 		</div>
 	</div>
+	<ServiceBg class="absolute right-0 top-0 z-[-2] w-2/3 text-base-300" />
 </section>
 
 <style lang="postcss">

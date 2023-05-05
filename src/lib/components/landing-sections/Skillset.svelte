@@ -7,21 +7,41 @@
 	import Figure from '../Figure.svelte';
 
 	const skills: string[] = [
-		'AWS',
+		// Cloud Technologies
 		'GCP',
+		'AWS',
 		'Kubernetes',
 		'Terraform',
-		'Azurill',
 		'Docker',
+		'BigQuery',
+
+		'Azurill-poke', // poke
+
+		// DevOps
+		'DevOps',
 		'Jenkins',
 		'GitHub',
-		'Gorebyss',
+		'Agile',
+		'Ansible',
+
+		'Gorebyss-poke', // poke
+
+		// Languages
 		'Python',
 		'Golang',
 		'Java',
 		'Javascript',
+
+		'Raichu-poke', // poke
+
+		// Frontend Framewoks
 		'VueJS',
-		'Ansible',
+		'Svelte',
+		'NextJS',
+		'Firebase',
+		'Supabase',
+
+		'Lopunny-poke', // poke
 	];
 </script>
 
@@ -34,20 +54,23 @@
 			<Figure class="absolute -left-24 -top-12 -z-10 h-72 w-72 animate-move-y text-base-content" />
 		</div>
 
-		<div class="">
-			<span class="pre-line-top-title mb-4 text-xl leading-normal">My Skills</span>
-			<h2 class="h2 mt-4">What's my Skillset?</h2>
-			<p class="mb-4">
+		<div class="prose prose-lg lg:prose-lg xl:prose-xl max-w-none prose-condensed mb-8">
+			<span class="pre-line-top-title">My Skills</span>
+			<h2>What's my Skillset?</h2>
+			<p>
 				I'll be honest, this section here is just the "buzzword bingo" that I play with the search
-				engines. (Also, can you find the two pokeimon?)
+				engines. (Also, can you find the four pokeimon?)
 			</p>
 
-			<div class="grid grid-cols-3">
+			<div class="grid grid-cols-[repeat(auto-fit,_minmax(8rem,_1fr))]">
 				{#each skills as skill}
-					<span class="flex items-center justify-start space-x-2 border-t p-1">
-						<Check class="h-5 w-5 fill-current text-primary" />
-						<span class="text-xl leading-normal">{skill}</span>
-					</span>
+					<div
+						class="flex items-center justify-start gap-2 border-t p-1 {skill.split('-').length >
+							1 && 'pokemon'}"
+					>
+						<Check class="h-5 w-5 text-primary" />
+						<span class="text-xl leading-normal">{skill.split('-')[0]}</span>
+					</div>
 				{/each}
 			</div>
 		</div>
@@ -61,3 +84,14 @@
 		class="absolute -bottom-0 right-0 -z-20 h-72 w-72 rotate-90 transform text-base-300 lg:right-8"
 	/>
 </section>
+
+<style lang="postcss">
+	.pokemon {
+		transition: 0s background-color;
+	}
+
+	.pokemon:hover {
+		transition-delay: 500ms;
+		@apply bg-green-200 duration-300;
+	}
+</style>

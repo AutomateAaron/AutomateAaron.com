@@ -49,7 +49,8 @@
 	class="{clazz} group rounded-xl bg-base-100 p-8 shadow duration-300 ease-in-out focus-within:scale-[1.03] focus-within:shadow-xl hover:scale-[1.03] hover:shadow-xl"
 >
 	<slot>
-		<h5 class="text-center md:text-left">
+		<span class="pre-line-top-title mb-4">Mailing List</span>
+		<h4 class="text-center md:text-left h4">
 			{#if formResult}
 				{subscribeMessage}
 			{:else if interacted}
@@ -57,7 +58,7 @@
 			{:else}
 				{message}
 			{/if}
-		</h5>
+		</h4>
 	</slot>
 
 	{#if !formResult}

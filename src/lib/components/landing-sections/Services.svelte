@@ -71,10 +71,10 @@
 <section id="services" class="section relative overflow-hidden">
 	<div>
 		<div class="container">
-			<div class="lg:w-1/2">
-				<span class="pre-line-top-title leading mb-4 text-xl leading-normal">Area of Work</span>
-				<h2 class="h2 mt-4">Google Cloud</h2>
-				<p class="mb-4 text-xl leading-normal">
+			<div class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg prose-condensed mb-8">
+				<span class="pre-line-top-title">Services</span>
+				<h2>Google Cloud</h2>
+				<p>
 					Using technology to empower development teams to deliver software better faster stronger.
 				</p>
 			</div>
@@ -101,7 +101,7 @@
 
 	<BreathingBlob class="absolute -left-8 bottom-0 -z-20 h-96 w-96 rotate-45 text-base-300" />
 	<Figure class="absolute bottom-12 left-28 -z-10 h-24 w-24 animate-move-y" />
-	<ServiceBg class="absolute right-0 top-0 z-[-2] w-3/5 text-base-300" />
+	<!-- <ServiceBg class="absolute right-0 top-16 z-[-2] w-1/2 text-base-300" /> -->
 </section>
 
 <style lang="postcss">

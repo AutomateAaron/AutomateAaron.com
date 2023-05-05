@@ -20,7 +20,8 @@
 			<svelte:component this={service?.icon} class="z-20 h-16 w-16 text-primary" />
 		</div>
 	{/if}
-
-	<h3 class="h4 mt-12">{service?.title}</h3>
-	<p class="mb-4">{service?.description}</p>
+	<div class="prose lg:prose-lg">
+		<h3>{service?.title}</h3>
+		<p class="">{service?.description}</p>
+	</div>
 </div>

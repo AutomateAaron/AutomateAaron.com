@@ -20,12 +20,14 @@
 	import { netlifyEnhance } from '$lib/assets/js/netlifyForm';
 	import Figure from '$lib/components/Figure.svelte';
 	import FigureSmall from '$lib/components/FigureSmall.svelte';
+	import ContactCard from './ContactCard.svelte';
 
 	let formResult: ActionResult | undefined;
 
 	const deleteFormResult = function () {
 		formResult = undefined;
 	};
+	console.log(ClockIcon);
 </script>
 
 <svelte:head>
@@ -80,40 +82,26 @@
 <section class="section relative overflow-hidden">
 	<div class="container relative">
 		<div class="mb-8 flex flex-col items-center text-center">
-			<h1 class="mb-2">Contact Me</h1>
+			<h1 class="mb-4 h1">Contact Me</h1>
 			<Breadcrumbs />
 		</div>
 		<!-- contact options -->
 		<div class="grid gap-4 lg:grid-cols-3 xl:gap-8">
-			<div class="flex w-full flex-col rounded-xl bg-base-100 p-8 text-base-content shadow-xl">
-				<div class="relative z-0 mb-4 flex h-32 w-24 items-end justify-start">
-					<ClockIcon class="z-10 h-16 w-16 text-primary" />
-					<div class="z-00 absolute left-0 top-0">
-						<CardBlob class="text-base-300" />
-					</div>
-				</div>
-
-				<h4 class="h4">Let's Chat</h4>
-				<p>Blah blah blah</p>
-
-				<div class="mt-auto">
+			<ContactCard icon={ClockIcon}>
+				<h2>Let's Chat</h2>
+				<p>Schedule a consultation to make sure you're getting the most out of Google Cloud!</p>
+				<svelte:fragment slot="cta">
 					<button data-cal-link="aaronnbrock/lets-chat" class="btn-outline btn-primary btn w-fit">
 						Schedule a Call
 					</button>
-				</div>
-			</div>
+				</svelte:fragment>
+			</ContactCard>
 
-			<div class="flex w-full flex-col rounded-xl bg-base-100 p-8 text-base-content shadow-xl">
-				<div class="relative z-0 mb-4 flex h-32 w-24 items-end justify-start">
-					<SocialIcon class="z-10 h-16 w-16 text-primary" />
-					<div class="z-00 absolute left-0 top-0">
-						<CardBlob class="text-base-300" />
-					</div>
-				</div>
-
-				<h4 class="h4">Socials</h4>
+			<ContactCard icon={SocialIcon}>
+				<h2>Socials</h2>
 				<p>Add me on the whatever social media platform you prefer!</p>
-				<div class="mt-auto flex max-w-max flex-wrap justify-center gap-1">
+
+				<div slot="cta" class="mt-auto flex max-w-max flex-wrap justify-center gap-1">
 					{#each socialMediaLinks as item}
 						<div class="tooltip tooltip-primary" data-tip="{item.url.replace('https://', '')} ↗">
 							<a
@@ -127,24 +115,20 @@
 						</div>
 					{/each}
 				</div>
-			</div>
+			</ContactCard>
 
-			<div class="flex w-full flex-col rounded-xl bg-base-100 p-8 text-base-content shadow-xl">
-				<div class="relative z-0 mb-4 flex h-32 w-24 items-end justify-start">
-					<EmailIcon class="z-10 h-16 w-16 text-primary" />
-
-					<div class="z-00 absolute left-0 top-0">
-						<CardBlob class="text-base-300" />
-					</div>
-				</div>
-
-				<h4 class="h4">Email</h4>
+			<ContactCard icon={EmailIcon}>
+				<h2>Email</h2>
 				<p>If you prefer communicating via ye 'ol email that's an option too, shoot me an email.</p>
 
-				<ClickToCopy class="tooltip-primary mt-auto w-fit" copyText="Aaron@AaronNBrock.com">
+				<ClickToCopy
+					slot="cta"
+					class="tooltip-primary mt-auto w-fit"
+					copyText="Aaron@AaronNBrock.com"
+				>
 					<div class="btn-outline btn-primary btn-sm btn capitalize">Aaron@AaronNBrock.com</div>
 				</ClickToCopy>
-			</div>
+			</ContactCard>
 		</div>
 	</div>
 
