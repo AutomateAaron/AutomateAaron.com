@@ -45,7 +45,7 @@
 					<p class="mt-6 text-base leading-7">
 						My mission is to facilitate your business' cloud usage as your needs grow and change.
 						Assuring that you're leveraging the wide veracity of services offered by Google Cloud,
-						as well as taking advantage of any incentive programs or discounts available to you!
+						as well as making the most of any incentive programs or discounts available to you!
 					</p>
 				</div>
 
