@@ -8,9 +8,7 @@
 	export { clazz as class };
 </script>
 
-<div
-	class="mb-12 h-[500px] w-full rounded-xl bg-base-100 p-8 shadow-xl md:h-[520px] lg:h-[620px] xl:h-[520px] {clazz}"
->
+<div class="w-full h-full rounded-xl bg-base-100 p-8 shadow-xl {clazz}">
 	<!-- render icon -->
 	{#if service?.icon}
 		<div class="relative mb-4 flex h-32 w-24 items-end justify-start">

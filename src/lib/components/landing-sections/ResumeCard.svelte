@@ -18,7 +18,7 @@
 </script>
 
 <div
-	class="my-8 mx-auto rounded-xl bg-base-200 p-8 pr-4 max-w-[38em] prose xl:prose-lg prose-li:leading-snug prose-li:my-0 prose-li:pl-0 prose-ul:pl-0 prose-condensed"
+	class="my-8 rounded-xl bg-base-200 p-8 pr-4 max-w-[38em] prose xl:prose-lg prose-li:leading-snug prose-li:my-0 prose-li:pl-0 prose-ul:pl-0 prose-condensed"
 >
 	{#if date}
 		<span class="pre-line-top-title text-primary before:bg-primary">

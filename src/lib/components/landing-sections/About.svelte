@@ -34,11 +34,11 @@
 				<p>
 					I'm a professional Google Cloud Engineer, with extensive experience enabling startups and
 					small businesses. Through designing cloud native architectures, conducting workshops, and
-					more I've helped hundreds of organizations to maximize their Cloud investment. And, I'd
-					love to help yours too!
+					more I've helped hundreds of organizations to maximize their Cloud investment. I'd love to
+					help yours too!
 				</p>
 
-				<div class="flex flex-wrap gap-2">
+				<div class="flex flex-wrap gap-4">
 					<a href="/contact" class="btn-primary btn">Schedule Consultation</a>
 					<a href="/#resume" class="btn-outline btn text-accent-content"> View Resume </a>
 				</div>

@@ -28,7 +28,7 @@
 
 		// Languages
 		'Python',
-		'Golang',
+		'GoLang',
 		'Java',
 		'Javascript',
 

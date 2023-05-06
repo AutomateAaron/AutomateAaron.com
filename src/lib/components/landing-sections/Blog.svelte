@@ -12,7 +12,7 @@
 			<div class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg prose-condensed">
 				<span class="pre-line-top-title"> Blog </span>
 				<h2>Recent Articles</h2>
-				<p>Just a place for my thoughts...</p>
+				<p>Just a place for my thoughts.</p>
 			</div>
 
 			<div class="hidden lg:block">

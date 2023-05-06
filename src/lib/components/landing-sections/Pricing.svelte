@@ -25,7 +25,7 @@
 	];
 </script>
 
-<section id="pricing" class="section relative overflow-hidden hidden target:block">
+<section id="pricing" class="section relative overflow-hidden">
 	<div class="container relative">
 		<!-- heading -->
 		<div
@@ -33,7 +33,7 @@
 		>
 			<span>Pricing</span>
 			<h2>But at what cost?</h2>
-			<p>Well, None actually...</p>
+			<p>Well, none actually.</p>
 		</div>
 
 		<div
@@ -53,7 +53,9 @@
 					<h4 class="flex-none text-sm font-semibold leading-6 text-primary">What’s included</h4>
 					<div class="h-px flex-auto bg-base-300" />
 				</div>
-				<ul class="mt-6 grid grid-cols-1 gap-4 leading-6 sm:grid-cols-2 sm:gap-6">
+				<ul
+					class="mt-6 grid grid-cols-[repeat(auto-fit,_minmax(15rem,_1fr))] gap-4 leading-6 sm:gap-6"
+				>
 					{#each features as feature}
 						<li class="flex items-center gap-x-3 {feature.comingSoon && 'opacity-50'}">
 							<Check class="inline w-6 h-6 text-primary" />
@@ -85,7 +87,9 @@
 					</div>
 				</div>
 			</div>
-			<Figure class="w-96 h-96 absolute -top-24 -right-24 -z-10 animate-move-y" />
+			<Figure
+				class="w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 absolute -top-24 -right-24 -z-10 animate-move-y"
+			/>
 		</div>
 	</div>
 </section>

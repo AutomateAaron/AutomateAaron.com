@@ -192,7 +192,7 @@
 			</div>
 		</div>
 	</div>
-	<Figure class="absolute bottom-24 -z-10 h-24 w-12 animate-move-y text-accent-content" />
+	<Figure class="absolute top-24 right-0 -z-10 h-24 w-12 animate-move-y text-accent-content" />
 </section>
 
 <style type="postcss">

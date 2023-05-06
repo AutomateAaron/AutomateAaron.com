@@ -17,7 +17,7 @@
 			>
 				<span class="pre-line-top-title"> Memes </span>
 				<h2>Memes Memes</h2>
-				<p>Like the comic section of a newspaper...</p>
+				<p>Like the comic section of a newspaper.</p>
 			</div>
 		</div>
 		<div class="relative">

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Star from '../svg/Star.svelte';
 	import '@splidejs/svelte-splide/css';
-	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
+	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
 	import type { ITestimonial } from '$lib/types';
 	import ServiceBg from '../svg/landing-sections/service/ServiceBg.svelte';
 
@@ -37,7 +37,7 @@
 	];
 
 	const options = {
-		type: 'slide',
+		type: 'loop',
 		perPage: 2,
 		perMove: 1,
 		gap: '0rem',
@@ -46,7 +46,7 @@
 		autoplay: true,
 		interval: 5000,
 		breakpoints: {
-			1023: {
+			1280: {
 				perPage: 1,
 				gap: '-1rem',
 			},
@@ -61,58 +61,61 @@
 
 <section id="reviews" class="section relative">
 	<!-- <div class=" absolute bottom-0 left-0 right-0 top-0 -z-40 -skew-y-2 transform bg-base-300" /> -->
+	<div class="overflow-hidden">
+		<div class="container">
+			<div
+				class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg prose-condensed mb-8 text-center mx-auto"
+			>
+				<span class="">Testimonials</span>
+				<h2 class="">What People Are Saying?</h2>
+			</div>
 
-	<div class="container overflow-hidden">
-		<div
-			class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg prose-condensed mb-8 text-center mx-auto"
-		>
-			<span class="">Testimonials</span>
-			<h2 class="">What People Are Saying?</h2>
-		</div>
+			<div class="-mx-6 mt-12">
+				<Splide hasTrack={false} {options}>
+					<SplideTrack class="overflow-visible pb-8">
+						{#each testimonials as item, i}
+							<SplideSlide>
+								<div class="p-6 h-full">
+									<div
+										class="h-full shadow-lg rounded-xl bg-base-100 p-8 lg:p-12 prose lg:prose-lg max-w-none"
+									>
+										<div>
+											{#each Array(item.star) as star, i}
+												<Star class="inline-block h-5 w-5 fill-yellow-400 text-yellow-400" />
+											{/each}
+										</div>
 
-		<div class="-mx-6 mt-12">
-			<Splide {options}>
-				{#each testimonials as item, i}
-					<SplideSlide>
-						<div class="p-6 h-full">
-							<div
-								class="h-full shadow-lg rounded-xl bg-base-100 p-8 lg:p-12 prose lg:prose-lg max-w-none"
-							>
-								<div>
-									{#each Array(item.star) as star, i}
-										<Star class="inline-block h-5 w-5 fill-yellow-400 text-yellow-400" />
-									{/each}
+										<p class="mb-10 mt-6">{item.comment}</p>
+
+										<div class="not-prose">
+											<span class="pre-line-top-title text-base font-bold leading-none">
+												{item.name}
+											</span>
+											<span class="text-base leading-none opacity-70"> | {item.time}</span>
+										</div>
+									</div>
 								</div>
-
-								<p class="mb-10 mt-6">{item.comment}</p>
-
-								<div class="not-prose">
-									<span class="pre-line-top-title text-base font-bold leading-none">
-										{item.name}
-									</span>
-									<span class="text-base leading-none opacity-70"> | {item.time}</span>
-								</div>
-							</div>
-						</div>
-					</SplideSlide>
-				{/each}
-			</Splide>
+							</SplideSlide>
+						{/each}
+					</SplideTrack>
+				</Splide>
+			</div>
 		</div>
 	</div>
-	<ServiceBg class="absolute right-0 top-0 z-[-2] w-2/3 text-base-300" />
+
+	<ServiceBg class="absolute right-0 top-0 z-[-2] w-10/12 md:w-9/12 2xl:w-8/12 text-base-300" />
 </section>
 
 <style lang="postcss">
 	:global(.testimonial-slide-pagination) {
-		@apply -bottom-[4rem];
+		@apply bottom-4;
 	}
 
 	:global(.testimonial-slide-page) {
-		background-color: #c2c8cc !important;
+		@apply !bg-base-100 shadow;
 	}
 
-	:global(.testimonial-slide-pagination .is-active) {
-		background-color: #400080 !important;
-		transform: none;
-	}
+	/* :global(.testimonial-slide-pagination .is-active) {
+		@apply !bg-accent;
+	} */
 </style>

@@ -7,7 +7,6 @@
 	import Tuning from '~icons/ic/outline-pie-chart';
 	import Templates from '~icons/ic/outline-file-copy';
 
-	import ServiceBg from '../svg/landing-sections/service/ServiceBg.svelte';
 	import ServiceCard from './ServiceCard.svelte';
 	import BreathingBlob from '../svg/BreathingBlob.svelte';
 	import Figure from '../Figure.svelte';
@@ -34,33 +33,38 @@
 	];
 
 	const options = {
-		type: 'loop',
-		perPage: 2,
+		type: 'slide',
+		perPage: 3,
 		perMove: 1,
-		gap: 30,
+		gap: '2rem',
 		autoplay: false,
 		interval: 3000,
 		padding: '2rem',
 		arrows: false,
 		pagination: true,
-		height: '550px',
 		breakpoints: {
 			640: {
+				// xs
 				perPage: 1,
-				gap: 10,
+				gap: '1rem',
 			},
-			768: {
+			// 768: {
+			// 	// sm
+			// 	perPage: 2,
+			// 	gap: '2rem',
+			// },
+			// 1024: {
+			// 	// md
+			// 	perPage: 2,
+			// 	gap: '2rem',
+			// },
+			1279: {
+				// lg
 				perPage: 2,
-				gap: 30,
+				gap: '2rem',
 			},
 		},
 		classes: {
-			// Add classes for arrows.
-			arrows: 'splide__arrows service-slide-arrows',
-			arrow: 'splide__arrow service-slide-arrow',
-			prev: 'splide__arrow--prev service-slide-prev',
-			next: 'splide__arrow--next service-slide-next',
-
 			// Add classes for pagination.
 			pagination: 'splide__pagination service-slide-pagination', // container
 			page: 'splide__pagination__page service-slide-page', // each button
@@ -73,16 +77,13 @@
 		<div class="container">
 			<div class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg prose-condensed mb-8">
 				<span class="pre-line-top-title">Services</span>
-				<h2>Google Cloud</h2>
+				<h2>What I Do</h2>
 				<p>
 					Using technology to empower development teams to deliver software better faster stronger.
 				</p>
 			</div>
-		</div>
-
-		<div class="mb-12 mt-12 lg:hidden">
 			<Splide hasTrack={false} {options}>
-				<SplideTrack>
+				<SplideTrack class="overflow-visible pb-12">
 					{#each services as service}
 						<SplideSlide>
 							<ServiceCard {service} />
@@ -92,11 +93,13 @@
 			</Splide>
 		</div>
 
-		<div class="container mt-12 hidden items-start justify-between space-x-10 lg:flex">
+		<div class="my-12" />
+
+		<!-- <div class="container mt-12 hidden items-start justify-between space-x-10 lg:flex">
 			{#each services as service}
 				<ServiceCard {service} />
 			{/each}
-		</div>
+		</div> -->
 	</div>
 
 	<BreathingBlob class="absolute -left-8 bottom-0 -z-20 h-96 w-96 rotate-45 text-base-300" />
@@ -106,21 +109,14 @@
 
 <style lang="postcss">
 	:global(.service-slide-pagination) {
-		@apply -bottom-[2rem];
-	}
-
-	@media (min-width: 640px) {
-		:global(.service-slide-pagination) {
-			bottom: -2rem;
-		}
+		@apply bottom-0;
 	}
 
 	:global(.service-slide-page) {
-		background-color: #c2c8cc !important;
+		@apply !bg-base-100 shadow;
 	}
 
-	:global(.service-slide-pagination .is-active) {
-		background-color: #400080 !important;
-		transform: none;
-	}
+	/* :global(.service-slide-pagination .is-active) {
+		@apply !bg-accent-focus;
+	} */
 </style>
