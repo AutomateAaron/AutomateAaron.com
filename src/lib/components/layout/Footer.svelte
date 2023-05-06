@@ -58,7 +58,7 @@
 			</div>
 
 			<div>
-				<h2 class="h4 mb-6 text-center md:text-left">Sitemap</h2>
+				<h2 class="h4 mb-6 text-center md:text-left h3">Sitemap</h2>
 
 				<nav class="flex flex-col flex-wrap items-center space-y-2 md:items-start">
 					{#each siteMap as item}
@@ -68,7 +68,7 @@
 			</div>
 
 			<div>
-				<h2 class="h4 mb-6 text-center md:text-left">Address</h2>
+				<h2 class="h4 mb-6 text-center md:text-left h3">Address</h2>
 
 				<div class="flex flex-col items-center space-y-2 md:items-start">
 					<ClickToCopy

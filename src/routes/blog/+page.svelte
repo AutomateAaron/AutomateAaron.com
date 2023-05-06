@@ -19,7 +19,7 @@
 <section class="section relative">
 	<div class="container relative">
 		<div class="mb-8 flex flex-col items-start">
-			<h1 class="h1 mb-4">Blog</h1>
+			<h1 class="h1">Blog</h1>
 			<Breadcrumbs />
 		</div>
 		<div class="relative">

@@ -54,7 +54,7 @@
 			<Figure class="absolute -left-24 -top-12 -z-10 h-72 w-72 animate-move-y text-base-content" />
 		</div>
 
-		<div class="prose prose-lg lg:prose-lg xl:prose-xl max-w-none prose-condensed mb-8">
+		<div class="prose prose-lg lg:prose-xl xl:prose-2xl prose-condensed mb-8">
 			<span class="pre-line-top-title">My Skills</span>
 			<h2>What's my Skillset?</h2>
 			<p>

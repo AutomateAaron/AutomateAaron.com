@@ -83,7 +83,7 @@
 				</p>
 			</div>
 			<Splide hasTrack={false} {options}>
-				<SplideTrack class="overflow-visible pb-12">
+				<SplideTrack class="!overflow-visible pb-12">
 					{#each services as service}
 						<SplideSlide>
 							<ServiceCard {service} />

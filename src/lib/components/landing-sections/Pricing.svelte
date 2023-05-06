@@ -9,6 +9,9 @@
 			name: 'Architecture Reviews',
 		},
 		{
+			name: 'Pricing Optimization Session',
+		},
+		{
 			name: 'Product Workshops*',
 		},
 		{
@@ -20,6 +23,10 @@
 		},
 		{
 			name: 'Private Help Forum',
+			comingSoon: true,
+		},
+		{
+			name: '24/7 Support',
 			comingSoon: true,
 		},
 	];
@@ -41,7 +48,7 @@
 		>
 			<div class="p-8 pb-4 sm:pb-5 sm:p-10 lg:flex-auto">
 				<div class="prose lg:prose-lg xl:prose-xl max-w-none">
-					<h3 class="text-2xl font-bold tracking-tight">Lifetime Partnership</h3>
+					<h3 class="text-2xl font-bold tracking-tight">Google Cloud Services</h3>
 					<p class="mt-6 text-base leading-7">
 						My mission is to facilitate your business' cloud usage as your needs grow and change.
 						Assuring that you're leveraging the wide veracity of services offered by Google Cloud,
@@ -53,9 +60,7 @@
 					<h4 class="flex-none text-sm font-semibold leading-6 text-primary">What’s included</h4>
 					<div class="h-px flex-auto bg-base-300" />
 				</div>
-				<ul
-					class="mt-6 grid grid-cols-[repeat(auto-fit,_minmax(15rem,_1fr))] gap-4 leading-6 sm:gap-6"
-				>
+				<ul class="mt-6 grid grid-cols-[repeat(auto-fit,_minmax(15rem,_1fr))] gap-4">
 					{#each features as feature}
 						<li class="flex items-center gap-x-3 {feature.comingSoon && 'opacity-50'}">
 							<Check class="inline w-6 h-6 text-primary" />
@@ -67,7 +72,7 @@
 					{/each}
 				</ul>
 				<div class="mt-8 text-sm opacity-50">
-					* may require additional cost, depending on current Google Cloud spend.
+					* may require additional cost, depending on Google Cloud spend.
 				</div>
 			</div>
 			<div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">

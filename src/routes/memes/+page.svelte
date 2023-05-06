@@ -20,7 +20,7 @@
 <section class="section relative overflow-hidden">
 	<div class="container relative">
 		<div class="mb-8 flex flex-col items-end text-center">
-			<h1 class="mb-2">Memes</h1>
+			<h1 class="h1">Memes</h1>
 			<Breadcrumbs />
 		</div>
 		<div class="relative">

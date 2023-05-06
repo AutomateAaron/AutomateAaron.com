@@ -9,7 +9,7 @@
 <section id="blog" class="section relative overflow-hidden">
 	<div class="container relative z-10">
 		<div class="items-end justify-between lg:flex mb-16">
-			<div class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg prose-condensed">
+			<div class="prose prose-lg lg:prose-xl xl:prose-2xl prose-condensed">
 				<span class="pre-line-top-title"> Blog </span>
 				<h2>Recent Articles</h2>
 				<p>Just a place for my thoughts.</p>

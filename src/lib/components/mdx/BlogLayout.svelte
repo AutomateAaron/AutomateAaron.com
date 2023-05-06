@@ -15,12 +15,12 @@
 	export let imageAlt;
 	export let categories;
 
-	let interacted = true;
+	let interacted = false;
 </script>
 
 <article class="section relative overflow-hidden pb-0">
 	<div class="container relative mb-8">
-		<h1 class="mb-2 text-center">{title}</h1>
+		<h1 class="mb-2 h1 text-center">{title}</h1>
 		<Breadcrumbs class="mx-auto mb-2 max-w-max" />
 		<Img
 			src={imageData}

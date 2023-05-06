@@ -97,9 +97,9 @@
 							<a
 								on:click={() => (showMobileMenu = false)}
 								href="/contact"
-								class="btn-primary btn flex items-center hover:text-primary-content"
+								class="btn-primary btn items-center hover:text-primary-content w-full"
 							>
-								Get in Touch
+								Contact Me
 							</a>
 						</li>
 					</ul>
