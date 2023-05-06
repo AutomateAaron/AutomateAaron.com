@@ -25,7 +25,7 @@
 	];
 </script>
 
-<section id="pricing" class="section relative overflow-hidden">
+<section id="pricing" class="section relative overflow-hidden hidden target:block">
 	<div class="container relative">
 		<!-- heading -->
 		<div
