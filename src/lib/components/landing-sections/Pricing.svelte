@@ -43,9 +43,9 @@
 				<div class="prose lg:prose-lg xl:prose-xl max-w-none">
 					<h3 class="text-2xl font-bold tracking-tight">Lifetime Partnership</h3>
 					<p class="mt-6 text-base leading-7">
-						My goal is to grow along side your business as you build on Google Cloud. Making sure
-						you're taking advantages of the wide veraity of services offered as well as leveraging
-						any insentive programs or discounts available to you!
+						My mission is to facilitate your business' cloud usage as your needs grow and change.
+						Assuring that you're leveraging the wide veracity of services offered by Google Cloud,
+						as well as taking advantage of any incentive programs or discounts available to you!
 					</p>
 				</div>
 
