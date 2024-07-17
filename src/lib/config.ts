@@ -58,10 +58,6 @@ export const siteMap = [
 		route: '/blog',
 	},
 	{
-		title: 'Memes',
-		route: '/memes',
-	},
-	{
 		title: 'Contact',
 		route: '/contact',
 	},
