@@ -25,7 +25,7 @@ export function loadImageSmall(path: string) {
 
 	let images = import.meta.glob('../images/blog/**/*.{jpg,jpeg,png}', {
 		query: {
-			run: '',
+			as: 'run',
 			width: '480;640',
 		},
 		eager: true,
@@ -51,7 +51,7 @@ export function loadImage(path: string) {
 
 	let images = import.meta.glob('../images/blog/**/*.{jpg,jpeg,png}', {
 		query: {
-			run: '',
+			as: 'run',
 		},
 		eager: true,
 	});
@@ -114,7 +114,7 @@ export async function fetchMemes({ offset = 0, limit = 0 } = {}) {
 		Object.entries(
 			import.meta.glob('../images/memes/*.{jpg,jpeg,png}', {
 				query: {
-					run: '',
+					as: 'run',
 				},
 				eager: true,
 			})

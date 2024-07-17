@@ -4,8 +4,6 @@ const daisyui = require('daisyui');
 const typography = require('@tailwindcss/typography');
 const plugin = require('tailwindcss/plugin');
 
-console.log(typography.defaultTheme);
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	darkMode: 'class',

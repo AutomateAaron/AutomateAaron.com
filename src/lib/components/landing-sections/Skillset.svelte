@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Img from '@zerodevx/svelte-img';
-	import SkillImage from '$lib/assets/images/skillset.jpg?width=480;720&run';
+	import SkillImage from '$lib/assets/images/skillset.jpg?as=run&width=480;720';
 	import Check from '~icons/mdi/check-bold';
 
 	import BreathingBlob from '../svg/BreathingBlob.svelte';

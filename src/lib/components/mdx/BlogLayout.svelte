@@ -2,7 +2,7 @@
 	import Img from '@zerodevx/svelte-img';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import BreathingBlob from '$lib/components/svg/BreathingBlob.svelte';
-	import ProfilePicture from '$lib/assets/images/profile-picture.jpg?run';
+	import ProfilePicture from '$lib/assets/images/profile-picture.jpg?as=run';
 	import Figure from '$lib/components/Figure.svelte';
 
 	import MailingList from '$lib/components/MailingList.svelte';
@@ -20,7 +20,7 @@
 
 <article class="section relative overflow-hidden pb-0">
 	<div class="container relative mb-8">
-		<h1 class="mb-2 h1 text-center">{title}</h1>
+		<h1 class="h1 mb-2 text-center">{title}</h1>
 		<Breadcrumbs class="mx-auto mb-2 max-w-max" />
 		<Img
 			src={imageData}
@@ -29,7 +29,7 @@
 			class="mx-auto max-h-[50vh] w-max rounded-xl object-contain"
 		/>
 
-		<Figure class="absolute -left-[4.5rem] lg:-left-12 top-0 -z-10 h-24 w-24 animate-move-y" />
+		<Figure class="absolute -left-[4.5rem] top-0 -z-10 h-24 w-24 animate-move-y lg:-left-12" />
 		<BreathingBlob
 			class=" absolute -left-24 -top-24 -z-20 h-40 w-40 text-base-300 lg:-left-60 lg:-top-44 lg:h-80 lg:w-80"
 		/>
@@ -46,7 +46,7 @@
 							{#each categories as category}
 								<li class="float-left ml-4">
 									<a href="/blog/">
-										<span class="badge-secondary badge">#{category}</span>
+										<span class="badge badge-secondary">#{category}</span>
 									</a>
 								</li>
 							{/each}
@@ -82,7 +82,7 @@
 						<Img src={ProfilePicture} alt="about-img" class="mask-left" />
 					</div>
 					<div
-						class="flex-col rounded-xl bg-base-100 p-8 pl-24 shadow duration-300 ease-in-out group-hover:shadow-lg prose prose-condensed"
+						class="prose-condensed prose flex-col rounded-xl bg-base-100 p-8 pl-24 shadow duration-300 ease-in-out group-hover:shadow-lg"
 					>
 						<h2>Aaron N. Brock</h2>
 						<p>
@@ -93,7 +93,7 @@
 						</p>
 						<a
 							href="/contact#contact"
-							class="btn-primary btn-sm btn [.group:not(:hover)_&]:btn-outline hover:text-primary-content"
+							class="btn btn-primary btn-sm [.group:not(:hover)_&]:btn-outline hover:text-primary-content"
 						>
 							Contact Me
 						</a>

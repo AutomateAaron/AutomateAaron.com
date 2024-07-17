@@ -6,7 +6,7 @@
 	import EmailIcon from '~icons/ic/outline-email';
 
 	import CardBlob from '$lib/components/svg/CardBlob.svelte';
-	import ProfilePicture from '$lib/assets/images/profile-picture.jpg?run';
+	import ProfilePicture from '$lib/assets/images/profile-picture.jpg?as=run';
 	import BreathingBlob from '$lib/components/svg/BreathingBlob.svelte';
 
 	import { siteTitle, socialMediaLinks } from '$lib/config.js';
@@ -27,7 +27,6 @@
 	const deleteFormResult = function () {
 		formResult = undefined;
 	};
-	console.log(ClockIcon);
 </script>
 
 <svelte:head>

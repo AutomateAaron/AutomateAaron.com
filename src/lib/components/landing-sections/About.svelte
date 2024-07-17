@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Img from '@zerodevx/svelte-img';
-	import AboutImage from '$lib/assets/images/about.jpg?width=480;720&run';
+	import AboutImage from '$lib/assets/images/about.jpg?as=run&width=480;720';
 
 	import BreathingBlob from '../svg/BreathingBlob.svelte';
 	import Figure from '../Figure.svelte';
@@ -10,7 +10,7 @@
 	<div class="container">
 		<!-- heading -->
 		<div
-			class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg mx-auto text-center prose-condensed mb-8"
+			class="prose-condensed prose prose-lg mx-auto mb-8 max-w-lg text-center lg:prose-xl xl:prose-2xl"
 		>
 			<span>About About</span>
 			<h2>About About About</h2>
@@ -28,7 +28,7 @@
 
 			<!-- text -->
 			<div
-				class="relative z-10 mx-4 -mt-48 rounded-xl bg-accent p-6 text-accent-content md:mx-0 md:-ml-12 md:-mt-0 md:w-1/2 md:p-8 lg:p-12 prose lg:prose-lg xl:prose-xl prose-headings:text-accent-content max-w-none"
+				class="prose relative z-10 mx-4 -mt-48 max-w-none rounded-xl bg-accent p-6 text-accent-content lg:prose-lg xl:prose-xl prose-headings:text-accent-content md:mx-0 md:-ml-12 md:-mt-0 md:w-1/2 md:p-8 lg:p-12"
 			>
 				<h3>Who am I?</h3>
 				<p>
@@ -39,8 +39,8 @@
 				</p>
 
 				<div class="flex flex-wrap gap-4">
-					<a href="/contact" class="btn-primary btn">Schedule Consultation</a>
-					<a href="/#resume" class="btn-outline btn text-accent-content"> View Resume </a>
+					<a href="/contact" class="btn btn-primary">Schedule Consultation</a>
+					<a href="/#resume" class="btn btn-outline text-accent-content"> View Resume </a>
 				</div>
 			</div>
 
