@@ -173,7 +173,7 @@
 				</a>
 				version.
 			</p>
-			<div class="tabs-boxed tabs tabs-lg bg-accent-content duration-300 hover:scale-[1.03]">
+			<div class="tabs-boxed tabs tabs-lg bg-base-200 duration-300 hover:scale-[1.03]">
 				<label class="tab-label tab1-label tab text-accent" for="tab1">Experience</label>
 				<label class="tab-label tab2-label tab text-accent" for="tab2">Achievements</label>
 			</div>
