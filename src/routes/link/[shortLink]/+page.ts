@@ -19,5 +19,5 @@ export const load: Load = async ({ params }) => {
 		}
 	}
 
-	throw error(404, 'Shortlink Not Found');
+	error(404, 'Shortlink Not Found');
 };

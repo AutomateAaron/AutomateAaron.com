@@ -8,7 +8,7 @@ export const load = async ({ params }) => {
 		};
 	} catch (err) {
 		if (err instanceof Error) {
-			throw error(404, err.message);
+			error(404, err.message);
 		}
 		throw err
 	}

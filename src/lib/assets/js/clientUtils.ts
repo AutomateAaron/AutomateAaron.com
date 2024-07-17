@@ -40,7 +40,7 @@ export function loadImageSmall(path: string) {
 	if (imageModule) {
 		return imageModule.default;
 	}
-	throw error(404, `image "${path}" not found`);
+	error(404, `image "${path}" not found`);
 }
 
 export function loadImage(path: string) {
@@ -66,7 +66,7 @@ export function loadImage(path: string) {
 		return imageModule.default;
 	}
 
-	throw error(404, `image "${path}" not found`);
+	error(404, `image "${path}" not found`);
 }
 
 export async function fetchBlogsMeta({
