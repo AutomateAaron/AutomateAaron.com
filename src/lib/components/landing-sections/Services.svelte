@@ -115,8 +115,4 @@
 	:global(.service-slide-page) {
 		@apply !bg-base-100 shadow;
 	}
-
-	/* :global(.service-slide-pagination .is-active) {
-		@apply !bg-accent-focus;
-	} */
 </style>

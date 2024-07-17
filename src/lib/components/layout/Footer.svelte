@@ -32,18 +32,18 @@
 				<div class="mt-8 flex justify-center md:mt-0 md:items-end md:justify-end">
 					{#if $page.url.pathname != '/contact'}
 						<a href="/contact">
-							<button class="btn-outline btn text-primary-content">Schedule Consultation</button>
+							<button class="btn btn-outline text-primary-content">Schedule Consultation</button>
 						</a>
 					{/if}
 				</div>
 			</div>
 
-			<div class="absolute -top-[43%] left-[2%] z-0 text-primary-focus">
+			<div class="absolute -top-[43%] left-[2%] z-0 text-accent-content opacity-10">
 				<Shape1 class="h-80 w-[357px] animate-spin-slow" />
 			</div>
 
 			<div
-				class="absolute -right-[9%] top-[12%] z-0 rotate-[80deg] transform animate-move-y text-primary-focus hidden md:block"
+				class="absolute -right-[9%] top-[12%] z-0 hidden rotate-[80deg] transform animate-move-y text-accent-content opacity-10 md:block"
 			>
 				<Shape2 class="h-52 w-60" />
 			</div>
@@ -58,7 +58,7 @@
 			</div>
 
 			<div>
-				<h2 class="h4 mb-6 text-center md:text-left h3">Sitemap</h2>
+				<h2 class="h4 h3 mb-6 text-center md:text-left">Sitemap</h2>
 
 				<nav class="flex flex-col flex-wrap items-center space-y-2 md:items-start">
 					{#each siteMap as item}
@@ -68,7 +68,7 @@
 			</div>
 
 			<div>
-				<h2 class="h4 mb-6 text-center md:text-left h3">Address</h2>
+				<h2 class="h4 h3 mb-6 text-center md:text-left">Address</h2>
 
 				<div class="flex flex-col items-center space-y-2 md:items-start">
 					<ClickToCopy

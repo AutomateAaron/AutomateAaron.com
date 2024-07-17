@@ -30,7 +30,7 @@
 			<!-- <Figure class="absolute -left-12 bottom-24 -z-10 h-36 w-36 animate-move-y" /> -->
 		</div>
 		<div class="mt-8 flex justify-center">
-			<a href="/memes" class="btn-outline btn text-neutral"> See All Memes </a>
+			<a href="/memes" class="btn-outline btn text-base-content"> See All Memes </a>
 		</div>
 		<!-- <Shape1 class="absolute right-0 top-4 -z-20 -mt-24 h-48 w-48 animate-spin-slow text-base-300" /> -->
 	</div>

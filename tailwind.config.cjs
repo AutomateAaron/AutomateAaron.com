@@ -2,9 +2,9 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
 const daisyui = require('daisyui');
 const typography = require('@tailwindcss/typography');
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
-console.log(typography.defaultTheme)
+console.log(typography.defaultTheme);
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -38,7 +38,7 @@ module.exports = {
 				'spin-slow': 'spin 48s linear infinite',
 				'move-y': 'move-y 8s linear infinite',
 				'move-x': 'move-x 8s linear infinite',
-				'wiggle': 'wiggle 300ms linear 5',
+				wiggle: 'wiggle 300ms linear 5',
 				'wiggle-zoom': 'wiggle-zoom 1.5s ease-in-out 1',
 			},
 			keyframes: {
@@ -50,14 +50,14 @@ module.exports = {
 					'0%, 100%': { transform: 'translateX(-0.75rem)' },
 					'50%': { transform: 'translateX(0.75rem)' },
 				},
-				'wiggle': {
+				wiggle: {
 					'25%': { transform: 'rotate(3deg)' },
 					'75%': { transform: 'rotate(-3deg)' },
 				},
 				'wiggle-zoom': {
 					'0%, 100%': { transform: 'scale(100%)' },
 					'10%, 90%': { transform: 'scale(110%)' },
-				}
+				},
 			},
 			borderRadius: {
 				sm: defaultTheme.borderRadius['md'],
@@ -80,30 +80,38 @@ module.exports = {
 	daisyui: {
 		themes: [
 			{
-				mytheme: {
+				light: {
+					...require('daisyui/src/theming/themes')['light'],
 					primary: colors.violet[700],
-					'primary-content': colors.slate[100],
-					secondary: '#F9D72F',
-
+					secondary: colors.slate[300],
 					accent: colors.slate[800],
-					'accent-content': colors.slate[200],
 
-					neutral: colors.slate[600],
-					'neutral-content': colors.slate[50],
 					'base-100': colors.slate[50],
 					'base-200': colors.slate[100],
 					'base-300': colors.slate[200],
 					'base-content': colors.slate[800],
-					info: '#3ABFF8',
-					success: '#36D399',
-					warning: '#FBBD23',
-					error: '#F87272',
+
+					'--rounded-btn': '1rem',
+					'--border-btn': '0.25rem',
+					'--btn-text-case': 'none',
+				},
+				dark: {
+					...require('daisyui/src/theming/themes')['dark'],
+					primary: colors.violet[700],
+					secondary: colors.slate[300],
+					accent: colors.slate[800],
+
+					'base-100': colors.slate[950],
+					'base-200': colors.slate[900],
+					'base-300': colors.slate[800],
+					'base-content': colors.slate[200],
 
 					'--rounded-btn': '1rem',
 					'--border-btn': '0.25rem',
 					'--btn-text-case': 'none',
 				},
 			},
+			'cupcake',
 		],
 	},
 
@@ -111,17 +119,18 @@ module.exports = {
 		typography,
 		daisyui,
 		plugin(function ({ matchUtilities, theme }) {
-      matchUtilities(
-        {
-          "animation-delay": (value) => {
-            return {
-              "animation-delay": value,
-            };
-          },
-        },
-        {
-          values: theme("transitionDelay"),
-        }
-      );
-    }),],
+			matchUtilities(
+				{
+					'animation-delay': (value) => {
+						return {
+							'animation-delay': value,
+						};
+					},
+				},
+				{
+					values: theme('transitionDelay'),
+				}
+			);
+		}),
+	],
 };

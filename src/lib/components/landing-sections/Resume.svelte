@@ -158,7 +158,7 @@
 
 	<div class="tab-holder container relative items-start justify-between gap-x-6 lg:flex">
 		<div
-			class="!top-32 prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg prose-condensed text-accent-content prose-headings:text-accent-content prose-a:text-accent-content lg:!sticky min-w-[18rem]"
+			class="prose-condensed prose prose-lg !top-32 min-w-[18rem] max-w-lg text-accent-content lg:prose-xl xl:prose-2xl prose-headings:text-accent-content prose-a:text-accent-content lg:!sticky"
 		>
 			<span class="pre-line-top-title before:bg-accent-content"> Resume </span>
 			<h2 class="">Experience</h2>
@@ -173,26 +173,26 @@
 				</a>
 				version.
 			</p>
-			<div class="tabs tabs-boxed inline-block bg-accent-content duration-300 hover:scale-[1.03]">
-				<label class="tab-label tab1-label tab tab-lg text-accent" for="tab1">Experience</label>
-				<label class="tab-label tab2-label tab tab-lg text-accent" for="tab2">Achievements</label>
+			<div class="tabs-boxed tabs tabs-lg bg-accent-content duration-300 hover:scale-[1.03]">
+				<label class="tab-label tab1-label tab text-accent" for="tab1">Experience</label>
+				<label class="tab-label tab2-label tab text-accent" for="tab2">Achievements</label>
 			</div>
 		</div>
 
 		<div class="">
-			<div class="tab-content tab1-content w-full lg:w-max">
+			<div class="tab1-content tab-content w-full lg:w-max">
 				{#each experience as item}
 					<ResumeCard {item} />
 				{/each}
 			</div>
-			<div class="tab-content tab2-content w-full lg:w-max">
+			<div class="tab2-content tab-content w-full lg:w-max">
 				{#each achievements as item}
 					<ResumeCard {item} />
 				{/each}
 			</div>
 		</div>
 	</div>
-	<Figure class="absolute top-24 right-0 -z-10 h-24 w-12 animate-move-y text-accent-content" />
+	<Figure class="absolute right-0 top-24 -z-10 h-24 w-12 animate-move-y text-accent-content" />
 </section>
 
 <style type="postcss">

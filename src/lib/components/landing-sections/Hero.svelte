@@ -14,11 +14,11 @@
 
 <section id="home" class="section relative">
 	<div
-		class="container relative items-center justify-between gap-16 pt-8 flex flex-col md:flex-row lg:gap-24"
+		class="container relative flex flex-col items-center justify-between gap-16 pt-8 md:flex-row lg:gap-24"
 	>
 		<!-- text -->
-		<div class="relative w-full text-center md:text-left group">
-			<div class="relative prose prose-lg lg:prose-xl xl:prose-2xl prose-condensed">
+		<div class="group relative w-full text-center md:text-left">
+			<div class="prose-condensed prose prose-lg relative lg:prose-xl xl:prose-2xl">
 				<span class="pre-line-top-title">Hello there,</span>
 
 				<h1 class="">
@@ -31,7 +31,7 @@
 					Effortlessly navigate your way to success on Google Cloud with expert guidance.
 				</p>
 
-				<a href="/contact#schedule" class="btn-primary btn"> Schedule Consultation </a>
+				<a href="/contact#schedule" class="btn btn-primary">Schedule Consultation </a>
 			</div>
 
 			<div
@@ -92,7 +92,7 @@
 	</div>
 
 	<!-- gray bg -->
-	<HeroBg class="absolute left-0 top-0 -z-50 w-10/12 md:w-8/12 text-base-300" />
+	<HeroBg class="absolute left-0 top-0 -z-50 w-10/12 text-base-300 md:w-8/12" />
 
 	<!-- figure -->
 	<Figure
