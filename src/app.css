@@ -76,7 +76,7 @@
 
 	/* #region General */
 	body {
-		@apply bg-base-200 text-base text-base-content selection:bg-primary-focus selection:text-base-200;
+		@apply bg-base-200 text-base text-base-content selection:bg-primary selection:text-base-200;
 	}
 
 	p {
@@ -349,7 +349,6 @@
 		@apply relative ml-8 -translate-x-1/2 transform before:absolute before:-left-8 before:top-1/2 before:h-0.5 before:w-5 before:bg-base-content;
 	}
 
-
 	@keyframes gradient {
 		0% {
 			background-position: 0% 50%;
@@ -388,6 +387,6 @@
 	}
 
 	.prose-condensed.prose-condensed {
-		@apply prose-p:leading-normal prose-headings:mt-[0.2em] prose-headings:mb-[0.5em];
+		@apply prose-headings:mb-[0.5em] prose-headings:mt-[0.2em] prose-p:leading-normal;
 	}
 }
