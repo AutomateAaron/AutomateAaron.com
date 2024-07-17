@@ -99,9 +99,9 @@ module.exports = {
 					secondary: colors.slate[300],
 					accent: colors.slate[800],
 
-					'base-100': colors.slate[950],
-					'base-200': colors.slate[900],
-					'base-300': colors.slate[800],
+					'base-100': colors.slate[800],
+					'base-200': colors.slate[950],
+					'base-300': colors.slate[900],
 					'base-content': colors.slate[200],
 
 					'--rounded-btn': '1rem',

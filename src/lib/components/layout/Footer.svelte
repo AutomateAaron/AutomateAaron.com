@@ -31,7 +31,7 @@
 
 				<div class="mt-8 flex justify-center md:mt-0 md:items-end md:justify-end">
 					{#if $page.url.pathname != '/contact'}
-						<a href="/contact">
+						<a href="/contact#schedule">
 							<button class="btn btn-outline text-primary-content">Schedule Consultation</button>
 						</a>
 					{/if}

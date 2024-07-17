@@ -5,7 +5,6 @@
 	import SocialIcon from '~icons/ic/outline-people-alt';
 	import EmailIcon from '~icons/ic/outline-email';
 
-	import CardBlob from '$lib/components/svg/CardBlob.svelte';
 	import ProfilePicture from '$lib/assets/images/profile-picture.jpg?as=run';
 	import BreathingBlob from '$lib/components/svg/BreathingBlob.svelte';
 
@@ -22,24 +21,23 @@
 	import FigureSmall from '$lib/components/FigureSmall.svelte';
 	import ContactCard from './ContactCard.svelte';
 
+	import { onMount } from 'svelte';
+
 	let formResult: ActionResult | undefined;
 
 	const deleteFormResult = function () {
 		formResult = undefined;
 	};
-</script>
 
-<svelte:head>
-	<title>Contact | {siteTitle}</title>
-	<meta
-		data-key="description"
-		name="description"
-		content="Contact Aaron N. Brock for all your Google Cloud questions"
-	/>
-</svelte:head>
+	let calSection: HTMLElement;
 
-<div use:teleport>
-	<script type="text/javascript">
+	onMount(() => {
+		// const element = document.querySelector('[data-theme]'); // Select element with your theme applied
+		const computedStyle = getComputedStyle(calSection);
+		function getProp(property: string) {
+			return computedStyle.getPropertyValue(property);
+		}
+
 		(function (C, A, L) {
 			let p = function (a, ar) {
 				a.q.push(ar);
@@ -62,27 +60,110 @@
 						};
 						const namespace = ar[1];
 						api.q = api.q || [];
-						typeof namespace === 'string' ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar);
+						if (typeof namespace === 'string') {
+							cal.ns[namespace] = cal.ns[namespace] || api;
+							p(cal.ns[namespace], ar);
+							p(cal, ['initNamespace', namespace]);
+						} else p(cal, ar);
 						return;
 					}
 					p(cal, ar);
 				};
 		})(window, 'https://app.cal.com/embed/embed.js', 'init');
-		Cal('init', { origin: 'https://app.cal.com' });
+		Cal('init', { origin: 'https://cal.com' });
 
-		// Important: Make sure to add `data-cal-link="aaronnbrock/lets-chat"` attribute to the element you want to open Cal on click
-		Cal('ui', {
-			styles: { branding: { brandColor: '#000000' } },
-			hideEventTypeDetails: false,
+		Cal('inline', {
+			elementOrSelector: '#my-cal-inline',
+			calLink: 'aaronnbrock/consultation',
+			layout: 'month_view',
 		});
-	</script>
-</div>
+
+		Cal('ui', {
+			hideEventTypeDetails: false,
+			layout: 'month_view',
+			cssVarsPerTheme: {
+				light: {
+					// Brand
+					'cal-brand': `oklch(${getProp('--p')})`,
+					'cal-brand-text': `oklch(${getProp('--pc')})`,
+
+					// Default
+					'cal-bg': `oklch(${getProp('--b1')})`,
+					'cal-text': `oklch(${getProp('--bc')})`,
+					'cal-border': `oklch(${getProp('--b3')})`,
+
+					// Emphasis
+					'cal-bg-emphasis': `oklch(${getProp('--b3')})`,
+					'cal-text-emphasis': `oklch(${getProp('--bc')})`,
+					'cal-border-emphasis': `oklch(${getProp('--b3')})`,
+
+					// Subtle
+					'cal-bg-subtle': `oklch(${getProp('--b2')})`,
+					'cal-text-subtle': `oklch(${getProp('--bc')})`,
+					'cal-border-subtle': `oklch(${getProp('--b3')})`,
+					'cal-border-booker': `oklch(${getProp('--b3')})`,
+
+					// Muted
+					'cal-bg-muted': `oklch(${getProp('--b2')})`,
+					'cal-text-muted': `oklch(${getProp('--bc')})`,
+					'cal-border-muted': `oklch(${getProp('--b3')})`,
+
+					// Info
+					'cal-bg-info': `oklch(${getProp('--in')})`,
+					'cal-text-info': `oklch(${getProp('--inc')})`,
+
+					// Success
+					'cal-bg-success': `oklch(${getProp('--su')})`,
+					'cal-text-success': `oklch(${getProp('--suc')})`,
+
+					// Attention
+					'cal-bg-attention': `oklch(${getProp('--wa')})`,
+					'cal-text-attention': `oklch(${getProp('--wac')})`,
+
+					// Error
+					'cal-bg-error': `oklch(${getProp('--er')})`,
+					'cal-text-error': `oklch(${getProp('--erc')})`,
+					'cal-border-error': `oklch(${getProp('--erc')})`,
+
+					// emphasis: "var(--cal-border-emphasis, #9CA3AF)",
+					// default: "var(--cal-border, #D1D5DB)",
+					// subtle: `var(--cal-border-subtle, ${subtleColor})`,
+					// muted: "var(--cal-border-muted, #F3F4F6)",
+					// booker: `var(--cal-border-booker, ${subtleColor})`,
+					// error: "var(--cal-border-error, #AA2E26)",
+
+					// 'cal-text': '#6F61C0',
+					// 'cal-text-emphasis': '#4D408D',
+					// 'cal-border-emphasis': '#4D408D',
+					// 'cal-text-error': 'pink',
+					// 'cal-border': '#A090E0',
+					// 'cal-border-default': '#A090E0',
+					// 'cal-border-subtle': '#A090E0',
+					// 'cal-border-booker': '#A090E0',
+					// 'cal-text-muted': '#C0B8FF',
+					// 'cal-bg-emphasis': '#E1DFFF',
+
+					// More CSS variables are defined here
+					// https://github.com/calcom/cal.com/blob/b0ca7dae1a17f897e34b83c990f30ab65f615ee0/packages/config/tailwind-preset.js#L69
+				},
+			},
+		});
+	});
+</script>
+
+<svelte:head>
+	<title>Contact | {siteTitle}</title>
+	<meta
+		data-key="description"
+		name="description"
+		content="Contact Aaron N. Brock for all your Google Cloud questions"
+	/>
+</svelte:head>
 
 <section class="section relative overflow-hidden">
-	<div id="schedule" class="absolute top-0 hidden" />
 	<div class="container relative">
 		<div class="mb-8 flex flex-col items-center text-center">
-			<h1 class="mb-4 h1">Contact Me</h1>
+			<h1 class="h1 mb-4">Contact Me</h1>
 			<Breadcrumbs />
 		</div>
 		<!-- contact options -->
@@ -94,13 +175,9 @@
 					assist in avoiding problems in the future!
 				</p>
 				<svelte:fragment slot="cta">
-					<button
-						data-cal-link="aaronnbrock/lets-chat"
-						id="schedule-button"
-						class="btn-outline btn-primary btn w-fit"
-					>
+					<a href="#schedule" class="btn btn-outline btn-primary w-fit">
 						Schedule a Consultation
-					</button>
+					</a>
 				</svelte:fragment>
 			</ContactCard>
 
@@ -115,7 +192,7 @@
 								href={item.url}
 								target="_blank"
 								rel="noreferrer"
-								class="btn-outline btn-primary btn-square btn-sm btn"
+								class="btn btn-square btn-outline btn-primary btn-sm"
 							>
 								<svelte:component this={item.icon} class="h-2/3 w-2/3 fill-current" />
 							</a>
@@ -135,7 +212,7 @@
 					class="tooltip-primary mt-auto w-fit"
 					copyText="Aaron@AaronNBrock.com"
 				>
-					<div class="btn-outline btn-primary btn-sm btn capitalize">Aaron@AaronNBrock.com</div>
+					<div class="btn btn-outline btn-primary btn-sm capitalize">Aaron@AaronNBrock.com</div>
 				</ClickToCopy>
 			</ContactCard>
 		</div>
@@ -152,6 +229,21 @@
 	<BreathingBlob
 		class="absolute right-6 top-8 -z-20 hidden h-52 w-52 transform text-base-300 lg:block"
 	/>
+</section>
+<section id="schedule" bind:this={calSection} class="section relative">
+	<div class="absolute bottom-0 left-0 right-0 top-0 -z-40 skew-y-2 transform bg-base-300" />
+
+	<div class="container relative">
+		<Figure class="absolute right-0 top-2/3 -z-10 -mr-2 -mt-0 h-36 w-36 animate-move-y" />
+
+		<div class="min-h-96 w-full rounded-xl bg-base-100 p-8 text-base-content shadow-xl">
+			<div class="prose mb-4 w-full lg:prose-lg">
+				<h2>Pick a Time</h2>
+			</div>
+
+			<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline" />
+		</div>
+	</div>
 </section>
 
 <section id="contact" class="section relative overflow-hidden">
@@ -192,11 +284,11 @@
 							id="email"
 							type="email"
 							placeholder="Bilbo@TheShire.net"
-							class="input-bordered input w-full max-w-xs"
+							class="input input-bordered w-full max-w-xs"
 						/>
 					</label>
 
-					<button type="submit" class="btn-primary btn self-start"> Send </button>
+					<button type="submit" class="btn btn-primary self-start"> Send </button>
 					{#if formResult}
 						{#if formResult.type === 'success'}
 							<div class="alert alert-success shadow-lg">
@@ -204,7 +296,7 @@
 									<CheckIcon />
 									<span>Message Sent. I'll get back to you Soon™</span>
 								</div>
-								<button on:click={deleteFormResult} class="btn-ghost btn-square btn-sm btn">
+								<button on:click={deleteFormResult} class="btn btn-square btn-ghost btn-sm">
 									<CloseIcon />
 								</button>
 							</div>
@@ -214,7 +306,7 @@
 									<ErrorIcon />
 									<span>Error {formResult.status}: {formResult.error.message}</span>
 								</div>
-								<button on:click={deleteFormResult} class="btn-ghost btn-square btn-sm btn">
+								<button on:click={deleteFormResult} class="btn btn-square btn-ghost btn-sm">
 									<CloseIcon />
 								</button>
 							</div>
@@ -224,7 +316,7 @@
 									<ErrorIcon />
 									<span>Form responded with "{formResult.type}", not sure why...</span>
 								</div>
-								<button on:click={deleteFormResult} class="btn-ghost btn-square btn-sm btn">
+								<button on:click={deleteFormResult} class="btn btn-square btn-ghost btn-sm">
 									<CloseIcon />
 								</button>
 							</div>
