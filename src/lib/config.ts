@@ -7,7 +7,7 @@ import Medium from '~icons/fa6-brands/medium';
 import Twitter from '~icons/fa6-brands/twitter';
 import Instagram from '~icons/fa6-brands/instagram';
 
-export const siteTitle = 'PurpleUmbrella ☂️';
+export const siteTitle = 'Purple Umbrella ☂️';
 export const siteDescription = 'How to make Google Cloud simpler.';
 export const siteURL = 'purpleumbrella.com';
 export const siteAuthor = '@AaronNBrock';

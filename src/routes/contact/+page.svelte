@@ -163,7 +163,7 @@
 <section id="contact-cards" class="section relative overflow-hidden">
 	<div class="container relative">
 		<div class="mb-8 flex flex-col items-center text-center">
-			<h1 class="h1 mb-4">Contact Me</h1>
+			<h1 class="h1 mb-4">Contact Us</h1>
 			<Breadcrumbs />
 		</div>
 		<!-- contact options -->
