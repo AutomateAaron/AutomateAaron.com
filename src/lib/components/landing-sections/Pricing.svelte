@@ -41,7 +41,7 @@
 			class="prose-condensed prose prose-lg mx-auto mb-8 max-w-lg text-center text-accent-content lg:prose-xl xl:prose-2xl prose-headings:text-accent-content prose-a:text-accent-content"
 		>
 			<span>Pricing</span>
-			<h2>But at what cost?</h2>
+			<h2>What Is The Cost?</h2>
 			<p>Well, none actually.</p>
 		</div>
 
@@ -52,8 +52,8 @@
 				<div class="prose max-w-none lg:prose-lg xl:prose-xl">
 					<h3 class="text-2xl font-bold tracking-tight">Google Cloud Services</h3>
 					<p class="mt-6 leading-7">
-						Our mission is to facilitate your business' cloud usage as your needs grow and change.
-						Assuring that you're leveraging the wide variety of services offered by Google Cloud, as
+						Our mission is to facilitate your business' cloud usage as your needs grow and change,
+						assuring that you're leveraging the wide variety of services offered by Google Cloud, as
 						well as making the most of any incentive programs or discounts available to you!
 					</p>
 				</div>

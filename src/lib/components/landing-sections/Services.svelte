@@ -27,7 +27,7 @@
 		{
 			title: 'Templates',
 			description:
-				'Streamline your Google Cloud operations with templates. From deployments to scaling, templates provide you with a proven foundation to build upon, and allow you to focus on growing your business.',
+				'Streamline your Google Cloud operations with templates. From deployments to scaling, templates provide you with a proven foundation to build upon and allow you to focus on growing your business.',
 			icon: Templates,
 		},
 	];
@@ -77,9 +77,9 @@
 		<div class="container">
 			<div class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg prose-condensed mb-8">
 				<span class="pre-line-top-title">Services</span>
-				<h2>What We Do</h2>
+				<h2>What Do We Do?</h2>
 				<p>
-					Using technology to empower development teams to deliver software better faster stronger.
+					We us technology to empower development teams to deliver software better, faster, & stronger.
 				</p>
 			</div>
 			<Splide hasTrack={false} {options}>

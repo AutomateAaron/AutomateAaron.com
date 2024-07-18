@@ -35,14 +35,12 @@
 					We're a group of professional Google Cloud Engineers, with extensive experience enabling
 					startups and small businesses. Through designing cloud native architectures, conducting
 					workshops, and more we've helped hundreds of organizations to maximize their Cloud
-					investment. we'd love to help yours too!
+					investment. We'd love to help yours too!
 				</p>
 
 				<div class="flex flex-wrap gap-4">
-					<a href="/contact#schedule" class="btn btn-primary">Schedule Consultation</a>
-					<a href="/contact#contact" class="btn btn-outline text-accent-content">
-						Drop Us a Line
-					</a>
+					<a href="/contact#schedule" class="btn btn-primary">Schedule a Free Consultation</a>
+					<a href="/contact#contact" class="btn btn-outline text-accent-content"> Contact Us </a>
 				</div>
 			</div>
 

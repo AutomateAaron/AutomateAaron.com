@@ -31,7 +31,7 @@
 					Effortlessly navigate your way to success on Google Cloud with expert guidance.
 				</p>
 
-				<a href="/contact#schedule" class="btn btn-primary">Schedule Consultation </a>
+				<a href="/contact#schedule" class="btn btn-primary">Schedule a Free Consultation </a>
 			</div>
 
 			<div

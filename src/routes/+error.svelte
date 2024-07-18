@@ -21,14 +21,14 @@
 			<span class="mb-6 inline-block">{$page.error.message}</span>
 		{/if}
 		<p>
-			Maybe send message about it so I can fix it?<br />
+			Maybe send us a message about it so we can fix it?<br />
 			<span class="text-sm opacity-50">(or just go back to the home page)</span>
 		</p>
 		<div class="flex gap-4">
-			<a href="/" class="btn-outline btn-primary btn">
+			<a href="/" class="btn btn-outline btn-primary">
 				<LeftArrow class="align-middle text-3xl" />Home
 			</a>
-			<a href="/contact" class="btn-outline btn-primary btn">
+			<a href="/contact" class="btn btn-outline btn-primary">
 				Contact<RightArrow class="align-middle text-3xl" />
 			</a>
 		</div>

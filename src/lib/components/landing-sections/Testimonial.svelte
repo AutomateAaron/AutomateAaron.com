@@ -67,7 +67,7 @@
 				class="prose-condensed prose prose-lg mx-auto mb-8 max-w-lg text-center lg:prose-xl xl:prose-2xl"
 			>
 				<span class="">Testimonials</span>
-				<h2 class="">What People Are Saying?</h2>
+				<h2 class="">What Are People Saying?</h2>
 			</div>
 
 			<div class="-mx-6 mt-12">

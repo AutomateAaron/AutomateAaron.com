@@ -54,12 +54,12 @@
 			<Figure class="absolute -left-24 -top-12 -z-10 h-72 w-72 animate-move-y text-base-content" />
 		</div>
 
-		<div class="prose prose-lg lg:prose-xl xl:prose-2xl prose-condensed mb-8">
-			<span class="pre-line-top-title">My Skills</span>
-			<h2>What's our Skillset?</h2>
+		<div class="prose-condensed prose prose-lg mb-8 lg:prose-xl xl:prose-2xl">
+			<span class="pre-line-top-title">Our Skills</span>
+			<h2>What's Our Skillset?</h2>
 			<p>
-				I'll be honest, this section here is just the "buzzword bingo" that I play with the search
-				engines. (Also, can you find the four pokeimon?)
+				Let's be honest, this section here is just the "buzzword bingo" for search engines. (Also,
+				can you find the four Pokémon?)
 			</p>
 
 			<div class="grid grid-cols-[repeat(auto-fit,_minmax(8rem,_1fr))]">

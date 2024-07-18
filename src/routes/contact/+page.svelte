@@ -171,19 +171,19 @@
 			<ContactCard icon={ClockIcon}>
 				<h2>Let's Chat</h2>
 				<p>
-					We'll to take a look at any Google Cloud problem currently you're having, and assist in
+					We'd love to take a look at any Google Cloud problem currently you're having and assist in
 					avoiding problems in the future!
 				</p>
 				<svelte:fragment slot="cta">
 					<a href="#schedule" class="btn btn-outline btn-primary w-fit">
-						Schedule a Consultation
+						Schedule a Free Consultation
 					</a>
 				</svelte:fragment>
 			</ContactCard>
 
 			<ContactCard icon={SocialIcon}>
 				<h2>Socials</h2>
-				<p>Or, feel free to reach out to us on whatever social media platform you prefer.</p>
+				<p>Feel free to reach out to us on whatever social media platform you prefer.</p>
 
 				<div slot="cta" class="mt-auto flex max-w-max flex-wrap justify-center gap-1">
 					{#each socialMediaLinks as item}
@@ -208,7 +208,7 @@
 				</p>
 
 				<ClickToCopy slot="cta" class="tooltip-primary mt-auto w-fit" copyText={email}>
-					<div class="btn btn-outline btn-primary btn-sm capitalize">{email}</div>
+					<div class="btn btn-outline btn-primary btn-sm">{email}</div>
 				</ClickToCopy>
 			</ContactCard>
 		</div>
@@ -334,9 +334,3 @@
 		</div>
 	</div>
 </section>
-
-<style lang="postcss">
-	#schedule:target ~ * #schedule-button {
-		@apply animate-wiggle;
-	}
-</style>
