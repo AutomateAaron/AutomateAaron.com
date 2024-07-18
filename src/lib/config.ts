@@ -7,10 +7,12 @@ import Medium from '~icons/fa6-brands/medium';
 import Twitter from '~icons/fa6-brands/twitter';
 import Instagram from '~icons/fa6-brands/instagram';
 
-export const siteTitle = 'Aaron N. Brock';
+export const siteTitle = 'PurpleUmbrella ☂️';
 export const siteDescription = 'How to make Google Cloud simpler.';
-export const siteURL = 'aaronnbrock.com';
+export const siteURL = 'purpleumbrella.com';
 export const siteAuthor = '@AaronNBrock';
+
+export const email = 'aaron@purpleumbrella.net';
 
 // Controls how many blogs are shown per page on the main blog index pages
 export const blogsPerPage = 10;
@@ -33,19 +35,9 @@ export const navItems = [
 		route: '/#services',
 	},
 	{
-		title: 'Resume',
-		route: '/#resume',
+		title: 'Pricing',
+		route: '/#pricing',
 	},
-	{
-		title: 'Blog',
-		route: '/#blog',
-	},
-
-	{
-		title: 'Memes',
-		route: '/#memes',
-	},
-
 ];
 
 export const siteMap = [

@@ -64,7 +64,7 @@
 	<div class="overflow-hidden">
 		<div class="container">
 			<div
-				class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg prose-condensed mb-8 text-center mx-auto"
+				class="prose-condensed prose prose-lg mx-auto mb-8 max-w-lg text-center lg:prose-xl xl:prose-2xl"
 			>
 				<span class="">Testimonials</span>
 				<h2 class="">What People Are Saying?</h2>
@@ -75,9 +75,9 @@
 					<SplideTrack class="overflow-visible pb-8">
 						{#each testimonials as item, i}
 							<SplideSlide>
-								<div class="p-6 h-full">
+								<div class="h-full p-6">
 									<div
-										class="h-full shadow-lg rounded-xl bg-base-100 p-8 lg:p-12 prose lg:prose-lg max-w-none"
+										class="prose h-full max-w-none rounded-xl bg-base-100 p-8 shadow-lg lg:prose-lg lg:p-12"
 									>
 										<div>
 											{#each Array(item.star) as star, i}
@@ -103,7 +103,7 @@
 		</div>
 	</div>
 
-	<ServiceBg class="absolute right-0 top-0 z-[-2] w-10/12 md:w-9/12 2xl:w-8/12 text-base-300" />
+	<ServiceBg class="absolute right-0 top-0 z-[-2] w-10/12 text-base-300 md:w-9/12 2xl:w-8/12" />
 </section>
 
 <style lang="postcss">

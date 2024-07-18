@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    width="800"
    height="800"
@@ -5,9 +6,7 @@
    version="1.1"
    id="svg1"
    xmlns="http://www.w3.org/2000/svg"
-   {...$$props}
-   
->
+   xmlns:svg="http://www.w3.org/2000/svg">
   <defs
      id="defs1" />
   <path

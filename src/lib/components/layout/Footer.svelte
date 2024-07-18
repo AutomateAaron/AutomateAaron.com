@@ -5,10 +5,12 @@
 	import Shape2 from '$lib/components/svg/Shape2.svelte';
 	import Location from '~icons/ic/baseline-location-on'; // eslint-disable-line
 
-	import { socialMediaLinks, siteMap } from '$lib/config.js';
+	import { socialMediaLinks, siteMap, email } from '$lib/config.js';
 
 	import { page } from '$app/stores';
 	import ClickToCopy from '../ClickToCopy.svelte';
+
+	email;
 </script>
 
 <footer class="relative text-accent-content">
@@ -24,7 +26,7 @@
 			<div class="relative z-10 justify-between gap-4 md:flex">
 				<div class="">
 					<span class="pre-line-top-title text-xl leading-none before:bg-primary-content"
-						>Contact Me</span
+						>Contact Us</span
 					>
 					<h2 class="h3 mt-5 text-left md:mb-0">Optimize your Cloud</h2>
 				</div>
@@ -71,13 +73,10 @@
 				<h2 class="h4 h3 mb-6 text-center md:text-left">Address</h2>
 
 				<div class="flex flex-col items-center space-y-2 md:items-start">
-					<ClickToCopy
-						class="tooltip-primary duration-300 hover:text-primary"
-						copyText="Hello@AaronNBrock.com"
-					>
+					<ClickToCopy class="tooltip-primary duration-300 hover:text-primary" copyText={email}>
 						<div class="flex w-full items-center justify-center space-x-3 md:justify-start">
 							<EmailIcon class="mr-4" />
-							Hello@AaronNBrock.com
+							{email}
 						</div>
 					</ClickToCopy>
 

@@ -8,7 +8,7 @@
 	import ProfilePicture from '$lib/assets/images/profile-picture.jpg?as=run';
 	import BreathingBlob from '$lib/components/svg/BreathingBlob.svelte';
 
-	import { siteTitle, socialMediaLinks } from '$lib/config.js';
+	import { email, siteTitle, socialMediaLinks } from '$lib/config.js';
 	import { teleport } from '$lib/assets/js/clientUtils';
 	import ClickToCopy from '$lib/components/ClickToCopy.svelte';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
@@ -156,11 +156,11 @@
 	<meta
 		data-key="description"
 		name="description"
-		content="Contact Aaron N. Brock for all your Google Cloud questions"
+		content="Contact Purple Umbrella ☂️ for all your Google Cloud questions"
 	/>
 </svelte:head>
 
-<section class="section relative overflow-hidden">
+<section id="contact-cards" class="section relative overflow-hidden">
 	<div class="container relative">
 		<div class="mb-8 flex flex-col items-center text-center">
 			<h1 class="h1 mb-4">Contact Me</h1>
@@ -171,8 +171,8 @@
 			<ContactCard icon={ClockIcon}>
 				<h2>Let's Chat</h2>
 				<p>
-					At no cost to you, I'll to take a look at any Google Cloud problem you're having, or
-					assist in avoiding problems in the future!
+					We'll to take a look at any Google Cloud problem currently you're having, and assist in
+					avoiding problems in the future!
 				</p>
 				<svelte:fragment slot="cta">
 					<a href="#schedule" class="btn btn-outline btn-primary w-fit">
@@ -183,7 +183,7 @@
 
 			<ContactCard icon={SocialIcon}>
 				<h2>Socials</h2>
-				<p>Or, feel free to reach out to me on whatever social media platform you prefer.</p>
+				<p>Or, feel free to reach out to us on whatever social media platform you prefer.</p>
 
 				<div slot="cta" class="mt-auto flex max-w-max flex-wrap justify-center gap-1">
 					{#each socialMediaLinks as item}
@@ -204,15 +204,11 @@
 			<ContactCard icon={EmailIcon}>
 				<h2>Email</h2>
 				<p>
-					If you prefer communicating via ye 'ol email that's an option too, shoot me an email at:
+					If you prefer communicating via ye 'ol email that's an option too, shoot us an email at:
 				</p>
 
-				<ClickToCopy
-					slot="cta"
-					class="tooltip-primary mt-auto w-fit"
-					copyText="Aaron@AaronNBrock.com"
-				>
-					<div class="btn btn-outline btn-primary btn-sm capitalize">Aaron@AaronNBrock.com</div>
+				<ClickToCopy slot="cta" class="tooltip-primary mt-auto w-fit" copyText={email}>
+					<div class="btn btn-outline btn-primary btn-sm capitalize">{email}</div>
 				</ClickToCopy>
 			</ContactCard>
 		</div>
@@ -230,108 +226,111 @@
 		class="absolute right-6 top-8 -z-20 hidden h-52 w-52 transform text-base-300 lg:block"
 	/>
 </section>
-<section id="schedule" bind:this={calSection} class="section relative">
-	<div class="absolute bottom-0 left-0 right-0 top-0 -z-40 skew-y-2 transform bg-base-300" />
 
-	<div class="container relative">
-		<Figure class="absolute right-0 top-2/3 -z-10 -mr-2 -mt-0 h-36 w-36 animate-move-y" />
+<section id="contact" class="relative">
+	<div class="absolute bottom-0 left-0 right-0 top-0 -z-40 -skew-y-2 transform bg-base-300" />
+	<div class="section overflow-hidden">
+		<div class="container">
+			<!-- content -->
+			<div class="items-center justify-center md:flex">
+				<!-- text -->
+				<div
+					class="relative z-10 -mb-16 rounded-xl bg-base-100 p-6 pb-20 shadow-lg md:-mr-20 md:mb-0 md:w-4/5 md:pb-6 md:pr-20"
+				>
+					<h3 class="h3">Or, drop us a line here...</h3>
 
-		<div class="min-h-96 w-full rounded-xl bg-base-100 p-8 text-base-content shadow-xl">
-			<div class="prose mb-4 w-full lg:prose-lg">
-				<h2>Pick a Time</h2>
+					<form
+						use:netlifyEnhance={() =>
+							async ({ result }) => {
+								formResult = result;
+							}}
+						name="contact"
+						method="POST"
+						class="flex flex-col space-y-4"
+						action="/submitted"
+					>
+						<label for="message">
+							<textarea
+								name="message"
+								id="message"
+								class="textarea input-bordered w-full md:h-36 lg:h-24"
+								placeholder="So...  I'm having this issue with..."
+								required
+							/>
+						</label>
+
+						<label for="email">
+							<span class="sr-only block text-lg">Email</span>
+							<input
+								name="email"
+								id="email"
+								type="email"
+								placeholder="Bilbo@TheShire.net"
+								class="input input-bordered w-full max-w-xs"
+							/>
+						</label>
+
+						<button type="submit" class="btn btn-primary self-start"> Send </button>
+						{#if formResult}
+							{#if formResult.type === 'success'}
+								<div class="alert alert-success shadow-lg">
+									<div>
+										<CheckIcon />
+										<span>Message Sent. we'll get back to you Soon™</span>
+									</div>
+									<button on:click={deleteFormResult} class="btn btn-square btn-ghost btn-sm">
+										<CloseIcon />
+									</button>
+								</div>
+							{:else if formResult.type === 'error'}
+								<div class="alert alert-error shadow-lg">
+									<div>
+										<ErrorIcon />
+										<span>Error {formResult.status}: {formResult.error.message}</span>
+									</div>
+									<button on:click={deleteFormResult} class="btn btn-square btn-ghost btn-sm">
+										<CloseIcon />
+									</button>
+								</div>
+							{:else}
+								<div class="alert alert-warning shadow-lg">
+									<div>
+										<ErrorIcon />
+										<span>Form responded with "{formResult.type}", not sure why...</span>
+									</div>
+									<button on:click={deleteFormResult} class="btn btn-square btn-ghost btn-sm">
+										<CloseIcon />
+									</button>
+								</div>
+							{/if}
+						{/if}
+					</form>
+				</div>
+				<!-- image -->
+				<div class="relative z-10 md:w-1/2 lg:w-1/5">
+					<Img src={ProfilePicture} alt="" class="mask-right" />
+					<FigureSmall class="absolute -right-4 -top-12 -z-10 h-24 w-24 animate-move-y" />
+					<BreathingBlob
+						class="absolute -right-40 -top-48 -z-20 hidden h-64 w-64 rotate-90 text-base-200 lg:block"
+					/>
+				</div>
 			</div>
-
-			<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline" />
 		</div>
 	</div>
 </section>
 
-<section id="contact" class="section relative overflow-hidden">
-	<div class="container">
-		<!-- content -->
-		<div class="items-center justify-center md:flex">
-			<!-- text -->
-			<div
-				class="relative z-10 -mb-16 rounded-xl bg-base-300 p-6 pb-20 shadow-lg md:-mr-20 md:mb-12 md:w-4/5 md:pb-6 md:pr-20"
-			>
-				<h3 class="h3">Or, drop me a line here...</h3>
+<section id="schedule" bind:this={calSection} class="section relative overflow-hidden">
+	<div class="container relative">
+		<Figure class="absolute right-0 top-2/3 -z-10 -mr-2 -mt-0 h-36 w-36 animate-move-y" />
+		<Figure class="absolute -top-12 left-4 -z-10 -mt-0 h-24 w-24 animate-move-y" />
 
-				<form
-					use:netlifyEnhance={() =>
-						async ({ result }) => {
-							formResult = result;
-						}}
-					name="contact"
-					method="POST"
-					class="flex flex-col space-y-4"
-					action="/submitted"
-				>
-					<label for="message">
-						<span class="text-lg">Name</span>
-						<textarea
-							name="message"
-							id="message"
-							class="textarea w-full md:h-36 lg:h-24"
-							placeholder="So...  I'm having this issue with..."
-							required
-						/>
-					</label>
-
-					<label for="email">
-						<span class="sr-only block text-lg">Email</span>
-						<input
-							name="email"
-							id="email"
-							type="email"
-							placeholder="Bilbo@TheShire.net"
-							class="input input-bordered w-full max-w-xs"
-						/>
-					</label>
-
-					<button type="submit" class="btn btn-primary self-start"> Send </button>
-					{#if formResult}
-						{#if formResult.type === 'success'}
-							<div class="alert alert-success shadow-lg">
-								<div>
-									<CheckIcon />
-									<span>Message Sent. I'll get back to you Soon™</span>
-								</div>
-								<button on:click={deleteFormResult} class="btn btn-square btn-ghost btn-sm">
-									<CloseIcon />
-								</button>
-							</div>
-						{:else if formResult.type === 'error'}
-							<div class="alert alert-error shadow-lg">
-								<div>
-									<ErrorIcon />
-									<span>Error {formResult.status}: {formResult.error.message}</span>
-								</div>
-								<button on:click={deleteFormResult} class="btn btn-square btn-ghost btn-sm">
-									<CloseIcon />
-								</button>
-							</div>
-						{:else}
-							<div class="alert alert-warning shadow-lg">
-								<div>
-									<ErrorIcon />
-									<span>Form responded with "{formResult.type}", not sure why...</span>
-								</div>
-								<button on:click={deleteFormResult} class="btn btn-square btn-ghost btn-sm">
-									<CloseIcon />
-								</button>
-							</div>
-						{/if}
-					{/if}
-				</form>
+		<div class="min-h-96 w-full rounded-xl bg-base-100 p-8 text-base-content shadow-xl">
+			<div class="prose mb-4 w-full lg:prose-lg">
+				<h2>Schedule a Consultation</h2>
+				<p>Pick a time, any time! (that we're available)</p>
 			</div>
-			<!-- image -->
-			<div class="relative z-10 md:w-1/2 lg:w-1/5">
-				<Img src={ProfilePicture} alt="" class="mask-right" />
-				<FigureSmall class="absolute -right-4 -top-12 -z-10 h-24 w-24 animate-move-y" />
-				<BreathingBlob
-					class="absolute -right-40 -top-48 -z-20 hidden h-64 w-64 rotate-90 text-base-300 lg:block"
-				/>
-			</div>
+
+			<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline" />
 		</div>
 	</div>
 </section>

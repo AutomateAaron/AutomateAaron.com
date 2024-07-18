@@ -1,5 +1,5 @@
 module.exports = {
-  domain: 'https://aaronnbrock.com',
+  domain: 'https://purpleumbrella.net',
   resetTime: true,
   changeFreq: 'monthly'
 };

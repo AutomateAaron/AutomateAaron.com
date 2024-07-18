@@ -56,7 +56,7 @@
 
 		<div class="prose prose-lg lg:prose-xl xl:prose-2xl prose-condensed mb-8">
 			<span class="pre-line-top-title">My Skills</span>
-			<h2>What's my Skillset?</h2>
+			<h2>What's our Skillset?</h2>
 			<p>
 				I'll be honest, this section here is just the "buzzword bingo" that I play with the search
 				engines. (Also, can you find the four pokeimon?)

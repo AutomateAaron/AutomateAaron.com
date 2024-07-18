@@ -15,13 +15,13 @@
 		{
 			title: 'Teaching',
 			description:
-				'Learn to use Google Cloud like a pro. From the basics to advanced strategies, I’ll give you the knowledge and skills you need to fully leverage the power of Google Cloud.',
+				'Learn to use Google Cloud like a pro. From the basics to advanced strategies, we’ll give you the knowledge and skills you need to fully leverage the power of Google Cloud.',
 			icon: Teaching,
 		},
 		{
 			title: 'Tuning',
 			description:
-				'Take control of your Google Cloud costs. From identifying and eliminating unnecessary expenses to implementing cost-saving strategies, I’ll help you get the most out of your investment.',
+				'Take control of your Google Cloud costs. From identifying and eliminating unnecessary expenses to implementing cost-saving strategies, we’ll help you get the most out of your investment.',
 			icon: Tuning,
 		},
 		{
@@ -77,7 +77,7 @@
 		<div class="container">
 			<div class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg prose-condensed mb-8">
 				<span class="pre-line-top-title">Services</span>
-				<h2>What I Do</h2>
+				<h2>What We Do</h2>
 				<p>
 					Using technology to empower development teams to deliver software better faster stronger.
 				</p>
