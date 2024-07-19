@@ -25,9 +25,9 @@
 <About />
 <Testimonial />
 <Services />
-<!-- <Resume /> -->
-<Pricing />
+<Resume />
+<!-- <Pricing /> -->
 <!-- <Blog {blogMetas} /> -->
-<!-- <Meme {memes} /> -->
+<Meme {memes} />
 <Skillset />
 <!-- <Portfolio /> -->

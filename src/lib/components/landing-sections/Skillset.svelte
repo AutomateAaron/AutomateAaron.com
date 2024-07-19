@@ -55,10 +55,10 @@
 		</div>
 
 		<div class="prose-condensed prose prose-lg mb-8 lg:prose-xl xl:prose-2xl">
-			<span class="pre-line-top-title">Our Skills</span>
-			<h2>What's Our Skillset?</h2>
+			<span class="pre-line-top-title">My Skills</span>
+			<h2>What's My Skillset?</h2>
 			<p>
-				Let's be honest, this section here is just the "buzzword bingo" for search engines. (Also,
+				Let's be honest, this section is just "buzzword bingo" for search engines. (Also,
 				can you find the four Pokémon?)
 			</p>
 

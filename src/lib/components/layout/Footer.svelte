@@ -26,7 +26,7 @@
 			<div class="relative z-10 justify-between gap-4 md:flex">
 				<div class="">
 					<span class="pre-line-top-title text-xl leading-none before:bg-primary-content"
-						>Contact Us</span
+						>Contact Me</span
 					>
 					<h2 class="h3 mt-5 text-left md:mb-0">Optimize Your Cloud</h2>
 				</div>
@@ -34,7 +34,7 @@
 				<div class="mt-8 flex justify-center md:mt-0 md:items-end md:justify-end">
 					{#if $page.url.pathname != '/contact'}
 						<a href="/contact#contact">
-							<button class="btn btn-outline text-primary-content">Contact Us</button>
+							<button class="btn btn-outline text-primary-content">Contact Me</button>
 						</a>
 					{/if}
 				</div>

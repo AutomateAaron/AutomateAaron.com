@@ -163,7 +163,7 @@
 <section id="contact-cards" class="section relative overflow-hidden">
 	<div class="container relative">
 		<div class="mb-8 flex flex-col items-center text-center">
-			<h1 class="h1 mb-4">Contact Us</h1>
+			<h1 class="h1 mb-4">Contact Me</h1>
 			<Breadcrumbs />
 		</div>
 		<!-- contact options -->
@@ -171,7 +171,7 @@
 			<ContactCard icon={ClockIcon}>
 				<h2>Let's Chat</h2>
 				<p>
-					We'd love to take a look at any Google Cloud problem currently you're having and assist in
+					I'd love to take a look at any Google Cloud problem currently you're having and assist in
 					avoiding problems in the future!
 				</p>
 				<svelte:fragment slot="cta">
@@ -276,7 +276,7 @@
 								<div class="alert alert-success shadow-lg">
 									<div>
 										<CheckIcon />
-										<span>Message Sent. we'll get back to you Soon™</span>
+										<span>Message Sent. I'll get back to you Soon™</span>
 									</div>
 									<button on:click={deleteFormResult} class="btn btn-square btn-ghost btn-sm">
 										<CloseIcon />
@@ -327,7 +327,7 @@
 		<div class="min-h-96 w-full rounded-xl bg-base-100 p-8 text-base-content shadow-xl">
 			<div class="prose mb-4 w-full lg:prose-lg">
 				<h2>Schedule a Consultation</h2>
-				<p>Pick a time, any time! (that we're available)</p>
+				<p>Pick a time, any time! (that I'm available)</p>
 			</div>
 
 			<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline" />

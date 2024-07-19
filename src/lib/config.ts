@@ -7,12 +7,12 @@ import Medium from '~icons/fa6-brands/medium';
 import Twitter from '~icons/fa6-brands/twitter';
 import Instagram from '~icons/fa6-brands/instagram';
 
-export const siteTitle = 'Purple Umbrella ☂️';
-export const siteDescription = 'How to make Google Cloud simpler.';
-export const siteURL = 'purpleumbrella.com';
-export const siteAuthor = '@AaronNBrock';
+export const siteTitle = 'AutomateAaron ☂️';
+export const siteDescription = 'How to make The Cloud simpler.';
+export const siteURL = 'AutomateAaron.com';
+export const siteAuthor = '@AutomateAaron';
 
-export const email = 'aaron@purpleumbrella.net';
+export const email = 'Aaron@AutomateAaron.com';
 
 // Controls how many blogs are shown per page on the main blog index pages
 export const blogsPerPage = 10;
@@ -35,8 +35,12 @@ export const navItems = [
 		route: '/#services',
 	},
 	{
-		title: 'Pricing',
-		route: '/#pricing',
+		title: 'Resume',
+		route: '/#resume',
+	},
+	{
+		title: 'Memes',
+		route: '/#memes',
 	},
 ];
 
@@ -61,11 +65,11 @@ export const siteMap = [
 
 export const socialMediaLinks: ISocialMediaLink[] = [
 	{
-		url: 'https://github.com/AaronNBrock',
+		url: 'https://github.com/AutomateAaron',
 		icon: Github,
 	},
 	{
-		url: 'https://linkedin.com/in/AaronNBrock',
+		url: 'https://linkedin.com/in/AutomateAaron',
 		icon: Linkedin,
 	},
 	{
@@ -73,7 +77,7 @@ export const socialMediaLinks: ISocialMediaLink[] = [
 		icon: Facebook,
 	},
 	{
-		url: 'https://twitter.com/AaronNBrock',
+		url: 'https://twitter.com/AutomateAaron',
 		icon: Twitter,
 	},
 	{

@@ -165,7 +165,7 @@
 			<p class="mb-4">
 				What? You don’t want to just take my word for it that I know what I’m talking about? I guess
 				some healthy scepticism is a good thing. You can also view the <a
-					href="https://docs.google.com/document/d/1q3EbjUYqKp2T82Ns-qilLLiLrXJLs_K3J4jwU1Lbw8A/edit?usp=sharing"
+					href="https://docs.google.com/document/d/16FDmclyQRMEkhyr37R1P_f7uE1IUwE6QW7eRM4VqTbg/edit?usp=sharing"
 					target="_blank"
 					rel="noreferrer"
 				>

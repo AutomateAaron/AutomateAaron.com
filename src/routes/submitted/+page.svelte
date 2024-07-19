@@ -16,7 +16,7 @@
 			<Check class="align-text-bottom text-success" />
 		</h1>
 
-		<p>Thank you for sending us a message, we'll get back to you Soon™</p>
+		<p>Thank you for sending us a message, I'll get back to you Soon™</p>
 
 		<a href="/" class="btn btn-outline btn-primary"
 			><LeftArrow class="mr-2 align-middle" />Back Home</a

@@ -21,7 +21,7 @@
 			<span class="mb-6 inline-block">{$page.error.message}</span>
 		{/if}
 		<p>
-			Maybe send us a message about it so we can fix it?<br />
+			Maybe send us a message about it so I can fix it?<br />
 			<span class="text-sm opacity-50">(or just go back to the home page)</span>
 		</p>
 		<div class="flex gap-4">

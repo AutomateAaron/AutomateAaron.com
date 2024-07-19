@@ -59,10 +59,10 @@
 				<div class="block">
 					<a
 						href="/contact"
-						aria-label="Contact Us"
+						aria-label="Contact Me"
 						class="btn btn-primary hidden items-center hover:text-primary-content lg:flex"
 					>
-						Contact Us
+						Contact Me
 					</a>
 				</div>
 
@@ -99,7 +99,7 @@
 								href="/contact"
 								class="btn btn-primary w-full items-center hover:text-primary-content"
 							>
-								Contact Us
+								Contact Me
 							</a>
 						</li>
 					</ul>
