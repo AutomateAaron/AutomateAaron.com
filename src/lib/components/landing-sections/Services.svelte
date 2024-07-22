@@ -15,19 +15,19 @@
 		{
 			title: 'Teaching',
 			description:
-				'Learn to use Google Cloud like a pro. From the basics to advanced strategies, I’ll give you the knowledge and skills you need to fully leverage the power of Google Cloud.',
+				'Learn to use a public cloud like a pro. From the basics to advanced strategies, I’ll give you the knowledge and skills you need to fully leverage the power of the public cloud.',
 			icon: Teaching,
 		},
 		{
 			title: 'Tuning',
 			description:
-				'Take control of your Google Cloud costs. From identifying and eliminating unnecessary expenses to implementing cost-saving strategies, I’ll help you get the most out of your investment.',
+				'Take control of your costs. From identifying and eliminating unnecessary expenses to implementing cost-saving strategies, I’ll help you get the most out of your technology investment.',
 			icon: Tuning,
 		},
 		{
 			title: 'Templates',
 			description:
-				'Streamline your Google Cloud operations with templates. From deployments to scaling, templates provide you with a proven foundation to build upon and allow you to focus on growing your business.',
+				'Streamline your operations with templates. From deployments to scaling, templates provide you with a proven foundation to build upon and allow you to focus on growing your business.',
 			icon: Templates,
 		},
 	];

@@ -18,20 +18,25 @@
 	>
 		<!-- text -->
 		<div class="group relative w-full text-center md:text-left">
-			<div class="prose-condensed prose prose-lg relative lg:prose-xl xl:prose-2xl">
+			<div
+				class="prose-condensed prose prose-lg relative lg:prose-xl xl:prose-2xl xl:prose-p:text-lg"
+			>
 				<span class="pre-line-top-title">Hello there,</span>
 
-				<h1 class="">
-					Let’s make <br />
-					<span class="rainbow-text text-primary">Google Cloud</span>
-					<br /> simple
+				<h1>
+					Let's
+					<br />
+					<span class="rainbow-text text-primary">Automate</span>
+					<br />
+					Everything
 				</h1>
 
 				<p class="mx-auto mb-8 max-w-sm leading-normal md:mx-0 md:max-w-lg">
-					Effortlessly navigate your way to success on Google Cloud with expert guidance.
+					Advocating for Amplifying Abilities by Applying Automation. ⚙️ <br />
+					Aspiring to Architect a life Aligning Ambition & Awareness. 🧘
 				</p>
 
-				<a href="/contact#schedule" class="btn btn-primary">Schedule a Free Consultation </a>
+				<a href="/contact#schedule" class="btn btn-primary">Schedule a Call</a>
 			</div>
 
 			<div

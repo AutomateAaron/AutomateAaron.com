@@ -175,9 +175,7 @@
 					avoiding problems in the future!
 				</p>
 				<svelte:fragment slot="cta">
-					<a href="#schedule" class="btn btn-outline btn-primary w-fit">
-						Schedule a Free Consultation
-					</a>
+					<a href="#schedule" class="btn btn-outline btn-primary w-fit"> Schedule a Call </a>
 				</svelte:fragment>
 			</ContactCard>
 
@@ -237,7 +235,7 @@
 				<div
 					class="relative z-10 -mb-16 rounded-xl bg-base-100 p-6 pb-20 shadow-lg md:-mr-20 md:mb-0 md:w-4/5 md:pb-6 md:pr-20"
 				>
-					<h3 class="h3">Or, drop us a line here...</h3>
+					<h3 class="h3">Or, drop me a line here...</h3>
 
 					<form
 						use:netlifyEnhance={() =>
@@ -326,7 +324,7 @@
 
 		<div class="min-h-96 w-full rounded-xl bg-base-100 p-8 text-base-content shadow-xl">
 			<div class="prose mb-4 w-full lg:prose-lg">
-				<h2>Schedule a Consultation</h2>
+				<h2>Schedule a Call</h2>
 				<p>Pick a time, any time! (that I'm available)</p>
 			</div>
 

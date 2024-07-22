@@ -31,13 +31,14 @@
 			date: 'NOV 2020 - PRESENT',
 			company: 'SADA',
 			bullets: [
-				'Lead technical relationships with 200+ clients which directly lead to deals closing.',
+				'Led technical relationships with 20+ clients which directly lead to deals closing.',
+				'Architected & assisted adoption of Google Cloud’s Gen AI Tooling in 4+ organizations.',
 				'Built relationships with Google reps, leading to an increased lead generation.',
 				"Co-Presented with Googlers both internally & externally, establishing SADA's brand.",
-				'Architected application for social media startup with over 2 million active users.',
+				'Architected a secure application for a social media startup with over 2 million active users.',
 				'Automated parts of the internal sales pipeline, saving valuable cycles.',
 				'Successfully supported the migration from AWS to GCP for multiple customers.',
-				'Developed multiple professional services offerings based on observations of market needs',
+				'Developed multiple professional services offerings based on observations of market needs.',
 			],
 		},
 		{
@@ -45,11 +46,12 @@
 			company: 'Contino',
 			date: 'SEP 2019 - NOV 2020',
 			bullets: [
+				'Created automation to enforce git tagging rules to follow Semantic Versioning.',
+				'Deployed CI/CD platform enforcing FedRAMP medium standards to all environments.',
 				'Developed automated tests to guarantee proper terraform deployment.',
-				'Created automation to enforce git tagging rules follow Semantic Versioning.',
 				'Created a POC terraform provider which wraps GCP storage objects.',
 				'Migrated AWS Service Control Policies from a manual workflow to an automated policy-as-code workflow at a global financial ratings and intelligence firm.',
-				'Lead pair programming sessions upskilling clients on Cloud best practices.',
+				'Lead pair programming sessions, upskilling clients on Cloud best practices.',
 			],
 		},
 		{
@@ -57,9 +59,10 @@
 			company: 'Functionize',
 			date: 'SEP 2019 - JAN 2020',
 			bullets: [
-				'Designed a solution for running Selenium against Windows browsers in GKE.',
+				'Designed a solution for running Selenium tests against Windows browsers in GKE.',
 				'Configured secure remote access to Jenkins using Google Cloud’s Identity-Aware Proxy.',
-				'Containerized legacy node.js application, allowing it to be migrated to Kubernetes.',
+				'Containerized a legacy node.js application, allowing it to be migrated to Kubernetes.',
+				'Created private Kubernetes deployment, integrating with k8s & GKE best practices.',
 			],
 		},
 		{
@@ -67,7 +70,7 @@
 			company: 'Soterea',
 			date: 'JUN 2019 - AUG 2019',
 			bullets: [
-				'Developed and deployed a dataset management tool, completely removing the need for manual data transfers to and from labelers.',
+				'Developed & deployed a data management tool, replacing manual data transfers.',
 				'Deployed an ELK Stack to collect and visualize metrics across the company.',
 				'Facilitated company adoption and upskilling of Git and Docker.',
 			],
@@ -77,12 +80,12 @@
 			company: 'iconectiv',
 			date: 'DEC 2017 - MAY 2019',
 			bullets: [
-				'Setup Kubernetes to support CI workflow reducing build wait times.',
-				'Simplified & stabilized build and deployment by dockerizing jobs, allowing for more developer flexibility and greater test repeatability.',
-				'Developed automated testing tools to support API & Data integrity tests drastically reducing test development time and increasing test coverage.',
-				'Reduced GUI testing time by creating a Selenoid grid cluster which allowed for parallel test execution, reducing test time by a factor of 10. ',
-				'Provided training for Git & Tensorflow which facilitated tool adoption.',
-				'Created a Dockerized version of MongoDB’s Ops Manager.',
+				'Setup Kubernetes to support CI workflow, reducing build wait times.',
+				'Stabilized build and deployment by dockerizing jobs, allowing for greater test repeatability.',
+				'Developed automated testing tools to support API & Data integrity tests, drastically reducing test development time and increasing test coverage.',
+				'Reduced GUI testing time by deploying Selenoid grid cluster, reducing test time by 10x.',
+				'Provided training for Git & TensorFlow, which facilitated tool adoption.',
+				'Created a dockerized version of MongoDB’s Ops Manager.',
 			],
 		},
 		{
@@ -102,8 +105,7 @@
 			date: 'OCT 2016 - JAN 2017',
 			bullets: [
 				'Developed and demoed a prototype cloud gaming application.',
-				'Automated VPN connections to AWS to ensure secure connections.',
-				'Created scripts to set up AWS instances to enable on-demand gaming.',
+				'Automated AWS instance creation & VPN connections to ensure secure connections.',
 				'Automated bidding on AWS spot instances, lowering server costs by over 70%.',
 			],
 		},

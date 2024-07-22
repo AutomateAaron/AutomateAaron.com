@@ -7,7 +7,7 @@ import Medium from '~icons/fa6-brands/medium';
 import Twitter from '~icons/fa6-brands/twitter';
 import Instagram from '~icons/fa6-brands/instagram';
 
-export const siteTitle = 'AutomateAaron ☂️';
+export const siteTitle = 'Aaron Brock ☂️';
 export const siteDescription = 'How to make The Cloud simpler.';
 export const siteURL = 'AutomateAaron.com';
 export const siteAuthor = '@AutomateAaron';

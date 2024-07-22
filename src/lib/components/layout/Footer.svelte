@@ -94,9 +94,7 @@
 	<!-- copyright -->
 	<div>
 		<div class="container grid-cols-2 border-t border-accent-content py-10 md:grid">
-			<p class="text-center md:text-left">
-				All rights reserved copyright © Purple Umbrella LLC 2024
-			</p>
+			<p class="text-center md:text-left">All rights reserved copyright © Aaron Brock 2024</p>
 
 			<!-- social media links -->
 			<div class="mt-12 flex items-center justify-center space-x-6 md:mt-0 md:justify-end">

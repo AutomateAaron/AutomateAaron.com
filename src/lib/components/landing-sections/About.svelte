@@ -28,18 +28,21 @@
 
 			<!-- text -->
 			<div
-				class="prose relative z-10 mx-4 -mt-48 max-w-none rounded-xl bg-accent p-6 text-accent-content lg:prose-lg xl:prose-xl prose-headings:text-accent-content md:mx-0 md:-ml-12 md:-mt-0 md:w-1/2 md:p-8 lg:p-12"
+				class="prose relative z-10 mx-4 -mt-48 max-w-none rounded-xl bg-accent p-6 leading-4 text-accent-content xl:prose-lg prose-headings:text-accent-content md:mx-0 md:-ml-12 md:-mt-0 md:w-1/2 md:p-8 lg:p-12"
 			>
 				<h3>Who am I?</h3>
 				<p>
-					I'm a Google Cloud Engineers, with extensive experience enabling
-					startups and small businesses. Through designing cloud native architectures, conducting
-					workshops, and more I've helped hundreds of organizations to maximize their Cloud
-					investment. I'd love to help yours too!
+					I'm a passionate DevOps Engineer with a love for adventure! When I'm not optimizing IT
+					processes, you'll find me dancing, exploring places on public transit, or challenging
+					myself with hikes and rock climbs.
+					<br /> <br />
+					This blend of enthusiasm and expertise enables me to approach problem-solving with creativity.
+					I'd love to help your org streamline their workflows, automate tasks, and implement innovative
+					solutions that boost efficiency!
 				</p>
 
 				<div class="flex flex-wrap gap-4">
-					<a href="/contact#schedule" class="btn btn-primary">Schedule a Free Consultation</a>
+					<a href="/contact#schedule" class="btn btn-primary">Schedule a Call</a>
 					<a href="/contact#contact" class="btn btn-outline text-accent-content"> Contact Me </a>
 				</div>
 			</div>
