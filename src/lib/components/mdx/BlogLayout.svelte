@@ -1,13 +1,14 @@
 <script>
 	import Img from '@zerodevx/svelte-img';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-	import BreathingBlob from '$lib/components/svg/BreathingBlob.svelte';
+	import BreathingBlob from '$lib/assets/svg/BreathingBlob.svelte';
+	// @ts-expect-error: svelte-img import
 	import ProfilePicture from '$lib/assets/images/profile-picture.jpg?as=run';
-	import Figure from '$lib/components/Figure.svelte';
+	import Figure from '$lib/assets/figures/Figure.svelte';
 
 	import MailingList from '$lib/components/MailingList.svelte';
-	import FigureSmall from '$lib/components/FigureSmall.svelte';
-	import { loadImage } from '$lib/assets/js/clientUtils';
+	import FigureSmall from '$lib/assets/figures/FigureSmall.svelte';
+	import { loadImage } from '$lib/utils/clientUtils';
 
 	export let title;
 	export let image;

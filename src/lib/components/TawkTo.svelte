@@ -1,20 +1,8 @@
 <script>
-	import { teleport } from '$lib/assets/js/clientUtils';
+	import { teleport } from '$lib/utils/clientUtils';
 </script>
 
 <div use:teleport>
-	<!--Start of Tawk.to Script-->
-	<!--Start of Tawk.to Script-->
-	<!--Start of Tawk.to Script-->
-	<!--Start of Tawk.to Script-->
-	<!--Start of Tawk.to Script-->
-	<!--Start of Tawk.to Script-->
-	<!--Start of Tawk.to Script-->
-	<!--Start of Tawk.to Script-->
-	<!--Start of Tawk.to Script-->
-	<!--Start of Tawk.to Script-->
-	<!--Start of Tawk.to Script-->
-	<!--Start of Tawk.to Script-->
 	<!--Start of Tawk.to Script-->
 	<script type="text/javascript">
 		var Tawk_API = Tawk_API || {},

@@ -7,14 +7,14 @@ export const load: Load = async ({ params }) => {
 		if (shortLink.slug === params.shortLink) {
 			const shortLinkImages = import.meta.glob('../../../lib/assets/images/shortlinks/*.png', {
 				query: { as: 'run', blur: '6' },
-				eager: true,
+				eager: true
 			});
 
 			return {
 				image:
 					shortLinkImages[`../../../lib/assets/images/shortlinks/${params.shortLink}.png`]
 						?.default || null,
-				shortLink,
+				shortLink
 			};
 		}
 	}

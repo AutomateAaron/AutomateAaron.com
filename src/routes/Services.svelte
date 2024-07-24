@@ -8,28 +8,28 @@
 	import Templates from '~icons/ic/outline-file-copy';
 
 	import ServiceCard from './ServiceCard.svelte';
-	import BreathingBlob from '../svg/BreathingBlob.svelte';
-	import Figure from '../Figure.svelte';
+	import BreathingBlob from '$lib/assets/svg/BreathingBlob.svelte';
+	import Figure from '$lib/assets/figures/Figure.svelte';
 
 	const services: IService[] = [
 		{
 			title: 'Teaching',
 			description:
 				'Learn to use Google Cloud like a pro. From the basics to advanced strategies, we’ll give you the knowledge and skills you need to fully leverage the power of Google Cloud.',
-			icon: Teaching,
+			icon: Teaching
 		},
 		{
 			title: 'Tuning',
 			description:
 				'Take control of your Google Cloud costs. From identifying and eliminating unnecessary expenses to implementing cost-saving strategies, we’ll help you get the most out of your investment.',
-			icon: Tuning,
+			icon: Tuning
 		},
 		{
 			title: 'Templates',
 			description:
 				'Streamline your Google Cloud operations with templates. From deployments to scaling, templates provide you with a proven foundation to build upon and allow you to focus on growing your business.',
-			icon: Templates,
-		},
+			icon: Templates
+		}
 	];
 
 	const options = {
@@ -46,7 +46,7 @@
 			640: {
 				// xs
 				perPage: 1,
-				gap: '1rem',
+				gap: '1rem'
 			},
 			// 768: {
 			// 	// sm
@@ -61,25 +61,26 @@
 			1279: {
 				// lg
 				perPage: 2,
-				gap: '2rem',
-			},
+				gap: '2rem'
+			}
 		},
 		classes: {
 			// Add classes for pagination.
 			pagination: 'splide__pagination service-slide-pagination', // container
-			page: 'splide__pagination__page service-slide-page', // each button
-		},
+			page: 'splide__pagination__page service-slide-page' // each button
+		}
 	};
 </script>
 
 <section id="services" class="section relative overflow-hidden">
 	<div>
 		<div class="container">
-			<div class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg prose-condensed mb-8">
+			<div class="prose-condensed prose prose-lg mb-8 max-w-lg lg:prose-xl xl:prose-2xl">
 				<span class="pre-line-top-title">Services</span>
 				<h2>What Do We Do?</h2>
 				<p>
-					We us technology to empower development teams to deliver software better, faster, & stronger.
+					We us technology to empower development teams to deliver software better, faster, &
+					stronger.
 				</p>
 			</div>
 			<Splide hasTrack={false} {options}>

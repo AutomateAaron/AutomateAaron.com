@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { IService } from '$lib/types';
-	import CardBlob from '$lib/components/svg/CardBlob.svelte';
+	import CardBlob from '$lib/assets/svg/CardBlob.svelte';
 
 	export let service: IService;
 
@@ -8,7 +8,7 @@
 	export { clazz as class };
 </script>
 
-<div class="w-full h-full rounded-xl bg-base-100 p-8 shadow-xl {clazz}">
+<div class="h-full w-full rounded-xl bg-base-100 p-8 shadow-xl {clazz}">
 	<!-- render icon -->
 	{#if service?.icon}
 		<div class="relative mb-4 flex h-32 w-24 items-end justify-start">

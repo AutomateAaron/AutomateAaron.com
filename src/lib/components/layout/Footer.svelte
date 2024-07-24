@@ -1,16 +1,14 @@
 <script lang="ts">
-	import Logo from '$lib/components/svg/Logo.svelte';
+	import Logo from '$lib/assets/svg/Logo.svelte';
 	import EmailIcon from '~icons/ic/baseline-email';
-	import Shape1 from '$lib/components/svg/Shape1.svelte';
-	import Shape2 from '$lib/components/svg/Shape2.svelte';
-	import Location from '~icons/ic/baseline-location-on'; // eslint-disable-line
+	import Shape1 from '$lib/assets/svg/Shape1.svelte';
+	import Shape2 from '$lib/assets/svg/Shape2.svelte';
+	import Location from '~icons/ic/baseline-location-on';
 
 	import { socialMediaLinks, siteMap, email } from '$lib/config.js';
 
 	import { page } from '$app/stores';
 	import ClickToCopy from '../ClickToCopy.svelte';
-
-	email;
 </script>
 
 <footer class="relative text-accent-content">

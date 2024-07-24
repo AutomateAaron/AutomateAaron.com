@@ -1,13 +1,15 @@
 <script lang="ts">
 	import Img from '@zerodevx/svelte-img';
+	// @ts-expect-error: svelte-img import
 	import HeroImage from '$lib/assets/images/hero.jpg?as=run&width=480;720';
+	// @ts-expect-error: svelte-img import
 	import PopupThumb from '$lib/assets/images/hero-video-thumbnail.jpg?as=run&width=480';
 
-	import HeroBg from '$lib/components/svg/landing-sections/hero/HeroBg.svelte';
+	import HeroBg from '$lib/assets/svg/landing-sections/hero/HeroBg.svelte';
 
-	import Close from '../svg/Close.svelte';
-	import BreathingBlob from '../svg/BreathingBlob.svelte';
-	import Figure from '../Figure.svelte';
+	import Close from '$lib/assets/svg/Close.svelte';
+	import BreathingBlob from '$lib/assets/svg/BreathingBlob.svelte';
+	import Figure from '$lib/assets/figures/Figure.svelte';
 
 	let showModal = false;
 </script>

@@ -1,4 +1,4 @@
-import { fetchBlogsMeta, fetchMemes } from '$lib/assets/js/clientUtils.js';
+import { fetchBlogsMeta, fetchMemes } from '$lib/utils/clientUtils.js';
 
 export const load = async () => {
 	const blogMetas = await fetchBlogsMeta({ limit: 3 });
@@ -6,6 +6,6 @@ export const load = async () => {
 
 	return {
 		blogMetas,
-		memes: memes,
+		memes: memes
 	};
 };

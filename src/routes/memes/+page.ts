@@ -1,9 +1,9 @@
-import { fetchMemes } from '$lib/assets/js/clientUtils.js';
+import { fetchMemes } from '$lib/utils/clientUtils.js';
 
 export const load = async () => {
 	const memes = await fetchMemes();
 
 	return {
-		memes,
+		memes
 	};
 };

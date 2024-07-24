@@ -11,11 +11,11 @@ export default defineConfig({
 			scale: 1,
 
 			// experimental
-			autoInstall: true,
+			autoInstall: true
 		}),
 		imagetools({
 			// By default, directives are `?width=480;1024;1920&format=avif;webp;jpg`
-			defaultDirectives: () => new URLSearchParams('?width=480;1024&format=avif;jpg&lqip=32'),
-		}),
-	],
+			defaultDirectives: () => new URLSearchParams('?width=480;1024&format=avif;jpg&lqip=32')
+		})
+	]
 });

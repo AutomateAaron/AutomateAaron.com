@@ -1,7 +1,7 @@
 <script lang="ts">
-	import BreathingBlob from '$lib/components/svg/BreathingBlob.svelte';
-	import Figure from '../Figure.svelte';
-	import Shape1 from '../svg/Shape1.svelte';
+	import BreathingBlob from '$lib/assets/svg/BreathingBlob.svelte';
+	import Figure from '../../assets/figures/Figure.svelte';
+	import Shape1 from '../../assets/svg/Shape1.svelte';
 </script>
 
 <section class="relative h-screen overflow-hidden">

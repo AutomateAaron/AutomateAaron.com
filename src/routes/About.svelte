@@ -1,9 +1,10 @@
 <script lang="ts">
 	import Img from '@zerodevx/svelte-img';
+	// @ts-expect-error: svelte-img import
 	import AboutImage from '$lib/assets/images/about.jpg?as=run&width=480;720';
 
-	import BreathingBlob from '../svg/BreathingBlob.svelte';
-	import Figure from '../Figure.svelte';
+	import BreathingBlob from '../lib/assets/svg/BreathingBlob.svelte';
+	import Figure from '../lib/assets/figures/Figure.svelte';
 </script>
 
 <section id="about" class="section overflow-hidden">

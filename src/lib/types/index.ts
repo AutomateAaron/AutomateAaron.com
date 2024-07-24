@@ -5,6 +5,15 @@ import type { ComponentType } from 'svelte';
 //   alt: string;
 // }
 
+export interface IBlogMeta {
+	url: string;
+	date: string;
+	title: string;
+	description: string;
+	image: string;
+	imageAlt: string;
+}
+
 export interface INavItem {
 	name: string;
 	href: string;

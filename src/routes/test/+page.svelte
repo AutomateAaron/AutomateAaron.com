@@ -1,8 +1,8 @@
 <script lang="ts">
-	import BigFigure from '$lib/components/FigureBig.svelte';
-	import BabyFigure from '$lib/components/FigureSmall.svelte';
+	import BigFigure from '$lib/assets/figures/FigureBig.svelte';
+	import BabyFigure from '$lib/assets/figures/FigureSmall.svelte';
 	import CardPage from '$lib/components/layout/CardPage.svelte';
-	import Figure from '../../lib/components/Figure.svelte';
+	import Figure from '$lib/assets/figures/Figure.svelte';
 </script>
 
 <CardPage>

@@ -1,9 +1,10 @@
 <script lang="ts">
-	import BlogBlob from '$lib/components/svg/GradientBlob.svelte';
+	import BlogBlob from '$lib/assets/svg/GradientBlob.svelte';
 	import BlogsList from '$lib/components/BlogsList.svelte';
-	import Figure from '../Figure.svelte';
+	import Figure from '../lib/assets/figures/Figure.svelte';
+	import type { IBlogMeta } from '$lib/types';
 
-	export let blogMetas: any[];
+	export let blogMetas: IBlogMeta[];
 </script>
 
 <section id="blog" class="section relative overflow-hidden">

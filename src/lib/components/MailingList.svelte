@@ -4,7 +4,7 @@
 	import ErrorIcon from '~icons/ic/outline-error';
 	import CloseIcon from '~icons/ic/baseline-close';
 	import { mailingListEmail } from '$lib/stores.js';
-	import { netlifyEnhance } from '$lib/assets/js/netlifyForm.js';
+	import { netlifyEnhance } from '$lib/utils/netlifyForm';
 
 	export let message = 'Want more?';
 	export let interactedMessage = 'Is it Later?';
@@ -22,7 +22,7 @@
 		if (value) {
 			formResult = {
 				type: 'success',
-				status: 200,
+				status: 200
 			};
 			interacted = true;
 		}
@@ -50,7 +50,7 @@
 >
 	<slot>
 		<span class="pre-line-top-title mb-4">Mailing List</span>
-		<h3 class="text-center md:text-left h3">
+		<h3 class="h3 text-center md:text-left">
 			{#if formResult}
 				{subscribeMessage}
 			{:else if interacted}
@@ -77,17 +77,17 @@
 					type="email"
 					name="email"
 					placeholder="brian@vghs.edu"
-					class="input-bordered input-primary input input-sm max-w-sm"
+					class="input input-sm input-bordered input-primary max-w-sm"
 					required
 				/>
-				<button type="submit" class="btn-primary btn-sm btn"> Subscribe </button>
+				<button type="submit" class="btn btn-primary btn-sm"> Subscribe </button>
 			</div>
 			{#if !interacted}
 				<button
 					on:click={() => {
 						interacted = true;
 					}}
-					class="btn-ghost btn-sm btn duration-300 ease-in-out group-focus-within:shadow group-hover:shadow"
+					class="btn btn-ghost btn-sm duration-300 ease-in-out group-focus-within:shadow group-hover:shadow"
 				>
 					{notNowMessage}
 				</button>
@@ -101,7 +101,7 @@
 						<CheckIcon />
 						<span>Subscribed! Thank you.</span>
 					</div>
-					<button on:click={deleteFormResult} class="btn-ghost btn-square btn-sm btn">
+					<button on:click={deleteFormResult} class="btn btn-square btn-ghost btn-sm">
 						<CloseIcon />
 					</button>
 				</div>
@@ -113,7 +113,7 @@
 							Error {formResult.status}: {formResult.error.message}
 						</span>
 					</div>
-					<button on:click={deleteFormResult} class="btn-ghost btn-square btn-sm btn">
+					<button on:click={deleteFormResult} class="btn btn-square btn-ghost btn-sm">
 						<CloseIcon />
 					</button>
 				</div>
@@ -125,7 +125,7 @@
 							Form responded with "{formResult.type}", not sure why...
 						</span>
 					</div>
-					<button on:click={deleteFormResult} class="btn-ghost btn-square btn-sm btn">
+					<button on:click={deleteFormResult} class="btn btn-square btn-ghost btn-sm">
 						<CloseIcon />
 					</button>
 				</div>

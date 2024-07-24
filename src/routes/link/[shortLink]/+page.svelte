@@ -24,12 +24,12 @@
 		<span class="pre-line-top-title mb-4">Mailing List</span>
 
 		{#if interacted}
-			<h1 class="mb-0 text-center md:text-left h3">Redirecting...</h1>
+			<h1 class="h3 mb-0 text-center md:text-left">Redirecting...</h1>
 			<a class="mb-4 block text-sm opacity-50" href={shortLink.url}>
 				(click here if you aren't redirected)
 			</a>
 		{:else}
-			<h1 class="text-center md:text-left h3">Almost There...</h1>
+			<h1 class="h3 text-center md:text-left">Almost There...</h1>
 		{/if}
 	</MailingList>
 </CardPage>
