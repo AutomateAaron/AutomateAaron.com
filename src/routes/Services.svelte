@@ -8,8 +8,8 @@
 	import Templates from '~icons/ic/outline-file-copy';
 
 	import ServiceCard from './ServiceCard.svelte';
-	import BreathingBlob from '../svg/BreathingBlob.svelte';
-	import Figure from '../Figure.svelte';
+	import BreathingBlob from '$lib/assets/svg/BreathingBlob.svelte';
+	import Figure from '$lib/assets/figures/Figure.svelte';
 
 	const services: IService[] = [
 		{
@@ -46,7 +46,7 @@
 			640: {
 				// xs
 				perPage: 1,
-				gap: '1rem',
+				gap: '1rem'
 			},
 			// 768: {
 			// 	// sm
@@ -61,21 +61,21 @@
 			1279: {
 				// lg
 				perPage: 2,
-				gap: '2rem',
-			},
+				gap: '2rem'
+			}
 		},
 		classes: {
 			// Add classes for pagination.
 			pagination: 'splide__pagination service-slide-pagination', // container
-			page: 'splide__pagination__page service-slide-page', // each button
-		},
+			page: 'splide__pagination__page service-slide-page' // each button
+		}
 	};
 </script>
 
 <section id="services" class="section relative overflow-hidden">
 	<div>
 		<div class="container">
-			<div class="prose prose-lg lg:prose-xl xl:prose-2xl max-w-lg prose-condensed mb-8">
+			<div class="prose-condensed prose prose-lg mb-8 max-w-lg lg:prose-xl xl:prose-2xl">
 				<span class="pre-line-top-title">Services</span>
 				<h2>What Do I Do?</h2>
 				<p>

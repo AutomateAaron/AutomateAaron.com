@@ -12,8 +12,8 @@
 			title: 'Case Study One',
 			image: {
 				src: Portfolio1,
-				alt: '',
-			},
+				alt: ''
+			}
 		},
 		{
 			slug: '',
@@ -21,8 +21,8 @@
 			title: 'Case Study One',
 			image: {
 				src: Portfolio2,
-				alt: '',
-			},
+				alt: ''
+			}
 		},
 		{
 			slug: '',
@@ -30,8 +30,8 @@
 			title: 'Recipe App Ux Study',
 			image: {
 				src: Portfolio3,
-				alt: '',
-			},
+				alt: ''
+			}
 		},
 		{
 			slug: '',
@@ -39,9 +39,9 @@
 			title: 'UX Design',
 			image: {
 				src: Portfolio4,
-				alt: '',
-			},
-		},
+				alt: ''
+			}
+		}
 	];
 </script>
 
@@ -53,7 +53,7 @@
 		</div>
 
 		<div class="mt-12 md:columns-2">
-			{#each portfolio as item, i}
+			{#each portfolio as item}
 				<div class="mb-8 md:m-6">
 					<a href="/">
 						<div class="group">

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { IResumeSectionItem } from '$lib/types';
-	import Figure from '../Figure.svelte';
+	import Figure from '$lib/assets/figures/Figure.svelte';
 	import ResumeCard from './ResumeCard.svelte';
 	import ArrowOutward from '~icons/ic/baseline-arrow-outward';
 
@@ -9,20 +9,20 @@
 			title: 'GCP Professional Cloud Architect',
 			description:
 				'"A Professional Cloud Architect enables organizations to leverage Google Cloud technologies. With a thorough understanding of cloud architecture and Google Cloud Platform, this individual can design, develop, and manage robust, secure, scalable, highly available, and dynamic solutions to drive business objectives." ~ Google Cloud',
-			date: new Date(2022, 5, 1),
+			date: new Date(2022, 5, 1)
 		},
 		{
 			title: 'GCP Associate Cloud Engineer',
 			description:
 				'"An Associate Cloud Engineer deploys applications, monitors operations, and manages enterprise solutions. This individual is able to use Google Cloud Console and the command-line interface to perform common platform-based tasks to maintain one or more deployed solutions that leverage Google-managed or self-managed services on Google Cloud." ~ Google Cloud',
-			date: new Date(2018, 11, 1),
+			date: new Date(2018, 11, 1)
 		},
 		{
 			title: 'Eagle Scout',
 			description:
 				'"Since 1912, the Eagle Scout rank has represented a milestone of accomplishment—perhaps without equal—that is recognized across the country and even the world." ~ Scouting.org',
-			date: new Date(2018, 11, 1),
-		},
+			date: new Date(2018, 11, 1)
+		}
 	];
 
 	const experience: IResumeSectionItem[] = [
@@ -72,8 +72,8 @@
 			bullets: [
 				'Developed & deployed a data management tool, replacing manual data transfers.',
 				'Deployed an ELK Stack to collect and visualize metrics across the company.',
-				'Facilitated company adoption and upskilling of Git and Docker.',
-			],
+				'Facilitated company adoption and upskilling of Git and Docker.'
+			]
 		},
 		{
 			title: 'DevOps Engineer',
@@ -96,8 +96,8 @@
 				'Created a program to detect lane lines on a video stream using OpenCV.',
 				'On-boarded & taught new members TensorFlow.',
 				'Created a neural network to clone human driving in a simulator.',
-				'Developed a Vehicle Detector using OpenCV & Keras.',
-			],
+				'Developed a Vehicle Detector using OpenCV & Keras.'
+			]
 		},
 		{
 			title: 'Co-Founder',
@@ -118,9 +118,9 @@
 				'Developed a plugin to translate Minecraft chat live via Google Translate.',
 				'Led a team of developers to create a modular mini-game framework.',
 				'Trained developers in how to use and develop for our mini-game framework.',
-				'Automated our deployments via Gradle to speed up the development cycle.',
-			],
-		},
+				'Automated our deployments via Gradle to speed up the development cycle.'
+			]
+		}
 	];
 	let self: HTMLElement;
 	function scrollToTop() {
@@ -132,7 +132,7 @@
 		if (viewBottom > elemBottom) {
 			window.scrollTo({
 				top: self.offsetHeight + self.offsetTop - window.innerHeight - 20,
-				behavior: 'instant',
+				behavior: 'instant'
 			});
 		}
 		window.scrollTo({ top: self.offsetTop, behavior: 'smooth' });

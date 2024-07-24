@@ -13,7 +13,7 @@ export function teleport(node: HTMLElement, name = 'teleport') {
 	return {
 		destroy() {
 			node.remove();
-		},
+		}
 	};
 }
 
@@ -26,9 +26,9 @@ export function loadImageSmall(path: string) {
 	let images = import.meta.glob('../images/blog/**/*.{jpg,jpeg,png}', {
 		query: {
 			as: 'run',
-			width: '480;640',
+			width: '480;640'
 		},
-		eager: true,
+		eager: true
 	});
 
 	images = Object.fromEntries(
@@ -51,9 +51,9 @@ export function loadImage(path: string) {
 
 	let images = import.meta.glob('../images/blog/**/*.{jpg,jpeg,png}', {
 		query: {
-			as: 'run',
+			as: 'run'
 		},
-		eager: true,
+		eager: true
 	});
 
 	images = Object.fromEntries(
@@ -69,18 +69,13 @@ export function loadImage(path: string) {
 	error(404, `image "${path}" not found`);
 }
 
-export async function fetchBlogsMeta({
-	offset = 0,
-	limit = 0,
-	category = '',
-} = {}) {
-
-	const getSlug = /([^/\\&?]+)(?:\/\+page)?\.md$/g
+export async function fetchBlogsMeta({ offset = 0, limit = 0, category = '' } = {}) {
+	const getSlug = /([^/\\&?]+)(?:\/\+page)?\.md$/g;
 
 	let blogMetas = await Promise.all(
 		// Todo filter out markdown files like /src/routes/blog/blog-slug/something-not-page.md
 		Object.entries(import.meta.glob('/src/routes/blog/**/*.md')).map(async ([path, resolver]) => {
-			const slug = path.matchAll(getSlug).next().value[1]
+			const slug = path.matchAll(getSlug).next().value[1];
 
 			// Todo: Only Load Meta instead of Everything
 			const blog = await resolver();
@@ -88,7 +83,7 @@ export async function fetchBlogsMeta({
 			return {
 				slug: slug,
 				url: `/blog/${slug}`,
-				...blog.metadata,
+				...blog.metadata
 			};
 		})
 	);
@@ -112,17 +107,17 @@ export async function fetchBlogsMeta({
 export async function fetchMemes({ offset = 0, limit = 0 } = {}) {
 	let memes = await Promise.all(
 		Object.entries(
-			import.meta.glob('../images/memes/*.{jpg,jpeg,png}', {
+			import.meta.glob('/src/lib/assets/images/memes/*.{jpg,jpeg,png}', {
 				query: {
-					as: 'run',
+					as: 'run'
 				},
-				eager: true,
+				eager: true
 			})
 		).map(([path, meme]) => {
 			const slug = path.split('/').pop()?.split('.')[0];
 			return {
 				slug: slug,
-				default: meme.default,
+				default: meme.default
 			};
 		})
 	);

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import CardBlob from '$lib/components/svg/CardBlob.svelte';
+	import CardBlob from '$lib/assets/svg/CardBlob.svelte';
 
 	export let icon;
 </script>
@@ -13,7 +13,7 @@
 		</div>
 	</div>
 
-	<div class="prose lg:prose-lg mb-4">
+	<div class="prose mb-4 lg:prose-lg">
 		<slot />
 	</div>
 

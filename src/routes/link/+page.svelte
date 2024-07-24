@@ -22,7 +22,7 @@
 				<li>
 					<ClickToCopy
 						copyText={url + '/' + shortLink.slug}
-						class="btn-primary tooltip-left tooltip-primary btn-square btn-sm btn mr-2 capitalize"
+						class="btn btn-square btn-primary btn-sm tooltip-left tooltip-primary mr-2 capitalize"
 					>
 						<CopyIcon class="inline h-2/3 w-2/3 fill-current" />
 					</ClickToCopy>

@@ -1,18 +1,18 @@
 <script lang="ts">
-	import Figure from '$lib/components/Figure.svelte';
-	import About from '$lib/components/landing-sections/About.svelte';
-	import Blog from '$lib/components/landing-sections/Blog.svelte';
-	import Hero from '$lib/components/landing-sections/Hero.svelte';
-	import Meme from '$lib/components/landing-sections/Meme.svelte';
-	import Pricing from '$lib/components/landing-sections/Pricing.svelte';
-	import Resume from '$lib/components/landing-sections/Resume.svelte';
-	import Services from '$lib/components/landing-sections/Services.svelte';
-	import Skillset from '$lib/components/landing-sections/Skillset.svelte';
-	import Testimonial from '$lib/components/landing-sections/Testimonial.svelte';
+	// import Figure from '$lib/components/figures/Figure.svelte';
+	import About from './About.svelte';
+	// import Blog from './Blog.svelte';
+	import Hero from './Hero.svelte';
+	import Meme from './Meme.svelte';
+	// import Pricing from './Pricing.svelte';
+	import Resume from './Resume.svelte';
+	import Services from './Services.svelte';
+	import Skillset from './Skillset.svelte';
+	import Testimonial from './Testimonial.svelte';
 	import { siteDescription, siteTitle } from '$lib/config';
+	import type { IBlogMeta, IMeme } from '$lib/types';
 
-	export let data;
-
+	export let data: {blogMetas: IBlogMeta[], memes:IMeme[]};
 	const { blogMetas, memes } = data;
 </script>
 

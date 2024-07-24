@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { IMeme } from '$lib/types/';
-	import MemesList from '../MemesList.svelte';
-	import Figure from '../Figure.svelte';
+	import MemesList from '$lib/components/MemesList.svelte';
+	import Figure from '$lib/assets/figures/Figure.svelte';
 
 	export let memes: IMeme[];
 	let showMore = false;

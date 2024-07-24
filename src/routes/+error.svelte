@@ -4,11 +4,11 @@
 	import LeftArrow from '~icons/ic/baseline-arrow-left';
 	import RightArrow from '~icons/ic/baseline-arrow-right';
 
-	import BreathingBlob from '$lib/components/svg/BreathingBlob.svelte';
+	import BreathingBlob from '$lib/assets/svg/BreathingBlob.svelte';
 	import { page } from '$app/stores';
 	import CardPage from '$lib/components/layout/CardPage.svelte';
-	import Shape1 from '$lib/components/svg/Shape1.svelte';
-	import Figure from '$lib/components/Figure.svelte';
+	import Shape1 from '$lib/assets/svg/Shape1.svelte';
+	import Figure from '$lib/assets/figures/Figure.svelte';
 </script>
 
 <CardPage>

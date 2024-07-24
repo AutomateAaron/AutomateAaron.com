@@ -16,7 +16,6 @@
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import { navItems, siteMap } from '$lib/config';
 	import { preloadCode } from '$app/navigation';
-	import TawkTo from '$lib/components/TawkTo.svelte';
 	import GoogleAnalytics from '$lib/components/GoogleAnalytics.svelte';
 
 	/**

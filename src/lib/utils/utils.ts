@@ -14,7 +14,7 @@ export async function fetchBlogs({ offset = 0, limit = blogsPerPage, category = 
 			return {
 				slug: slug,
 				metadata: blog.metadata,
-				content: blog.default,
+				content: blog.default
 			};
 		})
 	);
@@ -35,7 +35,7 @@ export async function fetchBlogs({ offset = 0, limit = blogsPerPage, category = 
 
 	blogs = blogs.map((blog) => ({
 		slug: blog.slug,
-		metadata: blog.metadata,
+		metadata: blog.metadata
 	}));
 
 	return blogs;
@@ -76,7 +76,7 @@ export function getMemeFromPath(pathStr: string) {
 	const meme: IMeme = {
 		slug: parsed.name,
 		image: `/memes/${parsed.base}`,
-		title: parsed.name,
+		title: parsed.name
 	};
 
 	return meme;

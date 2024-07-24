@@ -1,10 +1,11 @@
 <script lang="ts">
 	import Img from '@zerodevx/svelte-img';
+	// @ts-expect-error: svelte-img import
 	import SkillImage from '$lib/assets/images/skillset.jpg?as=run&width=480;720';
 	import Check from '~icons/mdi/check-bold';
 
-	import BreathingBlob from '../svg/BreathingBlob.svelte';
-	import Figure from '../Figure.svelte';
+	import BreathingBlob from '$lib/assets/svg/BreathingBlob.svelte';
+	import Figure from '$lib/assets/figures/Figure.svelte';
 
 	const skills: string[] = [
 		// Cloud Technologies
@@ -41,7 +42,7 @@
 		'Firebase',
 		'Supabase',
 
-		'Lopunny-poke', // poke
+		'Lopunny-poke' // poke
 	];
 </script>
 

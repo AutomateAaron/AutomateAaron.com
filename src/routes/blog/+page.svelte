@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { siteDescription, siteTitle } from '$lib/config';
-	import BreathingBlob from '$lib/components/svg/BreathingBlob.svelte';
-	import ServiceBg from '$lib/components/svg/landing-sections/service/ServiceBg.svelte';
+	import BreathingBlob from '$lib/assets/svg/BreathingBlob.svelte';
+	import ServiceBg from '$lib/assets/svg/landing-sections/service/ServiceBg.svelte';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import BlogsList from '$lib/components/BlogsList.svelte';
-	import Figure from '$lib/components/Figure.svelte';
+	import Figure from '$lib/assets/figures/Figure.svelte';
 
 	export let data;
 

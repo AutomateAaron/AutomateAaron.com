@@ -1,17 +1,11 @@
 <script lang="ts">
-	import { loadImageSmall } from '$lib/assets/js/clientUtils';
+	import { loadImageSmall } from '$lib/utils/clientUtils';
+	import type { IBlogMeta } from '$lib/types';
 	import Img from '@zerodevx/svelte-img';
 
 	export let titleElement = 'h3';
 
-	export let blogMetas: {
-		url: string;
-		date: string;
-		title: string;
-		description: string;
-		image: string;
-		imageAlt: string;
-	}[];
+	export let blogMetas: IBlogMeta[];
 
 	let clazz = '';
 	export { clazz as class };
@@ -35,7 +29,7 @@
 					<span class="pre-line-top-title text-base text-primary">{blogMeta.date}</span>
 					<svelte:element
 						this={titleElement}
-						class="font-bold text-2xl lg:text-xl xl:text-2xl mt-4 group-focus-within:text-primary group-hover:text-primary"
+						class="mt-4 text-2xl font-bold group-focus-within:text-primary group-hover:text-primary lg:text-xl xl:text-2xl"
 					>
 						{blogMeta.title}
 					</svelte:element>

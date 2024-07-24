@@ -5,20 +5,20 @@
 	import SocialIcon from '~icons/ic/outline-people-alt';
 	import EmailIcon from '~icons/ic/outline-email';
 
+	// @ts-expect-error: svelte-img import
 	import ProfilePicture from '$lib/assets/images/profile-picture.jpg?as=run';
-	import BreathingBlob from '$lib/components/svg/BreathingBlob.svelte';
+	import BreathingBlob from '$lib/assets/svg/BreathingBlob.svelte';
 
 	import { email, siteTitle, socialMediaLinks } from '$lib/config.js';
-	import { teleport } from '$lib/assets/js/clientUtils';
 	import ClickToCopy from '$lib/components/ClickToCopy.svelte';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 
 	import CheckIcon from '~icons/ic/outline-check';
 	import ErrorIcon from '~icons/ic/outline-error';
 	import CloseIcon from '~icons/ic/baseline-close';
-	import { netlifyEnhance } from '$lib/assets/js/netlifyForm';
-	import Figure from '$lib/components/Figure.svelte';
-	import FigureSmall from '$lib/components/FigureSmall.svelte';
+	import { netlifyEnhance } from '$lib/utils/netlifyForm';
+	import Figure from '$lib/assets/figures/Figure.svelte';
+	import FigureSmall from '$lib/assets/figures/FigureSmall.svelte';
 	import ContactCard from './ContactCard.svelte';
 
 	import { onMount } from 'svelte';
@@ -31,6 +31,7 @@
 
 	let calSection: HTMLElement;
 
+	/* eslint-disable no-undef */
 	onMount(() => {
 		// const element = document.querySelector('[data-theme]'); // Select element with your theme applied
 		const computedStyle = getComputedStyle(calSection);
@@ -39,13 +40,17 @@
 		}
 
 		(function (C, A, L) {
+			// @ts-expect-error: Parameter 'a' implicitly has an 'any' type.
 			let p = function (a, ar) {
 				a.q.push(ar);
 			};
 			let d = C.document;
+			// @ts-expect-error: Property 'Cal' does not exist on type 'Window & typeof globalThis'.
 			C.Cal =
+				// @ts-expect-error: Property 'Cal' does not exist on type 'Window & typeof globalThis'.
 				C.Cal ||
 				function () {
+					// @ts-expect-error: Property 'Cal' does not exist on type 'Window & typeof globalThis'.
 					let cal = C.Cal;
 					let ar = arguments;
 					if (!cal.loaded) {
@@ -59,6 +64,7 @@
 							p(api, arguments);
 						};
 						const namespace = ar[1];
+						// @ts-expect-error: 'q' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
 						api.q = api.q || [];
 						if (typeof namespace === 'string') {
 							cal.ns[namespace] = cal.ns[namespace] || api;
@@ -70,14 +76,18 @@
 					p(cal, ar);
 				};
 		})(window, 'https://app.cal.com/embed/embed.js', 'init');
+
+		// @ts-expect-error: Cannot find name 'Cal'
 		Cal('init', { origin: 'https://cal.com' });
 
+		// @ts-expect-error: Cannot find name 'Cal'
 		Cal('inline', {
 			elementOrSelector: '#my-cal-inline',
 			calLink: 'aaronnbrock/consultation',
-			layout: 'month_view',
+			layout: 'month_view'
 		});
 
+		// @ts-expect-error: Cannot find name 'Cal'
 		Cal('ui', {
 			hideEventTypeDetails: false,
 			layout: 'month_view',
@@ -123,7 +133,7 @@
 					// Error
 					'cal-bg-error': `oklch(${getProp('--er')})`,
 					'cal-text-error': `oklch(${getProp('--erc')})`,
-					'cal-border-error': `oklch(${getProp('--erc')})`,
+					'cal-border-error': `oklch(${getProp('--erc')})`
 
 					// emphasis: "var(--cal-border-emphasis, #9CA3AF)",
 					// default: "var(--cal-border, #D1D5DB)",
@@ -145,10 +155,11 @@
 
 					// More CSS variables are defined here
 					// https://github.com/calcom/cal.com/blob/b0ca7dae1a17f897e34b83c990f30ab65f615ee0/packages/config/tailwind-preset.js#L69
-				},
-			},
+				}
+			}
 		});
 	});
+	/* eslint-enable no-undef */
 </script>
 
 <svelte:head>

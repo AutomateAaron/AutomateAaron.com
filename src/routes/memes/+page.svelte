@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { siteDescription } from '$lib/config';
 	import MemesList from '$lib/components/MemesList.svelte';
-	import ServiceBg from '$lib/components/svg/landing-sections/service/ServiceBg.svelte';
-	import Figure from '$lib/components/Figure.svelte';
+	import ServiceBg from '$lib/assets/svg/landing-sections/service/ServiceBg.svelte';
+	import Figure from '$lib/assets/figures/Figure.svelte';
 
-	import BreathingBlob from '$lib/components/svg/BreathingBlob.svelte';
+	import BreathingBlob from '$lib/assets/svg/BreathingBlob.svelte';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 
 	export let data;
