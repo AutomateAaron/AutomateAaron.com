@@ -1,11 +1,16 @@
 import type { IShortLink, ISocialMediaLink } from '$lib/types';
 
-import Facebook from '~icons/fa6-brands/facebook-f';
 import Github from '~icons/fa6-brands/github';
 import Linkedin from '~icons/fa6-brands/linkedin-in';
-import Medium from '~icons/fa6-brands/medium';
 import Twitter from '~icons/fa6-brands/twitter';
+import Reddit from '~icons/fa6-brands/reddit-alien';
+import Lemmy from '~icons/fluent-emoji-high-contrast/mouse-face';
+import Mastodon from '~icons/fa6-brands/mastodon';
+import Facebook from '~icons/fa6-brands/facebook-f';
 import Instagram from '~icons/fa6-brands/instagram';
+import Youtube from '~icons/fa6-brands/youtube';
+import Medium from '~icons/fa6-brands/medium';
+import Tiktok from '~icons/fa6-brands/tiktok';
 
 export const siteTitle = 'Aaron Brock ☂️';
 export const siteDescription = 'How to make The Cloud simpler.';
@@ -36,12 +41,12 @@ export const navItems = [
 	},
 	{
 		title: 'Resume',
-		route: '/#resume',
+		route: '/#resume'
 	},
 	{
 		title: 'Memes',
-		route: '/#memes',
-	},
+		route: '/#memes'
+	}
 ];
 
 export const siteMap = [
@@ -66,27 +71,47 @@ export const siteMap = [
 export const socialMediaLinks: ISocialMediaLink[] = [
 	{
 		url: 'https://github.com/AutomateAaron',
-		icon: Github,
+		icon: Github
 	},
 	{
 		url: 'https://linkedin.com/in/AutomateAaron',
-		icon: Linkedin,
-	},
-	{
-		url: 'https://facebook.com/AaronNBrock',
-		icon: Facebook
+		icon: Linkedin
 	},
 	{
 		url: 'https://twitter.com/AutomateAaron',
-		icon: Twitter,
+		icon: Twitter
 	},
 	{
-		url: 'https://medium.com/@AaronNBrock',
-		icon: Medium
+		url: 'https://www.reddit.com/user/AaronNBrock',
+		icon: Reddit
+	},
+	{
+		url: 'https://lemmy.world/u/AutomateAaron',
+		icon: Lemmy
+	},
+	{
+		url: 'https://mastodon.social/@AutomateAaron',
+		icon: Mastodon
+	},
+	{
+		url: 'https://facebook.com/AutomateAaron',
+		icon: Facebook
 	},
 	{
 		url: 'https://instagram.com/AutomateAaron',
 		icon: Instagram
+	},
+	{
+		url: 'https://www.youtube.com/@AutomateAaron',
+		icon: Youtube
+	},
+	{
+		url: 'https://medium.com/@AutomateAaron',
+		icon: Medium
+	},
+	{
+		url: 'https://www.tiktok.com/@AutomateAaron',
+		icon: Tiktok
 	}
 ];
 
