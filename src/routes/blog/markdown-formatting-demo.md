@@ -1,7 +1,7 @@
 ---
 title: 'Markdown Formatting Demo'
 date: '2020-09-13'
-image: /images/blog/markdown-formatting-demo.jpg
+image: /src/lib/assets/images/blog/markdown-formatting-demo.jpg
 imageAlt: 'Markdown Formatting Demo'
 categories:
   - 'markdown'

@@ -23,7 +23,7 @@ export function loadImageSmall(path: string) {
 
 	path = path.replace(replaceExp, '');
 
-	let images = import.meta.glob('../images/blog/**/*.{jpg,jpeg,png}', {
+	let images = import.meta.glob('/src/lib/assets/images/**/**/*.{jpg,jpeg,png}', {
 		query: {
 			as: 'run',
 			width: '480;640'
@@ -49,7 +49,7 @@ export function loadImage(path: string) {
 
 	path = path.replace(replaceExp, '');
 
-	let images = import.meta.glob('../images/blog/**/*.{jpg,jpeg,png}', {
+	let images = import.meta.glob('/src/lib/assets/images/**/**/*.{jpg,jpeg,png}', {
 		query: {
 			as: 'run'
 		},

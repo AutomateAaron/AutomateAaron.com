@@ -1,7 +1,7 @@
 ---
 title: 'Optimal Dating Strategy'
 date: '2021-10-22'
-image: /images/blog/optimal-dating-strategy.jpg
+image: /src/lib/assets/images/blog/optimal-dating-strategy.jpg
 imageAlt: 'Optimal Dating Strategy!'
 categories:
   - 'algorithm'
