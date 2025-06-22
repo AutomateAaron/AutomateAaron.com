@@ -28,7 +28,18 @@
 	const experience: IResumeSectionItem[] = [
 		{
 			title: 'Cloud Engineer',
-			date: 'NOV 2020 - PRESENT',
+			date: 'SEP 2024 - PRESENT',
+			company: 'S&P Global',
+			bullets: [
+				"Created the Gen A.I. Security Standard for adopting the technology into S&P's products.",
+				'Performed a comprehensive tool comparison of Gen A.I. Firewall tools.',
+				"Managed Gen A.I. Application's architecture reviews for 20+ applications.",
+				"Worked with Gen A.I. firewall vendor to deploy application within S&P's Secure Cloud Env."
+			]
+		},
+		{
+			title: 'Cloud Engineer',
+			date: 'NOV 2020 - JUL 2024',
 			company: 'SADA',
 			bullets: [
 				'Led technical relationships with 20+ clients which directly lead to deals closing.',
@@ -38,8 +49,8 @@
 				'Architected a secure application for a social media startup with over 2 million active users.',
 				'Automated parts of the internal sales pipeline, saving valuable cycles.',
 				'Successfully supported the migration from AWS to GCP for multiple customers.',
-				'Developed multiple professional services offerings based on observations of market needs.',
-			],
+				'Developed multiple professional services offerings based on observations of market needs.'
+			]
 		},
 		{
 			title: 'DevOps Consultant',
@@ -51,8 +62,8 @@
 				'Developed automated tests to guarantee proper terraform deployment.',
 				'Created a POC terraform provider which wraps GCP storage objects.',
 				'Migrated AWS Service Control Policies from a manual workflow to an automated policy-as-code workflow at a global financial ratings and intelligence firm.',
-				'Lead pair programming sessions, upskilling clients on Cloud best practices.',
-			],
+				'Lead pair programming sessions, upskilling clients on Cloud best practices.'
+			]
 		},
 		{
 			title: 'DevOps Contractor',
@@ -62,8 +73,8 @@
 				'Designed a solution for running Selenium tests against Windows browsers in GKE.',
 				'Configured secure remote access to Jenkins using Google Cloud’s Identity-Aware Proxy.',
 				'Containerized a legacy node.js application, allowing it to be migrated to Kubernetes.',
-				'Created private Kubernetes deployment, integrating with k8s & GKE best practices.',
-			],
+				'Created private Kubernetes deployment, integrating with k8s & GKE best practices.'
+			]
 		},
 		{
 			title: 'Data Engineering Intern',
@@ -85,8 +96,8 @@
 				'Developed automated testing tools to support API & Data integrity tests, drastically reducing test development time and increasing test coverage.',
 				'Reduced GUI testing time by deploying Selenoid grid cluster, reducing test time by 10x.',
 				'Provided training for Git & TensorFlow, which facilitated tool adoption.',
-				'Created a dockerized version of MongoDB’s Ops Manager.',
-			],
+				'Created a dockerized version of MongoDB’s Ops Manager.'
+			]
 		},
 		{
 			title: 'A.I. Team Member',
@@ -106,8 +117,8 @@
 			bullets: [
 				'Developed and demoed a prototype cloud gaming application.',
 				'Automated AWS instance creation & VPN connections to ensure secure connections.',
-				'Automated bidding on AWS spot instances, lowering server costs by over 70%.',
-			],
+				'Automated bidding on AWS spot instances, lowering server costs by over 70%.'
+			]
 		},
 		{
 			title: 'Contract Consultant',
@@ -167,7 +178,7 @@
 			<p class="mb-4">
 				What? You don’t want to just take my word for it that I know what I’m talking about? I guess
 				some healthy scepticism is a good thing. You can also view the <a
-					href="https://docs.google.com/document/d/16FDmclyQRMEkhyr37R1P_f7uE1IUwE6QW7eRM4VqTbg/edit?usp=sharing"
+					href="https://docs.google.com/document/d/1985-Pc-7_UBh2knOl7mT-kKYlmUfY26kglERqmppGCQ/edit?usp=sharing"
 					target="_blank"
 					rel="noreferrer"
 				>
